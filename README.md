@@ -53,3 +53,13 @@ Cette autorisation sur le compte GitHub n’a pas été réalisée par l’assis
 Les choix de la dernière tentative sont conservés par module. Chaque correction enregistre date, réponses et score dans l’historique local, limité à 100 tentatives. resultats.html permet de voir ce bilan et de télécharger un export JSON pouvant être transmis par mail. Les meilleurs scores alimentent la progression. Aucun nom n’est exigé pour s’entraîner ; le nom facultatif saisi lors de l’export figure uniquement dans le fichier téléchargé.
 
 Il n’y a pas de stockage central ni de tableau de résultats de classe. Le forum public ne doit pas être utilisé pour collecter les notes nominatives. Une collecte automatique serait une fonctionnalité distincte nécessitant un stockage supplémentaire.
+
+## Archives cumulatives
+
+Chaque livraison contient tous les fichiers du site, prêts à remplacer la version précédente. Ne pas mélanger plusieurs archives : utiliser la plus récente, décompresser puis téléverser tous ses fichiers à la racine du dépôt. L’ancien cours.js n’est plus utilisé et peut être supprimé.
+
+## Forum général
+
+forum.html affiche un fil général intégré via giscus, avec le même dépôt et la même catégorie que les discussions des modules. Le mappage pathname associe un fil à forum.html et un fil à chaque page de module. Les messages sont conservés dans GitHub Discussions ; le remplacement des fichiers HTML ne les supprime pas. Les noms des pages sont à conserver pour garder cette correspondance.
+
+Le bouton Forum de la navigation ouvre la page du site. L’autorisation GitHub pour participer au forum peut nécessiter une fenêtre de connexion externe, puis l’utilisateur retrouve le fil intégré. La lecture et les échanges restent dans la page.
