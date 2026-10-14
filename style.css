@@ -104,3 +104,5 @@
 @keyframes thermal-stir{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.18)}}
 @media(max-width:540px){.thermal-widget{padding:.85rem}.thermal-readouts{grid-template-columns:1fr}.thermal-readouts p{margin:0;display:flex;justify-content:space-between;gap:.5rem}.thermal-readouts p br{display:none}.thermal-readouts strong{font-size:.98rem}.thermal-controls .button{flex:1 1 135px}}
 @media print{.thermal-controls,.thermal-widget input[type=range],#calo-stir,.heating-prediction{display:none!important}.stirring #calo-paddle{animation:none}}
+
+.full-phase-plot{display:block;width:100%;max-width:720px;height:auto;margin:auto}.full-phase-steps .button{font-size:.85rem}#full-phase-info .formula{font-size:1rem}

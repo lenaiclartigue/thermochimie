@@ -392,3 +392,58 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     select('wall'); motion(false);
   }
 })();
+
+// Courbe qualitative T(temps) du diaporama : les cinq étapes et les deux paliers.
+(() => {
+  const host = document.getElementById('figure-changements-etat');
+  if (!host || !document.getElementById('full-phase-progress')) return;
+  const $ = id => document.getElementById(id);
+  const points = [[100,350],[175,295],[295,295],[370,165],[545,165],[620,65]];
+  const descriptions = [
+    ['Chauffage du solide · S','Le corps est solide. La chaleur reçue augmente sa température jusqu’à la température de fusion.','Q = n C<sub>p,m</sub>(solide) ΔT'],
+    ['Fusion · S + L','Le solide et le liquide coexistent. La température reste constante à T<sub>fus</sub> tandis que le solide se transforme progressivement en liquide. Le système continue à recevoir de la chaleur.','Q<sub>fusion</sub> = n<sub>fondue</sub> Δ<sub>fus</sub>H'],
+    ['Chauffage du liquide · L','Tout le solide a fondu. La chaleur reçue augmente maintenant la température du liquide, jusqu’à la température de vaporisation.','Q = n C<sub>p,m</sub>(liquide) ΔT'],
+    ['Vaporisation · L + V','Le liquide et la vapeur coexistent. La température reste constante à T<sub>vap</sub> tandis que le liquide se transforme progressivement en vapeur. Le système continue à recevoir de la chaleur.','Q<sub>vap</sub> = n<sub>vaporisée</sub> Δ<sub>vap</sub>H'],
+    ['Chauffage de la vapeur · V','Tout le liquide est vaporisé. La chaleur reçue augmente à nouveau la température, cette fois celle de la vapeur.','Q = n C<sub>p,m</sub>(vapeur) ΔT']
+  ];
+  let frame=0,last=0,stage=-1,progress=0;
+  const slider=$('full-phase-progress');
+  function stop(){cancelAnimationFrame(frame);frame=0;last=0;$('full-phase-play').textContent='Animer la courbe';$('full-phase-play').setAttribute('aria-pressed','false');}
+  function render(){
+    const x=100+Number(slider.value)/1000*520;
+    let i=points.findIndex((p,j)=>j<5 && x<points[j+1][0]);if(i<0)i=4;
+    const a=points[i],b=points[i+1],u=(x-a[0])/(b[0]-a[0]),y=a[1]+u*(b[1]-a[1]);
+    $('full-phase-point').setAttribute('cx',x);$('full-phase-point').setAttribute('cy',y);
+    $('full-phase-guide').setAttribute('d',`M${x} ${y}V380`);
+    $('full-phase-trace').setAttribute('d','M'+points.slice(0,i+1).map(p=>p.join(' ')).join('L')+`L${x} ${y}`);
+    slider.setAttribute('aria-valuetext',descriptions[i][0]);
+    const energies=[1.1286,18,22.59,122.1,2.0148],temps=[263.15,273.15,273.15,373.15,373.15,393.15];
+    const qStage=energies[i]*u,qTotal=energies.slice(0,i).reduce((a,b)=>a+b,0)+qStage;
+    const temperature=temps[i]+u*(temps[i+1]-temps[i]);
+    const fmt=(n,d=3)=>n.toLocaleString('fr-FR',{minimumFractionDigits:d,maximumFractionDigits:d});
+    $('full-numeric-t').textContent=fmt(temperature,2)+' K ('+fmt(temperature-273.15,2)+' °C)';
+    $('full-numeric-q').textContent=fmt(qTotal)+' kJ';
+    const expressions=[`3 × 37,62 × (${fmt(temperature,2)} − 263,15) / 1000`,`${fmt(3*u)} × 6,00`,`3 × 75,3 × (${fmt(temperature,2)} − 273,15) / 1000`,`${fmt(3*u)} × 40,7`,`3 × 33,58 × (${fmt(temperature,2)} − 373,15) / 1000`];
+    const phases=i===1?`Solide : ${fmt(3*(1-u))} mol ; liquide : ${fmt(3*u)} mol.`:i===3?`Liquide : ${fmt(3*(1-u))} mol ; vapeur : ${fmt(3*u)} mol.`:`3 mol dans la phase ${['solide','','liquide','','vapeur'][i]}.`;
+    $('full-numeric-calculation').innerHTML=`<p><strong>Étape en cours</strong><br>${expressions[i]} ≈ <strong>${fmt(qStage)} kJ</strong></p><p>${phases}</p><p>Chaleur reçue aux étapes précédentes : ${fmt(qTotal-qStage)} kJ.<br><strong>Total : ${fmt(qTotal)} kJ.</strong></p><p class="muted">Calculs sur les valeurs non arrondies. Le facteur 1/1000 convertit les joules en kilojoules. Pendant les paliers, on multiplie l’enthalpie molaire par la quantité déjà transformée.</p>`;
+
+    if(i!==stage){
+      stage=i;host.dataset.stage=String(i);
+      $('full-phase-info').innerHTML=`<h4>${i+1}. ${descriptions[i][0]}</h4><p>${descriptions[i][1]}</p><p class="formula">${descriptions[i][2]}</p><p class="muted">${i===1||i===3?'La quantité dans la formule est celle effectivement transformée pendant le palier. ΔT = 0 ne signifie pas Q = 0.':'Cette expression suppose la capacité calorifique constante sur l’intervalle considéré.'}</p>`;
+      host.querySelectorAll('[data-full-step]').forEach(el=>el.setAttribute('aria-pressed',String(Number(el.dataset.fullStep)===i)));
+      host.querySelectorAll('[data-full-label]').forEach(el=>el.setAttribute('fill',Number(el.dataset.fullLabel)===i?'#b3391a':'#526973'));
+    }
+  }
+  function tick(t){
+    if(document.hidden||host.closest('[hidden]')){stop();return;}
+    const dt=last?Math.min(t-last,100):0;last=t;
+    progress=Math.min(1000,progress+dt/25);slider.value=progress;render();
+    if(Number(slider.value)>=1000){stop();return;}frame=requestAnimationFrame(tick);
+  }
+  slider.addEventListener('input',()=>{stop();render();});
+  $('full-phase-play').addEventListener('click',()=>{if(frame){stop();return;}if(Number(slider.value)>=1000){slider.value=0;render();}last=0;progress=Number(slider.value);$('full-phase-play').textContent='Pause';$('full-phase-play').setAttribute('aria-pressed','true');frame=requestAnimationFrame(tick);});
+  $('full-phase-reset').addEventListener('click',()=>{stop();slider.value=0;render();});
+  host.querySelectorAll('[data-full-step]').forEach(el=>el.addEventListener('click',()=>{stop();const i=Number(el.dataset.fullStep);slider.value=Math.round(((points[i][0]+points[i+1][0])/2-100)/520*1000);render();}));
+  new IntersectionObserver(es=>{if(!es[0].isIntersecting)stop();}).observe(host);
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});render();
+})();

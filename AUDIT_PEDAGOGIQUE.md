@@ -101,3 +101,17 @@ Contrôles : branches correctes, incomplètes et fausses, sauvegarde/restauratio
 ## Courbe de chauffage et calorimètre interactifs (14 octobre 2026)
 
 Ajout pédagogique dans Comprendre fondé sur les diapositives 21–22 et 33–35 : courbe T(Q) calculée avec les données de l’exercice des 3 mol d’eau, proportions molaires liquide/vapeur, et exploration du rôle des éléments du Dewar. Qchauffage = 18,072 kJ ; Qvap = 122,100 kJ ; Qtotal = 140,172 kJ. L’axe n’est pas un temps ; aucune cinétique de chauffage n’est supposée. Calculs non arrondis en interne, affichage arrondi. La coupe est schématique, les données et figures originales sont conservées. Démarrage manuel, pause et commande par curseur ; prédiction au début du palier sans modification des 40 QCM et 18 exercices.
+
+## Courbe complète du diaporama animée
+
+La figure des changements d’état est maintenant une courbe SVG interactive T(K) en fonction du temps, avec cinq étapes : chauffage du solide, fusion (S + L), chauffage du liquide, vaporisation (L + V), chauffage de la vapeur. Animation à démarrage manuel, pause, curseur et choix direct des étapes. Courbe schématique avec calculs pour 3 mol d’eau de −10 à 120 °C : données glace/vapeur/fusion du TD, données liquide/vaporisation du diaporama pour cohérence avec le second exemple. Axes non à l’échelle ; aucune durée physique calculée. Total : 165,8334 kJ. Les 40 QCM et 18 exercices restent inchangés. Cette courbe précède le complément numérique sur les 3 mol d’eau, conservé. L’image source reste dans les assets.
+
+## Audit complet du 14 octobre 2026 — dernière passe
+
+Relecture des 6 parties et de la fiche, 40 QCM, 18 activités, calculs et interactions. Les 41 champs numériques ont été recalculés indépendamment à partir des énoncés ; 61 lignes de contrôle couvrent aussi les exemples et animations. Aucune erreur arithmétique détectée dans les réponses attendues. Les données restent celles annoncées par chaque activité, avec leurs approximations.
+
+Précisions apportées : calorie notée comme valeur arrondie ; composition fixe pour les capacités ; T et p constantes rappelées pour la contribution ΔH≈ξΔrH° ; seuils des états de référence déclarés approchés ; titre distinguant le graphique du PPT de son exemple numérique adapté. Les deux animations de 3 mol sont conservées.
+
+Provenance : 7 exercices du PPT, 2 activités de restitution créées, 9 entraînements ajoutés dont un adapté du TD. Les 40 QCM sont des questions rédigées pour le site. Le rapport enseignant séparé détaille 38 blocs de provenance ; aucune attribution mot à mot ni proportion exacte de texte original n’est revendiquée. Les fichiers de cours et corrigés source ne sont pas modifiés.
+
+Tests navigateur réussis : QCM/exercices et sauvegarde/export, états physiques et réactions, constructeur Hess et bilans, courbe complète, liens locaux et affichage mobile. La vérification ne comprend pas l’envoi de messages giscus ni un audit juridique des droits sur les sources.

@@ -1,6 +1,6 @@
 # Thermochimie · Licence
 
-Version « courbe de chauffage et calorimètre interactifs » du 14 octobre 2026 : mise en interaction du diaporama du chapitre 2. Conception du parcours : Lénaïc Lartigue.
+Version « audit complet et deux animations sur 3 mol d’eau » du 14 octobre 2026 : mise en interaction du diaporama du chapitre 2. Conception du parcours : Lénaïc Lartigue.
 
 Site statique pour GitHub Pages. Les six parties suivent le cours commun : **Comprendre → QCM → Exercices → Discussion**. Le chapitre 3 n’est pas développé ici ; les prérequis du chapitre 1 sont rappelés dans la première partie.
 
@@ -99,3 +99,7 @@ Le contenu a été rapproché du diaporama principal et les résultats des exerc
 Dans Comprendre, la partie Enthalpie propose une courbe T(Q) avec curseur, lecture/pause, arrêts au début, au milieu et à la fin du palier, et calculs évolutifs. Données inchangées de l’exercice : 3 mol d’eau, 20 → 100 °C, Cp,m = 75,3 J·mol⁻¹·K⁻¹, ΔvapH° = 40,7 kJ·mol⁻¹. La répartition liquide/vapeur représente les quantités de matière, pas les volumes. La lecture s’arrête au début du palier pour une question de prédiction non notée.
 
 Dans Calorimétrie, une coupe interactive présente double paroi argentée, vide, thermomètre et agitateur. Les éléments sont accessibles au clavier et l’agitation démarre uniquement à la demande. Les figures originales restent disponibles. Les animations s’arrêtent lorsqu’elles quittent l’écran. Aucun nouveau résultat noté ni donnée personnelle n’est enregistré.
+
+## Courbe complète du diaporama animée
+
+La figure des changements d’état est maintenant une courbe SVG interactive T(K) en fonction du temps, avec cinq étapes : chauffage du solide, fusion (S + L), chauffage du liquide, vaporisation (L + V), chauffage de la vapeur. Animation à démarrage manuel, pause, curseur et choix direct des étapes. Courbe schématique avec calculs pour 3 mol d’eau de −10 à 120 °C : données glace/vapeur/fusion du TD, données liquide/vaporisation du diaporama pour cohérence avec le second exemple. Axes non à l’échelle ; aucune durée physique calculée. Total : 165,8334 kJ. Les 40 QCM et 18 exercices restent inchangés. Cette courbe précède le complément numérique sur les 3 mol d’eau, conservé. L’image source reste dans les assets.

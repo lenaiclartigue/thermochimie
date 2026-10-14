@@ -30,3 +30,7 @@ L’activité Cu/Pb/Hg est dessinée en SVG dans `interactions.js` : trois carte
 ## Courbe de chauffage et calorimètre interactifs (14 octobre 2026)
 
 Ajout pédagogique dans Comprendre fondé sur les diapositives 21–22 et 33–35 : courbe T(Q) calculée avec les données de l’exercice des 3 mol d’eau, proportions molaires liquide/vapeur, et exploration du rôle des éléments du Dewar. Qchauffage = 18,072 kJ ; Qvap = 122,100 kJ ; Qtotal = 140,172 kJ. L’axe n’est pas un temps ; aucune cinétique de chauffage n’est supposée. Calculs non arrondis en interne, affichage arrondi. La coupe est schématique, les données et figures originales sont conservées. Démarrage manuel, pause et commande par curseur ; prédiction au début du palier sans modification des 40 QCM et 18 exercices.
+
+## Courbe complète du diaporama animée
+
+La figure des changements d’état est maintenant une courbe SVG interactive T(K) en fonction du temps, avec cinq étapes : chauffage du solide, fusion (S + L), chauffage du liquide, vaporisation (L + V), chauffage de la vapeur. Animation à démarrage manuel, pause, curseur et choix direct des étapes. Courbe schématique avec calculs pour 3 mol d’eau de −10 à 120 °C : données glace/vapeur/fusion du TD, données liquide/vaporisation du diaporama pour cohérence avec le second exemple. Axes non à l’échelle ; aucune durée physique calculée. Total : 165,8334 kJ. Les 40 QCM et 18 exercices restent inchangés. Cette courbe précède le complément numérique sur les 3 mol d’eau, conservé. L’image source reste dans les assets.
