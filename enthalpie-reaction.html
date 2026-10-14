@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Enthalpie de réaction · Thermochimie</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=d29bfa8568e1">
 </head>
 <body>
 <header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main data-current-module="4"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties du cours"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
@@ -25,7 +25,6 @@
 <li><a href="#etats-standard">États standard d’un constituant</a></li>
 <li><a href="#enthalpies-particulieres">Les enthalpies particulières du cours</a></li>
 <li><a href="#tables-formation">Utiliser les enthalpies de formation</a></li>
-<li><a href="#energie-enthalpie-reaction">Relier enthalpie et énergie interne de réaction</a></li>
 <li><a href="#deux-methodes">Deux façons de déterminer une enthalpie de réaction</a></li>
 </ul></nav><section class="course-section" data-source-slides="19–20"><h2 id="definition-reaction">Définir l’enthalpie de réaction</h2>
 <div class="definition">
@@ -41,7 +40,39 @@
 <div class="formula">ΔH = Q<sub>p</sub> = ξ Δ<sub>r</sub>H°</div>
 <p>Dans le modèle utilisé dans le cours, ξ est l’avancement de la transformation. ΔH est en J ; Δ<sub>r</sub>H° est en J·mol⁻¹. Si Δ<sub>r</sub>H° &lt; 0, la réaction est exothermique ; si Δ<sub>r</sub>H° &gt; 0, elle est endothermique.</p>
 <p><b>Approximation d’Ellingham :</b> Δ<sub>r</sub>H° est considérée constante dans l’intervalle de température étudié.</p>
-<p>Pour une transformation d’avancement initial nul, Q<sub>réaction</sub> ≈ ξΔ<sub>r</sub>H° : la chaleur totale dépend de la quantité transformée. Pour retrouver la grandeur molaire, divisez par ξ, déterminé par le tableau d’avancement. Pour une réaction totale, utilisez le réactif limitant.</p></section><section class="course-section" data-source-slides="18"><h2 id="etats-standard">États standard d’un constituant</h2>
+<p>Pour une transformation d’avancement initial nul, Q<sub>réaction</sub> ≈ ξΔ<sub>r</sub>H° : la chaleur totale dépend de la quantité transformée. Pour retrouver la grandeur molaire, divisez par ξ, déterminé par le tableau d’avancement. Pour une réaction totale, utilisez le réactif limitant.</p>
+<div class="course-interactive notation-widget" id="notation-enthalpie">
+<h3>Lire Δ<sub>r</sub>H°<sub>T</sub>
+</h3>
+<p>Cliquez sur un symbole pour retrouver sa signification.</p>
+<div class="notation-buttons" role="group" aria-label="Symboles de l’enthalpie">
+<button type="button" data-notation="delta" aria-pressed="true" aria-label="Delta">Δ</button><button type="button" data-notation="type" aria-pressed="false" aria-label="Indice r">r</button><button type="button" data-notation="h" aria-pressed="false" aria-label="H">H</button><button type="button" data-notation="standard" aria-pressed="false" aria-label="Symbole standard">°</button><button type="button" data-notation="temperature" aria-pressed="false" aria-label="Température T">T</button>
+</div>
+<p id="notation-result" role="status"><strong>Δ : variation.</strong> ΔH = H<sub>final</sub> − H<sub>initial</sub>.</p>
+<div class="table-wrap"><table><tbody>
+<tr>
+<th>Δ</th>
+<td>Renvoie à une variation.</td>
+</tr>
+<tr>
+<th>r, f, comb, fus, vap…</th>
+<td>Type de transformation : réaction, formation, combustion, fusion, vaporisation…</td>
+</tr>
+<tr>
+<th>H</th>
+<td>Fonction d’état considérée : l’enthalpie.</td>
+</tr>
+<tr>
+<th>° (parfois écrit 0)</th>
+<td>Constituants pris dans leur état standard. Ce signe ne fixe pas la température.</td>
+</tr>
+<tr>
+<th>T</th>
+<td>Température de la transformation, en kelvins.</td>
+</tr>
+</tbody></table></div>
+<p><strong>Unités :</strong> ΔH est une variation d’enthalpie, en J. Δ<sub>r</sub>H est une enthalpie de réaction par unité d’avancement, en J·mol⁻¹. Le r seul ne signifie donc pas « finale moins initiale » : il indique la transformation considérée.</p>
+</div></section><section class="course-section" data-source-slides="18"><h2 id="etats-standard">États standard d’un constituant</h2>
 <p>La pression standard vaut p° = 1 bar ; la concentration standard vaut C° = 1 mol·L⁻¹. Il existe un état standard pour chaque température considérée.</p>
 <div class="definition">
 <h3>Constituant gazeux</h3>
@@ -55,15 +86,69 @@
 <h3>Soluté</h3>
 <p>État de référence à la concentration C°, défini à partir du comportement en solution infiniment diluée, à la pression p° et à la température T considérée.</p>
 </div>
-<p>Le symbole ° indique l’état standard. La température doit toujours être précisée.</p></section><section class="course-section" data-source-slides="21, 23–24, 28, 30"><h2 id="enthalpies-particulieres">Les enthalpies particulières du cours</h2>
+<p>Le symbole ° indique l’état standard. La température doit toujours être précisée.</p>
+<div class="course-interactive" id="standard-temperature">
+<h3>Faire varier la température : quel état de référence ?</h3>
+<p>Choisissez un élément du diaporama, puis faites varier la température à p° = 1 bar. On cherche ici son <strong>état standard de référence</strong>, c’est-à-dire le corps simple dans son état le plus stable.</p>
+<label for="standard-element">Élément</label><select id="standard-element"><option value="Cu">Cuivre — Cu</option>
+<option value="Pb">Plomb — Pb</option>
+<option value="Hg">Mercure — Hg</option></select><div class="temperature-inputs">
+<label for="standard-temperature-range">Température (°C)<input id="standard-temperature-range" type="range" min="-100" max="2800" step="0.01" value="25"></label><label for="standard-temperature-number">Valeur précise (°C)<input id="standard-temperature-number" type="number" min="-100" max="2800" step="0.01" value="25"></label>
+</div>
+<div class="choice-buttons" role="group" aria-label="Températures repères">
+<button type="button" data-standard-point="ambient">25 °C</button><button type="button" data-standard-point="fusion">À la fusion</button><button type="button" data-standard-point="ebullition">À l’ébullition</button>
+</div>
+<p id="standard-thresholds"></p>
+<svg viewbox="0 0 580 180" role="img" aria-labelledby="standard-title standard-desc"><title id="standard-title">État physique du corps simple de référence</title>
+<desc id="standard-desc">Cuivre solide à 25 degrés Celsius.</desc><rect x="15" y="15" width="180" height="150" rx="10" fill="#eef3f5"></rect><g id="standard-particles"></g><text id="standard-species" x="380" y="75" text-anchor="middle" font-size="30">Cu(s)</text><text id="standard-kelvin" x="380" y="115" text-anchor="middle">298,15 K · p° = 1 bar</text></svg><p id="standard-result" role="status"></p>
+<p class="muted">Températures de transition reprises du diaporama. Aux températures de changement d’état, les deux phases peuvent coexister. Ces repères sont utilisés tels quels pour cette illustration.</p>
+<p><strong>À distinguer :</strong> un état standard est défini pour un constituant et une phase donnés à la température choisie. L’état standard <em>de référence d’un élément</em> retient sa forme la plus stable. Le symbole ° ne signifie pas « à 25 °C ».</p>
+</div></section><section class="course-section" data-source-slides="21, 23–24, 28, 30"><h2 id="enthalpies-particulieres">Les enthalpies particulières du cours</h2>
 <div class="definition">
 <h3>Enthalpie de changement d’état</h3>
 <p>Variation d’enthalpie associée au passage d’un état physique à un autre : fusion, vaporisation ou sublimation.</p>
 </div>
+<div class="course-interactive" id="phase-interactive">
+<h3>Choisir le changement d’état</h3>
+<label for="phase-choice">Transformation</label><select id="phase-choice"><option value="fusion">Fusion</option>
+<option value="solidification">Solidification</option>
+<option value="vaporisation">Vaporisation</option>
+<option value="condensation">Condensation liquide</option>
+<option value="sublimation">Sublimation</option>
+<option value="depot">Condensation solide</option></select><div class="reaction-route phase-route">
+<div id="phase-start" class="species-card"></div>
+<span aria-hidden="true">→</span><div id="phase-end" class="species-card"></div>
+</div>
+<div id="phase-equation" class="formula"></div>
+<p id="phase-result" role="status"></p>
+<p>À pression fixée, la température d’un corps pur reste constante pendant le changement d’état à l’équilibre. Inverser le changement d’état, à la même température, inverse le signe de son enthalpie.</p>
+</div>
 <div class="formula">H₂O(s) → H₂O(l) : Δ<sub>fus</sub>H°<br>H₂O(l) → H₂O(g) : Δ<sub>vap</sub>H°</div>
+<div class="definition" id="corps-simple">
+<h3>Corps simple</h3>
+<p>Un corps simple est constitué d’un seul élément chimique. Il peut contenir des atomes isolés ou des molécules : H₂, O₂ et N₂ sont des corps simples, même si leurs molécules contiennent deux atomes. Le carbone graphite est aussi un corps simple.</p>
+<p>Un corps composé contient plusieurs éléments chimiques : H₂O et CH₄ sont des corps composés.</p>
+</div>
 <div class="definition">
 <h3>Enthalpie standard de formation</h3>
 <p>Variation d’enthalpie de la réaction de synthèse de 1 mole de composé formé dans son état standard, à partir des corps simples appropriés pris dans leur état standard de référence.</p>
+</div>
+<div class="course-interactive" id="formation-interactive">
+<h3>Former une mole de composé à partir des corps simples</h3>
+<label for="formation-choice">Composé formé à 298 K</label><select id="formation-choice"><option value="CH4">Méthane CH₄(g)</option>
+<option value="H2O">Eau H₂O(l)</option>
+<option value="CO2">Dioxyde de carbone CO₂(g)</option>
+<option value="NH3">Ammoniac NH₃(g)</option></select><div class="reaction-route">
+<div>
+<span class="eyebrow">CORPS SIMPLES DE RÉFÉRENCE</span><div id="formation-reactants" class="species-cards"></div>
+</div>
+<span class="route-arrow" aria-hidden="true">→</span><div>
+<span class="eyebrow">UNE MOLE DU COMPOSÉ</span><div id="formation-product" class="species-cards"></div>
+</div>
+</div>
+<div id="formation-equation" class="formula" role="status"></div>
+<p id="formation-note"></p>
+<p>Le coefficient du composé formé est <strong>1</strong>. Des coefficients fractionnaires sont possibles devant les corps simples. Leur enthalpie standard de formation est nulle lorsqu’ils sont dans leur état standard de référence.</p>
 </div>
 <div class="definition">
 <h3>État standard de référence d’un élément</h3>
@@ -74,10 +159,36 @@
 <div class="definition">
 <h3>Enthalpie standard de combustion</h3>
 <p>Variation d’enthalpie associée à la combustion d’une substance à pression constante, dans les états standard indiqués. La combustion complète étudiée dans le cours est exothermique et totale.</p>
+<p>Dans les exercices de ce parcours, <strong>l’eau formée est prise gazeuse, sauf indication contraire</strong>. Il faut toujours écrire sa phase et utiliser les données qui lui correspondent. L’exercice du méthane du diaporama précise H₂O(l) : il constitue une indication contraire.</p>
+</div>
+<div class="course-interactive" id="combustion-interactive">
+<h3>Écrire une combustion complète</h3>
+<label for="combustion-choice">Combustible</label><select id="combustion-choice"><option value="CH4">Méthane CH₄(g)</option>
+<option value="C3H8">Propane C₃H₈(g)</option></select><div class="choice-buttons" role="group" aria-label="État de l’eau produite">
+<button type="button" data-combustion-water="g" aria-pressed="true">H₂O(g) · par défaut</button><button type="button" data-combustion-water="l" aria-pressed="false">H₂O(l) · si précisé</button>
+</div>
+<div id="combustion-equation" class="formula" role="status"></div>
+<p id="combustion-note"></p>
+<div class="energy-flow">
+<span>Système réactionnel</span><span aria-hidden="true">→</span><span>Chaleur vers l’extérieur</span>
+</div>
+<p>Dans les cas étudiés, la combustion complète est totale et exothermique : Δ<sub>comb</sub>H° &lt; 0. Changer la phase de l’eau change la valeur de l’enthalpie de combustion.</p>
 </div>
 <div class="definition">
 <h3>Enthalpie de dissociation de liaison</h3>
 <p>Variation d’enthalpie de la réaction A–B(g) → A(g) + B(g). La dissociation de la liaison considérée demande de l’énergie : ΔdissH° &gt; 0.</p>
+<p>On considère les espèces <strong>en phase gazeuse</strong>, avec des interactions entre molécules négligées : on isole ainsi l’énergie associée à la liaison rompue, sans y ajouter les effets des interactions intermoléculaires d’une phase condensée.</p>
+</div>
+<div class="course-interactive" id="liaison-interactive">
+<h3>Rompre ou former une liaison</h3>
+<label for="liaison-choice">Liaison en phase gazeuse</label><select id="liaison-choice"><option value="HCl">H–Cl : 432 kJ·mol⁻¹</option>
+<option value="H2">H–H : 436 kJ·mol⁻¹</option>
+<option value="Cl2">Cl–Cl : 243 kJ·mol⁻¹</option></select><div class="choice-buttons" role="group" aria-label="Sens de la transformation">
+<button type="button" data-bond-state="broken" aria-pressed="false">Rompre la liaison</button><button type="button" data-bond-state="formed" aria-pressed="true">Former la liaison</button>
+</div>
+<svg viewbox="0 0 580 150" role="img" aria-labelledby="bond-title bond-desc"><title id="bond-title">Deux atomes et leur liaison</title>
+<desc id="bond-desc">Deux atomes liés.</desc><line id="bond-line" x1="235" y1="75" x2="345" y2="75" stroke="#172e42" stroke-width="7"></line><g id="bond-left"><circle cx="235" cy="75" r="30" fill="#d8e9ef" stroke="#172e42"></circle><text id="bond-left-label" x="235" y="82" text-anchor="middle">H</text></g><g id="bond-right"><circle cx="345" cy="75" r="30" fill="#d4e7d5" stroke="#172e42"></circle><text id="bond-right-label" x="345" y="82" text-anchor="middle">Cl</text></g></svg><div id="bond-equation" class="formula"></div>
+<p id="bond-result" role="status"></p>
 </div>
 <p>Les liaisons sont rompues dans les espèces gazeuses. L’opération inverse, la formation de la liaison, change le signe de l’enthalpie.</p>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
@@ -86,14 +197,25 @@
 <h3>Enthalpie de dissolution</h3>
 <p>Dans les exercices du fascicule, elle décrit le passage d’une substance à l’état dissous, par exemple A(s) → A(aq). Elle est rapportée à une mole de substance dissoute, dans les conditions indiquées.</p>
 <p>Ne pas confondre <strong>dissolution</strong> dans un solvant et <strong>dissociation d’une liaison</strong> en phase gazeuse. Dans un cycle, les états (s), (l), (g) et (aq) font partie de l’équation.</p>
+<div>
+<p>Pour un <strong>solide ionique</strong>, on distingue la dissociation du réseau, qui sépare les ions, et leur solvatation, qui les entoure de molécules du solvant. Avec l’eau, on parle d’hydratation. La séparation demande de l’énergie ; la solvatation en libère. Le bilan des contributions détermine le signe de l’enthalpie de dissolution.</p>
+<p>Une dissolution moléculaire, par exemple celle du glucose, ne produit pas nécessairement d’ions : les molécules se séparent puis sont solvatées.</p>
+</div>
+</div>
+<div class="course-interactive" id="dissolution-interactive">
+<h3>Dissociation et solvatation d’un solide ionique</h3>
+<p>Exemple : dissolution de NaCl dans l’eau. Parcourez les étapes pour visualiser les deux contributions.</p>
+<div class="choice-buttons" role="group" aria-label="Étape de la dissolution">
+<button type="button" data-solution-step="solid" aria-pressed="true">1 · Solide ionique</button><button type="button" data-solution-step="separate" aria-pressed="false">2 · Séparer les ions</button><button type="button" data-solution-step="solvate" aria-pressed="false">3 · Solvater les ions</button>
+</div>
+<svg viewbox="0 0 600 310" role="img" aria-labelledby="solution-title solution-desc"><title id="solution-title">Dissolution d’un solide ionique dans l’eau</title>
+<desc id="solution-desc">Ions sodium et chlorure dans un réseau.</desc><g id="solution-drawing"></g></svg><p id="solution-result" role="status"></p>
+<div class="formula">NaCl(s) → Na⁺(aq) + Cl⁻(aq)</div>
+<p class="muted">Le découpage en séparation puis solvatation est un chemin de compréhension. Dans la dissolution réelle, les deux phénomènes sont couplés. Le dernier dessin est un zoom sur un ion de chaque type ; les ions restent des ions.</p>
 </div></section><section class="course-section" data-source-slides="25"><h2 id="tables-formation">Utiliser les enthalpies de formation</h2>
 <div class="formula">Δ<sub>r</sub>H° = ∑ νᵢ Δ<sub>f</sub>H°(produits) − ∑ νᵢ Δ<sub>f</sub>H°(réactifs)</div>
 <p>On multiplie chaque donnée par le coefficient de l’espèce dans l’équation. On calcule ensuite la somme pour les produits moins la somme pour les réactifs.</p>
-</section><section class="course-section" data-source-td="chapitre-2"><h2 id="energie-enthalpie-reaction">Relier enthalpie et énergie interne de réaction</h2>
-<p>À une même température, H = U + pV conduit, pour les gaz parfaits et en négligeant la contribution pV des phases condensées, à :</p>
-<div class="formula">Δ<sub>r</sub>H° = Δ<sub>r</sub>U° + Δν<sub>g</sub>RT<br>Δν<sub>g</sub> = ∑ coefficients des produits gazeux − ∑ coefficients des réactifs gazeux</div>
-<p>Comptez seulement les espèces marquées (g), avec les coefficients de l’équation telle qu’elle est écrite. Les solides, liquides et espèces dissoutes ne sont pas comptés dans Δν<sub>g</sub>. Utilisez T en kelvins. Avec R = 8,314 J·mol⁻¹·K⁻¹, le terme Δν<sub>g</sub>RT est en J·mol⁻¹.</p>
-<p>Pour chercher l’énergie interne de réaction, isolez Δ<sub>r</sub>U° = Δ<sub>r</sub>H° − Δν<sub>g</sub>RT. Inversement, si Δ<sub>r</sub>H° − Δ<sub>r</sub>U° est donné, sa division par RT permet de retrouver Δν<sub>g</sub> et de vérifier les phases dans l’équation.</p></section><section class="course-section" data-source-slides="25–41 ; transition demandée"><h2 id="deux-methodes">Deux façons de déterminer une enthalpie de réaction</h2>
+</section><section class="course-section" data-source-slides="25–41 ; transition demandée"><h2 id="deux-methodes">Deux façons de déterminer une enthalpie de réaction</h2>
 <div class="method-grid">
 <div>
 <h3>À partir de données tabulées</h3>
@@ -180,7 +302,7 @@
 <nav class="exercise-index" aria-label="Choisir un exercice"><ul>
 <li><a href="#exercice-benzene">Former le benzène à partir de l’acétylène</a></li>
 <li><a href="#exercice-combustion-methane">Équilibrer la combustion du méthane</a></li>
-<li><a href="#exercice-hydrogenation-simple">Passer de ΔrH° à ΔrU°</a></li>
+<li><a href="#exercice-hydrogenation-formation">Calculer l’enthalpie d’une hydrogénation</a></li>
 </ul></nav><section class="exercise-card" id="exercice-benzene"><p class="eyebrow">EXERCICE 1</p>
 <h3>Former le benzène à partir de l’acétylène</h3>
 <p class="exercise-origin">Exercice du diaporama · diapositive 25</p>
@@ -223,21 +345,21 @@
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Équilibrez successivement C, H, puis O.</p></details><details class="exercise-solution"><summary>Correction</summary><p><b>CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l)</b>.</p></details></section><section class="exercise-card" id="exercice-hydrogenation-simple"><p class="eyebrow">EXERCICE 3</p>
-<h3>Passer de ΔrH° à ΔrU°</h3>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Équilibrez successivement C, H, puis O.</p></details><details class="exercise-solution"><summary>Correction</summary><p><b>CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l)</b>.</p></details></section><section class="exercise-card" id="exercice-hydrogenation-formation"><p class="eyebrow">EXERCICE 3</p>
+<h3>Calculer l’enthalpie d’une hydrogénation</h3>
 <p class="exercise-origin">Entraînement à partir du TD 2.2, exercice 2</p>
 <p>C₂H₄(g) + H₂(g) → C₂H₆(g), à 298 K.</p>
-<p>En kJ·mol⁻¹ : Δ<sub>f</sub>H°(C₂H₄,g) = 52,28 ; Δ<sub>f</sub>H°(C₂H₆,g) = −84,67 ; Δ<sub>f</sub>H°(H₂,g) = 0. R = 8,314 J·mol⁻¹·K⁻¹. Les gaz sont parfaits.</p>
-<form class="exercise-form" data-exercise="hydrogenation-simple" novalidate>
+<p>En kJ·mol⁻¹ : ΔfH°(C₂H₄,g) = 52,28 ; ΔfH°(C₂H₆,g) = −84,67 ; ΔfH°(H₂,g) = 0.</p>
+<form class="exercise-form" data-exercise="hydrogenation-formation" novalidate>
 <div class="exercise-fields">
 <div class="exercise-field">
-<label for="hydrogenation-simple-reponse-1">1. Enthalpie de réaction ΔrH° <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hydrogenation-simple-reponse-1" name="reponse-1" data-expected="-136.95" data-hint="Produits moins réactifs." aria-describedby="hydrogenation-simple-reponse-1-feedback" data-tolerance="0.02" placeholder="Votre réponse"><p id="hydrogenation-simple-reponse-1-feedback" class="field-feedback"></p>
+<label for="hydrogenation-formation-reponse-1">1. Somme des enthalpies de formation des réactifs <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hydrogenation-formation-reponse-1" name="reponse-1" data-expected="52.28" data-hint="Le dihydrogène est dans son état de référence." aria-describedby="hydrogenation-formation-reponse-1-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="hydrogenation-formation-reponse-1-feedback" class="field-feedback"></p>
 </div>
 <div class="exercise-field">
-<label for="hydrogenation-simple-reponse-2">2. Variation des coefficients gazeux Δνg</label><input type="text" inputmode="decimal" autocomplete="off" id="hydrogenation-simple-reponse-2" name="reponse-2" data-expected="-1" data-hint="1 − (1 + 1)." aria-describedby="hydrogenation-simple-reponse-2-feedback" data-tolerance="0.001" placeholder="Votre réponse"><p id="hydrogenation-simple-reponse-2-feedback" class="field-feedback"></p>
+<label for="hydrogenation-formation-reponse-2">2. Somme des enthalpies de formation des produits <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hydrogenation-formation-reponse-2" name="reponse-2" data-expected="-84.67" data-hint="Le coefficient de C₂H₆ vaut 1." aria-describedby="hydrogenation-formation-reponse-2-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="hydrogenation-formation-reponse-2-feedback" class="field-feedback"></p>
 </div>
 <div class="exercise-field">
-<label for="hydrogenation-simple-reponse-3">3. Énergie interne de réaction ΔrU° <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hydrogenation-simple-reponse-3" name="reponse-3" data-expected="-134.472428" data-hint="ΔrU° = ΔrH° − Δνg RT ; divisez RT par 1000 pour passer en kJ·mol⁻¹." aria-describedby="hydrogenation-simple-reponse-3-feedback" data-tolerance="0.05" placeholder="Votre réponse"><p id="hydrogenation-simple-reponse-3-feedback" class="field-feedback"></p>
+<label for="hydrogenation-formation-reponse-3">3. Enthalpie de réaction ΔrH° <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hydrogenation-formation-reponse-3" name="reponse-3" data-expected="-136.95" data-hint="Produits moins réactifs." aria-describedby="hydrogenation-formation-reponse-3-feedback" data-tolerance="0.02" placeholder="Votre réponse"><p id="hydrogenation-formation-reponse-3-feedback" class="field-feedback"></p>
 </div>
 </div>
 <div class="exercise-actions">
@@ -245,8 +367,8 @@
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Écrivez séparément la somme des enthalpies de formation et le compte des coefficients gazeux.</p></details><details class="exercise-solution"><summary>Correction</summary><p>ΔrH° = −84,67 − 52,28 = −136,95 kJ·mol⁻¹ ; Δνg = −1.</p>
-<p>ΔrU° = −136,95 − (−1 × 8,314 × 298 / 1000) ≈ −134,47 kJ·mol⁻¹.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Écrivez la somme des produits, puis soustrayez celle des réactifs.</p></details><details class="exercise-solution"><summary>Correction</summary><p>Réactifs : 52,28 + 0 = 52,28 kJ·mol⁻¹. Produit : −84,67 kJ·mol⁻¹.</p>
+<p>ΔrH° = −84,67 − 52,28 = −136,95 kJ·mol⁻¹.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Enthalpie de réaction</h3>
@@ -266,8 +388,8 @@
 <div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2>
 <p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
-<script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
-<script src="exercices.js" defer></script>
-<script src="interactions.js" defer></script>
+<script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=6e363c55a6ac" defer></script>
+<script src="exercices.js?v=e57b80f52189" defer></script>
+<script src="interactions.js?v=793eea70e58b" defer></script>
 </body>
 </html>

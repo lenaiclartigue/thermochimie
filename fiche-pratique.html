@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Fiche pratique · Thermochimie</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=d29bfa8568e1">
 </head>
 <body>
 <header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main class="practical-guide"><p class="eyebrow">FORMULES ET MÉTHODES</p>
@@ -121,7 +121,8 @@
 <div class="formula">ΔH = n Δ<sub>changement d’état</sub>H°<br>Q<sub>total</sub> = ∑ Q<sub>chauffage</sub> + ∑ Q<sub>changement d’état</sub>
 </div>
 <p>n est la quantité transformée. Utiliser l’enthalpie molaire du changement d’état à la température de cette étape.</p>
-</div></section><section id="reaction"><h2>Enthalpies de réaction et cycles de Hess</h2>
+</div>
+<p><strong>Notation :</strong> Δ renvoie à une variation ; H à l’enthalpie ; l’indice r, f, comb, fus ou vap au type de transformation ; ° aux états standard ; T à la température en kelvins. ΔH est en J ; ΔrH en J·mol⁻¹.</p></section><section id="reaction"><h2>Enthalpies de réaction et cycles de Hess</h2>
 <div class="formula-entry">
 <h3>Définition et avancement</h3>
 <div class="formula">Δ<sub>r</sub>H = (∂H/∂ξ)<sub>T,p</sub><br>ΔH ≈ ξ Δ<sub>r</sub>H°</div>
@@ -142,7 +143,10 @@
 <div class="formula">A–B(g) → A(g) + B(g) : Δ<sub>diss</sub>H° &gt; 0<br>M(g) → M⁺(g) + e⁻ : Δ<sub>ion</sub>H° &gt; 0<br>M(g) + e⁻ → M⁻(g) : Δ<sub>AE</sub>H°</div>
 <p>Pour la formation d’une liaison à partir des atomes gazeux, on utilise l’opposé de son enthalpie de dissociation.</p>
 </div>
-<a href="enthalpie-reaction.html#enthalpies-particulieres">Revoir les définitions des enthalpies particulières</a><p><strong>Phases :</strong> seules les espèces de même formule et dans le même état peuvent s’annuler dans la somme des équations. Ajouter, si nécessaire, les enthalpies de changement d’état ou de dissolution. La dissolution A(s) → A(aq) diffère de la dissociation d’une liaison gazeuse.</p></section><section id="calorimetrie"><h2>Bilans calorimétriques</h2>
+<a href="enthalpie-reaction.html#enthalpies-particulieres">Revoir les définitions des enthalpies particulières</a><p><strong>Phases :</strong> seules les espèces de même formule et dans le même état peuvent s’annuler dans la somme des équations. Ajouter, si nécessaire, les enthalpies de changement d’état ou de dissolution. La dissolution A(s) → A(aq) diffère de la dissociation d’une liaison gazeuse.</p>
+<p><strong>Corps simple :</strong> un seul élément chimique, par exemple H₂, O₂ ou C(graphite). Un corps composé contient plusieurs éléments. La formation produit une mole du composé à partir des corps simples de référence.</p>
+<p><strong>Combustion :</strong> H₂O(g) sauf indication contraire dans ce parcours ; l’exercice du méthane du diaporama impose H₂O(l). Les enthalpies de liaison concernent des espèces gazeuses pour isoler la liaison des interactions intermoléculaires.</p>
+<p><strong>Dissolution d’un solide ionique :</strong> dissociation du réseau et solvatation des ions ; dans l’eau, hydratation. La dissolution d’un composé moléculaire ne forme pas nécessairement d’ions.</p></section><section id="calorimetrie"><h2>Bilans calorimétriques</h2>
 <div class="formula-entry">
 <h3>Somme des contributions</h3>
 <div class="formula">∑ Q<sub>p,i</sub> = 0<br>Q<sub>calo</sub> + Q<sub>chauffage</sub> + Q<sub>changement d’état</sub> + Q<sub>réaction</sub> = 0</div>
@@ -158,12 +162,6 @@
 <div class="formula">Q<sub>réaction</sub> = −∑ Q<sub>autres contributions</sub>
 </div>
 <p>Calculer séparément chaque variation de température. Dans l’exercice Zn/Cu²⁺, la somme comporte le calorimètre, la solution et le zinc.</p>
-</div>
-<div class="formula-entry">
-<h3>Relation entre ΔrH° et ΔrU°</h3>
-<div class="formula">Δ<sub>r</sub>H° = Δ<sub>r</sub>U° + Δν<sub>g</sub> RT<br>Δν<sub>g</sub> = ∑ ν<sub>produits gazeux</sub> − ∑ ν<sub>réactifs gazeux</sub>
-</div>
-<p>Modèle des gaz parfaits, contribution pV des phases condensées négligée. Compter seulement les espèces gazeuses et utiliser T en kelvins.</p>
 </div>
 <div class="formula-card">
 <h3>Fusion partielle ou totale</h3>
@@ -196,7 +194,8 @@
 </table></div>
 <p>Inverser les bornes change le signe de l’intégrale. Trouver une primitive de pext(V) pour un chemin donné ne fait pas de W une fonction d’état : la courbe pext(V) peut changer avec le chemin.</p>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
-<p>Pour voir simplement le lien entre une intégrale et une aire, regardez la vidéo <a href="https://youtu.be/jkxNKkmEXZA" target="_blank" rel="noopener noreferrer">Déterminer une intégrale par calculs d’aire — Yvan Monka</a>.</p>
+<p><strong>Calculer :</strong> <a href="https://youtu.be/8ci1RrNH1L0" target="_blank" rel="noopener noreferrer">Calculer une intégrale à l’aide d’une primitive — Yvan Monka</a>. Pour appliquer F(b) − F(a) pas à pas.</p>
+<p>Pour visualiser le lien avec l’aire sous la courbe : <a href="https://youtu.be/jkxNKkmEXZA" target="_blank" rel="noopener noreferrer">Déterminer une intégrale par calculs d’aire — Yvan Monka</a>.</p>
 <p class="muted">Facultatif · niveau terminale · vidéo en français · nouvel onglet</p></aside><a href="premier-principe.html#integrale-travail">Revenir à l’illustration interactive des rectangles</a></section><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Fiche pratique · CC BY-NC-ND 4.0</p></main><footer><div>
 <strong>Thermochimie · Licence</strong><p>Conception du parcours : Lénaïc Lartigue.</p>
 </div>
@@ -206,7 +205,7 @@
 <div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2>
 <p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
-<script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
-<script src="exercices.js" defer></script>
+<script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=6e363c55a6ac" defer></script>
+<script src="exercices.js?v=e57b80f52189" defer></script>
 </body>
 </html>

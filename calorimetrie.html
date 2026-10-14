@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Calorimétrie · Thermochimie</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=d29bfa8568e1">
 </head>
 <body>
 <header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main data-current-module="6"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties du cours"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
@@ -27,7 +27,6 @@
 <li><a href="#etalonnage">Déterminer la capacité du calorimètre</a></li>
 <li><a href="#chaleur-reaction">Déterminer une chaleur de réaction</a></li>
 <li><a href="#volume-constant">Chaleur mesurée à volume constant</a></li>
-<li><a href="#energie-enthalpie">Relier énergie interne et enthalpie de réaction</a></li>
 </ul></nav><section class="course-section" data-source-slides="33–35"><h2 id="calorimetre">Définition et description du calorimètre</h2>
 <div class="definition">
 <h3>Calorimètre</h3>
@@ -36,9 +35,9 @@
 <p>Le vase Dewar limite les échanges de chaleur avec l’extérieur. Un thermomètre mesure la variation de température ; un agitateur homogénéise la solution. La double paroi argentée limite les pertes par rayonnement et le vide entre les parois limite les pertes par conduction.</p>
 <p>Dans le modèle du cours, l’ensemble calorimétrique est <b>adiabatique</b>. Les constituants peuvent échanger de la chaleur entre eux.</p>
 <div class="figure-pair">
-<figure class="course-figure " id="figure-calorimetre-coupe"><button class="figure-open" type="button" data-image-full="assets/images/calorimetre-coupe.png" data-image-title="Coupe du calorimètre" aria-label="Agrandir : Coupe du calorimètre" aria-describedby="figure-calorimetre-coupe-caption"><img src="assets/images/calorimetre-coupe.png" width="813" height="1292" loading="lazy" decoding="async" alt="Schéma en coupe du calorimètre avec double paroi, liquide, thermomètre et agitateur."><span class="figure-expand" aria-hidden="true">Agrandir le schéma ↗</span></button><figcaption id="figure-calorimetre-coupe-caption">Coupe du calorimètre : récipient, double paroi, thermomètre et agitateur.</figcaption></figure><figure class="course-figure " id="figure-calorimetre-materiel"><button class="figure-open" type="button" data-image-full="assets/images/calorimetre-materiel.png" data-image-title="Matériel de calorimétrie" aria-label="Agrandir : Matériel de calorimétrie" aria-describedby="figure-calorimetre-materiel-caption"><img src="assets/images/calorimetre-materiel.png" width="1503" height="1167" loading="lazy" decoding="async" alt="Photographie des éléments d’un calorimètre : récipient isolant, récipients intérieurs, couvercle, agitateur et thermomètre."><span class="figure-expand" aria-hidden="true">Agrandir le schéma ↗</span></button><figcaption id="figure-calorimetre-materiel-caption">Les éléments du dispositif présentés dans le diaporama.</figcaption></figure>
+<figure class="course-figure " id="figure-calorimetre-coupe"><img src="assets/images/calorimetre-coupe.png" width="813" height="1292" loading="lazy" decoding="async" alt="Schéma en coupe du calorimètre avec double paroi, liquide, thermomètre et agitateur."><figcaption id="figure-calorimetre-coupe-caption">Coupe du calorimètre : récipient, double paroi, thermomètre et agitateur.</figcaption></figure><figure class="course-figure " id="figure-calorimetre-materiel"><img src="assets/images/calorimetre-materiel.png" width="1503" height="1167" loading="lazy" decoding="async" alt="Photographie des éléments d’un calorimètre : récipient isolant, récipients intérieurs, couvercle, agitateur et thermomètre."><figcaption id="figure-calorimetre-materiel-caption">Les éléments du dispositif présentés dans le diaporama.</figcaption></figure>
 </div>
-<details class="historical-figure"><summary>Voir l’illustration historique du cours</summary><figure class="course-figure figure-historical" id="figure-calorimetre-historique"><button class="figure-open" type="button" data-image-full="assets/images/calorimetre-historique.png" data-image-title="Illustration historique du calorimètre" aria-label="Agrandir : Illustration historique du calorimètre" aria-describedby="figure-calorimetre-historique-caption"><img src="assets/images/calorimetre-historique.png" width="1005" height="1464" loading="lazy" decoding="async" alt="Titre du Traité élémentaire de chimie de Lavoisier et gravure du calorimètre avec ses différentes pièces."><span class="figure-expand" aria-hidden="true">Agrandir le schéma ↗</span></button><figcaption id="figure-calorimetre-historique-caption">Illustration du <i>Traité élémentaire de chimie</i> de Lavoisier, reproduite dans le diaporama.</figcaption></figure></details></section><section class="course-section" data-source-slides="36–37"><h2 id="bilan-thermique">Établir le bilan thermique</h2>
+<figure class="course-figure figure-historical" id="figure-calorimetre-historique"><img src="assets/images/calorimetre-historique.png" width="1005" height="1464" loading="lazy" decoding="async" alt="Titre du Traité élémentaire de chimie de Lavoisier et gravure du calorimètre avec ses différentes pièces."><figcaption id="figure-calorimetre-historique-caption">Illustration du <i>Traité élémentaire de chimie</i> de Lavoisier, reproduite dans le diaporama.</figcaption></figure></section><section class="course-section" data-source-slides="36–37"><h2 id="bilan-thermique">Établir le bilan thermique</h2>
 <p>On fait le bilan de toutes les transformations physico-chimiques à l’intérieur du calorimètre. À pression constante, les chaleurs échangées sont reliées aux variations d’enthalpie.</p>
 <div class="formula">∑ Q<sub>p,i</sub> = 0</div>
 <div class="table-scroll"><table>
@@ -103,16 +102,13 @@
 <p>Une fois la capacité du calorimètre connue, on écrit le bilan en ajoutant la contribution de la réaction à celles des variations de température et des éventuels changements d’état.</p>
 <div class="formula">ξ Δ<sub>r</sub>H° + ∑ Q<sub>chauffage</sub> + ∑ Q<sub>changement d’état</sub> = 0</div>
 <p>Dans l’exercice Zn/Cu²⁺ du cours, on calcule les trois contributions thermiques indiquées dans le bilan, puis on détermine la variation d’enthalpie libérée par la réaction.</p>
-<figure class="course-figure figure-medium" id="figure-calorimetre-zinc-cuivre"><button class="figure-open" type="button" data-image-full="assets/images/calorimetre-zinc-cuivre.png" data-image-title="Montage de la réaction Zn/Cu²⁺" aria-label="Agrandir : Montage de la réaction Zn/Cu²⁺" aria-describedby="figure-calorimetre-zinc-cuivre-caption"><img src="assets/images/calorimetre-zinc-cuivre.png" width="964" height="829" loading="lazy" decoding="async" alt="Calorimètre avec solution d’ions Cu2+ aqueux, ajout de zinc solide, thermomètre et agitateur."><span class="figure-expand" aria-hidden="true">Agrandir le schéma ↗</span></button><figcaption id="figure-calorimetre-zinc-cuivre-caption">Montage de l’exercice : introduction de Zn(s) dans la solution contenant Cu²⁺(aq), avec thermomètre et agitateur.</figcaption></figure><div>
+<figure class="course-figure figure-medium" id="figure-calorimetre-zinc-cuivre"><img src="assets/images/calorimetre-zinc-cuivre.png" width="964" height="829" loading="lazy" decoding="async" alt="Calorimètre avec solution d’ions Cu2+ aqueux, ajout de zinc solide, thermomètre et agitateur."><figcaption id="figure-calorimetre-zinc-cuivre-caption">Montage de l’exercice : introduction de Zn(s) dans la solution contenant Cu²⁺(aq), avec thermomètre et agitateur.</figcaption></figure><div>
 <p>Une fois Q<sub>réaction</sub> obtenu, Δ<sub>r</sub>H ≈ Q<sub>réaction</sub>/ξ. Pour des solutions, les quantités initiales se calculent avec n = cV ; les coefficients de la réaction permettent de trouver le réactif limitant. Chaque solution et le calorimètre gardent leur propre température initiale dans les termes de chauffage.</p>
 <p>Pour une dissolution d’une quantité n de substance, Δ<sub>dissol</sub>H ≈ Q<sub>dissolution</sub>/n. Si le contenu refroidit, sa contribution de chauffage est négative : la dissolution reçoit une chaleur positive dans ce bilan adiabatique.</p>
 </div></section><section class="course-section" data-source-td="chapitre-2"><h2 id="volume-constant">Chaleur mesurée à volume constant</h2>
 <p>Dans l’exercice de la bombe calorimétrique, le récipient de réaction est rigide : V est constant et le travail de pression est nul. En ne considérant que ce travail, le premier principe donne :</p>
 <div class="formula">Q<sub>V, réaction</sub> = ΔU<sub>réaction</sub><br>Δ<sub>r</sub>U ≈ Q<sub>V, réaction</sub>/ξ</div>
-<p>Une énergie « libérée » ou « dégagée » par la réaction doit être affectée d’un signe négatif du point de vue du système réactionnel. On convertit ensuite Δ<sub>r</sub>U en Δ<sub>r</sub>H avec Δν<sub>g</sub>RT. À volume constant, la chaleur de réaction mesurée ne donne donc pas directement ΔH.</p></section><section class="course-section" data-source-slides="42–43"><h2 id="energie-enthalpie">Relier énergie interne et enthalpie de réaction</h2>
-<p>Le cours utilise H = U + pV. Pour les gaz parfaits, en négligeant le volume des phases condensées devant celui des gaz, on obtient :</p>
-<div class="formula">Δ<sub>r</sub>H° = Δ<sub>r</sub>U° + Δν<sub>g</sub> RT</div>
-<p>Δν<sub>g</sub> est la somme des coefficients stœchiométriques des produits gazeux moins celle des réactifs gazeux. Seules les espèces gazeuses sont comptées. Utiliser T en kelvins et des unités d’énergie cohérentes avec R.</p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Calorimétrie · CC BY-NC-ND 4.0</p>
+<p>Une énergie « libérée » ou « dégagée » par la réaction est négative du point de vue du système réactionnel. À volume constant, la chaleur mesurée donne ΔU et non directement ΔH.</p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Calorimétrie · CC BY-NC-ND 4.0</p>
 <p class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></p>
 </div>
 <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
@@ -154,10 +150,10 @@
 </fieldset>
 <p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-source-slides="42–43" data-correct="1" data-explanation="Il s’agit des coefficients des produits gazeux moins ceux des réactifs gazeux.">
+<div class="quiz-item" data-source-slides="19–20, 36" data-correct="1" data-explanation="La chaleur totale de réaction est rapportée à l’avancement ξ, déterminé avec le réactif limitant.">
 <fieldset>
-<legend>6. Dans ΔrH° = ΔrU° + Δνg RT, Δνg compte…</legend>
-<label class="quiz-option"><input type="radio" name="q5" value="0" required><span>toutes les espèces</span></label><label class="quiz-option"><input type="radio" name="q5" value="1" required><span>les espèces gazeuses seulement</span></label><label class="quiz-option"><input type="radio" name="q5" value="2" required><span>les solides seulement</span></label>
+<legend>6. Pour obtenir une enthalpie de réaction molaire à partir de la chaleur de réaction Qp, on calcule…</legend>
+<label class="quiz-option"><input type="radio" name="q5" value="0" required><span>Qp × ξ</span></label><label class="quiz-option"><input type="radio" name="q5" value="1" required><span>Qp / ξ</span></label><label class="quiz-option"><input type="radio" name="q5" value="2" required><span>Qp / ΔT</span></label>
 </fieldset>
 <p class="feedback" role="status"></p>
 </div>
@@ -261,9 +257,8 @@
 <div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2>
 <p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
-<script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
-<script src="exercices.js" defer></script>
-<script src="interactions.js" defer></script>
-<script src="illustrations.js" defer></script>
+<script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=6e363c55a6ac" defer></script>
+<script src="exercices.js?v=e57b80f52189" defer></script>
+<script src="interactions.js?v=793eea70e58b" defer></script>
 </body>
 </html>

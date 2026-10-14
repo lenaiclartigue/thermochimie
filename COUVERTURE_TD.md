@@ -4,7 +4,15 @@ Vérification du 14 octobre 2026 : fascicule 2026–2027, pages PDF 8 à 17, soi
 
 ## Conclusion et ordre de travail
 
-Les méthodes identifiées comme nécessaires figurent maintenant dans **Comprendre**, au plus tard dans la partie indiquée ci-dessous. Les 40 QCM vérifient les définitions et relations du diaporama ; les 18 exercices courts entraînent des étapes élémentaires. Les TD restent des problèmes de synthèse : leurs enchaînements complets ne sont pas reproduits dans les entraînements.
+La relation ΔrH° = ΔrU° + ΔνgRT a été **retirée à la demande de l’enseignant**. Le parcours n’a donc plus pour objectif de couvrir toutes les questions du fascicule. Les questions suivantes doivent être écartées ou accompagnées d’un complément séparé si elles sont proposées :
+
+| TD | Question concernée | Situation dans le parcours |
+| --- | --- | --- |
+| 2.2 ex.4 — TNT | Partie du calcul demandant ΔrU° à partir de ΔrH° | Non couverte ; le calcul de ΔrH° par les enthalpies de formation reste couvert |
+| 2.4 ex.3 — Bombe calorimétrique | Question 3, démonstration de ΔcombH°−ΔcombU° = −2RT | Non couverte ; QV=ΔU et son application molaire restent disponibles |
+| 2.4 ex.4 — Relation H/U du benzène | Questions 1–3 | Hors du périmètre actuel |
+
+Les autres méthodes repérées restent présentes. Les 40 QCM et 18 exercices courts entraînent les bases ; les TD demeurent des problèmes de synthèse. Les ressources externes sont facultatives et ne remplacent pas une notion requise par les exercices proposés.
 
 Le chapitre 1 est supposé déjà étudié. Les rappels de quantités, gaz, avancement et équilibre sont regroupés dans [la partie 1](systeme.html#rappels-chapitre1). Les méthodes dépliables font partie du parcours utile aux TD. Les ressources externes sont facultatives ; aucune notion nécessaire ne dépend de leur lecture.
 
@@ -19,7 +27,7 @@ La numérotation du fascicule ne correspond pas exactement à celle du site : **
 | 2.2 — 1, vaporisation | n=m/M, chaleur latente, volume du gaz, travail, ΔU=Q+W | [P3 : bilan de vaporisation](enthalpie.html#bilan-vaporisation) ; entraînements chauffage/vaporisation | Parties 1–3 |
 | 2.2 — 2, hydrogénation | Enthalpies de formation, somme produits moins réactifs, état de référence de H₂ | [P4 : tables de formation](enthalpie-reaction.html#tables-formation) ; entraînement hydrogénation | Parties 1–4 |
 | 2.2 — 3, FeS₂ et NH₃ | Coefficients et phases, enthalpies de formation nulles des éléments de référence | [P4 : formation](enthalpie-reaction.html#enthalpies-particulieres) et [tables](enthalpie-reaction.html#tables-formation) ; exercices benzène et combustion | Parties 1–4 |
-| 2.2 — 4, TNT | Équilibrage, formation, différence ΔrH°−ΔrU°, compte des seuls gaz | [P4 : relation H/U](enthalpie-reaction.html#energie-enthalpie-reaction) ; entraînement hydrogénation et Δνg | Parties 1–4 |
+| 2.2 — 4, TNT | Équilibrage et calcul de ΔrH° couverts ; relation vers ΔrU° retirée | [P4 : tables de formation](enthalpie-reaction.html#tables-formation) | Parties 1–4 pour ΔrH° seulement ; partie ΔrU° non couverte |
 | 2.3 — 1, éthylène et liaisons | Cycle de combustion, sublimation du graphite, compte des liaisons, estimation par valeurs moyennes | [P4 : enthalpies particulières](enthalpie-reaction.html#enthalpies-particulieres), [P5 : liaisons](hess.html#liaisons), [phases et liaisons](hess.html#phases-et-liaisons) ; exercices HCl et propane | Parties 1–5 ; donnée de l’eau à corriger |
 | 2.3 — 2, combustion de l’éthane | Inverser, multiplier et sommer des équations | [P5 : loi de Hess](hess.html#loi-hess), [combustions](hess.html#cycle-propane) ; exercices propane et sens/coefficient | Parties 1–5 |
 | 2.3 — 3, méthane | Formation, condensation, deux eaux dans l’équation, énergie totale ξΔrH, quantité d’un gaz | [P4 : définition](enthalpie-reaction.html#definition-reaction), [P5 : phases](hess.html#phases-et-liaisons), rappels P1 ; entraînements condensation et coefficients | Parties 1–5 ; pression et donnée de transition à préciser |
@@ -30,8 +38,8 @@ La numérotation du fascicule ne correspond pas exactement à celle du site : **
 | 2.3 — 8, lampe à carbure | Formation, combustion, équilibrage, quantités, volume gazeux, autonomie V/débit | [P1 : rappels et débit](systeme.html#rappels-chapitre1), [P4 : formation et combustion](enthalpie-reaction.html#enthalpies-particulieres) ; exercices unités et combustion | Parties 1–5 ; corrigé et données à contrôler |
 | 2.4 — 1, eau et glace | Étalonnage, fusion totale/partielle, masse fondue, chauffage en cinq étapes | [P3 : étapes du chauffage](enthalpie.html#etapes-chauffage), [P6 : fusion](calorimetrie.html#fusion-totale-partielle), [étalonnage](calorimetrie.html#etalonnage) ; exercices vaporisation, étalonnage et fusion partielle | Parties 1–6 ; donnée de vaporisation à harmoniser |
 | 2.4 — 2, neutralisation et sel | Étalonnage, températures initiales distinctes, n=cV, limitant, ΔrH=Q/ξ, sel hydraté et dissolution | [P1 : rappels](systeme.html#rappels-chapitre1), [P4 : dissolution](enthalpie-reaction.html#enthalpie-dissolution), [P6 : chaleur de réaction](calorimetrie.html#chaleur-reaction) ; exercices étalonnage et Zn/Cu²⁺ | Parties 1–6 ; l’équation de neutralisation est donnée, sans prérequis du chapitre 3 |
-| 2.4 — 3, bombe calorimétrique | Combustion, signe d’une chaleur libérée, QV=ΔU, division par ξ, conversion vers ΔrH | [P2 : signes et isochore](premier-principe.html#energy-exchanges), [P4 : H/U](enthalpie-reaction.html#energie-enthalpie-reaction), [P6 : volume constant](calorimetrie.html#volume-constant) | Parties 1–6 |
-| 2.4 — 4, H/U du benzène | Déduire Δνg de (ΔrH−ΔrU)/RT, identifier les phases, recompter les gaz | [P4 : H/U](enthalpie-reaction.html#energie-enthalpie-reaction), [P6 : rappel](calorimetrie.html#energie-enthalpie) ; entraînement hydrogénation | Parties 1–6 (relation déjà disponible en P4) |
+| 2.4 — 3, bombe calorimétrique | Combustion, signe, QV=ΔU et division par ξ ; conversion vers ΔrH retirée | [P6 : volume constant](calorimetrie.html#volume-constant) | Parties 1–6 pour questions 1–2 ; question 3 non couverte |
+| 2.4 — 4, H/U du benzène | Relation retirée du parcours | Aucun développement maintenu | Exercice hors du périmètre actuel |
 
 ## Lacunes comblées dans cette livraison
 
@@ -39,7 +47,6 @@ La numérotation du fascicule ne correspond pas exactement à celle du site : **
 - Définition explicite d’un cycle et conséquence sur les fonctions d’état.
 - Intégration du travail isotherme, conditions pext=p et lecture p(T)/p(V).
 - Bilan de vaporisation et chauffage traversant plusieurs phases.
-- Relation ΔrH/ΔrU présentée dès la partie 4, avant le TD sur le TNT.
 - Dissolution, conservation des phases, sublimation et limites des enthalpies de liaison moyennes.
 - Fusion partielle, chaleur molaire et application de QV=ΔU à la bombe calorimétrique.
 
@@ -58,4 +65,4 @@ La couverture des notions ne corrige pas les énoncés. Les fichiers sources res
 7. **Eau/glace, 2.4 ex. 1 :** le fascicule donne 44,36 kJ·mol⁻¹ pour la vaporisation à 100 °C, contre 40,7 ailleurs à 373 K. Harmoniser cette donnée avant de fixer le résultat attendu.
 8. **Corrigé ancien :** recalculer les applications numériques avec le fascicule distribué, notamment éthane, benzène et sel de Glauber. Le corrigé enseignant complet n’est pas inclus dans le site.
 
-Ce contrôle vise l’absence de prérequis théoriques oubliés. Il ne garantit ni la réussite immédiate des étudiants ni l’exactitude des supports non modifiés. La validation de l’enseignant reste nécessaire pour les points de données ci-dessus.
+Ce contrôle identifie les prérequis théoriques et les questions désormais hors périmètre. Il ne garantit ni la réussite immédiate des étudiants ni l’exactitude des supports non modifiés. La validation de l’enseignant reste nécessaire pour les points de données ci-dessus.

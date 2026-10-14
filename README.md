@@ -1,6 +1,6 @@
 # Thermochimie · Licence
 
-Version « parcours et TD » du 14 octobre 2026 : mise en interaction du diaporama du chapitre 2. Conception du parcours : Lénaïc Lartigue.
+Version « activités interactives et enthalpies » du 14 octobre 2026 : mise en interaction du diaporama du chapitre 2. Conception du parcours : Lénaïc Lartigue.
 
 Site statique pour GitHub Pages. Les six parties suivent le cours commun : **Comprendre → QCM → Exercices → Discussion**. Le chapitre 3 n’est pas développé ici ; les prérequis du chapitre 1 sont rappelés dans la première partie.
 
@@ -17,30 +17,35 @@ Site statique pour GitHub Pages. Les six parties suivent le cours commun : **Com
 
 **40 questions de compréhension et 18 exercices**, soit trois par partie. Les sept exercices du diaporama conservent leur énoncé et leurs données. Les deux activités de restitution sont conservées et neuf entraînements courts sont ajoutés, avec une origine clairement indiquée.
 
-Les méthodes requises par les 18 exercices du fascicule sont expliquées avant leur utilisation : travail isotherme et diagrammes, cycle, phases et dissolution, fusion partielle, relation ΔrH/ΔrU dès la partie 4 et QV=ΔU en calorimétrie. Voir **`COUVERTURE_TD.md`** pour la correspondance et les anomalies des énoncés qui restent à harmoniser. Les ajouts rédigés sont identifiés dans `NOTES_PEDAGOGIQUES.md`.
+Le cours reprend les définitions et les notations du diaporama, avec les activités interactives demandées. La relation entre enthalpie et énergie interne de réaction a été retirée du cours, de la fiche, du QCM et de l’exercice qui l’utilisait. **Les questions de TD qui demandent cette relation ne sont donc plus couvertes** : elles sont signalées dans `COUVERTURE_TD.md` pour adapter la sélection des TD. Les autres compléments nécessaires aux TD sont conservés.
 
 L’accueil présente six encarts. Les deux façons de déterminer une enthalpie de réaction ouvrent vers Hess et la calorimétrie à la fin de `enthalpie-reaction.html`.
 
 ## Interactions
 
-- Le schéma ouvert / fermé / isolé utilise trois petits dessins intégrés au HTML ; les boutons affichent les échanges autorisés.
-- Le schéma d’énergie propose chaleur ou travail, reçus ou cédés, avec flèche, signe et commentaire mis à jour ensemble.
-- L’illustration du travail compare quatre rectangles à un découpage réglable de 4 à 64 rectangles. La courbe reste fixe. L’explication distingue approximation par rectangles et calcul par primitive ; le cas d’une pression constante montre pourquoi un seul rectangle suffit.
-- Les exercices acceptent une validation partielle, proposent des indices et une rubrique **Correction** à ouvrir volontairement.
-- Les lectures facultatives sont placées dans des encarts **Pour aller plus loin** au fil de l’onglet Comprendre. `ressources.html` reste un récapitulatif. Les pages externes peuvent dépasser le programme : elles ne définissent pas le contenu évalué.
+- Systèmes ouvert, fermé et isolé : retour des illustrations du verre, de la bouteille et du thermos, avec les flèches d’échanges. Le thermos est un modèle idéal.
+- Énergie reçue/cédée : chaleur ou travail, signe et sens du transfert.
+- Piston mobile : compression ou détente depuis 2 L contre 1 bar, volume réglable, signe et valeur du travail. Animation désactivée si le navigateur demande une réduction des mouvements.
+- Intégrale : définition, primitive, calcul F(b)−F(a), rectangles conservés et deux vidéos de Yvan Monka (calcul / interprétation par l’aire).
+- Lecture de ΔrH°T : explication de chaque symbole au clic.
+- État standard de référence : température réglable pour Cu, Pb et Hg, avec les transitions du diaporama, températures en °C et K et coexistence aux seuils.
+- Formation de CH₄, H₂O, CO₂ et NH₃ à partir des corps simples de référence, pour une mole de produit.
+- Combustion du méthane ou du propane, avec choix explicite H₂O(g) ou H₂O(l).
+- Changements d’état, rupture/formation d’une liaison et dissolution d’un solide ionique avec solvatation orientée de l’eau.
+- Exercices à validation partielle, indices et **Correction** ouverte à la demande.
 
-## Images intégrées
+Toutes les activités sont réalisées en HTML/SVG/JavaScript, sans service externe ni extension. Les images du diaporama sont affichées directement, sans fenêtre d’agrandissement. Les trois illustrations d’objets sont de taille modérée ; le piston basse résolution est remplacé par l’activité.
 
-Les neuf exports fournis sont conservés à l’identique, en vignettes compactes, agrandissables dans une fenêtre fermable avec zoom. Les grandes images générées du verre, de la bouteille et du thermos sont remplacées par des dessins SVG directement intégrés aux boutons. Les schémas interactifs ne dépendent d’aucun fichier image.
+## Conventions à retenir
 
-Voir `IMAGES_DU_SITE.md`. Les images du diaporama sont dans `assets/images/` et la fenêtre d’agrandissement est gérée par `illustrations.js`.
+Dans les exercices du parcours, l’eau de combustion est gazeuse sauf indication contraire. Les exercices originaux du méthane et du propane indiquent explicitement H₂O(l) : leurs données et phases sont conservées. La distinction entre état standard et état standard de référence est explicite. La dissociation de liaison concerne la phase gazeuse ; pour la dissolution, le modèle séparation d’ions / solvatation concerne un solide ionique, et ne doit pas être généralisé à la formation d’ions lors de toute dissolution.
 
 ## Fichiers communs
 
 - `fiche-pratique.html` : relations du cours, unités et aide mathématique ; impression possible.
 - `integrales.html` : redirection conservée vers les intégrales dans le premier principe.
 - `forum.html` : forum intégré ; `resultats.html` : bilan local et export JSON ; `aide.html` : mode d’emploi.
-- `app.js` : navigation, QCM, scores et historique ; `exercices.js` : réponses et vérification des exercices ; **`interactions.js`** : schémas des systèmes, échanges d’énergie et rectangles.
+- `app.js` : navigation, QCM, scores et historique ; `exercices.js` : réponses et vérification des exercices ; **`interactions.js`** : toutes les activités interactives du cours.
 - `style.css` : présentation, affichage mobile et impression.
 - `giscus-config.js` : configuration des discussions.
 - `LICENSE.md` et `conditions.js` : conditions de réutilisation et citation, affichées dans une fenêtre du site.
@@ -49,11 +54,11 @@ Voir `IMAGES_DU_SITE.md`. Les images du diaporama sont dans `assets/images/` et 
 
 ## Mettre à jour GitHub Pages
 
-L’archive est **complète et cumulative**. Décompresser puis déposer tous les fichiers à la racine du dépôt `lenaiclartigue/thermochimie`, en remplaçant les fichiers existants. Ajouter aussi le dossier **`assets`** complet, ainsi que **`illustrations.js`** et **`interactions.js`**. Le dossier `assets` doit être au même niveau que `index.html`. Ne pas déposer seulement le ZIP ni placer les fichiers dans un sous-dossier.
+L’archive est **complète et cumulative**. Décompresser puis déposer tous les fichiers à la racine du dépôt `lenaiclartigue/thermochimie`, en remplaçant les fichiers existants. Ajouter aussi le dossier **`assets`** complet, ainsi que **`interactions.js`**. Le dossier `assets` doit être au même niveau que `index.html`. Ne pas déposer seulement le ZIP ni placer les fichiers dans un sous-dossier.
 
-Conserver `Deploy from a branch → main → /(root)`. Après le déploiement GitHub, ouvrir [le site](https://lenaiclartigue.github.io/thermochimie/) et actualiser la page si nécessaire. Cette livraison ne déploie rien sur GitHub.
+Conserver `Deploy from a branch → main → /(root)`. Après le déploiement GitHub, ouvrir [le site](https://lenaiclartigue.github.io/thermochimie/) et actualiser la page si nécessaire. Cette livraison ne déploie rien sur GitHub. Les scripts et la feuille de style portent un paramètre de version pour éviter le mélange d’une page nouvelle avec des fichiers anciens conservés en cache. En cas d’affichage ancien après déploiement, actualiser avec Ctrl+F5.
 
-L’ancien `integrales.js` n’est plus utilisé ; la nouvelle illustration est dans `interactions.js`. Conserver `integrales.html` pour les anciens liens. Les anciens fichiers `module-01.html` à `module-08.html` et `cours.js` ne sont plus utilisés. Les PowerPoint, le fascicule de TD et les corrections de TD ne sont pas inclus dans l’archive.
+Les anciens `illustrations.js` (visionneuse) et `integrales.js` ne sont plus utilisés ; la nouvelle illustration est dans `interactions.js`. Conserver `integrales.html` pour les anciens liens. Les anciens fichiers `module-01.html` à `module-08.html` et `cours.js` ne sont plus utilisés. Les PowerPoint, le fascicule de TD et les corrections de TD ne sont pas inclus dans l’archive.
 
 ## Modifier le site
 
@@ -69,7 +74,9 @@ Les encarts de définition utilisent `definition` ; les ressources utilisent `fu
 
 Les réponses et résultats sont conservés **dans ce navigateur uniquement**, sans envoi automatique à l’enseignant ni synchronisation. Le meilleur score QCM sert de repère ; 80 % est un objectif de travail. L’historique conserve jusqu’à 100 tentatives. Les exercices conservent les dernières saisies, les étapes vérifiées et la consultation de la correction. L’export JSON rassemble les résultats locaux.
 
-Les réponses aux neuf exercices déjà présents et les résultats QCM sont conservés : leurs identifiants, champs et réponses attendues ne changent pas. Neuf exercices portent de nouveaux identifiants. Une formulation du QCM de Hess distingue mieux chemin indirect et cycle fermé, sans changer les réponses possibles ni la bonne réponse. Aucun redémarrage de la progression n’est nécessaire pour cette livraison.
+Les réponses des exercices conservés restent utilisables. L’exercice hydrogénation/H-U est remplacé par un exercice limité au calcul par les enthalpies de formation, avec un nouvel identifiant. Son ancien résultat n’est plus affiché dans le bilan ; il reste dans les données locales exportables.
+
+Une question du QCM de calorimétrie change : la relation H/U est remplacée par le passage de Q à l’enthalpie molaire par division par ξ. Seules les réponses et la progression de ce quiz sont réinitialisées une fois ; les autres quiz restent conservés. L’historique garde les anciennes tentatives, identifiées comme version antérieure pour ce quiz.
 
 Clés actuelles : `thermo-progress-six-slides-v3`, `thermo-answers-six-slides-v3`, `thermo-exercises-slides-v2`. L’historique conserve la clé `thermo-attempts-six-v1`. L’effacement global supprime aussi les clés de la version précédente.
 

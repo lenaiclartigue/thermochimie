@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Premier principe, travail et chaleur · Thermochimie</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=d29bfa8568e1">
 </head>
 <body>
 <header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main data-current-module="2"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties du cours"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
@@ -65,7 +65,18 @@
 </div>
 <p>Une variation du volume du système, en présence de forces de pression extérieures, donne lieu au travail élémentaire :</p>
 <div class="formula">δW = −p<sub>ext</sub> dV</div>
-<figure class="course-figure figure-small" id="figure-travail-piston"><button class="figure-open" type="button" data-image-full="assets/images/travail-piston.png" data-image-title="Travail des forces de pression" aria-label="Agrandir : Travail des forces de pression" aria-describedby="figure-travail-piston-caption"><img src="assets/images/travail-piston.png" width="135" height="176" loading="lazy" decoding="async" alt="Gaz dans un cylindre à piston ; pression extérieure pext, déplacement du piston et variation de volume ΔV indiqués sur le dessin."><span class="figure-expand" aria-hidden="true">Agrandir le schéma ↗</span></button><figcaption id="figure-travail-piston-caption">Le déplacement du piston fait varier le volume du gaz de ΔV, sous une pression extérieure p<sub>ext</sub>.</figcaption></figure><p>Si la pression extérieure est constante, la transformation est <b>monobare</b> :</p>
+<div class="course-interactive" id="piston-interactif">
+<h3>Déplacer le piston : compression ou détente</h3>
+<p>Le système est le gaz sous le piston. Ici, p<sub>ext</sub> = 1 bar est constante. Chaque mouvement part du repère Vᵢ = 2 L.</p>
+<div class="choice-buttons" role="group" aria-label="Mouvement du piston">
+<button type="button" data-piston="compression">Comprimer</button><button type="button" data-piston="detente">Détendre</button><button type="button" data-piston="reset">Revenir au départ</button>
+</div>
+<label class="range-label" for="piston-volume">Volume final V<sub>f</sub> : <output id="piston-volume-value" for="piston-volume">2,00 L</output></label><input id="piston-volume" type="range" min="1" max="3" step="0.05" value="2"><svg viewbox="0 0 600 320" role="img" aria-labelledby="piston-title piston-desc"><title id="piston-title">Gaz enfermé dans un cylindre à piston mobile</title>
+<desc id="piston-desc">Piston à sa position initiale, volume de deux litres.</desc><text x="470" y="36" text-anchor="middle" font-size="15">Milieu extérieur</text><text x="470" y="58" text-anchor="middle" font-size="15">p ext = 1 bar</text><path d="M150 50V290H370V50" fill="none" stroke="#172e42" stroke-width="5"></path><rect id="piston-gas" x="153" y="170" width="214" height="117" fill="#d5e8ef"></rect><line x1="130" y1="170" x2="390" y2="170" stroke="#7d8990" stroke-dasharray="6 5"></line><text x="405" y="174" font-size="16">Départ : Vᵢ = 2 L</text><g id="piston-moving"><rect x="149" y="161" width="222" height="16" rx="3" fill="#718997" stroke="#172e42" stroke-width="2"></rect><rect x="253" y="85" width="14" height="76" fill="#718997"></rect><path d="M235 85H285" stroke="#172e42" stroke-width="5"></path></g><text x="260" y="270" text-anchor="middle">Gaz = système</text><path id="piston-motion" d="" fill="none" stroke="#226956" stroke-width="4"></path><text id="piston-sign" x="75" y="225" text-anchor="middle" font-weight="bold">W = 0</text></svg><div class="formula" id="piston-balance">ΔV = 0 L ; W = 0 J</div>
+<p id="piston-result" role="status">Choisissez une compression ou une détente pour observer le déplacement et le travail.</p>
+<p class="muted">W = −p<sub>ext</sub>(V<sub>f</sub> − Vᵢ), avec 1 bar·L = 100 J. La flèche près du piston indique son déplacement. Ce schéma illustre le travail ; il n’impose pas une température constante.</p>
+</div>
+<p>Si la pression extérieure est constante, la transformation est <b>monobare</b> :</p>
 <div class="formula">W = −p<sub>ext</sub>(V<sub>f</sub> − V<sub>i</sub>)</div>
 <p>À pression extérieure positive, une augmentation de volume donne W &lt; 0 ; une diminution de volume donne W &gt; 0.</p>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
@@ -119,6 +130,14 @@
 <p>Les relations sur W concernent le travail des forces de pression. <b>Adiabatique ne signifie pas isotherme :</b> l’absence de chaleur échangée n’impose pas une température constante.</p>
 <p><b>Isobare</b> concerne la pression du système ; <b>monobare</b> concerne la pression extérieure utilisée pour calculer W.</p>
 </section><section class="course-section" data-source-slides="12 ; aide mathématique demandée"><h2 id="integrale-travail">Comprendre l’intégrale du travail</h2>
+<div class="definition" id="definition-integrale">
+<h3>Qu’est-ce qu’une intégrale ?</h3>
+<p>Pour une fonction continue f entre a et b, l’intégrale ∫<sub>a</sub><sup>b</sup> f(x) dx est un <strong>nombre</strong> qui cumule les contributions de f sur cet intervalle. a et b sont les bornes ; x est la variable d’intégration.</p>
+<p>Une <strong>primitive</strong> de f est une fonction F dont la dérivée est f : F′ = f. Elle permet de calculer l’intégrale :</p>
+<div class="formula">∫<sub>a</sub><sup>b</sup> f(x) dx = [F(x)]<sub>a</sub><sup>b</sup> = F(b) − F(a)</div>
+<p>Il faut donc trouver une primitive, l’évaluer à la borne finale puis à la borne initiale, et soustraire. Par exemple, une primitive de 2x est x², donc ∫<sub>1</sub><sup>3</sup> 2x dx = 3² − 1² = 8.</p>
+<p>Quand f est positive et a &lt; b, ce nombre représente l’aire sous la courbe. Les rectangles ci-dessous illustrent cette accumulation ; le calcul par primitive donne la valeur exacte.</p>
+</div>
 <p>Si la pression varie, on additionne les petits travaux le long de la transformation :</p>
 <div class="formula">W = −∫<sub>Vᵢ</sub><sup>V<sub>f</sub></sup> p<sub>ext</sub>(V) dV</div>
 <p>Sur le graphique, un rectangle représente une petite variation de volume multipliée par une pression : son aire vaut p<sub>ext</sub> × ΔV. La somme des aires approche l’intégrale. <b>La courbe reste la même quand on augmente le nombre de rectangles :</b> les rectangles deviennent plus étroits et suivent mieux cette courbe.</p>
@@ -138,7 +157,8 @@
 </div>
 <p>Les rectangles illustrent <b>l’intégrale</b>. Une <b>primitive</b> permet de calculer sa valeur : si F′(V) = p<sub>ext</sub>(V), l’intégrale vaut F(V<sub>f</sub>) − F(V<sub>i</sub>). À pression constante, un seul rectangle donne déjà l’aire exacte.</p>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
-<p>Pour voir simplement le lien entre une intégrale et une aire, regardez la vidéo <a href="https://youtu.be/jkxNKkmEXZA" target="_blank" rel="noopener noreferrer">Déterminer une intégrale par calculs d’aire — Yvan Monka</a>.</p>
+<p><strong>Calculer :</strong> <a href="https://youtu.be/8ci1RrNH1L0" target="_blank" rel="noopener noreferrer">Calculer une intégrale à l’aide d’une primitive — Yvan Monka</a>. Pour appliquer F(b) − F(a) pas à pas.</p>
+<p>Pour visualiser le lien avec l’aire sous la courbe : <a href="https://youtu.be/jkxNKkmEXZA" target="_blank" rel="noopener noreferrer">Déterminer une intégrale par calculs d’aire — Yvan Monka</a>.</p>
 <p class="muted">Facultatif · niveau terminale · vidéo en français · nouvel onglet</p></aside></section><section class="course-section" data-source-td="chapitre-2"><h2 id="travail-et-diagrammes">Choisir le calcul du travail et lire un diagramme</h2>
 <p>La formule de départ est toujours W = −∫ p<sub>ext</sub> dV. Le nom de la transformation ne suffit pas : il faut connaître la pression extérieure le long du chemin.</p>
 <div class="table-wrap"><table>
@@ -375,9 +395,8 @@
 <div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2>
 <p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
-<script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
-<script src="exercices.js" defer></script>
-<script src="interactions.js" defer></script>
-<script src="illustrations.js" defer></script>
+<script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=6e363c55a6ac" defer></script>
+<script src="exercices.js?v=e57b80f52189" defer></script>
+<script src="interactions.js?v=793eea70e58b" defer></script>
 </body>
 </html>

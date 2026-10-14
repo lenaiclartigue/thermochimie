@@ -1,37 +1,39 @@
-# Révision du parcours et couverture des TD — 14 octobre 2026
-
-## Périmètre
-
-Cette livraison conserve le cours commun et ses sept exercices originaux, les deux activités de restitution, les discussions et la licence. Elle répond à la demande de couverture des TD par des explications ciblées et neuf entraînements supplémentaires : **trois exercices par partie, 18 au total**, avec les 40 QCM conservés. Les ajouts rédigés sont identifiés dans `NOTES_PEDAGOGIQUES.md` ; le contrôle des 18 exercices du fascicule est détaillé dans `COUVERTURE_TD.md`.
+# Activités interactives et enthalpies — 14 octobre 2026
 
 ## Modifications
 
-- Remplacement du PDF universitaire de mathématiques par une vidéo française de terminale d’Yvan Monka, dans le premier principe, la fiche pratique et les ressources.
-- Définition explicite d’un cycle fermé et distinction avec les deux chemins du diagramme de Hess. Reformulation d’une question de compréhension pour éviter cette ambiguïté, sans changer sa réponse attendue.
-- Suppression des raccourcis de Comprendre vers les exercices et du renvoi aux intégrales de la fiche pratique demandé par l’enseignant. Le parcours Comprendre → QCM → Exercices reste accessible par les onglets et boutons de fin.
-- Rappels de quantités/avancement/gaz, méthode du travail isotherme et lecture des diagrammes, chauffage par étapes, dissolution et phases, fusion partielle, chaleur molaire et volume constant.
-- Relation ΔrH/ΔrU désormais introduite en partie 4, avant les TD qui la mobilisent ; rappel conservé en calorimétrie.
-- Retour aux petits dessins SVG pour ouvert/fermé/isolé. Nouvelle interaction chaleur/travail reçus/cédés avec flèches, signes et texte synchronisés.
-- Neuf images sources conservées sans modification des pixels, mais affichées en vignettes compactes. Agrandissement et zoom restent dans la page. Les trois grandes images générées ne sont plus utilisées.
-- Conservation des rectangles, des primitives et du cas à pression constante.
-- README, aide, fiche pratique, provenance et ressources mis à jour.
+- Définition d’une intégrale, lien avec une primitive et calcul F(b)−F(a) avant l’illustration par les rectangles. Deux vidéos distinctes de terminale d’Yvan Monka : calcul par primitive et représentation par l’aire.
+- Retour des illustrations homogènes verre/bouteille/thermos, en taille modérée. Images du cours affichées directement, sans visionneuse ni bouton agrandir.
+- Piston animé et manipulable : état initial de 2 L, pression extérieure constante de 1 bar, détente et compression avec signe et valeur de W. Le mouvement respecte la préférence de réduction des animations.
+- Lecture interactive des symboles Δ, indice de transformation, H, ° et T ; distinction entre variation en J et grandeur molaire de réaction.
+- Activité sur les états standard de référence de Cu, Pb et Hg, avec températures issues de la diapo 24, coexistence aux transitions et distinction état standard / état de référence.
+- Définition du corps simple ; formation de CH₄, H₂O, CO₂ et NH₃ à partir des corps simples de référence, pour une mole de produit.
+- Combustion : eau gazeuse par défaut suivant la demande de l’enseignant ; exceptions explicites des exercices du diaporama conservées avec eau liquide.
+- Dissociation de liaison en phase gazeuse pour isoler la liaison des effets intermoléculaires des phases condensées ; activité H₂, Cl₂, HCl avec données du cours.
+- Dissolution : séparation des ions d’un réseau et solvatation par l’eau. Orientation de l’eau représentée autour de Na⁺ et Cl⁻ ; distinction avec la dissolution moléculaire sans formation nécessaire d’ions.
+- Retrait de la relation H/U de réaction du cours, de la fiche et des questions qui l’évaluaient. Les parties de TD non couvertes sont signalées dans `COUVERTURE_TD.md`.
 
-## Vérifications réalisées
+## Diagnostic des interactions signalées
 
-- Lecture croisée des exercices du chapitre 2 et des supports fournis ; tableau des prérequis pour les 18 TD.
-- Contrôle des liens, ancres et identifiants dans les 13 fichiers HTML ; aucun fichier local référencé manquant.
-- Conservation exacte des identifiants, champs, réponses et tolérances des neuf activités existantes.
-- Recalcul des réponses des nouveaux entraînements ; contrôle dans Chromium des 40 réponses QCM et des 18 exercices avec une grille de réponses indépendante des attributs HTML.
-- Réponse fausse, validation partielle, décimales françaises, correction à la demande, restauration après rechargement, export des 18 exercices et effacement.
-- Trois états du système et quatre combinaisons chaleur/travail reçus/cédés : sens des flèches, signes, textes et sélection des boutons.
-- Rectangles de 4 à 64, courbe conservée, cas à pression constante et valeur par primitive.
-- Neuf images effectivement chargées ; agrandissement sans changement d’adresse, zoom, fermeture par croix et Échap, retour du focus.
-- Navigation clavier des onglets, fenêtre de licence, redirection de l’ancienne page des intégrales, impression, affichage des pages et panneaux à 390 px sans débordement global.
-- Inspection visuelle des schémas interactifs et des images compactes sur ordinateur et téléphone.
-- Scripts de scores/sauvegarde, configuration giscus, conditions de consultation et licence identiques à la livraison précédente.
+Les fichiers HTML et `interactions.js` récupérés sur GitHub correspondaient à la dernière archive. Le blocage signalé n’a pas été reproduit dans les contrôles locaux avec ces fichiers. Sa cause dans le navigateur de l’utilisateur n’est donc pas établie.
 
-## Limites et points restant à traiter
+L’initialisation attend désormais explicitement la disponibilité du document. Les scripts et la feuille de style sont référencés avec une empreinte de version : une nouvelle page demande la nouvelle version du fichier, ce qui évite de réutiliser silencieusement un ancien script conservé en cache. Il faut déposer tous les fichiers de l’archive ensemble. La présente livraison n’a pas été publiée sur GitHub.
 
-Les méthodes nécessaires aux TD sont maintenant présentes dans l’ordre indiqué par `COUVERTURE_TD.md`. Cela ne remplace pas la relecture des énoncés : certaines données restent incompatibles ou incomplètes, notamment Sabatier, la pression du méthane, les phases dans certains cycles et la valeur de vaporisation. Le corrigé ancien doit aussi être recalculé avec les données du fascicule actuel.
+## Vérifications
 
-Les PowerPoint, le fascicule et le corrigé enseignant ne sont pas modifiés ni inclus. Le site n’a pas été déployé sur GitHub. L’authentification giscus n’est pas testée par le serveur local. Cette révision n’est pas une nouvelle recherche exhaustive : la nouvelle référence mathématique a été vérifiée, les autres ressources précédemment sélectionnées sont conservées.
+- 40 réponses QCM et 18 exercices vérifiés dans Chromium avec une grille indépendante des valeurs attendues dans le HTML ; les sept exercices originaux du diaporama conservent leurs données.
+- Réponses fausses, validation partielle, correction à la demande, décimales françaises, sauvegarde, restauration, export et effacement.
+- Migration ciblée : seule la progression du quiz de calorimétrie modifié repart de zéro. Les autres résultats restent conservés. L’ancien exercice H/U n’est plus proposé ; son résultat ancien reste exportable.
+- Trois types de systèmes et quatre combinaisons Q/W reçus/cédés, avec flèches, textes et états des boutons.
+- Piston : animation jusqu’aux positions finales, curseur, remise à zéro, W positif en compression et négatif en détente.
+- Cu, Pb et Hg : états de part et d’autre de chaque transition, coexistence exactement aux seuils, conversion °C/K, boutons et saisie.
+- Quatre formations, quatre combustions selon phase de l’eau, six cas de liaison, six changements d’état et trois étapes de dissolution.
+- Inspection des nouveaux visuels à 390 px et sur ordinateur ; contrôle des pages sans débordement horizontal global.
+- Rectangles, primitives, navigation, licence, impression et anciennes adresses conservés. Les schémas/illustrations ont été inspectés visuellement.
+- Identifiants et liens locaux vérifiés, scripts syntaxiquement valides, absence d’erreur JavaScript dans les scénarios testés.
+
+## Limites
+
+Les comportements ont été testés localement dans Chromium. Cela ne constitue pas une validation sur tous les navigateurs ni dans la session de l’utilisateur. L’authentification giscus reste extérieure à ces tests. Les paramètres giscus, adresses des pages et conditions de réutilisation sont conservés.
+
+Les PowerPoint, le fascicule et le corrigé enseignant ne sont pas modifiés ni inclus. Le choix de retirer la relation H/U laisse des questions de TD hors périmètre ; les incohérences des données des énoncés signalées précédemment restent aussi à traiter. Le relevé de couverture a été mis à jour en conséquence.

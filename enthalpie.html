@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Enthalpie · Thermochimie</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=d29bfa8568e1">
 </head>
 <body>
 <header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main data-current-module="3"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties du cours"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
@@ -38,6 +38,11 @@
 </div>
 <p>On utilise ici le travail de pression seul, avec la même pression extérieure constante aux états initial et final. Le bilan s’écrit :</p>
 <div class="formula">ΔU = Q − p<sub>ext</sub>(V<sub>f</sub> − V<sub>i</sub>)<br>ΔH = ΔU + p<sub>ext</sub>(V<sub>f</sub> − V<sub>i</sub>) = Q<sub>p</sub>
+</div>
+<div class="definition">
+<h3>Que signifie ΔH ?</h3>
+<p>H est l’enthalpie, fonction d’état définie par H = U + pV. Δ indique sa <strong>variation entre deux états</strong> : ΔH = H<sub>f</sub> − Hᵢ. Dans les conditions monobares du cours, cette variation est la chaleur transférée.</p>
+<p>Les notations Δ<sub>r</sub>H°<sub>T</sub>, Δ<sub>f</sub>H°<sub>T</sub> ou Δ<sub>vap</sub>H°<sub>T</sub> précisent ensuite le type de transformation, les états standard et la température. Chaque symbole est détaillé dans la partie « Enthalpie de réaction ».</p>
 </div></section><section class="course-section" data-source-slides="16–17"><h2 id="capacite-calorifique">Capacité calorifique</h2>
 <div class="definition">
 <h3>Capacité calorifique C</h3>
@@ -83,7 +88,7 @@
 <p>Pour chauffer puis vaporiser l’eau, on additionne deux contributions : le chauffage de l’eau liquide puis sa vaporisation.</p>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
 <p>La partie « Chaleur latente » du cours de changements de phase est présentée par <a href="https://femto-physique.fr/thermodynamique/changements-de-phase.php" target="_blank" rel="noopener noreferrer">Femto-physique</a>.</p>
-<p class="resource-meta">Lecture facultative · français · nouvel onglet</p></aside><figure class="course-figure figure-medium" id="figure-changements-etat"><button class="figure-open" type="button" data-image-full="assets/images/changements-etat.png" data-image-title="Chauffage et changements d’état" aria-label="Agrandir : Chauffage et changements d’état" aria-describedby="figure-changements-etat-caption"><img src="assets/images/changements-etat.png" width="1077" height="1071" loading="lazy" decoding="async" alt="Température en kelvins en fonction du temps : chauffage du solide, palier solide et liquide, chauffage du liquide, palier liquide et vapeur, chauffage de la vapeur."><span class="figure-expand" aria-hidden="true">Agrandir le schéma ↗</span></button><figcaption id="figure-changements-etat-caption">S : solide ; L : liquide ; V : vapeur. Les paliers correspondent à la coexistence S + L puis L + V.</figcaption></figure></section><section class="course-section" data-source-td="chapitre-2"><h2 id="etapes-chauffage">Décomposer un chauffage en plusieurs étapes</h2>
+<p class="resource-meta">Lecture facultative · français · nouvel onglet</p></aside><figure class="course-figure figure-medium" id="figure-changements-etat"><img src="assets/images/changements-etat.png" width="1077" height="1071" loading="lazy" decoding="async" alt="Température en kelvins en fonction du temps : chauffage du solide, palier solide et liquide, chauffage du liquide, palier liquide et vapeur, chauffage de la vapeur."><figcaption id="figure-changements-etat-caption">S : solide ; L : liquide ; V : vapeur. Les paliers correspondent à la coexistence S + L puis L + V.</figcaption></figure></section><section class="course-section" data-source-td="chapitre-2"><h2 id="etapes-chauffage">Décomposer un chauffage en plusieurs étapes</h2>
 <p>Quand l’état initial et l’état final traversent plusieurs phases, découpez le chemin à chaque changement d’état. À la pression du TD, avec fusion à 0 °C et ébullition à 100 °C, passer de glace à Tᵢ &lt; 0 °C à de la vapeur à T<sub>f</sub> &gt; 100 °C demande cinq contributions :</p>
 <ol>
 <li>Chauffer la glace : Q₁ = m c<sub>glace</sub>(0 − Tᵢ).</li>
@@ -246,9 +251,8 @@
 <div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2>
 <p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
-<script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
-<script src="exercices.js" defer></script>
-<script src="interactions.js" defer></script>
-<script src="illustrations.js" defer></script>
+<script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=6e363c55a6ac" defer></script>
+<script src="exercices.js?v=e57b80f52189" defer></script>
+<script src="interactions.js?v=793eea70e58b" defer></script>
 </body>
 </html>
