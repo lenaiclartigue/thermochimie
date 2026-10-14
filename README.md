@@ -2,7 +2,7 @@
 
 Version du 14 octobre 2026 : site statique à pages séparées, forums intégrés, résultats locaux, guide d’utilisation et conditions en fenêtre modale.
 
-Cours asynchrone du chapitre 2 de XLG1CU040. Conception du parcours : Lénaïc Lartigue. Supports sources : cours de Mireille Le Guennec et Lénaïc Lartigue et fascicule de TD 2026–2027. Le chapitre 1 est un prérequis ; le chapitre 3 reste prévu en séance.
+Cours asynchrone du chapitre 2 de XLG1CU040. Conception du parcours : Lénaïc Lartigue. Le chapitre 1 est un prérequis ; le chapitre 3 reste prévu en séance.
 
 ## Pages et fichiers
 
@@ -16,7 +16,7 @@ Cours asynchrone du chapitre 2 de XLG1CU040. Conception du parcours : Lénaïc L
 | style.css | Présentation commune |
 | app.js | Navigation des onglets, calculs interactifs, quiz, enregistrement local, fenêtres et chargement du forum |
 | giscus-config.js | Identifiants publics du dépôt et de la catégorie GitHub Discussions |
-| LICENSE.md | Conditions de consultation et de réutilisation |
+| LICENSE.md | Conditions d’utilisation et citation |
 | conditions.js | Texte de ces mêmes conditions affiché dans la fenêtre du site |
 | NOTES_PEDAGOGIQUES.md | Points de relecture des documents sources |
 | .nojekyll | Désactivation de Jekyll pour l’hébergement statique |
@@ -69,9 +69,9 @@ Les étudiants peuvent lire les messages dans le site. Pour participer, ils doiv
 
 ## Conditions affichées dans le site
 
-Le bouton « Conditions de consultation et de réutilisation » du pied de page ouvre une fenêtre du site avec une croix de fermeture. La touche Échap et le clic sur le fond permettent aussi de la fermer. Il n’ouvre plus LICENSE.md dans une autre interface.
+Le bouton « Conditions d’utilisation et citation » du pied de page ouvre une fenêtre du site avec une croix de fermeture. La touche Échap et le clic sur le fond permettent aussi de la fermer. Il n’ouvre plus LICENSE.md dans une autre interface.
 
-LICENSE.md et conditions.js contiennent exactement le même texte. Après une modification des conditions, mettre aussi à jour la chaîne window.THERMO_CONDITIONS dans conditions.js. Les conditions du contenu original ne remplacent pas celles des services tiers ni celles des éléments appartenant à d’autres titulaires.
+LICENSE.md et conditions.js contiennent exactement le même texte. Après une modification des conditions, mettre aussi à jour la chaîne window.THERMO_CONDITIONS dans conditions.js. Le texte explique l’usage personnel autorisé, la demande d’accord pour les autres réutilisations et la référence à utiliser pour citer le site. Les droits réservés ne sont pas présentés comme une licence Creative Commons ou open source.
 
 ## Guide et vérifications
 
