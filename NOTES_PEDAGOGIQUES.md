@@ -24,6 +24,10 @@
 
 ## Périmètre de cette version
 
-Le cours écrit couvre les thèmes des 43 diapositives, avec exemples, cinq questions par module et laboratoires. Il ne prétend pas reproduire mot à mot une présentation orale. Les cycles complexes et les problèmes de synthèse restent à discuter en séance ; les références de TD sont des renvois, pas des corrigés complets du fascicule.
+Le cours écrit couvre les thèmes des 43 diapositives, avec exemples, questions regroupées par partie et laboratoires. Il ne prétend pas reproduire mot à mot une présentation orale. Les cycles complexes et les problèmes de synthèse restent à discuter en séance ; les références de TD sont des renvois, pas des corrigés complets du fascicule.
 
 Les durées sont des estimations de travail avec activités et quiz. Ajuster après retour du premier groupe de 32 étudiants. La version n’a pas été essayée par des étudiants et n’a pas fait l’objet d’une validation visuelle en navigateur dans cette session.
+
+## Découpage en six parties
+
+Travail et chaleur sont regroupés avec le premier principe. Les contenus antérieurs ont été regroupés sans réécriture complète : leur répartition détaillée sera discutée avec l’enseignant. Les deux voies de détermination d’une enthalpie de réaction sont indiquées sur l’accueil et dans la partie correspondante.

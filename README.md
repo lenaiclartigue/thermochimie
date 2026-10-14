@@ -1,80 +1,66 @@
 # Thermochimie · Licence
 
-Version du 14 octobre 2026 : site statique à pages séparées, forums intégrés, résultats locaux, guide d’utilisation et conditions en fenêtre modale.
+Version du 14 octobre 2026 : accueil sous forme de page de garde, six parties cliquables, forums intégrés, scores locaux, guide et licence CC BY-NC-ND 4.0 pour les contenus pédagogiques originaux.
 
-Cours asynchrone du chapitre 2 de XLG1CU040. Conception du parcours : Lénaïc Lartigue. Le chapitre 1 est un prérequis ; le chapitre 3 reste prévu en séance.
+Conception du parcours : Lénaïc Lartigue. Le chapitre 1 est un prérequis ; le chapitre 3 reste prévu en séance.
 
-## Pages et fichiers
+## Les six parties
 
-| Fichier | Fonction |
+| Page | Partie |
 | --- | --- |
-| index.html | Accueil et liste des huit modules |
-| module-01.html à module-08.html | Cours, applications, laboratoires, quiz, discussions et préparation des TD |
-| forum.html | Forum général intégré au site |
-| resultats.html | Historique local, détail de la dernière tentative et export des réponses et scores |
-| aide.html | Guide « Utiliser le site » destiné aux étudiants |
-| style.css | Présentation commune |
-| app.js | Navigation des onglets, calculs interactifs, quiz, enregistrement local, fenêtres et chargement du forum |
-| giscus-config.js | Identifiants publics du dépôt et de la catégorie GitHub Discussions |
-| LICENSE.md | Conditions d’utilisation et citation |
-| conditions.js | Texte de ces mêmes conditions affiché dans la fenêtre du site |
-| NOTES_PEDAGOGIQUES.md | Points de relecture des documents sources |
-| .nojekyll | Désactivation de Jekyll pour l’hébergement statique |
+| systeme.html | Décrire un système |
+| premier-principe.html | Premier principe, travail et chaleur |
+| enthalpie.html | Enthalpie |
+| enthalpie-reaction.html | Enthalpie de réaction |
+| hess.html | Cycles de Hess |
+| calorimetrie.html | Calorimétrie |
 
-Le site comporte 12 pages HTML. Les textes et les questions des huit modules sont directement dans leurs fichiers HTML. Il n’utilise plus cours.js. L’encart « Fil conducteur » et la rubrique pédagogique « Comment travailler » ont été retirés. « Utiliser le site » explique uniquement les fonctionnalités disponibles.
+index.html présente le titre « Thermochimie » et six encarts cliquables. Il explique les deux voies pour déterminer une enthalpie de réaction : calcul à partir de données tabulées et de cycles de Hess ; mesure expérimentale par calorimétrie.
 
-## Publication et mises à jour
+Les contenus antérieurs sont conservés et regroupés pour cette étape. La répartition et le contenu détaillé restent à discuter avec l’enseignant. Cette version comprend les mêmes 40 questions et huit activités interactives. Les deux parties regroupant deux anciens modules ont dix questions ; les quatre autres en ont cinq. Un sélecteur permet de choisir entre les activités des parties regroupées.
 
-Toutes les livraisons sont des archives complètes et cumulatives. Utiliser uniquement la plus récente, la décompresser, puis déposer tous ses fichiers à la racine du dépôt lenaiclartigue/thermochimie, en remplaçant les versions précédentes. Ne pas déposer uniquement le ZIP. L’ancien cours.js peut être supprimé.
+## Fichiers communs
 
-Dans GitHub : Settings → Pages → Deploy from a branch → main → /(root).
-Le site est accessible à https://lenaiclartigue.github.io/thermochimie/ après un déploiement réussi. Vérifier le dernier déploiement dans Actions si une mise à jour n’apparaît pas, puis recharger la page sans cache si nécessaire.
+- forum.html : forum général intégré au site.
+- resultats.html : réponses et scores locaux, export de l’historique.
+- aide.html : guide « Utiliser le site ».
+- app.js : interactions, quiz, sauvegarde locale et fenêtres.
+- style.css : présentation.
+- giscus-config.js : configuration publique des commentaires.
+- LICENSE.md et conditions.js : même texte de licence et citation, affiché dans une fenêtre avec croix.
+- NOTES_PEDAGOGIQUES.md : points de relecture des supports.
+- .nojekyll : site statique sans Jekyll.
 
-Aucun serveur supplémentaire n’est nécessaire pour le cours et les quiz. Le service externe giscus est utilisé uniquement pour les commentaires. Il n’existe pas de compte étudiant propre au site ni de stockage central des résultats.
+## Publication
 
-## Modifier le contenu
+Cette archive est complète et cumulative. Décompresser puis déposer tous ses fichiers à la racine du dépôt lenaiclartigue/thermochimie, en remplaçant les versions précédentes. Conserver Settings → Pages → Deploy from a branch → main → /(root).
 
-Ouvrir le HTML du module concerné. Le bloc pane-course contient les leçons, formules, exemples et application numérique. Les commentaires HTML indiquent les zones de modification. pane-quiz contient les questions ; pane-td contient les références aux TD.
+Les anciens module-01.html à module-08.html et cours.js ne sont plus utilisés par cette version : ils peuvent être supprimés du dépôt. Tant qu’ils restent présents, leurs anciennes adresses restent accessibles.
 
-Pour une question de quiz, modifier son intitulé, ses options, data-correct (0 = première réponse, 1 = deuxième, etc.) et data-explanation. Pour une application numérique, modifier aussi data-answer et data-tolerance dans son formulaire. Garder les attributs id utilisés par app.js.
+Le site est publié à https://lenaiclartigue.github.io/thermochimie/ après déploiement réussi. Aucun fichier n’a été envoyé automatiquement sur le compte GitHub par l’assistant.
 
-Les paramètres et les calculs des laboratoires se trouvent dans renderLab, dans app.js. Les styles communs se modifient dans style.css.
+## Modifications
 
-## Quiz et données locales
+Le texte et les quiz sont directement dans le HTML de chaque partie : pane-course pour le cours, pane-quiz pour les questions et pane-td pour la préparation des exercices. Pour les quiz, mettre à jour les options, data-correct (index à partir de 0) et data-explanation. Pour les applications numériques, modifier data-answer, data-tolerance et data-hint dans le formulaire concerné. Garder les identifiants et classes utilisés par app.js.
 
-Chaque module comporte cinq questions. Le bouton « Valider mes réponses » affiche le score et les explications. L’étudiant peut recommencer ; le meilleur score de chaque module est conservé pour la progression. Un seuil de 80 % est un repère d’entraînement, pas une note officielle.
+Les activités interactives se trouvent dans renderLab dans app.js ; les activités regroupées se choisissent dans le menu de l’onglet Expérimenter.
 
-Les choix de la dernière tentative validée sont restaurés lorsque l’étudiant revient sur le module. L’historique conserve au maximum 100 tentatives corrigées, avec date, réponses et score. « Recommencer » retire les choix mémorisés du module pour une nouvelle tentative, sans supprimer l’historique ni le meilleur score.
+## Quiz et résultats
 
-resultats.html affiche cet historique et le détail de la dernière tentative. Le bouton de téléchargement exporte toutes les tentatives conservées au format JSON. Un nom facultatif peut être ajouté à l’export ; il n’est pas envoyé au serveur. L’étudiant choisit ensuite de transmettre son fichier par mail.
+Le bouton « Valider mes réponses » affiche un score et les corrections. Le meilleur score de chaque partie sert de repère de progression ; 80 % n’est pas une note officielle. Les réponses validées sont restaurées dans le navigateur. Les 100 dernières tentatives sont conservées et exportables depuis Mes résultats. Aucun score n’est transmis automatiquement à l’enseignant.
 
-Les résultats restent dans le navigateur et sur l’appareil utilisés. Ils ne sont pas synchronisés entre appareils et ne sont pas transmis automatiquement à l’enseignant. Si le stockage du navigateur est bloqué ou effacé, la sauvegarde peut être indisponible ou perdue. « Ma progression » ouvre une fenêtre permettant d’effacer les réponses, scores et tentatives locales. Ces exports sont déclaratifs, pas des évaluations certifiées.
+Le nouveau découpage utilise des clés de stockage distinctes pour éviter de confondre les scores des anciens modules avec les nouvelles parties. Les anciennes données locales ne sont pas supprimées, mais ne sont pas affichées dans la nouvelle progression. Il n’y a ni synchronisation entre appareils ni évaluation certifiée.
 
-## Forums intégrés
+## Forums
 
-forum.html affiche le fil général. Chaque module possède aussi un onglet Discussion. Le bouton « Afficher les échanges » charge le forum giscus dans la page. Il n’y a plus de lien de navigation envoyant le lecteur vers GitHub.
+Le fil général conserve son adresse forum.html et ses commentaires. Les six nouvelles pages ont des adresses distinctes : giscus leur associe de nouveaux fils via pathname. Les anciennes discussions restent dans GitHub Discussions ; aucun commentaire n’est supprimé par cette mise à jour.
 
-Configuration actuelle :
+Configuration : dépôt lenaiclartigue/thermochimie, catégorie Announcements, correspondance stricte pathname, langue française, thème clair. Les identifiants publics fournis sont conservés dans giscus-config.js. Un compte GitHub est nécessaire pour participer ; le mail et les séances à distance restent possibles.
 
-- dépôt : lenaiclartigue/thermochimie ;
-- identifiant : R_kgDOVHuUzw ;
-- catégorie : Announcements ;
-- identifiant de catégorie : DIC_kwDOVHuUz84DIZGT ;
-- correspondance : pathname, avec correspondance stricte ;
-- langue française, thème clair, zone de commentaire en haut.
+## Licence et guide
 
-Ces identifiants sont publics ; aucun jeton secret ne doit être ajouté. L’application giscus et GitHub Discussions doivent rester autorisés sur le dépôt. Les messages sont stockés dans GitHub Discussions, pas dans les fichiers du site. Remplacer les fichiers HTML ne supprime pas les commentaires. Conserver les noms et chemins des pages pour retrouver leurs fils.
+Les contenus pédagogiques originaux sont sous CC BY-NC-ND 4.0. Le partage sans modification est autorisé avec attribution et sans usage commercial. Une autorisation individuelle n’est donc pas requise pour ce partage conforme. La diffusion d’adaptations et les usages commerciaux nécessitent une autorisation distincte. Les droits tiers et les exceptions légales restent applicables ; le code n’est pas placé automatiquement sous cette licence.
 
-Les étudiants peuvent lire les messages dans le site. Pour participer, ils doivent avoir un compte GitHub et autoriser giscus. Cette connexion peut ouvrir une fenêtre GitHub, puis les échanges restent affichés dans la page. Les messages sont publics. Le mail et les séances à distance restent possibles. Ne pas utiliser le forum pour collecter des scores nominatifs.
+Le pied de page affiche le nom de la licence. Un clic ouvre les explications et la référence de citation dans une fenêtre du site. LICENSE.md et conditions.js doivent rester identiques lorsque le texte est modifié.
 
-## Conditions affichées dans le site
-
-Le bouton « Conditions d’utilisation et citation » du pied de page ouvre une fenêtre du site avec une croix de fermeture. La touche Échap et le clic sur le fond permettent aussi de la fermer. Il n’ouvre plus LICENSE.md dans une autre interface.
-
-LICENSE.md et conditions.js contiennent exactement le même texte. Après une modification des conditions, mettre aussi à jour la chaîne window.THERMO_CONDITIONS dans conditions.js. Le texte explique l’usage personnel autorisé, la demande d’accord pour les autres réutilisations et la référence à utiliser pour citer le site. Les droits réservés ne sont pas présentés comme une licence Creative Commons ou open source.
-
-## Guide et vérifications
-
-La page aide.html explique les onglets, la validation des quiz, l’historique, l’export, les forums, l’impression et les fenêtres de progression et de conditions. Elle est accessible depuis la navigation et le pied de page.
-
-Les liens locaux, les identifiants HTML, la syntaxe JavaScript et l’identité du texte des conditions ont été vérifiés lors de cette livraison. Le rendu de la nouvelle fenêtre et du guide reste à contrôler dans le navigateur après publication. Le contenu pédagogique reste à relire avant diffusion aux étudiants ; les durées sont indicatives.
+Le guide Utiliser le site décrit la navigation, les quiz, les scores, les forums et les fenêtres. Le rendu visuel du nouvel accueil reste à vérifier dans le navigateur après publication ; les liens, les questions et la syntaxe ont été contrôlés localement.

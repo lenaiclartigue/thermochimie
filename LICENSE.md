@@ -1,19 +1,24 @@
-# Conditions d’utilisation et citation
+# Licence et citation
 
-## Licence : droits réservés, avec autorisation d’usage personnel
+## CC BY-NC-ND 4.0
 
-Vous pouvez consulter ce cours, réaliser les activités et imprimer les fiches pour votre apprentissage personnel et non commercial.
+Les contenus pédagogiques originaux de ce site sont proposés par Lénaïc Lartigue sous licence Creative Commons Attribution — Pas d’utilisation commerciale — Pas de partage des adaptations 4.0 International (CC BY-NC-ND 4.0).
 
-Pour reprendre des contenus dans un autre cours, un site, une formation ou une publication, ou pour les redistribuer ou les adapter, demandez au préalable l’accord de Lénaïc Lartigue, sauf si votre usage est déjà autorisé par la loi.
+https://creativecommons.org/licenses/by-nc-nd/4.0/
 
-Le fait que le site soit accessible gratuitement ne signifie pas que ses contenus sont librement réutilisables. Ces conditions ne sont pas une licence Creative Commons ni une licence open source.
+Vous pouvez copier et partager le cours sans modification, y compris pour le transmettre à d’autres personnes, à condition de :
+
+- citer Lénaïc Lartigue et conserver les mentions de source ;
+- indiquer la licence et fournir son lien ;
+- ne pas en faire un usage commercial ;
+- ne pas diffuser de version adaptée ou modifiée.
+
+Ce partage conforme à la licence ne nécessite pas d’autorisation individuelle. Pour diffuser une adaptation ou pour un usage commercial, contactez l’auteur afin de demander une autorisation distincte.
+
+Les exceptions prévues par la loi restent applicables. Ce résumé ne remplace pas le texte officiel de la licence. Les éléments tiers et les contributions au forum restent soumis à leurs propres droits et conditions. La licence ci-dessus porte sur les contenus pédagogiques ; aucune licence open source n’est attribuée au code original par ce fichier.
 
 ## Comment citer le site
 
-Lartigue, L. (2026). Thermochimie : cours de niveau licence. https://lenaiclartigue.github.io/thermochimie/ (consulté le [date de consultation]).
+Lartigue, L. (2026). Thermochimie : cours de niveau licence. https://lenaiclartigue.github.io/thermochimie/ (consulté le [date]). Licence CC BY-NC-ND 4.0 : https://creativecommons.org/licenses/by-nc-nd/4.0/
 
-Si vous réutilisez un contenu avec autorisation, indiquez cette référence et précisez le module concerné. Une citation ne remplace pas l’accord lorsqu’il est nécessaire.
-
-## Éléments tiers
-
-Les services GitHub et giscus et les contributions des participants au forum restent soumis à leurs propres conditions et droits.
+Pour citer une partie précise, ajoutez son titre et son adresse.
