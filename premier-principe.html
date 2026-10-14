@@ -21,256 +21,213 @@
 <div id="pane-course" role="tabpanel" aria-labelledby="tab-course">
 <nav class="lesson-outline" aria-label="Dans cette partie"><p><b>Dans cette partie</b></p>
 <ul>
-<li><a href="#premier-principe-definition">Énergie interne, chaleur et travail</a></li>
-<li><a href="#notion-10">Fonction d’état : les extrémités suffisent</a></li>
-<li><a href="#notion-12">Adiabatique : la chaleur ne traverse pas la frontière</a></li>
-<li><a href="#notion-13">Pression intérieure et pression extérieure</a></li>
-<li><a href="#notion-14">Choisir l’intégrale du travail</a></li>
-</ul></nav><section><h2 id="premier-principe-definition">Énergie interne, chaleur et travail</h2>
+<li><a href="#energie-interne">Énergie interne et premier principe</a></li>
+<li><a href="#fonction-etat">Fonction d’état et chemin suivi</a></li>
+<li><a href="#chaleur-travail">Chaleur et travail</a></li>
+<li><a href="#transformations">Transformations à paramètre constant</a></li>
+<li><a href="#integrale-travail">Comprendre l’intégrale du travail</a></li>
+</ul></nav><section class="course-section" data-source-slides="9–10"><h2 id="energie-interne">Énergie interne et premier principe</h2>
 <div class="definition">
 <h3>Énergie interne U</h3>
-<p>Somme des énergies microscopiques des constituants du système. Sa variation entre un état initial et un état final est ΔU = Uf − Ui ; elle ne dépend pas du chemin suivi.</p>
+<p>Somme des énergies des constituants du système à l’échelle microscopique.</p>
 </div>
-<p>L’énergie cinétique et l’énergie potentielle du système pris dans son ensemble sont distinguées de U. Leurs variations sont négligées dans les bilans de ce chapitre.</p>
+<p>La variation d’énergie interne entre un état initial et un état final s’écrit :</p>
+<div class="formula">ΔU = U<sub>f</sub> − U<sub>i</sub>
+</div>
+<p>Elle s’exprime en joules (J). 1 calorie vaut 4,18 J.</p>
+<div class="definition">
+<h3>Premier principe</h3>
+<p>L’énergie n’est ni créée ni détruite : elle peut être transférée ou convertie sous forme de travail W et de chaleur Q.</p>
+</div>
+<div class="formula">ΔU = Q + W</div>
+<p>Dans les bilans de ce chapitre, on étudie un système fermé et on néglige les variations d’énergie cinétique et potentielle du système dans son ensemble. Les transferts sont comptés <b>positivement s’ils sont reçus</b>, négativement s’ils sont cédés.</p></section><section class="course-section" data-source-slides="9–10"><h2 id="fonction-etat">Fonction d’état et chemin suivi</h2>
+<p>U est une <b>fonction d’état</b> : sa variation dépend des états initial et final, pas du chemin suivi. Q et W dépendent du chemin.</p>
+<div class="formula">ΔU = W₁ + Q₁ = W₂ + Q₂ = W₃ + Q₃</div>
+<p>Pour une transformation infinitésimale :</p>
+<div class="formula">dU = δQ + δW</div>
+<p><b>dU</b> est une différentielle totale exacte. <b>δQ et δW</b> représentent les transferts élémentaires de chaleur et de travail, qui dépendent du chemin.</p>
+<div class="formula">∫<sub>i</sub><sup>f</sup> dU = U<sub>f</sub> − U<sub>i</sub><br>∫<sub>i</sub><sup>f</sup> δQ = Q ; ∫<sub>i</sub><sup>f</sup> δW = W</div>
+<p>Sur un cycle, le système retrouve son état initial : ΔU = 0 et Q + W = 0.</p></section><section class="course-section" data-source-slides="11–12"><h2 id="chaleur-travail">Chaleur et travail</h2>
 <div class="definition">
 <h3>Chaleur Q</h3>
-<p>La chaleur est un mode de transfert d’énergie lié à une différence de température.</p>
+<p>Mode de transfert d’énergie lié à une différence de température.</p>
 </div>
+<p><b>Endothermique :</b> chaleur reçue, Q &gt; 0. <b>Exothermique :</b> chaleur libérée, Q &lt; 0.</p>
 <div class="definition">
 <h3>Travail W</h3>
-<p>Le travail est un mode de transfert d’énergie lié à une force.</p>
+<p>Mode de transfert d’énergie lié à une force.</p>
 </div>
-<p>Convention du cours : énergie reçue positive, énergie cédée négative. Le premier principe exprime la conservation de l’énergie : elle peut être transférée ou convertie. Pour un système fermé dans le cadre indiqué :</p></section><div class="formula">ΔU = U<sub>f</sub> − U<sub>i</sub> = Q + W</div>
-<section><h3>Une méthode de bilan</h3>
-<p>Écrivez d’abord le point de vue : « système = … ». Décrivez ensuite chaque transfert en mots, avant de lui attribuer un signe. Enfin seulement, additionnez Q et W. Une diminution de U ne signifie pas nécessairement que le système a cédé de la chaleur : il peut avoir fourni un travail supérieur à la chaleur reçue.</p>
-<p>Dans le cadre précédent, pour un système isolé, Q = W = 0 et ΔU = 0. Des conversions internes restent possibles : une réaction peut chauffer les constituants tout en conservant l’énergie totale du système.</p>
-<p class="inline-resource"><a href="https://femto-physique.fr/thermodynamique/premier-principe.php" target="_blank" rel="noopener noreferrer">Femto-physique : premier principe et travail de pression</a> <span>(français, nouvel onglet)</span></p></section><section class="example"><h3>Un exemple commenté</h3>
-<p>Un système reçoit 500 J de chaleur et fournit 120 J de travail : Q = +500 J et W = −120 J. Son énergie interne augmente de 380 J.</p></section><section><h3>Avant de regarder la correction</h3>
-<p>Un système cède 200 J de chaleur et reçoit 80 J de travail. Calculez ΔU.</p>
-<details><summary>Afficher le raisonnement</summary><p>ΔU = −200 + 80 = −120 J. L’énergie interne diminue.</p></details></section><section><h3>Comprendre la notion</h3>
-<p>Pour le travail des forces de pression : δW = −p<sub>ext</sub>dV. À pression extérieure constante, on obtient W = −p<sub>ext</sub>(V<sub>f</sub> − V<sub>i</sub>). Contre une pression extérieure positive, une détente fournit du travail (W &lt; 0) et une compression en reçoit (W &gt; 0). Dans le vide, le travail de pression est nul.</p>
-<p><b>Isochore</b> : V constant, donc travail de pression nul. <b>Isobare</b> : pression du système constante. <b>Monobare</b> : pression extérieure constante. <b>Isotherme</b> : T constant. <b>Adiabatique</b> : aucun transfert de chaleur à chaque étape (δQ = 0).</p>
-<p>Pour un gaz parfait de composition fixe, U dépend seulement de T : une transformation isotherme donne ΔU = 0. Cette conclusion ne se transpose pas automatiquement à une réaction chimique qui change la composition.</p></section><section><h3>Repérer le chemin sur un diagramme</h3>
-<p>Dans un diagramme p(V), une isochore est verticale et une isobare est horizontale. Pour un gaz parfait à température constante, pV = nRT : l’isotherme est une hyperbole. Le travail se calcule avec la pression extérieure ; on ne remplace pext par la pression du gaz que lorsque le cadre mécanique le permet, dans la limite mécaniquement réversible, sans frottement et avec un écart de pression infinitésimal.</p>
-<p>Si pext varie, utilisez W = −∫pext dV. La formule −pextΔV est réservée à une pression extérieure constante. Deux chemins de p(V) peuvent donner deux travaux différents pour les mêmes états.</p></section><div class="formula">W = −p<sub>ext</sub>ΔV · 1 bar = 10⁵ Pa · 1 L = 10⁻³ m³</div>
-<section class="example"><h3>Un exemple commenté</h3>
-<p>À pext = 1 bar, un gaz passe de 2 L à 5 L. W = −10⁵ × 3 × 10⁻³ = −300 J.</p></section><section><h3>Avant de regarder la correction</h3>
-<p>À la même pression, le gaz passe de 5 L à 2 L. Quel est le travail ?</p>
-<details><summary>Afficher le raisonnement</summary><p>W = −10⁵ × (−3 × 10⁻³) = +300 J : compression.</p></details></section><section><h2 id="notion-10">Fonction d’état : les extrémités suffisent</h2>
-<p>Une fois l’état du système fixé (y compris sa composition), U a une valeur déterminée. Entre deux états A et B, ΔU = U(B) − U(A), quel que soit le chemin. Le travail et la chaleur décrivent les échanges pendant ce chemin : ils ne sont pas des contenus du système.</p>
-<div class="formula">dU = δQ + δW<br>∫<sub>A</sub><sup>B</sup> dU = U(B) − U(A) ; ∮ dU = 0</div>
-<p><b>dU est une différentielle totale exacte.</b> Son intégrale donne une différence de valeurs d’une fonction d’état. Les notations <b>δQ et δW</b> signalent des échanges élémentaires dont les intégrales dépendent du chemin Γ : Q<sub>Γ</sub> = ∫<sub>Γ</sub> δQ et W<sub>Γ</sub> = ∫<sub>Γ</sub> δW. On n’écrit donc pas Q(B) − Q(A) ni W(B) − W(A).</p>
-<p>Sur un cycle, ∮ δQ + ∮ δW = 0. Chacune des deux intégrales peut être non nulle. Retrouver l’état initial ne signifie pas que les échanges ont été nuls.</p>
-<details><summary>Que veut dire « totale » ?</summary><p>À composition fixe, si U est exprimée en fonction de T et V, dU = (∂U/∂T)<sub>V</sub> dT + (∂U/∂V)<sub>T</sub> dV : on prend en compte toutes les variables indépendantes choisies. Pour un gaz parfait de composition fixe, U ne dépend que de T et dU = n C<sub>V,m</sub>(T) dT. Une réaction exige de prendre aussi en compte le changement de composition.</p></details><p class="definition"><b>Fonction d’état :</b> sa variation entre deux états ne dépend pas du chemin suivi.</p>
-<p class="inline-resource"><a href="https://femto-physique.fr/thermodynamique/premier-principe.php" target="_blank" rel="noopener noreferrer">Femto-physique : premier principe et travail de pression</a> <span>(français, nouvel onglet)</span></p>
-<p class="course-exercise-link"><a href="#exercice-chemins">À vous de chercher : comparer deux chemins entre les mêmes états</a></p></section>
-<section class="example"><h3>Mêmes états, deux bilans</h3>
-<p>Un gaz parfait monoatomique de quantité fixe passe de A (1 bar, 1 L) à B (1,5 bar, 2 L). Deux chemins mécaniquement réversibles sont possibles :</p>
-<ul>
-<li>Chemin 1 : détente à 1 bar, puis chauffage à volume constant. W = −100 J.</li>
-<li>Chemin 2 : chauffage à volume constant, puis détente à 1,5 bar. W = −150 J.</li>
-</ul>
-<p>Dans les deux cas, ΔU = 3/2 × Δ(pV) = 300 J (1 bar·L = 100 J). Mais Q = ΔU − W : <b>Q₁ = 400 J et Q₂ = 450 J</b>. La somme est la même, les échanges diffèrent.</p></section>
-<section><h2 id="notion-12">Adiabatique : la chaleur ne traverse pas la frontière</h2>
-<p>Adiabatique signifie <b>δQ = 0 pendant toute la transformation</b>, par exemple avec une paroi idéalement isolante. Un bilan net Q = 0 obtenu par compensation entre chaleur reçue et cédée ne suffit pas. Le système peut encore échanger du travail : adiabatique ne signifie donc pas isolé.</p>
-<p>Pour un système fermé, avec seulement du travail de pression et sans variation d’énergie cinétique ou potentielle macroscopique : <b>ΔU = W</b>. Un gaz parfait de composition fixe se réchauffe lors d’une compression adiabatique et se refroidit lors d’une détente qui fournit du travail. Sa température n’est donc généralement pas constante.</p>
-<details><summary>Une détente adiabatique refroidit-elle toujours ?</summary><p>Non. Dans une détente libre dans le vide, p<sub>ext</sub> = 0, donc W = 0. Si elle est aussi adiabatique, ΔU = 0. Pour un gaz parfait de composition fixe, la température finale reste alors identique. Ce résultat n’est pas général pour un gaz réel.</p></details><p>Une transformation rapide peut être approximativement adiabatique si les échanges de chaleur sont négligeables à cette échelle de temps. La rapidité n’est ni la définition d’adiabatique ni une garantie de réversibilité.</p>
-<div class="definition">
-<h3>Transformation adiabatique</h3>
-<p>Le système n’échange pas de chaleur avec le milieu extérieur : Q = 0 et ΔU = W dans le cadre du premier principe utilisé ici.</p>
-</div>
-<p class="course-exercise-link"><a href="#exercice-adiabatique">À vous de chercher : prévoir l’effet d’une compression</a></p></section>
-<section><h2 id="notion-13">Pression intérieure et pression extérieure</h2>
-<p>p<sub>int</sub> décrit la pression du gaz ; p<sub>ext</sub> est la pression extérieure effective qui s’oppose au déplacement de la frontière (dans le modèle du piston, elle inclut les charges extérieures). Le travail reçu s’écrit <b>δW = −p<sub>ext</sub> dV</b>. Pendant une évolution rapide, la pression intérieure peut être non uniforme : une unique valeur p<sub>int</sub> n’est alors pas nécessairement définie.</p>
-<p><b>Monobare</b> : p<sub>ext</sub> est constante. <b>Isobare</b> : la pression du système p<sub>int</sub> est constante. Ces définitions ne sont pas interchangeables. Dans une évolution en équilibre mécanique, sans frottement et avec une pression constante, les deux conditions peuvent être réunies.</p>
-<details open><summary>Une transformation lente est-elle réversible ?</summary><p>Pas forcément : un piston peut se déplacer lentement avec des frottements. Pour une évolution mécaniquement réversible, les pressions sont séparées par un écart infinitésimal : p<sub>int</sub> ≈ p<sub>ext</sub>. Dans la limite idéale, on les identifie pour calculer le travail. Un petit déséquilibre permet le mouvement ; une égalité exacte décrit l’équilibre mécanique.</p>
-<p>La réversibilité complète exige également l’absence de dissipation et, s’il y a transfert de chaleur, un écart de température infinitésimal. La lenteur d’une réaction chimique ne suffit pas : il faut aussi examiner l’équilibre chimique, et pas seulement les pressions.</p></details></section>
-<section id="integrale-travail"><h2 id="notion-14">Choisir l’intégrale du travail</h2>
-<p>Pour le travail des forces de pression, commencez par W = −∫<sub>Vᵢ</sub><sup>V<sub>f</sub></sup> p<sub>ext</sub> dV. Les simplifications viennent ensuite, à partir des hypothèses.</p>
+<p>Une variation du volume du système, en présence de forces de pression extérieures, donne lieu au travail élémentaire :</p>
+<div class="formula">δW = −p<sub>ext</sub> dV</div>
+<p>Si la pression extérieure est constante, la transformation est <b>monobare</b> :</p>
+<div class="formula">W = −p<sub>ext</sub>(V<sub>f</sub> − V<sub>i</sub>)</div>
+<p>À pression extérieure positive, une augmentation de volume donne W &lt; 0 ; une diminution de volume donne W &gt; 0.</p>
+<aside class="further-reading"><h3>Pour aller plus loin</h3>
+<p>Les échanges de chaleur et le travail des forces de pression sont illustrés dans le cours de <a href="https://femto-physique.fr/thermodynamique/premier-principe.php" target="_blank" rel="noopener noreferrer">Femto-physique</a>.</p>
+<p class="resource-meta">Lecture facultative · français · nouvel onglet</p></aside></section><section class="course-section" data-source-slides="13"><h2 id="transformations">Transformations à paramètre constant</h2>
 <div class="table-scroll"><table>
-<thead><tr>
-<th>Condition</th>
-<th>Calcul</th>
-<th>À vérifier</th>
-</tr></thead>
-<tbody>
 <tr>
-<td>Isochore</td>
-<td>dV = 0 ⇒ W = 0</td>
-<td>Il s’agit du travail de pression.</td>
+<th>Transformation</th>
+<th>Grandeur constante ou échange nul</th>
+<th>Relation du cours</th>
 </tr>
 <tr>
-<td>Monobare</td>
-<td>W = −p₀(V<sub>f</sub> − Vᵢ)</td>
-<td>p<sub>ext</sub> = p₀ constante ; réversible ou non.</td>
+<td>Isochore</td>
+<td>Volume constant</td>
+<td>W = 0 ; ΔU = Q<sub>V</sub>
+</td>
+</tr>
+<tr>
+<td>Isotherme</td>
+<td>Température constante</td>
+<td>Pour un gaz parfait de composition fixe : ΔU = 0 ; W = −Q</td>
 </tr>
 <tr>
 <td>Isobare</td>
-<td>Même formule si p<sub>ext</sub> = p<sub>int</sub> = p₀</td>
-<td>La constance de p<sub>int</sub> seule ne décrit pas p<sub>ext</sub>.</td>
+<td>Pression du système constante</td>
+<td>p = constante</td>
 </tr>
 <tr>
-<td>Isotherme, gaz parfait, quantité fixe, mécaniquement réversible</td>
-<td>W = −nRT ∫ dV/V = −nRT ln(V<sub>f</sub>/Vᵢ)</td>
-<td>T constante et p<sub>ext</sub> ≈ p<sub>int</sub> = nRT/V.</td>
+<td>Adiabatique</td>
+<td>Pas de transfert de chaleur</td>
+<td>Q = 0 ; ΔU = W</td>
 </tr>
 <tr>
-<td>p<sub>ext</sub> variable</td>
-<td>Intégrer sa loi en fonction de V</td>
-<td>Ne pas sortir une pression variable de l’intégrale.</td>
+<td>Système isolé</td>
+<td>Pas d’échange de matière ni d’énergie</td>
+<td>Q = W = ΔU = 0</td>
 </tr>
-</tbody>
 </table></div>
-<p>Une transformation isotherme contre une pression extérieure constante utilise la formule monobare, pas automatiquement le logarithme. Isotherme ne signifie pas pression constante.</p>
-<details><summary>Exemple avec une pression variable</summary><p>Avec V en L, p<sub>ext</sub>(V) = 2 − 0,5V en bar, de 1 L à 3 L : W = −100 ∫₁³ (2 − 0,5V) dV = −100 [2V − 0,25V²]₁³ = −200 J. Le facteur 100 convertit bar·L en J.</p></details><details><summary>Pour aller plus loin : adiabatique réversible d’un gaz parfait</summary><p>À quantité fixe et capacités thermiques constantes, pV<sup>γ</sup> est constant, avec γ = C<sub>p,m</sub>/C<sub>V,m</sub>. L’intégration donne W = (p<sub>f</sub>V<sub>f</sub> − pᵢVᵢ)/(γ − 1) = nC<sub>V,m</sub>(T<sub>f</sub> − Tᵢ). Ces relations ne s’appliquent pas à toute transformation adiabatique.</p></details><p></p>
-<div class="method-note">
-<h3>Pourquoi une intégrale ? Pourquoi des rectangles ?</h3>
-<p>Si la pression extérieure varie pendant une détente, la même augmentation de volume ne demande pas le même travail à chaque étape. On découpe donc la variation totale de volume en petits intervalles ΔVᵢ. Sur chaque intervalle, on remplace provisoirement la pression variable par une valeur pext,ᵢ.</p>
-<div class="formula">Petit travail : ΔWᵢ ≈ −pext,ᵢ ΔVᵢ<br>Travail approché : W ≈ −Σᵢ pext,ᵢ ΔVᵢ</div>
-<p>Sur le graphique pext(V), chaque produit pext,ᵢ ΔVᵢ est l’aire d’un rectangle. En diminuant leur largeur, on réduit l’erreur due au fait de traiter la pression comme constante sur chaque intervalle. <b>On ne change pas la transformation physique : on améliore seulement son approximation numérique.</b> La limite de cette somme est l’intégrale.</p>
-<p>À pression extérieure constante, l’aire est déjà un rectangle exact : multiplier les rectangles n’apporte rien. Si une primitive de pext(V) est connue, elle donne directement l’intégrale, sans approximation par rectangles. Pour une détente contre une pression positive, l’aire géométrique est positive et le travail reçu est son opposé.</p>
-<p class="inline-resource"><a href="https://exo7.emath.fr/cours/ch_int.pdf" target="_blank" rel="noopener noreferrer">Exo7 : comprendre une intégrale avec les aires, pages 1–2</a> <span>(français, PDF, nouvel onglet)</span></p>
-<p class="inline-resource"><a href="https://femto-physique.fr/thermodynamique/premier-principe.php" target="_blank" rel="noopener noreferrer">Femto-physique : premier principe et travail de pression</a> <span>(français, nouvel onglet)</span></p>
-<p><a href="fiche-pratique.html#integrales">Primitives et choix de la formule dans la fiche pratique</a></p>
-</div></section><details><summary>De la force à l’expression du travail</summary><p>Pour un piston de section S se déplaçant de dx, dV = S dx. La force extérieure qui s’oppose à une détente a pour valeur p<sub>ext</sub>S. Le travail reçu vaut donc δW = −p<sub>ext</sub>S dx = −p<sub>ext</sub>dV. Le modèle suppose une pression extérieure effective bien définie et une énergie cinétique du piston négligeable dans le bilan retenu.</p></details><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Premier principe, travail et chaleur · CC BY-NC-ND 4.0 · lenaiclartigue.github.io/thermochimie/</p>
-<div class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></div>
+<p>Les relations sur W concernent le travail des forces de pression. <b>Adiabatique ne signifie pas isotherme :</b> l’absence de chaleur échangée n’impose pas une température constante.</p>
+<p><b>Isobare</b> concerne la pression du système ; <b>monobare</b> concerne la pression extérieure utilisée pour calculer W.</p>
+<p class="course-exercise-link"><a href="#exercice-relations-cours">Compléter les relations entre Q, W et ΔU</a></p></section><section class="course-section" data-source-slides="12 ; aide mathématique demandée"><h2 id="integrale-travail">Comprendre l’intégrale du travail</h2>
+<p>Si la pression varie, on additionne les petits travaux le long de la transformation :</p>
+<div class="formula">W = −∫<sub>Vᵢ</sub><sup>V<sub>f</sub></sup> p<sub>ext</sub>(V) dV</div>
+<p>Sur le graphique, un rectangle représente une petite variation de volume multipliée par une pression : son aire vaut p<sub>ext</sub> × ΔV. La somme des aires approche l’intégrale. <b>La courbe reste la même quand on augmente le nombre de rectangles :</b> les rectangles deviennent plus étroits et suivent mieux cette courbe.</p>
+<div class="course-interactive" id="integral-demo">
+<h3>Comparer les rectangles et l’aire sous la courbe</h3>
+<p>Les deux graphiques représentent la même courbe, sur le même intervalle de 1 à 3 L. Comparez l’approximation avec 4 rectangles à celle que vous choisissez.</p>
+<div class="choice-buttons" role="group" aria-label="Courbe de pression">
+<button type="button" data-integral-mode="variable" aria-pressed="true">Pression variable</button><button type="button" data-integral-mode="constant" aria-pressed="false">Pression constante</button>
+</div>
+<p id="integral-law">Courbe illustrative : pext(V) = 2/V, avec pext en bar et V en L.</p>
+<label for="rectangle-count">Nombre de rectangles du second graphique : <output id="rectangle-number" for="rectangle-count">16</output></label><input type="range" id="rectangle-count" min="4" max="64" step="4" value="16"><div class="rectangle-comparison">
+<figure><figcaption>4 rectangles</figcaption><div id="integral-coarse"></div></figure><figure><figcaption><span id="rectangle-caption">16</span> rectangles</figcaption><div id="integral-fine"></div></figure>
+</div>
+<p class="chart-legend"><span><i class="legend-curve" aria-hidden="true"></i> Courbe de pression</span><span><i class="legend-rect" aria-hidden="true"></i> Rectangles d’approximation</span></p>
+<p id="integral-observation" role="status"></p>
+<details id="integral-primitive"><summary>Relier les rectangles à une primitive</summary><div id="integral-calculation"></div></details><noscript><p>Activez JavaScript pour manipuler les rectangles. Une intégrale est la limite de la somme de leurs aires lorsque leur largeur tend vers zéro.</p></noscript>
+</div>
+<p>Les rectangles illustrent <b>l’intégrale</b>. Une <b>primitive</b> permet de calculer sa valeur : si F′(V) = p<sub>ext</sub>(V), l’intégrale vaut F(V<sub>f</sub>) − F(V<sub>i</sub>). À pression constante, un seul rectangle donne déjà l’aire exacte.</p>
+<aside class="further-reading"><h3>Pour aller plus loin</h3>
+<p>Pour revoir les aires, les rectangles et les primitives, commencez par les pages 1–2 du chapitre « Intégrales » d’ <a href="https://exo7.emath.fr/cours/ch_int.pdf" target="_blank" rel="noopener noreferrer">Exo7</a>.</p>
+<p class="resource-meta">Lecture facultative · français, PDF · nouvel onglet</p></aside><p><a href="fiche-pratique.html#travail">Retrouver les intégrales utiles au calcul du travail dans la fiche pratique.</a></p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Premier principe, travail et chaleur · CC BY-NC-ND 4.0</p>
+<p class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></p>
 </div>
 <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
-<h3>15 questions pour faire le point</h3>
-<p>Le quiz est un entraînement : vous pouvez recommencer.</p>
+<h2>8 questions de compréhension</h2>
+<p>Ces questions reprennent les définitions et les relations du cours. Vous pouvez recommencer.</p>
 <form id="quiz-form">
-<div class="quiz-item" data-correct="2" data-explanation="U est une fonction d’état. Q et W peuvent changer, mais leur somme reste égale à ΔU.">
+<div class="quiz-item" data-source-slides="10" data-correct="2" data-explanation="U est une fonction d’état.">
 <fieldset>
-<legend>1. Deux chemins relient exactement les mêmes états initial et final. Quelle grandeur a la même variation ?</legend>
-<label class="quiz-option"><input required type="radio" name="q0" value="0"><span>Q</span></label><label class="quiz-option"><input required type="radio" name="q0" value="1"><span>W</span></label><label class="quiz-option"><input required type="radio" name="q0" value="2"><span>U</span></label>
+<legend>1. Deux chemins relient les mêmes états initial et final. Quelle grandeur est la même ?</legend>
+<label class="quiz-option"><input type="radio" name="q0" value="0" required><span>Q</span></label><label class="quiz-option"><input type="radio" name="q0" value="1" required><span>W</span></label><label class="quiz-option"><input type="radio" name="q0" value="2" required><span>ΔU</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="Q = +250 J ; W = −90 J ; ΔU = +160 J.">
+<div class="quiz-item" data-source-slides="10" data-correct="0" data-explanation="Q et W sont comptés positivement lorsqu’ils sont reçus.">
 <fieldset>
-<legend>2. Un système reçoit 250 J de chaleur et fournit 90 J de travail. ΔU vaut…</legend>
-<label class="quiz-option"><input required type="radio" name="q1" value="0"><span>340 J</span></label><label class="quiz-option"><input required type="radio" name="q1" value="1"><span>160 J</span></label><label class="quiz-option"><input required type="radio" name="q1" value="2"><span>−160 J</span></label>
+<legend>2. Le premier principe s’écrit dans ce cours…</legend>
+<label class="quiz-option"><input type="radio" name="q1" value="0" required><span>ΔU = Q + W</span></label><label class="quiz-option"><input type="radio" name="q1" value="1" required><span>ΔU = Q − W</span></label><label class="quiz-option"><input type="radio" name="q1" value="2" required><span>ΔU = W − Q</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="Les signes sont définis du point de vue du système étudié.">
+<div class="quiz-item" data-source-slides="10–11" data-correct="1" data-explanation="Les échanges sont comptés du point de vue du système.">
 <fieldset>
 <legend>3. Une énergie cédée au milieu extérieur est comptée…</legend>
-<label class="quiz-option"><input required type="radio" name="q2" value="0"><span>positivement</span></label><label class="quiz-option"><input required type="radio" name="q2" value="1"><span>négativement</span></label><label class="quiz-option"><input required type="radio" name="q2" value="2"><span>sans signe</span></label>
+<label class="quiz-option"><input type="radio" name="q2" value="0" required><span>positivement</span></label><label class="quiz-option"><input type="radio" name="q2" value="1" required><span>négativement</span></label><label class="quiz-option"><input type="radio" name="q2" value="2" required><span>sans signe</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="Une fonction d’état retrouve sa valeur initiale. Q et W peuvent rester non nuls et opposés.">
+<div class="quiz-item" data-source-slides="10" data-correct="1" data-explanation="Son intégrale est Uf − Ui.">
 <fieldset>
-<legend>4. Après un cycle, le système retrouve exactement son état initial. Quelle relation est vraie ?</legend>
-<label class="quiz-option"><input required type="radio" name="q3" value="0"><span>Q = W = 0 nécessairement</span></label><label class="quiz-option"><input required type="radio" name="q3" value="1"><span>ΔU = 0 et Q + W = 0</span></label><label class="quiz-option"><input required type="radio" name="q3" value="2"><span>ΔU = Q</span></label>
+<legend>4. La différentielle dU est…</legend>
+<label class="quiz-option"><input type="radio" name="q3" value="0" required><span>dépendante du chemin</span></label><label class="quiz-option"><input type="radio" name="q3" value="1" required><span>une différentielle totale exacte</span></label><label class="quiz-option"><input type="radio" name="q3" value="2" required><span>toujours nulle</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="Le système possède une énergie interne. Le terme chaleur décrit un transfert, pas un contenu.">
+<div class="quiz-item" data-source-slides="13" data-correct="1" data-explanation="Q = 0 ; le système peut échanger du travail.">
 <fieldset>
-<legend>5. La chaleur est…</legend>
-<label class="quiz-option"><input required type="radio" name="q4" value="0"><span>une énergie stockée dans un corps</span></label><label class="quiz-option"><input required type="radio" name="q4" value="1"><span>un transfert d’énergie</span></label><label class="quiz-option"><input required type="radio" name="q4" value="2"><span>une température</span></label>
+<legend>5. Adiabatique signifie…</legend>
+<label class="quiz-option"><input type="radio" name="q4" value="0" required><span>température constante</span></label><label class="quiz-option"><input type="radio" name="q4" value="1" required><span>aucun transfert de chaleur</span></label><label class="quiz-option"><input type="radio" name="q4" value="2" required><span>aucun transfert d’énergie</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="Q = 0, mais W peut être non nul et la température peut varier.">
+<div class="quiz-item" data-source-slides="12" data-correct="1" data-explanation="La pression extérieure peut alors sortir de l’intégrale du travail.">
 <fieldset>
-<legend>6. Adiabatique signifie…</legend>
-<label class="quiz-option"><input required type="radio" name="q5" value="0"><span>température constante</span></label><label class="quiz-option"><input required type="radio" name="q5" value="1"><span>aucun transfert de chaleur</span></label><label class="quiz-option"><input required type="radio" name="q5" value="2"><span>aucun transfert d’énergie</span></label>
+<legend>6. Monobare signifie…</legend>
+<label class="quiz-option"><input type="radio" name="q5" value="0" required><span>pression du système constante</span></label><label class="quiz-option"><input type="radio" name="q5" value="1" required><span>pression extérieure constante</span></label><label class="quiz-option"><input type="radio" name="q5" value="2" required><span>volume constant</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="0" data-explanation="ΔV &lt; 0 et W = −pextΔV : le système reçoit du travail.">
+<div class="quiz-item" data-source-slides="12" data-correct="0" data-explanation="dV est positif et δW = −pext dV.">
 <fieldset>
-<legend>7. Une compression à pression extérieure constante positive donne…</legend>
-<label class="quiz-option"><input required type="radio" name="q6" value="0"><span>W &gt; 0</span></label><label class="quiz-option"><input required type="radio" name="q6" value="1"><span>W &lt; 0</span></label><label class="quiz-option"><input required type="radio" name="q6" value="2"><span>W = 0 nécessairement</span></label>
+<legend>7. Une détente contre une pression extérieure positive donne…</legend>
+<label class="quiz-option"><input type="radio" name="q6" value="0" required><span>W &lt; 0</span></label><label class="quiz-option"><input type="radio" name="q6" value="1" required><span>W &gt; 0</span></label><label class="quiz-option"><input type="radio" name="q6" value="2" required><span>W = 0 nécessairement</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="0" data-explanation="Wpression = 0, donc le premier principe donne ΔU = Qv.">
+<div class="quiz-item" data-source-slides="13" data-correct="0" data-explanation="Dans le modèle du cours, U ne dépend que de T.">
 <fieldset>
-<legend>8. À volume constant, si le seul travail possible est celui des forces de pression…</legend>
-<label class="quiz-option"><input required type="radio" name="q7" value="0"><span>ΔU = Qv</span></label><label class="quiz-option"><input required type="radio" name="q7" value="1"><span>ΔU = 0</span></label><label class="quiz-option"><input required type="radio" name="q7" value="2"><span>Qv = 0</span></label>
+<legend>8. Pour un gaz parfait de composition fixe en transformation isotherme…</legend>
+<label class="quiz-option"><input type="radio" name="q7" value="0" required><span>ΔU = 0</span></label><label class="quiz-option"><input type="radio" name="q7" value="1" required><span>Q = 0 nécessairement</span></label><label class="quiz-option"><input type="radio" name="q7" value="2" required><span>W = 0 nécessairement</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="2 bar = 2 × 10⁵ Pa et 1 L = 10⁻³ m³ : W = −200 J.">
-<fieldset>
-<legend>9. Une détente de 1 L sous une pression extérieure constante de 2 bar donne quel travail ?</legend>
-<label class="quiz-option"><input required type="radio" name="q8" value="0"><span>−2 J</span></label><label class="quiz-option"><input required type="radio" name="q8" value="1"><span>−200 J</span></label><label class="quiz-option"><input required type="radio" name="q8" value="2"><span>+200 J</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<div class="quiz-item" data-correct="1" data-explanation="Pour un gaz parfait de composition fixe, U ne dépend que de T. Ce résultat ne dispense pas d’étudier une réaction chimique.">
-<fieldset>
-<legend>10. Un gaz parfait de composition fixe subit une transformation isotherme. Son ΔU est…</legend>
-<label class="quiz-option"><input required type="radio" name="q9" value="0"><span>positif</span></label><label class="quiz-option"><input required type="radio" name="q9" value="1"><span>nul</span></label><label class="quiz-option"><input required type="radio" name="q9" value="2"><span>négatif</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<div class="quiz-item" data-correct="1" data-explanation="La lenteur ne supprime pas la dissipation et ne garantit pas les équilibres thermique ou chimique.">
-<fieldset>
-<legend>11. Une transformation lente est-elle nécessairement réversible ?</legend>
-<label class="quiz-option"><input required type="radio" name="q10" value="0"><span>Oui, toujours</span></label><label class="quiz-option"><input required type="radio" name="q10" value="1"><span>Non, des frottements peuvent subsister</span></label><label class="quiz-option"><input required type="radio" name="q10" value="2"><span>Oui, si elle est monobare</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<div class="quiz-item" data-correct="1" data-explanation="Monobare concerne pext ; isobare concerne la pression du système.">
-<fieldset>
-<legend>12. Que signifie monobare ?</legend>
-<label class="quiz-option"><input required type="radio" name="q11" value="0"><span>Pression du système constante</span></label><label class="quiz-option"><input required type="radio" name="q11" value="1"><span>Pression extérieure constante</span></label><label class="quiz-option"><input required type="radio" name="q11" value="2"><span>Température constante</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<div class="quiz-item" data-correct="0" data-explanation="U est une fonction d’état : sa variation sur un cycle est nulle. Les échanges peuvent être non nuls.">
-<fieldset>
-<legend>13. Sur un cycle, quelle intégrale est nécessairement nulle ?</legend>
-<label class="quiz-option"><input required type="radio" name="q12" value="0"><span>∮ dU</span></label><label class="quiz-option"><input required type="radio" name="q12" value="1"><span>∮ δQ</span></label><label class="quiz-option"><input required type="radio" name="q12" value="2"><span>∮ δW</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<div class="quiz-item" data-correct="1" data-explanation="Dans le vide pext = 0, donc W = 0. Adiabatique donne Q = 0 : ΔU = 0.">
-<fieldset>
-<legend>14. Une détente libre adiabatique d’un gaz parfait de composition fixe donne…</legend>
-<label class="quiz-option"><input required type="radio" name="q13" value="0"><span>Une température finale plus basse nécessairement</span></label><label class="quiz-option"><input required type="radio" name="q13" value="1"><span>ΔU = 0 et une température finale inchangée</span></label><label class="quiz-option"><input required type="radio" name="q13" value="2"><span>Une chaleur reçue positive</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<div class="quiz-item" data-correct="1" data-explanation="Le logarithme vient de pext ≈ pint = nRT/V ; ces hypothèses sont indispensables.">
-<fieldset>
-<legend>15. Quand utilise-t-on W = −nRT ln(Vf/Vi) ?</legend>
-<label class="quiz-option"><input required type="radio" name="q14" value="0"><span>Pour toute transformation isotherme</span></label><label class="quiz-option"><input required type="radio" name="q14" value="1"><span>Pour un gaz parfait de quantité fixe, isotherme et mécaniquement réversible</span></label><label class="quiz-option"><input required type="radio" name="q14" value="2"><span>Dès que pext est constante</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<button class="button" type="submit">Valider mes réponses</button> <button class="button secondary" type="reset">Recommencer</button><div id="quiz-result" role="status"></div>
+<button type="submit" class="button">Valider mes réponses</button> <button type="reset" class="button secondary">Recommencer</button>
 </form>
-<div class="step-next"><a class="button" href="#pane-exercises">Passer aux exercices</a></div>
+<div id="quiz-result" aria-live="polite"></div>
+<p class="step-next"><a class="button" href="#pane-exercises">Passer aux exercices</a></p>
 </div>
 <div id="pane-exercises" role="tabpanel" aria-labelledby="tab-exercises" hidden>
 <h2>Exercices</h2>
-<p>Après le QCM, cherchez les réponses sur votre brouillon puis saisissez-les ici. Vous pouvez vérifier une étape à la fois, demander un indice et ouvrir la correction après votre recherche.</p>
-<p class="muted">Les réponses vérifiées sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
-<nav class="exercise-index" aria-label="Choisir un exercice"><ul>
-<li><a href="#exercice-bilan-energie">Écrire les signes avant le bilan</a></li>
-<li><a href="#exercice-travail-monobare">Calculer le travail d’une détente</a></li>
-<li><a href="#exercice-chemins">Même état final, mêmes échanges ?</a></li>
-<li><a href="#exercice-adiabatique">Compression adiabatique</a></li>
-</ul></nav><section class="exercise-card" id="exercice-bilan-energie"><p class="eyebrow">EXERCICE 1</p>
-<h3>Écrire les signes avant le bilan</h3>
-<p class="exercise-origin">Application complémentaire aux diapositives 10–11</p>
-<p>Un système fermé cède 350 J de chaleur et reçoit 125 J de travail. Les variations d’énergie cinétique et potentielle macroscopiques sont négligées.</p>
-<form class="exercise-form" data-exercise="bilan-energie" novalidate>
+<p>Après le QCM, cherchez sur votre brouillon puis saisissez vos réponses. Vous pouvez vérifier une étape à la fois. Les indices et la correction s’ouvrent à votre demande.</p>
+<p class="muted">Vos réponses sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
+<nav class="exercise-index" aria-label="Choisir un exercice"><ul><li><a href="#exercice-relations-cours">Retrouver les relations du premier principe</a></li></ul></nav><section class="exercise-card" id="exercice-relations-cours"><p class="eyebrow">EXERCICE 1</p>
+<h3>Retrouver les relations du premier principe</h3>
+<p class="exercise-origin">Activité sur les diapositives 10–13</p>
+<p>Complétez les relations du cours. Le travail considéré est celui des forces de pression.</p>
+<form class="exercise-form" data-exercise="relations-cours" novalidate>
 <div class="exercise-fields">
 <div class="exercise-field">
-<label for="bilan-energie-reponse-1">1. Chaleur reçue algébrique Q <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="bilan-energie-reponse-1" name="reponse-1" data-expected="-350" data-hint="Une chaleur cédée par le système est comptée négativement." aria-describedby="bilan-energie-reponse-1-feedback" data-tolerance="1" placeholder="Votre réponse"><p id="bilan-energie-reponse-1-feedback" class="field-feedback"></p>
+<label for="relations-cours-reponse-1">1. À volume constant, le travail W est…</label><select id="relations-cours-reponse-1" name="reponse-1" data-expected="nul" data-hint="À volume constant, dV = 0." aria-describedby="relations-cours-reponse-1-feedback"><option value="">Choisir une réponse</option>
+<option value="nul">nul</option>
+<option value="positif">positif</option>
+<option value="negatif">négatif</option></select><p id="relations-cours-reponse-1-feedback" class="field-feedback"></p>
 </div>
 <div class="exercise-field">
-<label for="bilan-energie-reponse-2">2. Travail reçu algébrique W <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="bilan-energie-reponse-2" name="reponse-2" data-expected="125" data-hint="Un travail reçu est compté positivement." aria-describedby="bilan-energie-reponse-2-feedback" data-tolerance="1" placeholder="Votre réponse"><p id="bilan-energie-reponse-2-feedback" class="field-feedback"></p>
+<label for="relations-cours-reponse-2">2. Pour une transformation isochore…</label><select id="relations-cours-reponse-2" name="reponse-2" data-expected="q" data-hint="Remplacez W dans ΔU = Q + W." aria-describedby="relations-cours-reponse-2-feedback"><option value="">Choisir une réponse</option>
+<option value="q">ΔU = Q</option>
+<option value="w">ΔU = W</option>
+<option value="zero">ΔU = 0</option></select><p id="relations-cours-reponse-2-feedback" class="field-feedback"></p>
 </div>
 <div class="exercise-field">
-<label for="bilan-energie-reponse-3">3. Variation d’énergie interne ΔU <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="bilan-energie-reponse-3" name="reponse-3" data-expected="-225" data-hint="Utilisez ΔU = Q + W avec les signes précédents." aria-describedby="bilan-energie-reponse-3-feedback" data-tolerance="1" placeholder="Votre réponse"><p id="bilan-energie-reponse-3-feedback" class="field-feedback"></p>
+<label for="relations-cours-reponse-3">3. Pour une transformation adiabatique…</label><select id="relations-cours-reponse-3" name="reponse-3" data-expected="w" data-hint="Adiabatique signifie Q = 0." aria-describedby="relations-cours-reponse-3-feedback"><option value="">Choisir une réponse</option>
+<option value="q">ΔU = Q</option>
+<option value="w">ΔU = W</option>
+<option value="zero">ΔU = 0</option></select><p id="relations-cours-reponse-3-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="relations-cours-reponse-4">4. Pour un gaz parfait de composition fixe en transformation isotherme…</label><select id="relations-cours-reponse-4" name="reponse-4" data-expected="zero" data-hint="Dans le modèle du cours, U dépend de la température." aria-describedby="relations-cours-reponse-4-feedback"><option value="">Choisir une réponse</option>
+<option value="q">ΔU = Q</option>
+<option value="w">ΔU = W</option>
+<option value="zero">ΔU = 0</option></select><p id="relations-cours-reponse-4-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="relations-cours-reponse-5">5. Pour un système isolé…</label><select id="relations-cours-reponse-5" name="reponse-5" data-expected="zero" data-hint="Il n’échange ni chaleur ni travail." aria-describedby="relations-cours-reponse-5-feedback"><option value="">Choisir une réponse</option>
+<option value="q">ΔU = Q</option>
+<option value="w">ΔU = W</option>
+<option value="zero">ΔU = 0</option></select><p id="relations-cours-reponse-5-feedback" class="field-feedback"></p>
 </div>
 </div>
 <div class="exercise-actions">
@@ -278,83 +235,7 @@
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Choisissez le point de vue du système : reçu positif, cédé négatif.</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><p>Q = −350 J ; W = +125 J ; ΔU = −350 + 125 = −225 J. L’énergie interne diminue.</p></details><p class="inline-resource"><a href="https://femto-physique.fr/thermodynamique/premier-principe.php" target="_blank" rel="noopener noreferrer">Femto-physique — Premier principe</a> <span>(français, nouvel onglet)</span></p></section><section class="exercise-card" id="exercice-travail-monobare"><p class="eyebrow">EXERCICE 2</p>
-<h3>Calculer le travail d’une détente</h3>
-<p class="exercise-origin">Application complémentaire à la diapositive 12</p>
-<p>Un gaz passe de 1,5 L à 4,0 L contre une pression extérieure constante de 1,2 bar. Seul le travail de pression est considéré.</p>
-<form class="exercise-form" data-exercise="travail-monobare" novalidate>
-<div class="exercise-fields">
-<div class="exercise-field">
-<label for="travail-monobare-reponse-1">1. Variation de volume ΔV <span class="muted">(m³)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="travail-monobare-reponse-1" name="reponse-1" data-expected="0.0025" data-hint="Calculez Vf − Vi, puis convertissez : 1 L = 10⁻³ m³." aria-describedby="travail-monobare-reponse-1-feedback" data-tolerance="5e-06" placeholder="Votre réponse"><p id="travail-monobare-reponse-1-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="travail-monobare-reponse-2">2. Pression extérieure <span class="muted">(Pa)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="travail-monobare-reponse-2" name="reponse-2" data-expected="120000" data-hint="1 bar = 10⁵ Pa." aria-describedby="travail-monobare-reponse-2-feedback" data-tolerance="1" placeholder="Votre réponse"><p id="travail-monobare-reponse-2-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="travail-monobare-reponse-3">3. Travail W <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="travail-monobare-reponse-3" name="reponse-3" data-expected="-300" data-hint="La détente fournit du travail : W = −pext ΔV." aria-describedby="travail-monobare-reponse-3-feedback" data-tolerance="1" placeholder="Votre réponse"><p id="travail-monobare-reponse-3-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="travail-monobare-reponse-4">4. Travail de pression pour la même variation de volume dans le vide <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="travail-monobare-reponse-4" name="reponse-4" data-expected="0" data-hint="Dans le vide, pext = 0." aria-describedby="travail-monobare-reponse-4-feedback" data-tolerance="0.001" placeholder="Votre réponse"><p id="travail-monobare-reponse-4-feedback" class="field-feedback"></p>
-</div>
-</div>
-<div class="exercise-actions">
-<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
-</div>
-<p class="exercise-feedback" role="status" aria-live="polite"></p>
-</form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>La pression extérieure est constante : sortez-la de l’intégrale.</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><p>ΔV = 2,5 × 10⁻³ m³ et pext = 1,2 × 10⁵ Pa. W = −1,2 × 10⁵ × 2,5 × 10⁻³ = −300 J. Dans le vide, le travail de pression vaut 0 J.</p></details><p class="inline-resource"><a href="https://femto-physique.fr/thermodynamique/premier-principe.php" target="_blank" rel="noopener noreferrer">Femto-physique — Premier principe</a> <span>(français, nouvel onglet)</span></p></section><section class="exercise-card" id="exercice-chemins"><p class="eyebrow">EXERCICE 3</p>
-<h3>Même état final, mêmes échanges ?</h3>
-<p class="exercise-origin">Application complémentaire : fonction d’état</p>
-<p>Un gaz parfait monoatomique, de quantité fixe, passe de A (1 bar, 1 L) à B (1,5 bar, 2 L). Les chemins sont mécaniquement réversibles. Chemin 1 : détente à 1 bar, puis chauffage isochore. Chemin 2 : chauffage isochore, puis détente à 1,5 bar.</p>
-<p>Données : U = 3nRT/2 ; pV = nRT ; 1 bar·L = 100 J.</p>
-<form class="exercise-form" data-exercise="chemins" novalidate>
-<div class="exercise-fields">
-<div class="exercise-field">
-<label for="chemins-reponse-1">1. Variation ΔU, commune aux deux chemins <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="chemins-reponse-1" name="reponse-1" data-expected="300" data-hint="Calculez 3/2 × (pfVf − piVi), puis convertissez bar·L en J." aria-describedby="chemins-reponse-1-feedback" data-tolerance="1" placeholder="Votre réponse"><p id="chemins-reponse-1-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="chemins-reponse-2">2. Travail W₁ du chemin 1 <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="chemins-reponse-2" name="reponse-2" data-expected="-100" data-hint="L’étape isochore ne fournit aucun travail de pression." aria-describedby="chemins-reponse-2-feedback" data-tolerance="1" placeholder="Votre réponse"><p id="chemins-reponse-2-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="chemins-reponse-3">3. Chaleur Q₁ du chemin 1 <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="chemins-reponse-3" name="reponse-3" data-expected="400" data-hint="Q = ΔU − W." aria-describedby="chemins-reponse-3-feedback" data-tolerance="1" placeholder="Votre réponse"><p id="chemins-reponse-3-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="chemins-reponse-4">4. Travail W₂ du chemin 2 <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="chemins-reponse-4" name="reponse-4" data-expected="-150" data-hint="La détente a lieu ici à 1,5 bar." aria-describedby="chemins-reponse-4-feedback" data-tolerance="1" placeholder="Votre réponse"><p id="chemins-reponse-4-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="chemins-reponse-5">5. Chaleur Q₂ du chemin 2 <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="chemins-reponse-5" name="reponse-5" data-expected="450" data-hint="ΔU est identique, mais W a changé." aria-describedby="chemins-reponse-5-feedback" data-tolerance="1" placeholder="Votre réponse"><p id="chemins-reponse-5-feedback" class="field-feedback"></p>
-</div>
-</div>
-<div class="exercise-actions">
-<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
-</div>
-<p class="exercise-feedback" role="status" aria-live="polite"></p>
-</form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Utilisez les états A et B pour ΔU.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Pour W, examinez chaque étape du chemin ; déduisez ensuite Q du premier principe.</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><p>ΔU = 3/2 × (3−1) × 100 = 300 J. W₁ = −1 × (2−1) × 100 = −100 J ; Q₁ = 400 J. W₂ = −150 J ; Q₂ = 450 J. U est une fonction d’état ; W et Q dépendent du chemin.</p></details><p class="inline-resource"><a href="https://femto-physique.fr/thermodynamique/premier-principe.php" target="_blank" rel="noopener noreferrer">Femto-physique — Premier principe</a> <span>(français, nouvel onglet)</span></p></section><section class="exercise-card" id="exercice-adiabatique"><p class="eyebrow">EXERCICE 4</p>
-<h3>Compression adiabatique</h3>
-<p class="exercise-origin">Application complémentaire à la diapositive 13</p>
-<p>Un gaz parfait fermé, de composition fixe, reçoit un travail de 120 J lors d’une compression adiabatique. Les variations d’énergies macroscopiques sont négligées.</p>
-<form class="exercise-form" data-exercise="adiabatique" novalidate>
-<div class="exercise-fields">
-<div class="exercise-field">
-<label for="adiabatique-reponse-1">1. Chaleur Q <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="adiabatique-reponse-1" name="reponse-1" data-expected="0" data-hint="Adiabatique signifie absence de transfert de chaleur." aria-describedby="adiabatique-reponse-1-feedback" data-tolerance="0.001" placeholder="Votre réponse"><p id="adiabatique-reponse-1-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="adiabatique-reponse-2">2. Variation ΔU <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="adiabatique-reponse-2" name="reponse-2" data-expected="120" data-hint="Le premier principe reste applicable : ΔU = Q + W." aria-describedby="adiabatique-reponse-2-feedback" data-tolerance="1" placeholder="Votre réponse"><p id="adiabatique-reponse-2-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="adiabatique-reponse-3">3. Évolution de la température</label><select id="adiabatique-reponse-3" name="reponse-3" data-expected="hausse" data-hint="À composition fixe, l’énergie interne du gaz parfait augmente avec la température." aria-describedby="adiabatique-reponse-3-feedback"><option value="">Choisir une réponse</option>
-<option value="hausse">Elle augmente</option>
-<option value="baisse">Elle diminue</option>
-<option value="stable">Elle reste nécessairement constante</option></select><p id="adiabatique-reponse-3-feedback" class="field-feedback"></p>
-</div>
-</div>
-<div class="exercise-actions">
-<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
-</div>
-<p class="exercise-feedback" role="status" aria-live="polite"></p>
-</form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Ne confondez pas adiabatique (Q = 0) et isotherme (T constante).</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><p>Q = 0 et ΔU = W = +120 J. La température augmente. Le système échange du travail : il n’est pas isolé.</p></details><p class="inline-resource"><a href="https://femto-physique.fr/thermodynamique/premier-principe.php" target="_blank" rel="noopener noreferrer">Femto-physique — Premier principe</a> <span>(français, nouvel onglet)</span></p></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Partez de ΔU = Q + W et identifiez le terme nul pour chaque transformation.</p></details><details class="exercise-solution"><summary>Correction</summary><p>1. W = 0. 2. ΔU = Q. 3. ΔU = W. 4. ΔU = 0 et W = −Q. 5. Q = W = ΔU = 0.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Premier principe, travail et chaleur</h3>
@@ -376,5 +257,6 @@
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
 <script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
 <script src="exercices.js" defer></script>
+<script src="interactions.js" defer></script>
 </body>
 </html>

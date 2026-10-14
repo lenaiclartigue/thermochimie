@@ -2,9 +2,9 @@
 const $=id=>document.getElementById(id);
 const fmt=(n,d=2)=>Number(n).toLocaleString('fr-FR',{maximumFractionDigits:d});
 const partPages=['systeme.html','premier-principe.html','enthalpie.html','enthalpie-reaction.html','hess.html','calorimetrie.html'];
-const localKey='thermo-progress-six-audit-v2';
-const quizVersion='2026-10-14-audit';
-const answersKey='thermo-answers-six-audit-v2';
+const localKey='thermo-progress-six-slides-v3';
+const quizVersion='2026-10-14-slides-v3';
+const answersKey='thermo-answers-six-slides-v3';
 const historyKey='thermo-attempts-six-v1';
 function stored(key,fallback){try{const value=JSON.parse(localStorage.getItem(key));return value??fallback}catch{return fallback}}
 function save(key,value){try{localStorage.setItem(key,JSON.stringify(value));return true}catch{toast('Votre navigateur ne permet pas de sauvegarder les résultats.');return false}}
@@ -16,7 +16,7 @@ const lessonTabs=['course','quiz','exercises','discussion'];
 function setTab(name,changeUrl=true){if(!lessonTabs.includes(name))return;lessonTabs.forEach(t=>{const on=t===name;$('pane-'+t).hidden=!on;$('tab-'+t).setAttribute('aria-selected',String(on));$('tab-'+t).tabIndex=on?0:-1});if(changeUrl)history.replaceState(null,'','#pane-'+name)}
 function openLessonHash(){let key;try{key=decodeURIComponent(location.hash.slice(1))}catch{return}if(!key)return;if(key==='pane-lab')key='pane-exercises';if(key==='pane-td')key='pane-course';const target=$(key),panel=target?.closest('[role="tabpanel"]');if(panel){setTab(panel.id.slice(5),false);requestAnimationFrame(()=>target.scrollIntoView({block:'start'}))}}
 
-function init(){initConditions();refreshProgress();const dialog=$('info-dialog');dialog.querySelector('.close').onclick=()=>dialog.close();dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});$('privacy').onclick=()=>dialog.showModal();$('reset-progress').onclick=()=>{progress={};try{[localKey,answersKey,historyKey,'thermo-progress-six-v1','thermo-answers-six-v1'].forEach(key=>localStorage.removeItem(key))}catch{}refreshProgress();if($('quiz-form')){$('quiz-form').reset();document.querySelectorAll('.quiz-option input').forEach(el=>el.checked=false);}window.thermoExercises?.clear();if($('results-content'))renderResults();dialog.close();toast('Réponses, résultats et progression locale effacés.');};
+function init(){initConditions();refreshProgress();const dialog=$('info-dialog');dialog.querySelector('.close').onclick=()=>dialog.close();dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});$('privacy').onclick=()=>dialog.showModal();$('reset-progress').onclick=()=>{progress={};try{[localKey,answersKey,historyKey,'thermo-progress-six-audit-v2','thermo-answers-six-audit-v2','thermo-progress-six-v1','thermo-answers-six-v1'].forEach(key=>localStorage.removeItem(key))}catch{}refreshProgress();if($('quiz-form')){$('quiz-form').reset();document.querySelectorAll('.quiz-option input').forEach(el=>el.checked=false);}window.thermoExercises?.clear();if($('results-content'))renderResults();dialog.close();toast('Réponses, résultats et progression locale effacés.');};
 const id=Number(document.querySelector('main').dataset.currentModule);if(!id){if($('results-content'))renderResults();if(document.querySelector('main').dataset.forum==='general')$('load-discussion').onclick=()=>loadDiscussion('general');return;}
 lessonTabs.forEach(t=>$('tab-'+t).onclick=()=>setTab(t));window.addEventListener('hashchange',openLessonHash);openLessonHash();document.querySelector('.tabs').onkeydown=e=>{if(!['ArrowRight','ArrowLeft','Home','End'].includes(e.key))return;e.preventDefault();const tabs=[...document.querySelectorAll('.tabs button')];let i=tabs.indexOf(document.activeElement);i=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length;tabs[i].click();tabs[i].focus()};
 $('load-discussion').onclick=()=>loadDiscussion(id);restoreAnswers(id);$('print').onclick=()=>window.print();

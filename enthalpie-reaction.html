@@ -21,161 +21,153 @@
 <div id="pane-course" role="tabpanel" aria-labelledby="tab-course">
 <nav class="lesson-outline" aria-label="Dans cette partie"><p><b>Dans cette partie</b></p>
 <ul>
-<li><a href="#notion-0">Définir l’enthalpie de réaction</a></li>
-<li><a href="#notion-1">État standard : préciser phase et température</a></li>
-<li><a href="#notion-2">Quatre enthalpies à reconnaître</a></li>
-</ul></nav><section><h2 id="notion-0">Définir l’enthalpie de réaction</h2>
+<li><a href="#definition-reaction">Définir l’enthalpie de réaction</a></li>
+<li><a href="#etats-standard">États standard d’un constituant</a></li>
+<li><a href="#enthalpies-particulieres">Les enthalpies particulières du cours</a></li>
+<li><a href="#tables-formation">Utiliser les enthalpies de formation</a></li>
+<li><a href="#deux-methodes">Deux façons de déterminer une enthalpie de réaction</a></li>
+</ul></nav><section class="course-section" data-source-slides="19–20"><h2 id="definition-reaction">Définir l’enthalpie de réaction</h2>
 <div class="definition">
 <h3>Enthalpie de réaction</h3>
 <p>Variation d’enthalpie de réaction définie par unité d’avancement.</p>
 </div>
-<p>À température et pression fixées, l’enthalpie de réaction mesure la variation d’enthalpie par unité d’avancement : Δ<sub>r</sub>H = (∂H/∂ξ)<sub>T,p</sub>. Elle s’exprime en J·mol⁻¹ ou kJ·mol⁻¹, pour la réaction telle qu’elle est écrite. Si elle reste constante pendant la transformation, ΔH = Δ<sub>r</sub>H × Δξ ; sinon, on intègre Δ<sub>r</sub>H par rapport à ξ.</p>
-<p>Une enthalpie standard de réaction Δ<sub>r</sub>H° est calculée avec les enthalpies molaires standard des espèces. Le symbole ° précise les états standard ; il ne fixe pas la température, qui doit être indiquée séparément. Multiplier tous les coefficients par deux multiplie Δ<sub>r</sub>H par deux : « par mole » se rapporte ici à l’avancement de l’équation choisie.</p>
+<div class="formula">Δ<sub>r</sub>H = (∂H/∂ξ)<sub>T,p</sub>
+</div>
 <div class="definition">
 <h3>Enthalpie standard de réaction</h3>
 <p>L’enthalpie standard de réaction ΔrH° se rapporte à une réaction où les réactifs dans leur état standard se transforment en produits dans leur état standard.</p>
-</div></section><section><h2 id="notion-1">État standard : préciser phase et température</h2>
+</div>
+<div class="formula">ΔH = Q<sub>p</sub> = ξ Δ<sub>r</sub>H°</div>
+<p>Dans le modèle utilisé dans le cours, ξ est l’avancement de la transformation. ΔH est en J ; Δ<sub>r</sub>H° est en J·mol⁻¹. Si Δ<sub>r</sub>H° &lt; 0, la réaction est exothermique ; si Δ<sub>r</sub>H° &gt; 0, elle est endothermique.</p>
+<p><b>Approximation d’Ellingham :</b> Δ<sub>r</sub>H° est considérée constante dans l’intervalle de température étudié.</p></section><section class="course-section" data-source-slides="18"><h2 id="etats-standard">États standard d’un constituant</h2>
+<p>La pression standard vaut p° = 1 bar ; la concentration standard vaut C° = 1 mol·L⁻¹. Il existe un état standard pour chaque température considérée.</p>
 <div class="definition">
-<h3>État standard d’un constituant gazeux</h3>
-<p>État de ce constituant pur considéré comme un gaz parfait à une pression p° et à une température T considérée.</p>
+<h3>Constituant gazeux</h3>
+<p>État de ce constituant pur considéré comme un gaz parfait à la pression p° et à la température T considérée.</p>
 </div>
 <div class="definition">
-<h3>État standard d’un constituant en phase condensée</h3>
-<p>État de ce constituant pur dans le même état physique à une pression p° et à une température T considérée.</p>
+<h3>Constituant en phase condensée</h3>
+<p>État de ce constituant pur dans le même état physique à la pression p° et à la température T considérée.</p>
 </div>
-<p>La pression standard est p° = 1 bar. Pour un gaz, on considère le gaz pur idéal à cette pression. Pour une phase condensée pure, on considère la substance pure dans la phase indiquée à p°. Pour un soluté, la convention utilisée ici est c° = 1 mol·L⁻¹ avec le comportement idéal extrapolé depuis la dilution infinie : ce n’est pas une solution réelle à 1 mol·L⁻¹ supposée idéale.</p>
-<p>Un état standard existe à chaque température considérée. Il faut distinguer l’état standard d’une espèce de l’état de référence d’un élément utilisé pour les enthalpies de formation. Une phase peut être spécifiée pour un état standard même si elle n’est pas la phase la plus stable à cette température.</p>
-<p>Pour écrire ΔH ≈ Δξ Δ<sub>r</sub>H°, on suppose T et p fixées, Δ<sub>r</sub>H constante et suffisamment proche de la valeur standard dans le modèle retenu. Un mélange réel peut demander des corrections. À température variable, le bilan comprend aussi les contributions de chauffage. Si l’avancement initial vaut zéro, Δξ = ξ.</p>
-<p>Inverser la réaction change le signe de Δ<sub>r</sub>H. Multiplier ses coefficients par k multiplie Δ<sub>r</sub>H par k et divise par k l’avancement correspondant à une même conversion physique : le produit Δξ Δ<sub>r</sub>H reste le même.</p>
-<p>Δ<sub>r</sub>H &lt; 0 caractérise une réaction exothermique à T et p considérées. Cela ne suffit ni à prédire sa spontanéité ni sa vitesse. Une réaction exothermique peut se produire dans un dispositif adiabatique : elle contribue alors à l’échauffement interne.</p>
-<p class="definition"><b>État standard d’un soluté :</b> état de référence à c° = 1 mol·L⁻¹, défini par extrapolation du comportement idéal à dilution infinie, à p° et T. Il ne s’agit pas d’une solution réelle simultanément à 1 mol·L⁻¹ et infiniment diluée.</p></section><section><h2 id="notion-2">Quatre enthalpies à reconnaître</h2>
-<p>Ces noms précisent la transformation considérée. Dans chaque cas, il faut écrire son équation, ses états physiques et la température. Un changement d’état est une transformation physique ; formation, combustion et dissociation correspondent ici à des transformations chimiques.</p>
-<h3>1. Enthalpie de changement d’état</h3>
-<p>L’enthalpie molaire de changement d’état est la variation d’enthalpie lorsque <b>une mole d’une substance passe d’une phase à une autre</b>, à température et pression précisées. La nature chimique de la substance reste identique.</p>
-<ul>
-<li>Fusion : H₂O(s) → H₂O(l), Δ<sub>fus</sub>H<sub>m</sub>.</li>
-<li>Vaporisation : H₂O(l) → H₂O(g), Δ<sub>vap</sub>H<sub>m</sub>.</li>
-<li>Sublimation : H₂O(s) → H₂O(g), Δ<sub>sub</sub>H<sub>m</sub>.</li>
-</ul>
-<p>Aux conditions usuelles de transition, fusion et vaporisation demandent de l’énergie : leurs enthalpies sont positives. Les transformations inverses ont des enthalpies opposées, pour les mêmes conditions. Pour n moles entièrement transformées à conditions constantes, ΔH = n Δ<sub>tr</sub>H<sub>m</sub>.</p>
-<p><b>Une vaporisation ne dissocie pas les molécules d’eau.</b> H₂O(g) contient encore des molécules H₂O ; le changement de phase concerne notamment leurs interactions entre elles.</p>
-<h3>2. Enthalpie standard de formation</h3>
 <div class="definition">
-<h3>Définition du cours</h3>
-<p>Variation d’enthalpie de la réaction de synthèse de 1 mole de composé formé dans son état standard, à partir des corps simples appropriés, pris dans leur état standard de référence.</p>
+<h3>Soluté</h3>
+<p>État de référence à la concentration C°, défini à partir du comportement en solution infiniment diluée, à la pression p° et à la température T considérée.</p>
 </div>
-<p>Δ<sub>f</sub>H° correspond à la formation de <b>une mole de l’espèce</b>, dans l’état standard indiqué, à partir des éléments dans leurs états de référence à la même température et à la pression standard.</p>
-<div class="formula">H₂(g) + ½ O₂(g) → H₂O(l)</div>
-<p>Les coefficients fractionnaires sont donc permis. À 298,15 K, C(graphite) est l’état de référence du carbone : sa Δ<sub>f</sub>H° est nulle par convention, celle du diamant ne l’est pas. Cette convention ne signifie pas que l’enthalpie absolue de l’élément est nulle. Une enthalpie de formation peut être positive ou négative.</p>
-<h3>3. Enthalpie standard de combustion</h3>
-<p>Δ<sub>c</sub>H° correspond à la <b>combustion complète d’une mole du combustible dans le dioxygène</b>, avec les espèces dans leurs états standard à la température indiquée. Le coefficient du combustible est 1.</p>
-<p class="course-exercise-link"><a href="#exercice-combustion-methane">À vous de chercher : écrire la combustion complète du méthane</a></p>
-<p>Les combustions des combustibles usuels sont exothermiques : Δ<sub>c</sub>H° &lt; 0. Il faut préciser les produits et leurs phases : obtenir de l’eau liquide ou de la vapeur ne donne pas le même bilan. Les enthalpies de combustion permettent aussi de construire des cycles de Hess.</p>
-<h3>4. Enthalpie de dissociation d’une liaison</h3>
-<p>Dans le contexte des tables de liaisons, l’enthalpie de dissociation est l’enthalpie molaire nécessaire pour <b>rompre une liaison donnée par homolyse en phase gazeuse</b> : chacun des fragments conserve un des deux électrons de la liaison.</p>
-<div class="formula">H₂(g) → 2 H(g)<br>CH₄(g) → CH₃·(g) + H·(g)</div>
-<p>Pour une liaison stable, sa rupture demande de l’énergie ; la formation de cette même liaison à partir des mêmes fragments libère la même quantité d’énergie, dans les mêmes conditions. Les dissociations successives d’une molécule ne sont pas nécessairement équivalentes.</p>
-<p>Une <b>enthalpie moyenne de liaison</b> ne doit pas être confondue avec la valeur d’une liaison précise dans une molécule donnée. Les tables de valeurs moyennes permettent une estimation : Δ<sub>r</sub>H ≈ somme des enthalpies des liaisons rompues − somme des enthalpies des liaisons formées. Cette estimation concerne les espèces gazeuses ; pour d’autres phases, il faut aussi tenir compte des changements d’état.</p>
-<details><summary>Dissociation et atomisation : quelle différence ?</summary><p>L’atomisation produit des atomes gazeux à partir d’une espèce. H₂(g) → 2 H(g) est à la fois une dissociation de liaison et une atomisation de la molécule. CH₄(g) → C(g) + 4 H(g) correspond à son atomisation complète ; cela ne décrit pas la rupture de sa seule première liaison C–H. Plus généralement, une dissociation peut produire des fragments qui ne sont pas des atomes : son équation doit toujours être précisée.</p></details><details><summary>Vérifiez que vous distinguez les transformations</summary><p>H₂O(l) → H₂O(g) : vaporisation. H₂(g) + ½ O₂(g) → H₂O(l) : formation de l’eau, également combustion du dihydrogène. H₂(g) → 2 H(g) : dissociation. Une même équation peut donc relever de plusieurs catégories.</p></details><p class="definition"><b>État standard de référence d’un élément :</b> corps simple de cet élément dans son état le plus stable à une pression p° et à une température T considérée.</p>
-<p class="inline-resource"><a href="https://femto-physique.fr/thermodynamique/changements-de-phase.php" target="_blank" rel="noopener noreferrer">Femto-physique : chaleurs latentes</a> <span>(français, nouvel onglet)</span></p>
-<p class="inline-resource"><a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax : enthalpies de formation et équations thermochimiques</a> <span>(anglais, nouvel onglet)</span></p></section><section><h3>Calculer à partir des enthalpies de formation</h3>
-<p>Le calcul thermochimique commence par une équation équilibrée. Une combustion donnant H₂O(l) n’a pas la même enthalpie qu’une combustion donnant H₂O(g). L’enthalpie de formation d’un composé est associée à un état physique et à une température.</p>
-<p class="course-exercise-link"><a href="#exercice-benzene">À vous de chercher : calculer l’enthalpie de formation du benzène à partir de C₂H₂</a></p></section><div class="formula">Δ<sub>r</sub>H° = Σ<sub>produits</sub>ν Δ<sub>f</sub>H° − Σ<sub>réactifs</sub>ν Δ<sub>f</sub>H°</div>
-<p>Dans cette écriture « produits moins réactifs », ν désigne les coefficients positifs de chaque côté. Avec des nombres stœchiométriques signés (νᵢ &gt; 0 pour les produits, νᵢ &lt; 0 pour les réactifs), la même relation s’écrit Δ<sub>r</sub>H° = Σᵢ νᵢ Δ<sub>f</sub>Hᵢ°.</p>
-<section class="example"><h3>Un exemple commenté</h3>
-<p>Pour C₂H₄(g) + H₂(g) → C₂H₆(g), les données du TD donnent −84,67 − 52,28 − 0 = −136,95 kJ·mol⁻¹.</p></section><section><h3>Avant de regarder la correction</h3>
-<p>Écrivez la réaction de formation de H₂O(l) à 298 K.</p>
-<details><summary>Afficher le raisonnement</summary><p>H₂(g) + ½ O₂(g) → H₂O(l). Le coefficient de l’eau est 1.</p></details></section><details><summary>Complément : changer la température, loi de Kirchhoff</summary><p>Si les phases restent identiques, Δ<sub>r</sub>H°(T₂) = Δ<sub>r</sub>H°(T₁) + ∫<sub>T₁</sub><sup>T₂</sup> Δ<sub>r</sub>C<sub>p</sub>°(T) dT, avec Δ<sub>r</sub>C<sub>p</sub>° = Σᵢ νᵢ C<sub>p,m,i</sub>° et νᵢ signés. À capacités constantes, la correction vaut Δ<sub>r</sub>C<sub>p</sub>°(T₂−T₁).</p>
-<p>L’approximation d’Ellingham employée dans le cours néglige cette correction sur l’intervalle retenu. Si une phase change sur le chemin choisi, il faut fractionner le calcul et intégrer l’enthalpie de transition. Ce complément explique pourquoi une donnée à 298 K ne peut pas toujours être utilisée à une autre température.</p></details><section class="two-methods"><h3>Deux façons de déterminer une enthalpie de réaction</h3>
-<p>On peut calculer cette grandeur à partir de données connues, ou la déterminer expérimentalement.</p>
-<div class="method-pair">
-<a href="hess.html"><strong>À partir de données tabulées</strong><span>Utiliser les enthalpies de formation ou d’autres transformations connues et construire un cycle de Hess.</span></a><a href="calorimetrie.html"><strong>Par une mesure expérimentale</strong><span>Mesurer une variation de température et établir un bilan calorimétrique.</span></a>
+<p>Le symbole ° indique l’état standard. La température doit toujours être précisée.</p></section><section class="course-section" data-source-slides="21, 23–24, 28, 30"><h2 id="enthalpies-particulieres">Les enthalpies particulières du cours</h2>
+<div class="definition">
+<h3>Enthalpie de changement d’état</h3>
+<p>Variation d’enthalpie associée au passage d’un état physique à un autre : fusion, vaporisation ou sublimation.</p>
 </div>
-<p>Dans les deux cas, on cherche une enthalpie associée à une réaction écrite avec ses coefficients et ses états physiques.</p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Enthalpie de réaction · CC BY-NC-ND 4.0 · lenaiclartigue.github.io/thermochimie/</p>
-<div class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></div>
+<div class="formula">H₂O(s) → H₂O(l) : Δ<sub>fus</sub>H°<br>H₂O(l) → H₂O(g) : Δ<sub>vap</sub>H°</div>
+<div class="definition">
+<h3>Enthalpie standard de formation</h3>
+<p>Variation d’enthalpie de la réaction de synthèse de 1 mole de composé formé dans son état standard, à partir des corps simples appropriés pris dans leur état standard de référence.</p>
+</div>
+<div class="definition">
+<h3>État standard de référence d’un élément</h3>
+<p>Corps simple de cet élément dans son état le plus stable à la pression p° et à la température T considérée.</p>
+</div>
+<p>L’enthalpie standard de formation d’un élément dans son état de référence est nulle par convention.</p>
+<p>États de référence indiqués dans le cours : H₂(g), Cl₂(g), O₂(g), N₂(g) et carbone graphite. L’état de référence d’un élément peut dépendre de la température.</p>
+<div class="definition">
+<h3>Enthalpie standard de combustion</h3>
+<p>Variation d’enthalpie associée à la combustion d’une substance à pression constante, dans les états standard indiqués. La combustion complète étudiée dans le cours est exothermique et totale.</p>
+</div>
+<p class="course-exercise-link"><a href="#exercice-combustion-methane">Écrire la réaction de combustion du méthane</a></p>
+<div class="definition">
+<h3>Enthalpie de dissociation de liaison</h3>
+<p>Variation d’enthalpie de la réaction A–B(g) → A(g) + B(g). La dissociation de la liaison considérée demande de l’énergie : ΔdissH° &gt; 0.</p>
+</div>
+<p>Les liaisons sont rompues dans les espèces gazeuses. L’opération inverse, la formation de la liaison, change le signe de l’enthalpie.</p>
+<aside class="further-reading"><h3>Pour aller plus loin</h3>
+<p>Les définitions et les équations thermochimiques sont également présentées dans la section « Enthalpy » de <a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax, Chemistry 2e</a>.</p>
+<p class="resource-meta">Lecture facultative · anglais · nouvel onglet</p></aside></section><section class="course-section" data-source-slides="25"><h2 id="tables-formation">Utiliser les enthalpies de formation</h2>
+<div class="formula">Δ<sub>r</sub>H° = ∑ νᵢ Δ<sub>f</sub>H°(produits) − ∑ νᵢ Δ<sub>f</sub>H°(réactifs)</div>
+<p>On multiplie chaque donnée par le coefficient de l’espèce dans l’équation. On calcule ensuite la somme pour les produits moins la somme pour les réactifs.</p>
+<p class="course-exercise-link"><a href="#exercice-benzene">Calculer l’enthalpie de la réaction 3 C₂H₂(g) → C₆H₆(g)</a></p></section><section class="course-section" data-source-slides="25–41 ; transition demandée"><h2 id="deux-methodes">Deux façons de déterminer une enthalpie de réaction</h2>
+<div class="method-grid">
+<div>
+<h3>À partir de données tabulées</h3>
+<p>Combiner des transformations connues pour obtenir la réaction étudiée.</p>
+<a href="hess.html">Poursuivre avec les cycles de Hess →</a>
+</div>
+<div>
+<h3>Par une mesure expérimentale</h3>
+<p>Mesurer la variation de température et établir le bilan thermique.</p>
+<a href="calorimetrie.html">Poursuivre avec la calorimétrie →</a>
+</div>
+</div></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Enthalpie de réaction · CC BY-NC-ND 4.0</p>
+<p class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></p>
 </div>
 <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
-<h3>10 questions pour faire le point</h3>
-<p>Le quiz est un entraînement : vous pouvez recommencer.</p>
+<h2>8 questions de compréhension</h2>
+<p>Ces questions reprennent les définitions et les relations du cours. Vous pouvez recommencer.</p>
 <form id="quiz-form">
-<div class="quiz-item" data-correct="1" data-explanation="L’enthalpie de réaction se rapporte à l’équation telle qu’elle est écrite.">
+<div class="quiz-item" data-source-slides="19" data-correct="1" data-explanation="La dérivée est prise à température et pression constantes.">
 <fieldset>
-<legend>1. Si on double tous les coefficients d’une équation, son ΔrH°…</legend>
-<label class="quiz-option"><input required type="radio" name="q0" value="0"><span>reste inchangé</span></label><label class="quiz-option"><input required type="radio" name="q0" value="1"><span>double</span></label><label class="quiz-option"><input required type="radio" name="q0" value="2"><span>change uniquement de signe</span></label>
+<legend>1. ΔrH décrit la variation d’enthalpie par rapport à…</legend>
+<label class="quiz-option"><input type="radio" name="q0" value="0" required><span>la température</span></label><label class="quiz-option"><input type="radio" name="q0" value="1" required><span>l’avancement ξ</span></label><label class="quiz-option"><input type="radio" name="q0" value="2" required><span>le volume</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="0" data-explanation="Il faut partir des éléments dans leurs états de référence et former exactement une mole de composé.">
+<div class="quiz-item" data-source-slides="20" data-correct="0" data-explanation="Elle peut aussi s’exprimer en kJ·mol⁻¹.">
 <fieldset>
-<legend>2. La réaction de formation d’une mole de CO₂(g) à 298 K est…</legend>
-<label class="quiz-option"><input required type="radio" name="q1" value="0"><span>C(graphite) + O₂(g) → CO₂(g)</span></label><label class="quiz-option"><input required type="radio" name="q1" value="1"><span>CO(g) + ½ O₂(g) → CO₂(g)</span></label><label class="quiz-option"><input required type="radio" name="q1" value="2"><span>2 C(graphite) + 2 O₂(g) → 2 CO₂(g)</span></label>
+<legend>2. L’unité de ΔrH est…</legend>
+<label class="quiz-option"><input type="radio" name="q1" value="0" required><span>J·mol⁻¹</span></label><label class="quiz-option"><input type="radio" name="q1" value="1" required><span>J·K⁻¹</span></label><label class="quiz-option"><input type="radio" name="q1" value="2" required><span>mol·J⁻¹</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="C’est une convention de référence, pas une absence d’énergie.">
+<div class="quiz-item" data-source-slides="18" data-correct="1" data-explanation="p° = 1 bar.">
 <fieldset>
-<legend>3. ΔfH°(O₂,g) à 298 K vaut zéro parce que…</legend>
-<label class="quiz-option"><input required type="radio" name="q2" value="0"><span>l’oxygène ne contient aucune énergie</span></label><label class="quiz-option"><input required type="radio" name="q2" value="1"><span>O₂(g) est l’état de référence de l’élément à cette température</span></label><label class="quiz-option"><input required type="radio" name="q2" value="2"><span>toutes les molécules gazeuses ont une enthalpie nulle</span></label>
+<legend>3. La pression standard du cours vaut…</legend>
+<label class="quiz-option"><input type="radio" name="q2" value="0" required><span>1 Pa</span></label><label class="quiz-option"><input type="radio" name="q2" value="1" required><span>1 bar</span></label><label class="quiz-option"><input type="radio" name="q2" value="2" required><span>10 bar</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="0" data-explanation="82,9 − 3 × 226,7 = −597,2 kJ·mol⁻¹ pour l’équation écrite.">
+<div class="quiz-item" data-source-slides="18" data-correct="1" data-explanation="On peut définir un état standard à différentes températures.">
 <fieldset>
-<legend>4. Avec 3 C₂H₂(g) → C₆H₆(g), ΔfH°(C₂H₂) = 226,7 et ΔfH°(C₆H₆) = 82,9 kJ·mol⁻¹, ΔrH° vaut…</legend>
-<label class="quiz-option"><input required type="radio" name="q3" value="0"><span>−597,2 kJ·mol⁻¹</span></label><label class="quiz-option"><input required type="radio" name="q3" value="1"><span>−143,8 kJ·mol⁻¹</span></label><label class="quiz-option"><input required type="radio" name="q3" value="2"><span>+597,2 kJ·mol⁻¹</span></label>
+<legend>4. Le symbole ° impose-t-il une température de 298 K ?</legend>
+<label class="quiz-option"><input type="radio" name="q3" value="0" required><span>Oui, toujours</span></label><label class="quiz-option"><input type="radio" name="q3" value="1" required><span>Non, la température doit être précisée</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="À 298 K, le graphite est l’état standard de référence du carbone. Une autre forme doit être traitée séparément.">
+<div class="quiz-item" data-source-slides="23" data-correct="0" data-explanation="Le composé formé est dans son état standard.">
 <fieldset>
-<legend>5. Le diamant et le graphite ont nécessairement la même enthalpie de formation.</legend>
-<label class="quiz-option"><input required type="radio" name="q4" value="0"><span>Vrai</span></label><label class="quiz-option"><input required type="radio" name="q4" value="1"><span>Faux</span></label>
+<legend>5. Une réaction de formation produit…</legend>
+<label class="quiz-option"><input type="radio" name="q4" value="0" required><span>une mole du composé à partir des corps simples de référence</span></label><label class="quiz-option"><input type="radio" name="q4" value="1" required><span>toujours deux moles de gaz</span></label><label class="quiz-option"><input type="radio" name="q4" value="2" required><span>uniquement un corps simple</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="La molécule reste H₂O ; son état physique change.">
+<div class="quiz-item" data-source-slides="23–24" data-correct="1" data-explanation="Cette convention concerne l’état de référence de l’élément.">
 <fieldset>
-<legend>6. H₂O(l) → H₂O(g) correspond à…</legend>
-<label class="quiz-option"><input required="" type="radio" name="q5" value="0"><span>une dissociation des liaisons O–H</span></label><label class="quiz-option"><input required="" type="radio" name="q5" value="1"><span>une vaporisation</span></label><label class="quiz-option"><input required="" type="radio" name="q5" value="2"><span>une formation à partir des éléments</span></label>
+<legend>6. L’enthalpie standard de formation d’un élément dans son état de référence vaut…</legend>
+<label class="quiz-option"><input type="radio" name="q5" value="0" required><span>1 kJ·mol⁻¹</span></label><label class="quiz-option"><input type="radio" name="q5" value="1" required><span>0 par convention</span></label><label class="quiz-option"><input type="radio" name="q5" value="2" required><span>toujours une valeur positive</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="Le coefficient du combustible est 1 dans l’équation de définition.">
+<div class="quiz-item" data-source-slides="28" data-correct="0" data-explanation="La définition du cours utilise les espèces gazeuses.">
 <fieldset>
-<legend>7. Une enthalpie standard de combustion molaire se rapporte à…</legend>
-<label class="quiz-option"><input required="" type="radio" name="q6" value="0"><span>une mole de dioxygène, toujours</span></label><label class="quiz-option"><input required="" type="radio" name="q6" value="1"><span>une mole de combustible, pour les produits et phases indiqués</span></label><label class="quiz-option"><input required="" type="radio" name="q6" value="2"><span>une mole de chaque produit, toujours</span></label>
+<legend>7. La dissociation de la liaison A–B(g) donne…</legend>
+<label class="quiz-option"><input type="radio" name="q6" value="0" required><span>A(g) et B(g)</span></label><label class="quiz-option"><input type="radio" name="q6" value="1" required><span>A(l) et B(l)</span></label><label class="quiz-option"><input type="radio" name="q6" value="2" required><span>AB(s)</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="Rompre cette liaison stable en phase gazeuse demande de l’énergie.">
+<div class="quiz-item" data-source-slides="19" data-correct="0" data-explanation="La dépendance en température est négligée sur cet intervalle.">
 <fieldset>
-<legend>8. H₂(g) → 2 H(g) correspond à…</legend>
-<label class="quiz-option"><input required="" type="radio" name="q7" value="0"><span>une vaporisation</span></label><label class="quiz-option"><input required="" type="radio" name="q7" value="1"><span>une dissociation de la liaison H–H</span></label><label class="quiz-option"><input required="" type="radio" name="q7" value="2"><span>une combustion</span></label>
+<legend>8. Dans l’approximation d’Ellingham utilisée dans le cours…</legend>
+<label class="quiz-option"><input type="radio" name="q7" value="0" required><span>ΔrH° est considérée constante sur l’intervalle de température</span></label><label class="quiz-option"><input type="radio" name="q7" value="1" required><span>ΔrH° est toujours nulle</span></label><label class="quiz-option"><input type="radio" name="q7" value="2" required><span>la température ne peut pas changer</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="2" data-explanation="ΔrH double mais Δξ est divisé par deux : leur produit reste inchangé.">
-<fieldset>
-<legend>9. On double les coefficients de l’équation pour décrire la même conversion physique. Que devient ΔH ?</legend>
-<label class="quiz-option"><input required="" type="radio" name="q8" value="0"><span>Elle double</span></label><label class="quiz-option"><input required="" type="radio" name="q8" value="1"><span>Elle est divisée par deux</span></label><label class="quiz-option"><input required="" type="radio" name="q8" value="2"><span>Elle reste identique</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<div class="quiz-item" data-correct="1" data-explanation="L’état standard est défini à une température qu’il faut préciser ; 298,15 K est une température fréquente de tabulation.">
-<fieldset>
-<legend>10. Le symbole ° fixe-t-il la température à 298 K ?</legend>
-<label class="quiz-option"><input required="" type="radio" name="q9" value="0"><span>Oui</span></label><label class="quiz-option"><input required="" type="radio" name="q9" value="1"><span>Non</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<button class="button" type="submit">Valider mes réponses</button> <button class="button secondary" type="reset">Recommencer</button><div id="quiz-result" role="status"></div>
+<button type="submit" class="button">Valider mes réponses</button> <button type="reset" class="button secondary">Recommencer</button>
 </form>
-<div class="step-next"><a class="button" href="#pane-exercises">Passer aux exercices</a></div>
+<div id="quiz-result" aria-live="polite"></div>
+<p class="step-next"><a class="button" href="#pane-exercises">Passer aux exercices</a></p>
 </div>
 <div id="pane-exercises" role="tabpanel" aria-labelledby="tab-exercises" hidden>
 <h2>Exercices</h2>
-<p>Après le QCM, cherchez les réponses sur votre brouillon puis saisissez-les ici. Vous pouvez vérifier une étape à la fois, demander un indice et ouvrir la correction après votre recherche.</p>
-<p class="muted">Les réponses vérifiées sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
+<p>Après le QCM, cherchez sur votre brouillon puis saisissez vos réponses. Vous pouvez vérifier une étape à la fois. Les indices et la correction s’ouvrent à votre demande.</p>
+<p class="muted">Vos réponses sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
 <nav class="exercise-index" aria-label="Choisir un exercice"><ul>
 <li><a href="#exercice-benzene">Former le benzène à partir de l’acétylène</a></li>
 <li><a href="#exercice-combustion-methane">Équilibrer la combustion du méthane</a></li>
@@ -183,7 +175,7 @@
 <h3>Former le benzène à partir de l’acétylène</h3>
 <p class="exercise-origin">Exercice du diaporama · diapositive 25</p>
 <p>Calculer l’enthalpie standard de la réaction : <b>3 C₂H₂(g) → C₆H₆(g)</b>.</p>
-<p>À la même température : ΔfH°(C₂H₂,g) = 226,7 kJ·mol⁻¹ ; ΔfH°(C₆H₆,g) = 82,9 kJ·mol⁻¹. Les deux espèces sont gazeuses.</p>
+<p>Données : Δ<sub>f</sub>H°(C₂H₂,g) = 226,7 kJ·mol⁻¹ ; Δ<sub>f</sub>H°(C₆H₆,g) = 82,9 kJ·mol⁻¹.</p>
 <form class="exercise-form" data-exercise="benzene" novalidate>
 <div class="exercise-fields">
 <div class="exercise-field">
@@ -192,18 +184,14 @@
 <div class="exercise-field">
 <label for="benzene-reponse-2">2. Enthalpie standard ΔrH° <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="benzene-reponse-2" name="reponse-2" data-expected="-597.2" data-hint="Produits moins réactifs." aria-describedby="benzene-reponse-2-feedback" data-tolerance="0.2" placeholder="Votre réponse"><p id="benzene-reponse-2-feedback" class="field-feedback"></p>
 </div>
-<div class="exercise-field">
-<label for="benzene-reponse-3">3. Caractère thermique</label><select id="benzene-reponse-3" name="reponse-3" data-expected="exo" data-hint="Une enthalpie de réaction négative correspond à une réaction exothermique." aria-describedby="benzene-reponse-3-feedback"><option value="">Choisir une réponse</option>
-<option value="exo">Exothermique</option>
-<option value="endo">Endothermique</option></select><p id="benzene-reponse-3-feedback" class="field-feedback"></p>
-</div>
 </div>
 <div class="exercise-actions">
 <button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Écrivez ΔrH° = Σproduits ν ΔfH° − Σréactifs ν ΔfH°.</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><p>ΔrH° = 82,9 − 3 × 226,7 = <b>−597,2 kJ·mol⁻¹</b> pour l’équation écrite. La réaction est exothermique. Le coefficient du benzène est 1 : une mole d’avancement correspond à une mole de benzène formée.</p></details><p class="inline-resource"><a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax — Enthalpy</a> <span>(anglais, nouvel onglet)</span></p></section><section class="exercise-card" id="exercice-combustion-methane"><p class="eyebrow">EXERCICE 2</p>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Écrivez ΔrH° = Σproduits ν ΔfH° − Σréactifs ν ΔfH°.</p></details><details class="exercise-solution"><summary>Correction</summary><p>Δ<sub>r</sub>H° = Δ<sub>f</sub>H°(C₆H₆,g) − 3 Δ<sub>f</sub>H°(C₂H₂,g)</p>
+<p>Δ<sub>r</sub>H° = 82,9 − 3 × 226,7 = <b>−597,2 kJ·mol⁻¹</b>.</p></details></section><section class="exercise-card" id="exercice-combustion-methane"><p class="eyebrow">EXERCICE 2</p>
 <h3>Équilibrer la combustion du méthane</h3>
 <p class="exercise-origin">Exercice du diaporama · diapositive 30</p>
 <p>Écrire la combustion complète d’une mole de méthane gazeux dans le dioxygène. Les produits retenus sont CO₂(g) et H₂O(l).</p>
@@ -219,18 +207,13 @@
 <div class="exercise-field">
 <label for="combustion-methane-reponse-3">3. Coefficient c de l’eau</label><input type="text" inputmode="decimal" autocomplete="off" id="combustion-methane-reponse-3" name="reponse-3" data-expected="2" data-hint="Quatre atomes d’hydrogène donnent deux molécules H₂O." aria-describedby="combustion-methane-reponse-3-feedback" data-tolerance="0.001" placeholder="Votre réponse"><p id="combustion-methane-reponse-3-feedback" class="field-feedback"></p>
 </div>
-<div class="exercise-field">
-<label for="combustion-methane-reponse-4">4. Si le produit est H₂O(g), peut-on conserver la même valeur de l’enthalpie de combustion ?</label><select id="combustion-methane-reponse-4" name="reponse-4" data-expected="non" data-hint="L’enthalpie dépend des états physiques." aria-describedby="combustion-methane-reponse-4-feedback"><option value="">Choisir une réponse</option>
-<option value="oui">Oui</option>
-<option value="non">Non, il faut tenir compte du changement d’état</option></select><p id="combustion-methane-reponse-4-feedback" class="field-feedback"></p>
-</div>
 </div>
 <div class="exercise-actions">
 <button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Équilibrez successivement C, H, puis O.</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><p><b>CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l)</b>. Avec de la vapeur, on ajoute la vaporisation des deux moles d’eau à la même température ; la valeur de l’enthalpie de combustion change.</p></details><p class="inline-resource"><a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax — Enthalpy</a> <span>(anglais, nouvel onglet)</span></p></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Équilibrez successivement C, H, puis O.</p></details><details class="exercise-solution"><summary>Correction</summary><p><b>CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l)</b>.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Enthalpie de réaction</h3>
@@ -252,5 +235,6 @@
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
 <script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
 <script src="exercices.js" defer></script>
+<script src="interactions.js" defer></script>
 </body>
 </html>

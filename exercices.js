@@ -1,7 +1,7 @@
 'use strict';
 (() => {
-  const key='thermo-exercises-guided-v1';
-  const version='2026-10-14-guided-v1';
+  const key='thermo-exercises-slides-v2';
+  const version='2026-10-14-slides-v2';
   const pages=['systeme.html','premier-principe.html','enthalpie.html','enthalpie-reaction.html','hess.html','calorimetrie.html'];
   function read(){try{const x=JSON.parse(localStorage.getItem(key)||'{}');return x&&typeof x==='object'&&!Array.isArray(x)?x:{}}catch{return {}}}
   function write(all){try{localStorage.setItem(key,JSON.stringify(all))}catch{if(typeof toast==='function')toast('Les réponses ne peuvent pas être conservées dans ce navigateur.')}}
@@ -23,7 +23,7 @@
     controllers.push(reset);
   });
   function renderSummary(){const host=document.getElementById('exercise-results');if(!host)return;const entries=Object.entries(read()).filter(([id,r])=>r?.version===version&&Number.isInteger(r.module)&&r.module>=1&&r.module<=6&&typeof r.title==='string');host.replaceChildren();const title=document.createElement('h2');title.textContent='Exercices travaillés';host.append(title);if(!entries.length){const p=document.createElement('p');p.textContent='Aucun exercice enregistré dans ce navigateur.';host.append(p);return}for(const [id,r] of entries){const p=document.createElement('p'),a=document.createElement('a');a.href=pages[r.module-1]+'#exercice-'+encodeURIComponent(id);a.textContent=r.title;p.append(a,document.createTextNode(' : '+Number(r.correct)+' / '+Number(r.total)+' réponses vérifiées correctes'+(r.correction_viewed?' · correction consultée.':'.')));host.append(p)}}
-  window.thermoExercises={snapshot:read,clear(){try{localStorage.removeItem(key)}catch{}controllers.forEach(reset=>reset());renderSummary()}};
+  window.thermoExercises={snapshot:read,clear(){try{localStorage.removeItem(key);localStorage.removeItem('thermo-exercises-guided-v1')}catch{}controllers.forEach(reset=>reset());renderSummary()}};
   if(document.getElementById('exercise-results')){if(typeof renderResults==='function')renderResults();renderSummary()}
   document.getElementById('print-practical')?.addEventListener('click',()=>window.print());
 })();

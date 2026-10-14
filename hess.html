@@ -20,91 +20,99 @@
 </div>
 <div id="pane-course" role="tabpanel" aria-labelledby="tab-course">
 <nav class="lesson-outline" aria-label="Dans cette partie"><p><b>Dans cette partie</b></p>
-<ul><li><a href="#notion-5">Construire le cycle, étape par étape</a></li></ul></nav><section><h3>Comprendre la notion</h3>
+<ul>
+<li><a href="#loi-hess">Loi et diagramme de Hess</a></li>
+<li><a href="#liaisons">Utiliser les enthalpies de dissociation</a></li>
+<li><a href="#autres-enthalpies">Autres enthalpies indiquées dans le cours</a></li>
+<li><a href="#cycle-propane">Construire un cycle avec des combustions</a></li>
+</ul></nav><section class="course-section" data-source-slides="27"><h2 id="loi-hess">Loi et diagramme de Hess</h2>
 <div class="definition">
 <h3>Loi de Hess</h3>
 <p>Soit une réaction globale qui mène d’un état initial à un état final. Une suite de réactions successives peut mener de l’un à l’autre : la variation d’enthalpie accompagnant la réaction globale est la somme des enthalpies des réactions successives.</p>
 </div>
-<p>Parce que H est une fonction d’état, une transformation globale possède la même variation d’enthalpie quel que soit le chemin permettant de relier ses états initial et final.</p>
-<p>Inverser une réaction change le signe de son enthalpie. Multiplier ses coefficients par k multiplie son enthalpie par k. Additionner les équations permet d’éliminer les espèces intermédiaires présentes des deux côtés.</p>
-<p>Les enthalpies de dissociation concernent les espèces gazeuses. Le calcul par liaisons demande de compter les liaisons rompues puis formées, et d’ajouter les éventuelles étapes d’atomisation ou de changement de phase. Les valeurs moyennes de liaison donnent une estimation.</p>
-<p class="inline-resource"><a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax : loi de Hess et exemples corrigés</a> <span>(anglais, nouvel onglet)</span></p></section><section><h3>Combustion et autres étapes du cycle</h3>
-<p>Une combustion complète d’un composé carboné approprié utilise O₂ et produit CO₂ et H₂O, dont on doit préciser la phase. Pour CH₄(g) : CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l), si l’eau finale est liquide. Le dioxygène est ajouté en quantité suffisante dans les exercices de combustion totale.</p>
-<p class="course-exercise-link"><a href="#exercice-propane">À vous de chercher : construire le cycle du propane</a></p>
-<p>Certains cycles comportent une ionisation M(g) → M⁺(g) + e⁻ ou un attachement électronique M(g) + e⁻ → M⁻(g). Leur sens et leurs valeurs doivent être repris tels qu’ils sont définis dans les données. Ne donnez pas automatiquement le même signe à ces deux processus.</p></section><div class="formula">Δ<sub>r</sub>H° = somme des enthalpies des étapes ajustées</div>
-<section><h3>Dissocier puis former les liaisons</h3>
-<p>Le chemin fictif peut passer par des atomes gazeux communs aux réactifs et aux produits. On additionne les étapes de dissociation, puis les étapes de formation des liaisons, avec leurs signes.</p>
-<p class="course-exercise-link"><a href="#exercice-hcl">À vous de chercher : former HCl(g) à partir des données de dissociation</a></p></section><section><h3>Avant de regarder la correction</h3>
-<p>Pourquoi faut-il changer le signe d’une enthalpie lorsque l’on inverse une réaction ?</p>
-<details><summary>Afficher le raisonnement</summary><p>On échange les états initial et final : Hf − Hi devient Hi − Hf.</p></details></section><section><h2 id="notion-5">Construire le cycle, étape par étape</h2>
-<p>Écrivez d’abord la réaction cible avec les phases. Pour chaque équation disponible, choisissez le sens et le multiplicateur, puis additionnez. Annulez une espèce seulement si sa formule et sa phase sont identiques de chaque côté. Vérifiez le bilan de matière et, pour les espèces ioniques, le bilan de charge.</p>
-<p>Les étapes forment un chemin de calcul : elles ne décrivent pas nécessairement un mécanisme réel. Toutes les données doivent correspondre à la même température. Sur un cycle fermé, la somme des variations d’enthalpie est nulle.</p>
-<h3>Une phase différente ne s’annule pas</h3>
-<p>Pour passer d’une combustion produisant 2 H₂O(g) à la combustion produisant 2 H₂O(l), ajoutez deux condensations à la même température. À 298 K, les valeurs arrondies −241,8 et −285,8 kJ·mol⁻¹ donnent Δ<sub>vap</sub>H° ≈ 44,0 kJ·mol⁻¹. Le passage à l’eau liquide rend donc la combustion plus exothermique d’environ 88,0 kJ par mole de combustible si deux moles d’eau sont produites.</p>
-<p>La valeur 40,7 kJ·mol⁻¹ utilisée pour vaporiser l’eau vers 100 °C correspond à une autre température.</p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Cycles de Hess · CC BY-NC-ND 4.0 · lenaiclartigue.github.io/thermochimie/</p>
-<div class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></div>
+<div class="formula">Δ<sub>r</sub>H° = Δ<sub>r</sub>H°₁ + Δ<sub>r</sub>H°₂ + …</div>
+<p>On prend les données dans le bon sens du cycle choisi et avec la bonne stœchiométrie.</p>
+<ul>
+<li>Inverser une réaction change le signe de son enthalpie.</li>
+<li>Multiplier une équation par un nombre multiplie son enthalpie par ce nombre.</li>
+<li>On additionne les équations pour retrouver la réaction cherchée.</li>
+</ul>
+<aside class="further-reading"><h3>Pour aller plus loin</h3>
+<p>Retrouvez des exemples de combinaison d’équations dans la partie « Hess’s Law » de <a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax, Chemistry 2e</a>.</p>
+<p class="resource-meta">Lecture facultative · anglais · nouvel onglet</p></aside></section><section class="course-section" data-source-slides="28–29"><h2 id="liaisons">Utiliser les enthalpies de dissociation</h2>
+<p>Pour former HCl(g) à partir de H₂(g) et Cl₂(g), on peut décomposer le calcul en deux étapes : dissocier les liaisons des réactifs, puis former la liaison H–Cl.</p>
+<div class="formula">½ H₂(g) + ½ Cl₂(g) → HCl(g)</div>
+<p>La dissociation demande de l’énergie ; la formation de la liaison correspond à la transformation inverse.</p>
+<p class="course-exercise-link"><a href="#exercice-hcl">Résoudre l’exercice du cours sur HCl(g)</a></p></section><section class="course-section" data-source-slides="28"><h2 id="autres-enthalpies">Autres enthalpies indiquées dans le cours</h2>
+<div class="definition">
+<h3>Enthalpie d’ionisation</h3>
+<p>M(g) → M⁺(g) + e⁻ ; Δ<sub>ion</sub>H° &gt; 0.</p>
+</div>
+<div class="definition">
+<h3>Enthalpie d’attachement électronique</h3>
+<p>M(g) + e⁻ → M⁻(g) ; Δ<sub>AE</sub>H°.</p>
+</div></section><section class="course-section" data-source-slides="31"><h2 id="cycle-propane">Construire un cycle avec des combustions</h2>
+<p>L’exercice du propane utilise les combustions du propane, du carbone et du dihydrogène pour retrouver la réaction de formation :</p>
+<div class="formula">3 C(gr) + 4 H₂(g) → C₃H₈(g)</div>
+<p>Commencez par retrouver les coefficients et le sens de chaque réaction. Additionnez ensuite les enthalpies correspondantes.</p>
+<p class="course-exercise-link"><a href="#exercice-propane">Construire le cycle du propane</a></p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Cycles de Hess · CC BY-NC-ND 4.0</p>
+<p class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></p>
 </div>
 <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
-<h3>7 questions pour faire le point</h3>
-<p>Le quiz est un entraînement : vous pouvez recommencer.</p>
+<h2>6 questions de compréhension</h2>
+<p>Ces questions reprennent les définitions et les relations du cours. Vous pouvez recommencer.</p>
 <form id="quiz-form">
-<div class="quiz-item" data-correct="0" data-explanation="La formation de la liaison est la transformation inverse de sa dissociation.">
+<div class="quiz-item" data-source-slides="27" data-correct="0" data-explanation="La variation d’enthalpie ne dépend pas du chemin.">
 <fieldset>
-<legend>1. Reformer une liaison à partir des mêmes fragments gazeux, aux mêmes conditions, correspond à…</legend>
-<label class="quiz-option"><input required type="radio" name="q0" value="0"><span>l’opposé de son enthalpie de dissociation</span></label><label class="quiz-option"><input required type="radio" name="q0" value="1"><span>son enthalpie de dissociation positive</span></label><label class="quiz-option"><input required type="radio" name="q0" value="2"><span>une enthalpie toujours nulle</span></label>
+<legend>1. La loi de Hess s’appuie sur le fait que H est…</legend>
+<label class="quiz-option"><input type="radio" name="q0" value="0" required><span>une fonction d’état</span></label><label class="quiz-option"><input type="radio" name="q0" value="1" required><span>un transfert d’énergie</span></label><label class="quiz-option"><input type="radio" name="q0" value="2" required><span>une pression</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="Inverser l’équation inverse le signe.">
+<div class="quiz-item" data-source-slides="27" data-correct="1" data-explanation="Le sens de la transformation est inversé.">
 <fieldset>
-<legend>2. A → B a une enthalpie de +20 kJ·mol⁻¹. B → A a…</legend>
-<label class="quiz-option"><input required type="radio" name="q1" value="0"><span>+20 kJ·mol⁻¹</span></label><label class="quiz-option"><input required type="radio" name="q1" value="1"><span>−20 kJ·mol⁻¹</span></label><label class="quiz-option"><input required type="radio" name="q1" value="2"><span>0</span></label>
+<legend>2. Si une équation chimique est inversée, son enthalpie…</legend>
+<label class="quiz-option"><input type="radio" name="q1" value="0" required><span>reste inchangée</span></label><label class="quiz-option"><input type="radio" name="q1" value="1" required><span>change de signe</span></label><label class="quiz-option"><input type="radio" name="q1" value="2" required><span>devient nulle</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="0" data-explanation="Les équations s’ajoutent en éliminant B. Les enthalpies s’ajoutent : 20 − 50 = −30.">
+<div class="quiz-item" data-source-slides="27" data-correct="2" data-explanation="On applique le même coefficient à l’équation et à son enthalpie.">
 <fieldset>
-<legend>3. A → B : +20 ; B → C : −50 kJ·mol⁻¹. Pour A → C, on obtient…</legend>
-<label class="quiz-option"><input required type="radio" name="q2" value="0"><span>−30 kJ·mol⁻¹</span></label><label class="quiz-option"><input required type="radio" name="q2" value="1"><span>+30 kJ·mol⁻¹</span></label><label class="quiz-option"><input required type="radio" name="q2" value="2"><span>−70 kJ·mol⁻¹</span></label>
+<legend>3. Si une équation est multipliée par 3, son enthalpie est…</legend>
+<label class="quiz-option"><input type="radio" name="q2" value="0" required><span>divisée par 3</span></label><label class="quiz-option"><input type="radio" name="q2" value="1" required><span>inchangée</span></label><label class="quiz-option"><input type="radio" name="q2" value="2" required><span>multipliée par 3</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="0" data-explanation="Il faut ajouter les changements de phase ou atomisations nécessaires pour relier les bonnes espèces.">
+<div class="quiz-item" data-source-slides="28–29" data-correct="0" data-explanation="La contribution a le signe opposé à l’enthalpie de dissociation.">
 <fieldset>
-<legend>4. Les enthalpies de dissociation de liaison utilisées ici concernent…</legend>
-<label class="quiz-option"><input required type="radio" name="q3" value="0"><span>les molécules gazeuses</span></label><label class="quiz-option"><input required type="radio" name="q3" value="1"><span>uniquement les liquides</span></label><label class="quiz-option"><input required type="radio" name="q3" value="2"><span>indifféremment toutes les phases</span></label>
+<legend>4. Former une liaison à partir des atomes gazeux est…</legend>
+<label class="quiz-option"><input type="radio" name="q3" value="0" required><span>l’inverse de sa dissociation</span></label><label class="quiz-option"><input type="radio" name="q3" value="1" required><span>la même opération que sa dissociation</span></label><label class="quiz-option"><input type="radio" name="q3" value="2" required><span>sans variation d’enthalpie</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="0" data-explanation="L’enthalpie est une fonction d’état. Les différences numériques éventuelles proviennent de données ou d’approximations.">
+<div class="quiz-item" data-source-slides="28" data-correct="1" data-explanation="L’atome gazeux perd un électron.">
 <fieldset>
-<legend>5. Deux cycles de Hess exacts menant aux mêmes états donnent…</legend>
-<label class="quiz-option"><input required type="radio" name="q4" value="0"><span>la même enthalpie globale</span></label><label class="quiz-option"><input required type="radio" name="q4" value="1"><span>des résultats dépendant de l’ordre des étapes</span></label><label class="quiz-option"><input required type="radio" name="q4" value="2"><span>nécessairement une enthalpie nulle</span></label>
+<legend>5. M(g) → M⁺(g) + e⁻ correspond à…</legend>
+<label class="quiz-option"><input type="radio" name="q4" value="0" required><span>une combustion</span></label><label class="quiz-option"><input type="radio" name="q4" value="1" required><span>une ionisation</span></label><label class="quiz-option"><input type="radio" name="q4" value="2" required><span>une vaporisation</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="La phase fait partie de l’état. La condensation ou la vaporisation apporte un terme d’enthalpie.">
+<div class="quiz-item" data-source-slides="31" data-correct="0" data-explanation="Les espèces intermédiaires communes s’éliminent.">
 <fieldset>
-<legend>6. Dans l’addition de deux équations, peut-on annuler H₂O(l) avec H₂O(g) ?</legend>
-<label class="quiz-option"><input required="" type="radio" name="q5" value="0"><span>Oui, leur formule est identique</span></label><label class="quiz-option"><input required="" type="radio" name="q5" value="1"><span>Non, il faut une étape de changement de phase</span></label>
+<legend>6. Dans un cycle, l’addition des équations doit donner…</legend>
+<label class="quiz-option"><input type="radio" name="q5" value="0" required><span>la réaction recherchée</span></label><label class="quiz-option"><input type="radio" name="q5" value="1" required><span>uniquement une combustion</span></label><label class="quiz-option"><input type="radio" name="q5" value="2" required><span>toujours une réaction nulle</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="La loi utilise H comme fonction d’état ; les étapes choisies ne sont pas nécessairement les étapes réellement suivies.">
-<fieldset>
-<legend>7. Un cycle de Hess décrit nécessairement…</legend>
-<label class="quiz-option"><input required="" type="radio" name="q6" value="0"><span>le mécanisme réel de la réaction</span></label><label class="quiz-option"><input required="" type="radio" name="q6" value="1"><span>un chemin de calcul reliant les mêmes états</span></label><label class="quiz-option"><input required="" type="radio" name="q6" value="2"><span>une réaction spontanée</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<button class="button" type="submit">Valider mes réponses</button> <button class="button secondary" type="reset">Recommencer</button><div id="quiz-result" role="status"></div>
+<button type="submit" class="button">Valider mes réponses</button> <button type="reset" class="button secondary">Recommencer</button>
 </form>
-<div class="step-next"><a class="button" href="#pane-exercises">Passer aux exercices</a></div>
+<div id="quiz-result" aria-live="polite"></div>
+<p class="step-next"><a class="button" href="#pane-exercises">Passer aux exercices</a></p>
 </div>
 <div id="pane-exercises" role="tabpanel" aria-labelledby="tab-exercises" hidden>
 <h2>Exercices</h2>
-<p>Après le QCM, cherchez les réponses sur votre brouillon puis saisissez-les ici. Vous pouvez vérifier une étape à la fois, demander un indice et ouvrir la correction après votre recherche.</p>
-<p class="muted">Les réponses vérifiées sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
+<p>Après le QCM, cherchez sur votre brouillon puis saisissez vos réponses. Vous pouvez vérifier une étape à la fois. Les indices et la correction s’ouvrent à votre demande.</p>
+<p class="muted">Vos réponses sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
 <nav class="exercise-index" aria-label="Choisir un exercice"><ul>
 <li><a href="#exercice-hcl">Former HCl avec les enthalpies de dissociation</a></li>
 <li><a href="#exercice-propane">Construire le cycle du propane</a></li>
@@ -130,7 +138,7 @@
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Faites passer les réactifs par les mêmes atomes gazeux, puis reformez HCl.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Une liaison rompue coûte de l’énergie ; la même liaison formée apporte la contribution opposée.</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><p>½ × 436 + ½ × 243 = 339,5 kJ·mol⁻¹. La formation de H–Cl contribue −432 kJ·mol⁻¹. ΔfH°(HCl,g) = 339,5 − 432 = <b>−92,5 kJ·mol⁻¹</b>.</p></details><p class="inline-resource"><a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax — Hess’s Law, dans Enthalpy</a> <span>(anglais, nouvel onglet)</span></p></section><section class="exercise-card" id="exercice-propane"><p class="eyebrow">EXERCICE 2</p>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Faites passer les réactifs par les mêmes atomes gazeux, puis reformez HCl.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Une liaison rompue coûte de l’énergie ; la même liaison formée apporte la contribution opposée.</p></details><details class="exercise-solution"><summary>Correction</summary><p>½ × 436 + ½ × 243 = 339,5 kJ·mol⁻¹. La formation de H–Cl contribue −432 kJ·mol⁻¹. ΔfH°(HCl,g) = 339,5 − 432 = <b>−92,5 kJ·mol⁻¹</b>.</p></details></section><section class="exercise-card" id="exercice-propane"><p class="eyebrow">EXERCICE 2</p>
 <h3>Construire le cycle du propane</h3>
 <p class="exercise-origin">Exercice du diaporama · diapositive 31</p>
 <p>Retrouver la réaction <b>3 C(graphite) + 4 H₂(g) → C₃H₈(g)</b> à partir des équations ci-dessous.</p>
@@ -160,8 +168,8 @@
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Commencez par les espèces qui ne figurent que dans une des équations.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Vérifiez que O₂, CO₂ et H₂O s’annulent avant d’additionner les enthalpies.</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><p>Combinaison : <b>−équation 1 + 3 × équation 2 + 4 × équation 3</b>. Les 5 O₂, 3 CO₂ et 4 H₂O s’annulent. Il reste 3 C(graphite) + 4 H₂(g) → C₃H₈(g).</p>
-<p>ΔfH° = −(−2220) + 3(−394) + 4(−286) = <b>−106 kJ·mol⁻¹</b>, avec les données arrondies du cours.</p></details><p class="inline-resource"><a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax — Hess’s Law, dans Enthalpy</a> <span>(anglais, nouvel onglet)</span></p></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Commencez par les espèces qui ne figurent que dans une des équations.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Vérifiez que O₂, CO₂ et H₂O s’annulent avant d’additionner les enthalpies.</p></details><details class="exercise-solution"><summary>Correction</summary><p>Combinaison : <b>−équation 1 + 3 × équation 2 + 4 × équation 3</b>. Les 5 O₂, 3 CO₂ et 4 H₂O s’annulent. Il reste 3 C(graphite) + 4 H₂(g) → C₃H₈(g).</p>
+<p>ΔfH° = −(−2220) + 3(−394) + 4(−286) = <b>−106 kJ·mol⁻¹</b>, avec les données arrondies du cours.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Cycles de Hess</h3>
@@ -183,5 +191,6 @@
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
 <script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
 <script src="exercices.js" defer></script>
+<script src="interactions.js" defer></script>
 </body>
 </html>

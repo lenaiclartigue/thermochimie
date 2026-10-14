@@ -21,193 +21,139 @@
 <div id="pane-course" role="tabpanel" aria-labelledby="tab-course">
 <nav class="lesson-outline" aria-label="Dans cette partie"><p><b>Dans cette partie</b></p>
 <ul>
-<li><a href="#notion-0">Pourquoi définir l’enthalpie ?</a></li>
-<li><a href="#notion-1">Quand la chaleur reçue vaut-elle ΔH ?</a></li>
-<li><a href="#notion-2">Chauffage à composition fixe</a></li>
-<li><a href="#notion-5">Chauffage avec changement d’état</a></li>
-</ul></nav><section><h2 id="notion-0">Pourquoi définir l’enthalpie ?</h2>
-<p>À pression extérieure constante, une partie de l’énergie échangée sert au déplacement de la frontière. La fonction H regroupe U et le terme pV :</p>
-<div class="formula">H = U + pV<br>ΔH = ΔU + Δ(pV)</div>
-<p>p est la pression du système. U, p et V sont des grandeurs d’état : H est donc une fonction d’état. Sa variation dépend des états initial et final, et ∮ dH = 0. H n’est pas une quantité de chaleur stockée.</p>
+<li><a href="#fonction-enthalpie">Fonction enthalpie</a></li>
+<li><a href="#capacite-calorifique">Capacité calorifique</a></li>
+<li><a href="#chauffage">Variation d’enthalpie avec la température</a></li>
+<li><a href="#changement-etat">Chauffage et changement d’état</a></li>
+</ul></nav><section class="course-section" data-source-slides="15"><h2 id="fonction-enthalpie">Fonction enthalpie</h2>
 <div class="definition">
-<h3>Fonction enthalpie</h3>
+<h3>Enthalpie H</h3>
 <p>On définit l’enthalpie par H = U + pV. L’enthalpie est une fonction d’état.</p>
-</div></section><section><h2 id="notion-1">Quand la chaleur reçue vaut-elle ΔH ?</h2>
-<p>Considérons un système fermé, avec seulement le travail de pression, sans variation d’énergie cinétique ou potentielle macroscopique. La pression extérieure p₀ est constante et les états initial et final sont en équilibre mécanique à cette pression : pᵢ = p<sub>f</sub> = p₀.</p>
-<div class="formula">ΔU = Q − p₀(V<sub>f</sub> − Vᵢ)<br>ΔH = ΔU + p₀(V<sub>f</sub> − Vᵢ) = Q</div>
-<p>On note couramment cette chaleur Q<sub>p</sub>. L’évolution n’a pas besoin d’être réversible : les conditions aux extrémités et le bilan mécanique suffisent ici. Dans le cas isobare mécaniquement réversible, on obtient aussi dH = δQ.</p>
-<p>À volume constant, le même premier principe donne Q<sub>V</sub> = ΔU si aucun autre travail n’intervient. Une même transformation chimique peut donc être étudiée via U ou H selon le montage.</p>
-<p class="definition"><b>Relation du cours :</b> la variation d’enthalpie ΔH est la chaleur transférée lors d’une transformation monobare, sous les conditions précisées ci-dessus.</p>
-<p class="inline-resource"><a href="https://femto-physique.fr/thermodynamique/capacites-thermiques.php" target="_blank" rel="noopener noreferrer">Femto-physique : enthalpie et capacités thermiques</a> <span>(français, nouvel onglet)</span></p></section><section><h2 id="notion-2">Chauffage à composition fixe</h2>
+</div>
+<div class="formula">H = U + pV<br>ΔH = ΔU + Δ(pV)</div>
+<p>Pour une transformation monobare dans les conditions du cours, la variation d’enthalpie est la chaleur transférée :</p>
+<div class="formula">ΔH = Q<sub>p</sub>
+</div>
+<p>On utilise ici le travail de pression seul, avec la même pression extérieure constante aux états initial et final. Le bilan s’écrit :</p>
+<div class="formula">ΔU = Q − p<sub>ext</sub>(V<sub>f</sub> − V<sub>i</sub>)<br>ΔH = ΔU + p<sub>ext</sub>(V<sub>f</sub> − V<sub>i</sub>) = Q<sub>p</sub>
+</div></section><section class="course-section" data-source-slides="16–17"><h2 id="capacite-calorifique">Capacité calorifique</h2>
 <div class="definition">
 <h3>Capacité calorifique C</h3>
-<p>Quantité de chaleur à fournir à un constituant pour élever sa température de 1 °C (ou 1 K), dans les conditions de transformation indiquées. Son unité est J·K⁻¹.</p>
+<p>Quantité de chaleur à fournir à un constituant pour élever sa température de 1 °C (ou 1 K). Elle s’exprime en J·K⁻¹.</p>
 </div>
-<p>Sans réaction ni changement de phase, à pression constante, C<sub>p</sub> = (∂H/∂T)<sub>p,composition</sub> décrit la variation d’enthalpie par kelvin. Pour une quantité fixe de matière :</p>
-<div class="formula">ΔH = ∫<sub>Tᵢ</sub><sup>T<sub>f</sub></sup> C<sub>p</sub>(T) dT<br>Si C<sub>p</sub> est constante : ΔH = C<sub>p</sub> ΔT</div>
+<div class="formula">δQ = C dT ; Q = C ΔT</div>
 <div class="table-scroll"><table>
-<thead><tr>
-<th>Grandeur</th>
+<tr>
+<th>Capacité</th>
 <th>Unité</th>
-<th>Relation à capacité constante</th>
-</tr></thead>
-<tbody>
+<th>Calcul</th>
+</tr>
 <tr>
-<td>Capacité totale C<sub>p</sub>
-</td>
+<td>Totale C</td>
 <td>J·K⁻¹</td>
-<td>ΔH = C<sub>p</sub>ΔT</td>
+<td>Q = C ΔT</td>
 </tr>
 <tr>
-<td>Capacité massique c<sub>p</sub>
-</td>
-<td>J·g⁻¹·K⁻¹</td>
-<td>ΔH = mc<sub>p</sub>ΔT, m en g</td>
-</tr>
-<tr>
-<td>Capacité molaire C<sub>p,m</sub>
+<td>Molaire C<sub>p,m</sub>
 </td>
 <td>J·mol⁻¹·K⁻¹</td>
-<td>ΔH = nC<sub>p,m</sub>ΔT</td>
+<td>Q = n C<sub>p,m</sub> ΔT</td>
 </tr>
-</tbody>
+<tr>
+<td>Massique c<sub>p</sub>
+</td>
+<td>J·kg⁻¹·K⁻¹ ou J·g⁻¹·K⁻¹</td>
+<td>Q = m c<sub>p</sub> ΔT</td>
+</tr>
 </table></div>
-<p>C<sub>p,m</sub> = M c<sub>p</sub> avec des unités cohérentes. Pour plusieurs constituants, on peut sommer leurs contributions dans le modèle additif retenu. La capacité totale du récipient s’ajoute séparément si elle n’est pas déjà incluse dans la capacité mesurée.</p>
-<details><summary>Si la capacité dépend de la température</summary><p>Avec C<sub>p,m</sub>(T) = a + bT + cT², l’intégration donne ΔH = n[a(T<sub>f</sub>−Tᵢ) + b(T<sub>f</sub>²−Tᵢ²)/2 + c(T<sub>f</sub>³−Tᵢ³)/3]. Utiliser la température dans l’unité définie par la loi, généralement le kelvin. <a href="fiche-pratique.html#integrales">Fiche pratique : formules et méthodes</a></p></details><p class="inline-resource"><a href="https://femto-physique.fr/thermodynamique/capacites-thermiques.php" target="_blank" rel="noopener noreferrer">Femto-physique : enthalpie et capacités thermiques</a> <span>(français, nouvel onglet)</span></p></section><section class="example"><h3>Chauffer puis refroidir</h3>
-<p>100 g d’eau de 20 à 30 °C, avec c<sub>p</sub> = 4,18 J·g⁻¹·K⁻¹ : ΔH = 4 180 J. Le refroidissement inverse donne −4 180 J. Sous les conditions précisées plus haut, ces variations sont égales à la chaleur reçue.</p></section><section><h2 id="notion-5">Chauffage avec changement d’état</h2>
-<p>Pour un corps pur à l’équilibre et à pression fixée, un changement de phase peut absorber de l’énergie sans variation de température. Le plateau thermique correspond au changement des proportions des phases. Sa durée dépend aussi de la puissance de chauffage et des échanges avec l’extérieur.</p>
-<p>Pour passer de glace à −10 °C à vapeur à 120 °C sous environ une atmosphère, on additionne cinq étapes : chauffage de la glace, fusion, chauffage du liquide, vaporisation, puis chauffage de la vapeur. Chaque phase a sa capacité thermique. Une enthalpie de transition concerne une température précise.</p>
-<div class="formula">ΔH<sub>total</sub> = Σ ΔH<sub>chauffage</sub> + Σ n<sub>transformé</sub> Δ<sub>tr</sub>H<sub>m</sub>
+<p>Pour plusieurs constituants, on additionne leurs contributions. La masse ou la quantité de matière doit correspondre à l’unité de la capacité donnée.</p>
+<aside class="further-reading"><h3>Pour aller plus loin</h3>
+<p>Retrouvez la distinction entre capacité totale, massique et molaire dans le cours de <a href="https://femto-physique.fr/thermodynamique/capacites-thermiques.php" target="_blank" rel="noopener noreferrer">Femto-physique</a>.</p>
+<p class="resource-meta">Lecture facultative · français · nouvel onglet</p></aside></section><section class="course-section" data-source-slides="17"><h2 id="chauffage">Variation d’enthalpie avec la température</h2>
+<p>À pression constante, pour un constituant qui ne change pas d’état :</p>
+<div class="formula">dH = C<sub>p</sub> dT ; C<sub>p</sub> = (∂H/∂T)<sub>p</sub>
 </div>
-<p>Les exemples suivants utilisent 100 °C comme température d’ébullition arrondie sous une pression proche de l’atmosphère et Δ<sub>vap</sub>H<sub>m</sub> = 40,7 kJ·mol⁻¹ à cette température. À 1 bar, l’ébullition se situe vers 99,6 °C. Le changement d’état sera défini plus précisément dans la partie suivante.</p>
-<p class="inline-resource"><a href="https://femto-physique.fr/thermodynamique/changements-de-phase.php" target="_blank" rel="noopener noreferrer">Femto-physique : chaleurs latentes</a> <span>(français, nouvel onglet)</span></p></section><section><h3>Exercice du cours : chauffer puis vaporiser</h3>
-<p>Il faut distinguer le chauffage de l’eau initialement à 20 °C et sa vaporisation à l’ébullition.</p>
-<p class="course-exercise-link"><a href="#exercice-vaporisation">À vous de chercher : vaporiser trois moles d’eau</a></p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Enthalpie · CC BY-NC-ND 4.0 · lenaiclartigue.github.io/thermochimie/</p>
-<div class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></div>
+<p>Le cours donne C<sub>p</sub>(T) = a + bT + cT². On considère souvent la capacité constante sur l’intervalle étudié :</p>
+<div class="formula">ΔH = Q<sub>p</sub> = ∑ᵢ nᵢ C<sub>p,m,i</sub> ΔT</div>
+<p>Si sa dépendance en température est utilisée, on calcule l’intégrale de C<sub>p</sub>(T). Les primitives utiles figurent dans la fiche pratique.</p></section><section class="course-section" data-source-slides="21–22"><h2 id="changement-etat">Chauffage et changement d’état</h2>
+<p>Un changement d’état nécessite un apport d’énergie pour vaincre les forces de cohésion des phases condensées et séparer les molécules. La température reste constante pendant le changement d’état du corps pur à pression constante.</p>
+<div class="formula">Q<sub>fusion</sub> = n Δ<sub>fus</sub>H°<br>Q<sub>vaporisation</sub> = n Δ<sub>vap</sub>H°</div>
+<p>Pour chauffer puis vaporiser l’eau, on additionne deux contributions : le chauffage de l’eau liquide puis sa vaporisation.</p>
+<aside class="further-reading"><h3>Pour aller plus loin</h3>
+<p>La partie « Chaleur latente » du cours de changements de phase est présentée par <a href="https://femto-physique.fr/thermodynamique/changements-de-phase.php" target="_blank" rel="noopener noreferrer">Femto-physique</a>.</p>
+<p class="resource-meta">Lecture facultative · français · nouvel onglet</p></aside><p class="course-exercise-link"><a href="#exercice-vaporisation">Résoudre l’exercice du cours : vaporiser 3 moles d’eau</a></p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Enthalpie · CC BY-NC-ND 4.0</p>
+<p class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></p>
 </div>
 <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
-<h3>10 questions pour faire le point</h3>
-<p>Le quiz est un entraînement : vous pouvez recommencer.</p>
+<h2>6 questions de compréhension</h2>
+<p>Ces questions reprennent les définitions et les relations du cours. Vous pouvez recommencer.</p>
 <form id="quiz-form">
-<div class="quiz-item" data-correct="1" data-explanation="mol × J·mol⁻¹·K⁻¹ × K = J.">
+<div class="quiz-item" data-source-slides="15" data-correct="1" data-explanation="H est une fonction d’état, comme U.">
 <fieldset>
-<legend>1. Une capacité donnée en J·mol⁻¹·K⁻¹ doit être multipliée par…</legend>
-<label class="quiz-option"><input required type="radio" name="q0" value="0"><span>la masse et ΔT</span></label><label class="quiz-option"><input required type="radio" name="q0" value="1"><span>la quantité de matière et ΔT</span></label><label class="quiz-option"><input required type="radio" name="q0" value="2"><span>le volume et ΔT</span></label>
+<legend>1. L’enthalpie est définie par…</legend>
+<label class="quiz-option"><input type="radio" name="q0" value="0" required><span>H = U − pV</span></label><label class="quiz-option"><input type="radio" name="q0" value="1" required><span>H = U + pV</span></label><label class="quiz-option"><input type="radio" name="q0" value="2" required><span>H = Q + pV</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="Q = 50 × 4,18 × 10 = 2 090 J.">
+<div class="quiz-item" data-source-slides="15" data-correct="0" data-explanation="Il s’agit d’une variation d’enthalpie, pas de sa valeur.">
 <fieldset>
-<legend>2. Chauffer 50 g d’eau de 10 K avec c = 4,18 J·g⁻¹·K⁻¹ demande…</legend>
-<label class="quiz-option"><input required type="radio" name="q1" value="0"><span>209 J</span></label><label class="quiz-option"><input required type="radio" name="q1" value="1"><span>2 090 J</span></label><label class="quiz-option"><input required type="radio" name="q1" value="2"><span>20 900 J</span></label>
+<legend>2. Dans les conditions monobares du cours, la chaleur échangée est…</legend>
+<label class="quiz-option"><input type="radio" name="q1" value="0" required><span>Qp = ΔH</span></label><label class="quiz-option"><input type="radio" name="q1" value="1" required><span>Qp = 0</span></label><label class="quiz-option"><input type="radio" name="q1" value="2" required><span>Qp = H</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="0" data-explanation="C = Q/ΔT, tandis qu’une capacité massique ou molaire comporte une unité de masse ou de quantité de matière au dénominateur.">
+<div class="quiz-item" data-source-slides="16" data-correct="1" data-explanation="Elle rapporte la capacité à une mole de substance.">
 <fieldset>
-<legend>3. Une capacité calorifique totale C s’exprime en…</legend>
-<label class="quiz-option"><input required type="radio" name="q2" value="0"><span>J·K⁻¹</span></label><label class="quiz-option"><input required type="radio" name="q2" value="1"><span>J·mol⁻¹</span></label><label class="quiz-option"><input required type="radio" name="q2" value="2"><span>K·J⁻¹</span></label>
+<legend>3. L’unité d’une capacité calorifique molaire est…</legend>
+<label class="quiz-option"><input type="radio" name="q2" value="0" required><span>J·K⁻¹</span></label><label class="quiz-option"><input type="radio" name="q2" value="1" required><span>J·mol⁻¹·K⁻¹</span></label><label class="quiz-option"><input type="radio" name="q2" value="2" required><span>J·g⁻¹</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="0" data-explanation="Pour une différence, l’ajout de 273,15 s’annule. Pour une température absolue dans pV = nRT, il faut les kelvins.">
+<div class="quiz-item" data-source-slides="16–17" data-correct="0" data-explanation="On multiplie la capacité molaire par la quantité et la variation de température.">
 <fieldset>
-<legend>4. Une eau passe de 25 à 40 °C. ΔT vaut…</legend>
-<label class="quiz-option"><input required type="radio" name="q3" value="0"><span>15 K</span></label><label class="quiz-option"><input required type="radio" name="q3" value="1"><span>288,15 K</span></label><label class="quiz-option"><input required type="radio" name="q3" value="2"><span>313,15 K</span></label>
+<legend>4. Pour n moles, avec Cp,m constante et sans changement d’état…</legend>
+<label class="quiz-option"><input type="radio" name="q3" value="0" required><span>Qp = n Cp,m ΔT</span></label><label class="quiz-option"><input type="radio" name="q3" value="1" required><span>Qp = Cp,m/n</span></label><label class="quiz-option"><input type="radio" name="q3" value="2" required><span>Qp = n Cp,m/ΔT</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="0" data-explanation="À pression extérieure constante, Q = ΔU + p₀ΔV. Les conditions aux extrémités permettent d’identifier ce terme à ΔH.">
+<div class="quiz-item" data-source-slides="21–22" data-correct="1" data-explanation="Les deux contributions s’additionnent.">
 <fieldset>
-<legend>5. Pour un système fermé avec seul travail de pression, Q = ΔH si…</legend>
-<label class="quiz-option"><input required="" type="radio" name="q4" value="0"><span>pext = p₀ constante et pi = pf = p₀ à l’équilibre mécanique</span></label><label class="quiz-option"><input required="" type="radio" name="q4" value="1"><span>la température reste constante, sans autre condition</span></label><label class="quiz-option"><input required="" type="radio" name="q4" value="2"><span>toute transformation est isolée</span></label>
+<legend>5. Pour vaporiser l’eau initialement à 20 °C, le calcul du cours comporte…</legend>
+<label class="quiz-option"><input type="radio" name="q4" value="0" required><span>seulement la vaporisation</span></label><label class="quiz-option"><input type="radio" name="q4" value="1" required><span>le chauffage puis la vaporisation</span></label><label class="quiz-option"><input type="radio" name="q4" value="2" required><span>seulement le chauffage</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="L’énergie accompagne le changement de phase plutôt qu’une hausse de température.">
+<div class="quiz-item" data-source-slides="21" data-correct="2" data-explanation="La phase finale est gazeuse.">
 <fieldset>
-<legend>6. Pendant la fusion à l’équilibre d’un corps pur à pression fixée…</legend>
-<label class="quiz-option"><input required type="radio" name="q5" value="0"><span>la température augmente nécessairement</span></label><label class="quiz-option"><input required type="radio" name="q5" value="1"><span>la température reste constante malgré l’apport d’énergie</span></label><label class="quiz-option"><input required type="radio" name="q5" value="2"><span>aucune énergie n’est transférée</span></label>
+<legend>6. L’enthalpie de vaporisation correspond à…</legend>
+<label class="quiz-option"><input type="radio" name="q5" value="0" required><span>solide → liquide</span></label><label class="quiz-option"><input type="radio" name="q5" value="1" required><span>gaz → liquide</span></label><label class="quiz-option"><input type="radio" name="q5" value="2" required><span>liquide → gaz</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="La quantité totale vaut nΔvapH = 2 × 40,7 = 81,4 kJ.">
-<fieldset>
-<legend>7. Vaporiser 2 mol d’eau à sa température d’ébullition avec ΔvapH = 40,7 kJ·mol⁻¹ demande…</legend>
-<label class="quiz-option"><input required type="radio" name="q6" value="0"><span>20,35 kJ</span></label><label class="quiz-option"><input required type="radio" name="q6" value="1"><span>81,4 kJ</span></label><label class="quiz-option"><input required type="radio" name="q6" value="2"><span>40,7 J</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<div class="quiz-item" data-correct="1" data-explanation="L’enthalpie change de signe lorsqu’on inverse le changement d’état.">
-<fieldset>
-<legend>8. La condensation est l’inverse de la vaporisation. Son enthalpie, aux mêmes conditions, est…</legend>
-<label class="quiz-option"><input required type="radio" name="q7" value="0"><span>positive</span></label><label class="quiz-option"><input required type="radio" name="q7" value="1"><span>négative</span></label><label class="quiz-option"><input required type="radio" name="q7" value="2"><span>nulle</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<div class="quiz-item" data-correct="1" data-explanation="CpΔT est exact si Cp est constant ; sinon on intègre sa dépendance en température.">
-<fieldset>
-<legend>9. Si Cp dépend de T, la variation d’enthalpie à pression constante et composition fixe se calcule par…</legend>
-<label class="quiz-option"><input required="" type="radio" name="q8" value="0"><span>Cp(Ti)ΔT exactement dans tous les cas</span></label><label class="quiz-option"><input required="" type="radio" name="q8" value="1"><span>l’intégrale de Cp(T) entre Ti et Tf</span></label><label class="quiz-option"><input required="" type="radio" name="q8" value="2"><span>la seule enthalpie de vaporisation</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<div class="quiz-item" data-correct="0" data-explanation="H retrouve sa valeur initiale lorsque l’état complet est retrouvé.">
-<fieldset>
-<legend>10. H est une fonction d’état. Sur un cycle fermé, ΔH vaut…</legend>
-<label class="quiz-option"><input required="" type="radio" name="q9" value="0"><span>zéro</span></label><label class="quiz-option"><input required="" type="radio" name="q9" value="1"><span>la chaleur totale dans tous les cas</span></label><label class="quiz-option"><input required="" type="radio" name="q9" value="2"><span>le travail total dans tous les cas</span></label>
-</fieldset>
-<p class="feedback" aria-live="polite"></p>
-</div>
-<button class="button" type="submit">Valider mes réponses</button> <button class="button secondary" type="reset">Recommencer</button><div id="quiz-result" role="status"></div>
+<button type="submit" class="button">Valider mes réponses</button> <button type="reset" class="button secondary">Recommencer</button>
 </form>
-<div class="step-next"><a class="button" href="#pane-exercises">Passer aux exercices</a></div>
+<div id="quiz-result" aria-live="polite"></div>
+<p class="step-next"><a class="button" href="#pane-exercises">Passer aux exercices</a></p>
 </div>
 <div id="pane-exercises" role="tabpanel" aria-labelledby="tab-exercises" hidden>
 <h2>Exercices</h2>
-<p>Après le QCM, cherchez les réponses sur votre brouillon puis saisissez-les ici. Vous pouvez vérifier une étape à la fois, demander un indice et ouvrir la correction après votre recherche.</p>
-<p class="muted">Les réponses vérifiées sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
-<nav class="exercise-index" aria-label="Choisir un exercice"><ul>
-<li><a href="#exercice-chauffage">Chauffer une quantité d’eau</a></li>
-<li><a href="#exercice-vaporisation">Vaporiser trois moles d’eau</a></li>
-</ul></nav><section class="exercise-card" id="exercice-chauffage"><p class="eyebrow">EXERCICE 1</p>
-<h3>Chauffer une quantité d’eau</h3>
-<p class="exercise-origin">Application complémentaire aux diapositives 16–17</p>
-<p>On chauffe à pression constante 2 mol d’eau liquide de 15 à 35 °C, sans changement d’état. Cp,m = 75,3 J·mol⁻¹·K⁻¹ est supposée constante. Seul le travail de pression intervient.</p>
-<form class="exercise-form" data-exercise="chauffage" novalidate>
-<div class="exercise-fields">
-<div class="exercise-field">
-<label for="chauffage-reponse-1">1. Écart de température ΔT <span class="muted">(K)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="chauffage-reponse-1" name="reponse-1" data-expected="20" data-hint="Une différence de 1 °C vaut une différence de 1 K." aria-describedby="chauffage-reponse-1-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="chauffage-reponse-1-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="chauffage-reponse-2">2. Chaleur Qp = ΔH <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="chauffage-reponse-2" name="reponse-2" data-expected="3012" data-hint="Utilisez n Cp,m ΔT." aria-describedby="chauffage-reponse-2-feedback" data-tolerance="5" placeholder="Votre réponse"><p id="chauffage-reponse-2-feedback" class="field-feedback"></p>
-</div>
-</div>
-<div class="exercise-actions">
-<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
-</div>
-<p class="exercise-feedback" role="status" aria-live="polite"></p>
-</form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>La capacité est molaire : multipliez-la par une quantité en mol.</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><p>ΔT = 35−15 = 20 K. Qp = ΔH = 2 × 75,3 × 20 = 3 012 J.</p></details><p class="inline-resource"><a href="https://femto-physique.fr/thermodynamique/capacites-thermiques.php" target="_blank" rel="noopener noreferrer">Femto-physique — Capacités thermiques</a> <span>(français, nouvel onglet)</span></p></section><section class="exercise-card" id="exercice-vaporisation"><p class="eyebrow">EXERCICE 2</p>
+<p>Après le QCM, cherchez sur votre brouillon puis saisissez vos réponses. Vous pouvez vérifier une étape à la fois. Les indices et la correction s’ouvrent à votre demande.</p>
+<p class="muted">Vos réponses sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
+<nav class="exercise-index" aria-label="Choisir un exercice"><ul><li><a href="#exercice-vaporisation">Vaporiser trois moles d’eau</a></li></ul></nav><section class="exercise-card" id="exercice-vaporisation"><p class="eyebrow">EXERCICE 1</p>
 <h3>Vaporiser trois moles d’eau</h3>
 <p class="exercise-origin">Exercice du diaporama · diapositives 21–22</p>
 <p>Calculer la quantité de chaleur nécessaire à la vaporisation de <b>3 moles d’eau initialement à 20 °C</b>.</p>
-<p>Données du cours : Cp,m(H₂O,l) = 75,3 J·mol⁻¹·K⁻¹ et ΔvapHm = 40,7 kJ·mol⁻¹ près de 100 °C. À pression proche de l’atmosphère, on arrondit l’ébullition à 100 °C. L’état final est la vapeur à cette température.</p>
+<p>Données : C<sub>p,m</sub>(H₂O,l) = 75,3 J·mol⁻¹·K⁻¹ ; Δ<sub>vap</sub>H° = 40,7 kJ·mol⁻¹.</p>
 <form class="exercise-form" data-exercise="vaporisation" novalidate>
 <div class="exercise-fields">
 <div class="exercise-field">
-<label for="vaporisation-reponse-1">1. Première étape du calcul</label><select id="vaporisation-reponse-1" name="reponse-1" data-expected="chauffage" data-hint="La température de la donnée de vaporisation doit correspondre à l’étape considérée." aria-describedby="vaporisation-reponse-1-feedback"><option value="">Choisir une réponse</option>
-<option value="chauffage">Chauffer l’eau liquide jusqu’à l’ébullition</option>
-<option value="vaporiser">Vaporiser directement à 20 °C avec la donnée à 100 °C</option></select><p id="vaporisation-reponse-1-feedback" class="field-feedback"></p>
+<label for="vaporisation-reponse-1">1. Chaleur nécessaire au chauffage <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="vaporisation-reponse-1" name="reponse-1" data-expected="18.072" data-hint="n Cp,m (100−20), à convertir en kJ." aria-describedby="vaporisation-reponse-1-feedback" data-tolerance="0.05" placeholder="Votre réponse"><p id="vaporisation-reponse-1-feedback" class="field-feedback"></p>
 </div>
 <div class="exercise-field">
-<label for="vaporisation-reponse-2">2. Chaleur nécessaire au chauffage <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="vaporisation-reponse-2" name="reponse-2" data-expected="18.072" data-hint="n Cp,m (100−20), à convertir en kJ." aria-describedby="vaporisation-reponse-2-feedback" data-tolerance="0.05" placeholder="Votre réponse"><p id="vaporisation-reponse-2-feedback" class="field-feedback"></p>
+<label for="vaporisation-reponse-2">2. Chaleur nécessaire à la vaporisation <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="vaporisation-reponse-2" name="reponse-2" data-expected="122.1" data-hint="Multipliez l’enthalpie molaire de vaporisation par 3 mol." aria-describedby="vaporisation-reponse-2-feedback" data-tolerance="0.1" placeholder="Votre réponse"><p id="vaporisation-reponse-2-feedback" class="field-feedback"></p>
 </div>
 <div class="exercise-field">
-<label for="vaporisation-reponse-3">3. Chaleur nécessaire à la vaporisation <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="vaporisation-reponse-3" name="reponse-3" data-expected="122.1" data-hint="Multipliez l’enthalpie molaire de vaporisation par 3 mol." aria-describedby="vaporisation-reponse-3-feedback" data-tolerance="0.1" placeholder="Votre réponse"><p id="vaporisation-reponse-3-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="vaporisation-reponse-4">4. Chaleur totale <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="vaporisation-reponse-4" name="reponse-4" data-expected="140.172" data-hint="Additionnez les deux contributions dans la même unité." aria-describedby="vaporisation-reponse-4-feedback" data-tolerance="0.15" placeholder="Votre réponse"><p id="vaporisation-reponse-4-feedback" class="field-feedback"></p>
+<label for="vaporisation-reponse-3">3. Chaleur totale <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="vaporisation-reponse-3" name="reponse-3" data-expected="140.172" data-hint="Additionnez les deux contributions dans la même unité." aria-describedby="vaporisation-reponse-3-feedback" data-tolerance="0.15" placeholder="Votre réponse"><p id="vaporisation-reponse-3-feedback" class="field-feedback"></p>
 </div>
 </div>
 <div class="exercise-actions">
@@ -215,7 +161,9 @@
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Il y a deux étapes : chauffer le liquide, puis changer de phase à température constante.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Le terme Cp,m ΔT est en J·mol⁻¹ ici ; l’enthalpie de vaporisation est en kJ·mol⁻¹.</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><p>Qchauffage = 3 × 75,3 × 80 = 18 072 J = 18,072 kJ. Qvaporisation = 3 × 40,7 = 122,1 kJ. Donc Qtotal = 140,172 kJ, soit <b>140,2 kJ</b>. Pendant la vaporisation, l’énergie fournie transforme le liquide en vapeur sans augmenter la température dans ce modèle.</p></details><p class="inline-resource"><a href="https://femto-physique.fr/thermodynamique/changements-de-phase.php" target="_blank" rel="noopener noreferrer">Femto-physique — Changements de phase</a> <span>(français, nouvel onglet)</span></p></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Il y a deux étapes : chauffer le liquide, puis changer de phase à température constante.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Le terme Cp,m ΔT est en J·mol⁻¹ ici ; l’enthalpie de vaporisation est en kJ·mol⁻¹.</p></details><details class="exercise-solution"><summary>Correction</summary><p>Chauffage de 20 à 100 °C : Q₁ = 3 × 75,3 × (100−20) = 18 072 J ≈ <b>18,1 kJ</b>.</p>
+<p>Vaporisation : Q₂ = 3 × 40,7 = <b>122,1 kJ</b>.</p>
+<p>Q = Q₁ + Q₂ ≈ <b>140,2 kJ</b>.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Enthalpie</h3>
@@ -237,5 +185,6 @@
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
 <script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
 <script src="exercices.js" defer></script>
+<script src="interactions.js" defer></script>
 </body>
 </html>

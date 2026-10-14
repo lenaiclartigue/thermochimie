@@ -1,70 +1,61 @@
-# Mise en œuvre pédagogique
+# Correspondance avec le diaporama
 
-Version du 14 octobre 2026 : cours, compréhension directe, puis mise en pratique.
+Version du 14 octobre 2026, recentrée sur le chapitre 2. Objectif : rendre le PowerPoint interactif sans étendre le programme commun.
 
-## Progression
+Le support principal est `XLG1CU040_Cours_26-27_ChapII_enseignant(1).pptx`, 43 diapositives. Les phrases sont reprises ou légèrement reformulées pour la lecture sur écran ; il ne s’agit pas d’une transcription intégrale mot à mot. Les énoncés sont découpés en réponses intermédiaires sans nouveau jeu de données. Les réponses de QCM sont des reformulations des définitions et relations, pas de nouvelles notions.
 
-1. Délimiter le système et reconnaître les échanges possibles.
-2. Écrire le premier principe ; distinguer fonctions d'état et transferts ; calculer le travail selon le chemin.
-3. Introduire H et les conditions reliant ΔH à la chaleur échangée.
-4. Relier l'enthalpie à l'avancement ; définir changement d'état, formation, combustion et dissociation.
-5. Construire un cycle de Hess avec des données cohérentes en phase et température.
-6. Construire un bilan calorimétrique et passer de la température à l'enthalpie de réaction.
+## Parties du site
 
-Les deux méthodes de détermination d'une enthalpie de réaction sont présentées en fin de quatrième partie. La fiche pratique rassemble les formules du chapitre. L'intégration est expliquée au premier principe, là où elle intervient, avec un lien vers Exo7.
-
-## Déroulement d'une partie
-
-**Comprendre → QCM → Exercices → Discussion.** Les QCM vérifient immédiatement la compréhension. Les exercices demandent ensuite une réponse, avec vérification partielle possible, indices et correction volontairement accessible. Aucun score ne verrouille la suite. Des liens du cours conduisent directement aux exercices concernés.
-
-Les calculateurs automatiques et « Préparer les TD » ont été retirés. L'étudiant calcule ou choisit une réponse avant de la vérifier. Le raisonnement écrit reste à travailler sur papier ou en séance : le site vérifie des résultats et des choix, pas l'ensemble d'une démonstration.
-
-## Correspondance avec le diaporama
-
-Les numéros désignent les diapositives de `XLG1CU040_Cours_26-27_ChapII_enseignant(1).pptx`, couverture comprise. Les sept exercices de ce support sont répartis dans les onglets Exercices. Leurs énoncés sont découpés en étapes pour l'autonomie ; les autres exercices sont des compléments rédigés pour le site.
-
-| Partie | Exercice | Origine |
+| Partie | Diapositives | Contenu |
 | --- | --- | --- |
-| Système | Classer quatre situations | Entraînement complémentaire : frontières et échanges. |
-| Système | Concentration et réunion de deux portions | Entraînement complémentaire : intensif/extensif. |
-| Premier principe | Bilan d'énergie | Entraînement complémentaire : signes de Q et W. |
-| Premier principe | Travail monobare | Entraînement complémentaire : unités, pression extérieure, vide. |
-| Premier principe | Deux chemins entre les mêmes états | Entraînement complémentaire : ΔU invariant, Q et W différents. |
-| Premier principe | Compression adiabatique | Entraînement complémentaire : Q nul et température variable. |
-| Enthalpie | Chauffer l'eau liquide | Entraînement complémentaire : capacité molaire. |
-| Enthalpie | Chauffage puis vaporisation de 3 mol d'eau | **Diapos 21–22** : chauffage puis transition de phase. |
-| Enthalpie de réaction | Benzène gazeux à partir d'acétylène | **Diapo 25** : enthalpies de formation. |
-| Enthalpie de réaction | Combustion du méthane | **Diapo 30** : équilibrage et état de l'eau. |
-| Hess | Formation de HCl(g) | **Diapo 29** : dissociation puis formation de liaisons. |
-| Hess | Cycle du propane | **Diapo 31** : combinaison des équations. |
-| Calorimétrie | Étalonner par mélange | **Diapos 38–39** : déterminer Ccal. |
-| Calorimétrie | Réaction Zn/Cu²⁺ | **Diapos 40–41** : bilan énergétique et limites des données. |
-| Calorimétrie | Passer à une enthalpie molaire | Entraînement complémentaire avec avancement donné. |
+| Décrire un système | 5–8 | Systèmes, constituants, échanges, paramètres et unités |
+| Premier principe | 9–13 | U, fonction d’état, Q, W, signes, monobare, transformations |
+| Enthalpie | 15–17 et 21–22 | H, Qp, capacités, chauffage et changement d’état |
+| Enthalpie de réaction | 18–25, 28 et 30 | États standard, avancement, Ellingham, formation, combustion, changement d’état, dissociation |
+| Cycles de Hess | 27–31 | Loi de Hess, dissociation, ionisation, attachement électronique, HCl, propane |
+| Calorimétrie | 33–43 | Calorimètre, bilans, étalonnage, Zn/Cu²⁺, relation ΔrH/ΔrU |
 
-Le support `X12C010_Bilan thermique.pptx` précise les explications calorimétriques et le complément sur la bombe. Le site n'est pas un corrigé intégral du fascicule de TD.
+La définition des différentes enthalpies est regroupée dans la quatrième partie, conformément à la demande de l’enseignant. La transition vers les deux méthodes de détermination d’une enthalpie de réaction figure à la fin de cette partie.
 
-## Définitions et précisions
+## Activités et résultats attendus
 
-Les définitions du diaporama sont reprises : système thermodynamique, système physico-chimique, ouvert/fermé/isolé, grandeurs extensives/intensives et enthalpies particulières. Les hypothèses manquantes ou confusions signalées par l'audit restent corrigées : énergie interne distincte de l'énergie macroscopique, conditions de Q = ΔH, ΔH = ΔU + Δ(pV) pour une variation finie.
+| Partie | Activité | Origine | Réponse ou résultat |
+| --- | --- | --- | --- |
+| Système | Compléter les définitions | Diapos 7–8 ; questions de restitution | Ouvert, fermé, isolé, extensif, intensif |
+| Premier principe | Retrouver les relations | Diapos 10–13 ; questions de restitution | Isochore W = 0, ΔU = Q ; adiabatique ΔU = W ; isotherme du gaz parfait ΔU = 0 ; isolé ΔU = 0 |
+| Enthalpie | Vaporiser trois moles d’eau | Exercice, diapos 21–22 | 18,1 + 122,1 = 140,2 kJ |
+| Enthalpie de réaction | Former le benzène | Exercice, diapo 25 | 82,9 − 3 × 226,7 = −597,2 kJ·mol⁻¹ |
+| Enthalpie de réaction | Combustion du méthane | Exercice, diapo 30 | CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l) |
+| Hess | Former HCl | Exercice, diapo 29 | 436/2 + 243/2 − 432 = −92,5 kJ·mol⁻¹ |
+| Hess | Cycle du propane | Exercice, diapo 31 | Coefficients −1, 3, 4 ; ΔfH° = −106 kJ·mol⁻¹ |
+| Calorimétrie | Étalonner le calorimètre | Exercice, diapos 38–39 | Ccalo ≈ 159,5 J·K⁻¹ |
+| Calorimétrie | Réaction Zn/Cu²⁺ | Exercice, diapos 40–41 | 1 600 + 6 270 + 9,12 J ; réaction ≈ −7,9 kJ |
 
-L'exemple Zn/Cu²⁺ fournit une contribution énergétique dans le modèle proposé, mais pas une enthalpie molaire sans l'avancement. Le terme thermique du zinc décrit une étape d'un chemin fictif, pas l'affirmation que tout le zinc demeure à la fin. Le résultat n'est pas automatiquement standard.
+Le calcul Zn/Cu²⁺ explicite seulement l’assimilation déjà utilisée dans la correction du diaporama : 150 mL de solution sont traités comme 150 g d’eau. Les questions supplémentaires sur l’avancement ou le caractère standard d’une mesure ont été retirées de cet exercice.
 
-Les rectangles représentent une approximation numérique : en augmenter le nombre affine une estimation sans changer le chemin physique. À pression extérieure constante, un seul rectangle donne exactement l'intégrale. Le curseur a été retiré ; les pages illustrées d'Exo7 sont proposées à cet endroit.
+## Aides pédagogiques demandées
 
-## Points à faire verbaliser
+- Le schéma des échanges reprend celui de la diapositive 5 et les catégories de la diapositive 7.
+- L’illustration de l’intégrale est une aide mathématique ajoutée à la demande de l’enseignant, pas un exercice provenant du PowerPoint. La courbe illustrative est pext = 2/V, avec V en litres et pext en bars, entre 1 et 3 L ; le second cas utilise pext = 1 bar. Les rectangles prennent la hauteur au milieu de leur base. Les nombres ne sont pas ajoutés aux exercices évalués.
+- Le tableau de primitives et le lien Exo7 accompagnent cette aide. Les différences d’intégrales exactes et de transferts dépendant du chemin développent la distinction déjà indiquée à la diapositive 10.
+- Les encarts « Pour aller plus loin » sont facultatifs. Ils ne sont pas utilisés pour introduire des notions supplémentaires dans les QCM ou exercices.
 
-- Adiabatique : absence de chaleur échangée, pas température constante ni absence de travail.
-- L'intégrale d'une différentielle exacte dépend des extrémités ; Q et W dépendent du chemin.
-- Le travail de pression dépend de la pression extérieure ; une transformation lente n'est pas nécessairement réversible.
-- H est une fonction d'état, pas une quantité de chaleur contenue dans le système.
-- Coefficients, phases et température font partie de la donnée thermochimique.
-- Une enthalpie négative ne renseigne à elle seule ni sur la vitesse ni sur la spontanéité.
-- Un ensemble calorimétrique adiabatique peut contenir une réaction qui chauffe solution et récipient.
+## Ajustements scientifiques limités
 
-## Suivi et séances
+Les définitions suivent le support, avec ces corrections ou conditions explicites :
 
-Le bilan local indique les étapes vérifiées et la consultation de la correction ; il ne prouve ni l'identité ni une maîtrise durable. L'export peut être transmis volontairement ; aucun résultat n'est envoyé automatiquement. Une question précise dans le forum ou un raisonnement écrit permet de préparer la séance.
+1. **U, diapo 9** : éviter de confondre énergie interne et énergie totale macroscopique ; préciser le cadre des bilans ΔU = Q + W.
+2. **Différentielles, diapo 10** : écrire dU = δQ + δW pour distinguer différentielle exacte et transferts élémentaires.
+3. **Qp = ΔH, diapo 15** : mentionner le travail de pression seul et les conditions mécaniques aux états initial et final.
+4. **Unités, diapo 16** : Q est une énergie en J ; C est une capacité en J·K⁻¹. Distinguer capacité totale, molaire et massique.
+5. **État standard de référence, diapos 23–24** : la convention ΔfH° = 0 concerne l’élément dans son état de référence, pas toute forme de corps simple.
+6. **Calorimètre, diapos 34–37** : l’isolement est thermique ; le modèle est adiabatique à pression constante.
+7. **Variation de H, diapos 42–43** : utiliser ΔH = ΔU + Δ(pV) pour une variation finie. La relation molaire compte les coefficients gazeux, Δνg.
 
-Les durées sont indicatives et à ajuster après un essai. Observer les blocages réels : système, intégration, phases dans Hess, bilan du calorimètre. Les exercices ne simulent pas une expérience ni ses incertitudes.
+Ces adaptations n’ajoutent pas de chapitre ni de nouveau type de problème. Elles sont signalées ici pour que l’enseignant puisse les vérifier.
 
-Les originaux PowerPoint/PDF restent inchangés. Avant de distribuer les exercices de TD signalés dans l'audit, reprendre leurs données, phases et conditions.
+## Retraits de cette révision
+
+Retrait des huit exercices supplémentaires, des scénarios numériques inventés et des questions dépassant le support. Retrait de Kirchhoff, des relations en γ pour l’adiabatique réversible, de l’atomisation, des développements sur la détente libre, les frottements et la réversibilité, de la dérivée totale U(T,V) et du modèle monoatomique, et du développement sur la bombe calorimétrique. La fiche pratique a été réécrite dans le même périmètre.
+
+Les supports sources et les corrections du fascicule de TD ne sont pas modifiés par cette archive. Le relevé des erreurs de TD remis séparément reste un document de vérification pour l’enseignant ; les énoncés correspondants ne sont pas ajoutés au site.

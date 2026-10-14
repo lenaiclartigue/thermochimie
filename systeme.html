@@ -23,9 +23,8 @@
 <ul>
 <li><a href="#definitions-systeme">Définir le système étudié</a></li>
 <li><a href="#types-systemes">Système ouvert, fermé ou isolé</a></li>
-<li><a href="#parametres-systeme">Paramètres extensifs et intensifs</a></li>
-<li><a href="#variables-systeme">Unités et variables indépendantes</a></li>
-</ul></nav><section><h2 id="definitions-systeme">Définir le système étudié</h2>
+<li><a href="#parametres-systeme">Paramètres de description</a></li>
+</ul></nav><section class="course-section" data-source-slides="5–6"><h2 id="definitions-systeme">Définir le système étudié</h2>
 <div class="definition">
 <h3>Système thermodynamique</h3>
 <p>Portion étudiée délimitée par une frontière (réelle ou imaginaire) appelée paroi, qui la sépare de son environnement (milieu extérieur).</p>
@@ -35,8 +34,19 @@
 <h3>Système physico-chimique</h3>
 <p>Ensemble de constituants physico-chimiques susceptibles d’évoluer par transformation physique (changement d’état) ou transformation chimique (réaction chimique).</p>
 </div>
-<p>Un <b>constituant chimique</b> est une espèce chimique (atome, molécule, ion). Un <b>constituant physico-chimique</b> est une espèce chimique dans un état donné : liquide, solide, gaz ou dissous. H₂O(l) et H₂O(g) sont donc deux constituants physico-chimiques de la même espèce.</p></section><section><h2 id="types-systemes">Système ouvert, fermé ou isolé</h2>
-<p>Les définitions portent sur les échanges possibles à travers la frontière choisie.</p>
+<p>Un <b>constituant chimique</b> est une espèce chimique : atome, molécule ou ion. Un <b>constituant physico-chimique</b> est une espèce chimique dans un état donné : liquide, solide, gaz ou dissous.</p>
+<div class="method-grid">
+<div>
+<h3>Transformation chimique</h3>
+<p>A + B → C</p>
+<p>Les espèces chimiques changent.</p>
+</div>
+<div>
+<h3>Transformation physique</h3>
+<p>D(l) → D(g)</p>
+<p>L’état physique change.</p>
+</div>
+</div></section><section class="course-section" data-source-slides="7"><h2 id="types-systemes">Système ouvert, fermé ou isolé</h2>
 <div class="definition">
 <h3>Système ouvert</h3>
 <p>Échange possible de matière et d’énergie avec l’extérieur.</p>
@@ -49,153 +59,151 @@
 <h3>Système isolé</h3>
 <p>Ni échange de matière ni transfert d’énergie avec l’extérieur.</p>
 </div>
-<p>Une paroi <b>adiabatique</b> empêche le transfert de chaleur. Elle n’empêche pas nécessairement le travail : un gaz sous un piston étanche, mobile et adiabatique reste un système fermé, mais non isolé.</p>
-<details><summary>Une bouteille fermée qui se réchauffe : quel système choisir ?</summary><p>Si l’on étudie la bouteille et son contenu, la matière ne traverse pas la frontière mais la chaleur le peut : le système est fermé. « Fermé » ne signifie pas « thermiquement isolé ».</p></details><p class="inline-resource"><a href="https://uel.unisciel.fr/chimie/chimther/chimther_ch02/co/apprendre_ch2_02.html" target="_blank" rel="noopener noreferrer">Unisciel : systèmes ouverts, fermés et isolés</a> <span>(français, nouvel onglet)</span></p>
-<p class="course-exercise-link"><a href="#exercice-classer-systemes">À vous de chercher : classer quatre situations</a></p></section><section><h2 id="parametres-systeme">Paramètres extensifs et intensifs</h2>
+<div class="course-interactive" id="system-exchanges">
+<h3>Retrouver les échanges sur le schéma</h3>
+<p>Choisissez un type de système pour faire apparaître les échanges possibles.</p>
+<div class="choice-buttons" role="group" aria-label="Type de système">
+<button type="button" data-system-kind="ouvert" aria-pressed="true">Ouvert</button><button type="button" data-system-kind="ferme" aria-pressed="false">Fermé</button><button type="button" data-system-kind="isole" aria-pressed="false">Isolé</button>
+</div>
+<svg viewbox="0 0 600 220" role="img" aria-labelledby="system-diagram-title system-diagram-desc"><title id="system-diagram-title">Échanges entre le système et son environnement</title>
+<desc id="system-diagram-desc">Système ouvert : échanges possibles de matière et d’énergie.</desc><rect x="10" y="10" width="580" height="200" rx="12" fill="#eaf0f3"></rect><text x="32" y="42">Environnement</text><rect x="60" y="70" width="210" height="110" rx="10" fill="#fff" stroke="#172e42" stroke-width="2"></rect><text x="165" y="130" text-anchor="middle">Système</text><text x="150" y="200" text-anchor="middle" font-size="14">Paroi</text><g id="matter-arrow"><path d="M250 100H440m-13-8 13 8-13 8M263 92l-13 8 13 8" fill="none" stroke="#ba572d" stroke-width="3"></path><text x="465" y="107">Matière</text></g><g id="energy-arrow"><path d="M250 155H440m-13-8 13 8-13 8M263 147l-13 8 13 8" fill="none" stroke="#226956" stroke-width="3"></path><text x="465" y="162">Énergie</text></g></svg><p id="system-exchanges-result" role="status">Ouvert : échanges possibles de matière et d’énergie.</p>
+</div>
+<aside class="further-reading"><h3>Pour aller plus loin</h3>
+<p>Retrouvez une autre présentation des systèmes ouverts, fermés et isolés dans le cours de <a href="https://uel.unisciel.fr/chimie/chimther/chimther_ch02/co/apprendre_ch2_02.html" target="_blank" rel="noopener noreferrer">Unisciel</a>.</p>
+<p class="resource-meta">Lecture facultative · français · nouvel onglet</p></aside></section><section class="course-section" data-source-slides="8"><h2 id="parametres-systeme">Paramètres de description</h2>
 <div class="definition">
 <h3>Paramètres extensifs</h3>
 <p>Proportionnels à la quantité de matière du système. Ils sont additifs lors de la réunion de deux systèmes : masse m, volume V, quantité de matière n.</p>
 </div>
 <div class="definition">
 <h3>Paramètres intensifs</h3>
-<p>Indépendants de la quantité de matière d’un système. Ils ne sont pas additifs lors de la réunion de deux systèmes : température T, pression p, concentration c, fraction molaire x.</p>
+<p>Indépendants de la quantité de matière du système. Ils ne sont pas additifs lors de la réunion de deux systèmes : température T, pression p, concentration C, fraction molaire x.</p>
 </div>
-<p>La comparaison se fait à même composition et même état. Réunir deux portions identiques d’une solution double la masse et, dans le modèle de volumes additifs, le volume. La température et la concentration restent les mêmes.</p>
-<div class="formula">c = n/V   ;   xᵢ = nᵢ/Σnⱼ</div>
-<p class="course-exercise-link"><a href="#exercice-concentration">À vous de chercher : calculer puis comparer deux portions</a></p></section><section><h2 id="variables-systeme">Unités et variables indépendantes</h2>
 <div class="table-scroll"><table>
 <tr>
 <th>Grandeur</th>
-<th>Unité SI</th>
-<th>Unité usuelle et conversion</th>
+<th>Unité</th>
 </tr>
 <tr>
-<td>T</td>
+<td>Température T</td>
 <td>K</td>
-<td>T/K = θ/°C + 273,15</td>
 </tr>
 <tr>
-<td>p</td>
+<td>Pression p</td>
 <td>Pa</td>
-<td>1 bar = 10⁵ Pa</td>
 </tr>
 <tr>
-<td>V</td>
-<td>m³</td>
-<td>1 L = 10⁻³ m³</td>
+<td>Volume V</td>
+<td>m³ ; 1 L = 10⁻³ m³</td>
 </tr>
 <tr>
-<td>n</td>
+<td>Quantité de matière n</td>
 <td>mol</td>
-<td>n = m/M, unités de masse cohérentes</td>
 </tr>
 <tr>
-<td>m</td>
+<td>Fraction molaire x</td>
+<td>Sans unité</td>
+</tr>
+<tr>
+<td>Concentration C</td>
+<td>mol·m⁻³ ou mol·L⁻¹</td>
+</tr>
+<tr>
+<td>Masse m</td>
 <td>kg</td>
-<td>1 g = 10⁻³ kg</td>
-</tr>
-<tr>
-<td>c</td>
-<td>mol·m⁻³</td>
-<td>1 mol·L⁻¹ = 10³ mol·m⁻³</td>
-</tr>
-<tr>
-<td>xᵢ</td>
-<td>sans unité</td>
-<td>Σxᵢ = 1</td>
 </tr>
 </table></div>
-<p>Les variables ne sont pas toutes indépendantes. Pour un gaz parfait, pV = nRT : fixer n, T et V fixe p. À n fixé, on peut choisir deux variables parmi p, V et T.</p>
-<p>Un système homogène peut contenir plusieurs espèces. Un mélange eau + glace possède deux phases. Une différence de température de 1 °C vaut 1 K, mais 20 °C ne vaut pas 20 K.</p>
-<a href="fiche-pratique.html#unites">Retrouver les conversions dans la fiche pratique</a></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Décrire un système · CC BY-NC-ND 4.0</p>
-<div class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></div>
+<p class="course-exercise-link"><a href="#exercice-definitions-cours">Compléter les définitions du cours</a></p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Décrire un système · CC BY-NC-ND 4.0</p>
+<p class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></p>
 </div>
 <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
-<h3>6 questions pour faire le point</h3>
-<p>Le quiz est un entraînement : vous pouvez recommencer.</p>
+<h2>6 questions de compréhension</h2>
+<p>Ces questions reprennent les définitions et les relations du cours. Vous pouvez recommencer.</p>
 <form id="quiz-form">
-<div class="quiz-item" data-correct="1" data-explanation="Le piston étanche empêche les échanges de matière. Son déplacement permet un travail mécanique, même si Q = 0.">
+<div class="quiz-item" data-source-slides="5" data-correct="0" data-explanation="La frontière délimite la portion étudiée.">
 <fieldset>
-<legend>1. Un gaz sous un piston étanche et mobile, dans une enceinte adiabatique, est nécessairement…</legend>
-<label class="quiz-option"><input required type="radio" name="q0" value="0"><span>isolé</span></label><label class="quiz-option"><input required type="radio" name="q0" value="1"><span>fermé, mais susceptible d’échanger du travail</span></label><label class="quiz-option"><input required type="radio" name="q0" value="2"><span>ouvert</span></label>
+<legend>1. Le système étudié est séparé du milieu extérieur par…</legend>
+<label class="quiz-option"><input type="radio" name="q0" value="0" required><span>une frontière réelle ou imaginaire</span></label><label class="quiz-option"><input type="radio" name="q0" value="1" required><span>uniquement une paroi solide</span></label><label class="quiz-option"><input type="radio" name="q0" value="2" required><span>une température constante</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="0" data-explanation="La vapeur quitte le système : il y a échange de matière. La tasse échange aussi de l’énergie.">
+<div class="quiz-item" data-source-slides="7" data-correct="1" data-explanation="Un système fermé ne permet pas l’échange de matière.">
 <fieldset>
-<legend>2. Une tasse ouverte contenant de l’eau chaude qui s’évapore est un système…</legend>
-<label class="quiz-option"><input required type="radio" name="q1" value="0"><span>ouvert</span></label><label class="quiz-option"><input required type="radio" name="q1" value="1"><span>fermé</span></label><label class="quiz-option"><input required type="radio" name="q1" value="2"><span>isolé</span></label>
+<legend>2. Un système fermé peut échanger…</legend>
+<label class="quiz-option"><input type="radio" name="q1" value="0" required><span>de la matière et de l’énergie</span></label><label class="quiz-option"><input type="radio" name="q1" value="1" required><span>de l’énergie, mais pas de matière</span></label><label class="quiz-option"><input type="radio" name="q1" value="2" required><span>ni matière ni énergie</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="La masse s’additionne lorsque l’on réunit les deux portions.">
+<div class="quiz-item" data-source-slides="7" data-correct="2" data-explanation="Il n’échange ni matière, ni chaleur, ni travail.">
 <fieldset>
-<legend>3. Quelle grandeur est extensive ?</legend>
-<label class="quiz-option"><input required type="radio" name="q2" value="0"><span>La pression</span></label><label class="quiz-option"><input required type="radio" name="q2" value="1"><span>La masse</span></label><label class="quiz-option"><input required type="radio" name="q2" value="2"><span>La température</span></label>
+<legend>3. Un système isolé échange avec l’extérieur…</legend>
+<label class="quiz-option"><input type="radio" name="q2" value="0" required><span>seulement de la chaleur</span></label><label class="quiz-option"><input type="radio" name="q2" value="1" required><span>seulement du travail</span></label><label class="quiz-option"><input type="radio" name="q2" value="2" required><span>ni matière ni énergie</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="1" data-explanation="La quantité de soluté et le volume doublent ensemble : leur rapport reste inchangé.">
+<div class="quiz-item" data-source-slides="8" data-correct="1" data-explanation="Elle est proportionnelle à la quantité de matière.">
 <fieldset>
-<legend>4. Deux portions identiques d’une solution à 0,10 mol·L⁻¹ sont réunies. La concentration finale est…</legend>
-<label class="quiz-option"><input required type="radio" name="q3" value="0"><span>0,05 mol·L⁻¹</span></label><label class="quiz-option"><input required type="radio" name="q3" value="1"><span>0,10 mol·L⁻¹</span></label><label class="quiz-option"><input required type="radio" name="q3" value="2"><span>0,20 mol·L⁻¹</span></label>
+<legend>4. La masse est un paramètre…</legend>
+<label class="quiz-option"><input type="radio" name="q3" value="0" required><span>intensif</span></label><label class="quiz-option"><input type="radio" name="q3" value="1" required><span>extensif</span></label><label class="quiz-option"><input type="radio" name="q3" value="2" required><span>sans unité</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="0" data-explanation="La même espèce dans deux phases correspond à deux constituants physico-chimiques différents.">
+<div class="quiz-item" data-source-slides="8" data-correct="0" data-explanation="Elle est indépendante de la quantité de matière.">
 <fieldset>
-<legend>5. Pourquoi faut-il préciser H₂O(l) ou H₂O(g) ?</legend>
-<label class="quiz-option"><input required type="radio" name="q4" value="0"><span>L’état physique fait partie de la définition du constituant</span></label><label class="quiz-option"><input required type="radio" name="q4" value="1"><span>La formule chimique change</span></label><label class="quiz-option"><input required type="radio" name="q4" value="2"><span>L’eau gazeuse contient davantage d’atomes</span></label>
+<legend>5. La température est un paramètre…</legend>
+<label class="quiz-option"><input type="radio" name="q4" value="0" required><span>intensif</span></label><label class="quiz-option"><input type="radio" name="q4" value="1" required><span>extensif</span></label><label class="quiz-option"><input type="radio" name="q4" value="2" required><span>additif</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<div class="quiz-item" data-correct="0" data-explanation="L’équation pV = nRT relie les variables d’état. La chaleur dépend du chemin, pas seulement de cet état.">
+<div class="quiz-item" data-source-slides="6" data-correct="1" data-explanation="La même espèce chimique se trouve dans deux états différents.">
 <fieldset>
-<legend>6. Un gaz parfait de quantité fixe est à l’équilibre. Fixer T et V…</legend>
-<label class="quiz-option"><input required="" type="radio" name="q5" value="0"><span>fixe aussi sa pression</span></label><label class="quiz-option"><input required="" type="radio" name="q5" value="1"><span>laisse sa pression libre</span></label><label class="quiz-option"><input required="" type="radio" name="q5" value="2"><span>fixe nécessairement sa chaleur reçue</span></label>
+<legend>6. H₂O(l) et H₂O(g) sont…</legend>
+<label class="quiz-option"><input type="radio" name="q5" value="0" required><span>le même constituant physico-chimique</span></label><label class="quiz-option"><input type="radio" name="q5" value="1" required><span>deux constituants physico-chimiques</span></label><label class="quiz-option"><input type="radio" name="q5" value="2" required><span>deux éléments chimiques</span></label>
 </fieldset>
-<p class="feedback" aria-live="polite"></p>
+<p class="feedback" role="status"></p>
 </div>
-<button class="button" type="submit">Valider mes réponses</button> <button class="button secondary" type="reset">Recommencer</button><div id="quiz-result" role="status"></div>
+<button type="submit" class="button">Valider mes réponses</button> <button type="reset" class="button secondary">Recommencer</button>
 </form>
-<div class="step-next"><a class="button" href="#pane-exercises">Passer aux exercices</a></div>
+<div id="quiz-result" aria-live="polite"></div>
+<p class="step-next"><a class="button" href="#pane-exercises">Passer aux exercices</a></p>
 </div>
 <div id="pane-exercises" role="tabpanel" aria-labelledby="tab-exercises" hidden>
 <h2>Exercices</h2>
-<p>Après le QCM, cherchez les réponses sur votre brouillon puis saisissez-les ici. Vous pouvez vérifier une étape à la fois, demander un indice et ouvrir la correction après votre recherche.</p>
-<p class="muted">Les réponses vérifiées sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
-<nav class="exercise-index" aria-label="Choisir un exercice"><ul>
-<li><a href="#exercice-classer-systemes">Identifier les échanges</a></li>
-<li><a href="#exercice-concentration">Quantité de matière et concentration</a></li>
-</ul></nav><section class="exercise-card" id="exercice-classer-systemes"><p class="eyebrow">EXERCICE 1</p>
-<h3>Identifier les échanges</h3>
-<p class="exercise-origin">Entraînement sur les définitions des diapositives 5–8</p>
-<p>Choisissez le système indiqué, puis classez-le selon les échanges <b>possibles</b>. Un système fermé peut être adiabatique ou échanger de la chaleur.</p>
-<form class="exercise-form" data-exercise="classer-systemes" novalidate>
+<p>Après le QCM, cherchez sur votre brouillon puis saisissez vos réponses. Vous pouvez vérifier une étape à la fois. Les indices et la correction s’ouvrent à votre demande.</p>
+<p class="muted">Vos réponses sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
+<nav class="exercise-index" aria-label="Choisir un exercice"><ul><li><a href="#exercice-definitions-cours">Compléter les définitions du cours</a></li></ul></nav><section class="exercise-card" id="exercice-definitions-cours"><p class="eyebrow">EXERCICE 1</p>
+<h3>Compléter les définitions du cours</h3>
+<p class="exercise-origin">Activité sur les diapositives 7–8</p>
+<p>Associez chaque définition à son terme.</p>
+<form class="exercise-form" data-exercise="definitions-cours" novalidate>
 <div class="exercise-fields">
 <div class="exercise-field">
-<label for="classer-systemes-reponse-1">1. Une tasse d’eau chaude ouverte (tasse et contenu)</label><select id="classer-systemes-reponse-1" name="reponse-1" data-expected="ouvert" data-hint="La vapeur peut quitter la tasse." aria-describedby="classer-systemes-reponse-1-feedback"><option value="">Choisir une réponse</option>
+<label for="definitions-cours-reponse-1">1. Échange possible de matière et d’énergie avec l’extérieur</label><select id="definitions-cours-reponse-1" name="reponse-1" data-expected="ouvert" data-hint="Reprenez les échanges permis par chaque type de système." aria-describedby="definitions-cours-reponse-1-feedback"><option value="">Choisir une réponse</option>
 <option value="ouvert">Ouvert</option>
 <option value="ferme">Fermé</option>
-<option value="isole">Isolé</option></select><p id="classer-systemes-reponse-1-feedback" class="field-feedback"></p>
+<option value="isole">Isolé</option></select><p id="definitions-cours-reponse-1-feedback" class="field-feedback"></p>
 </div>
 <div class="exercise-field">
-<label for="classer-systemes-reponse-2">2. Une bouteille hermétiquement fermée qui se réchauffe (bouteille et contenu)</label><select id="classer-systemes-reponse-2" name="reponse-2" data-expected="ferme" data-hint="La matière ne traverse pas la frontière ; la chaleur le peut." aria-describedby="classer-systemes-reponse-2-feedback"><option value="">Choisir une réponse</option>
+<label for="definitions-cours-reponse-2">2. Pas d’échange de matière, mais transfert d’énergie possible</label><select id="definitions-cours-reponse-2" name="reponse-2" data-expected="ferme" data-hint="L’absence d’échange de matière ne suffit pas à définir un système isolé." aria-describedby="definitions-cours-reponse-2-feedback"><option value="">Choisir une réponse</option>
 <option value="ouvert">Ouvert</option>
 <option value="ferme">Fermé</option>
-<option value="isole">Isolé</option></select><p id="classer-systemes-reponse-2-feedback" class="field-feedback"></p>
+<option value="isole">Isolé</option></select><p id="definitions-cours-reponse-2-feedback" class="field-feedback"></p>
 </div>
 <div class="exercise-field">
-<label for="classer-systemes-reponse-3">3. Un gaz sous un piston étanche, mobile et adiabatique</label><select id="classer-systemes-reponse-3" name="reponse-3" data-expected="ferme" data-hint="Le piston permet un travail, même si la paroi ne laisse pas passer la chaleur." aria-describedby="classer-systemes-reponse-3-feedback"><option value="">Choisir une réponse</option>
+<label for="definitions-cours-reponse-3">3. Ni échange de matière ni transfert d’énergie</label><select id="definitions-cours-reponse-3" name="reponse-3" data-expected="isole" data-hint="Vérifiez les deux types d’échanges." aria-describedby="definitions-cours-reponse-3-feedback"><option value="">Choisir une réponse</option>
 <option value="ouvert">Ouvert</option>
-<option value="ferme">Fermé et adiabatique</option>
-<option value="isole">Isolé</option></select><p id="classer-systemes-reponse-3-feedback" class="field-feedback"></p>
+<option value="ferme">Fermé</option>
+<option value="isole">Isolé</option></select><p id="definitions-cours-reponse-3-feedback" class="field-feedback"></p>
 </div>
 <div class="exercise-field">
-<label for="classer-systemes-reponse-4">4. Une enceinte idéale rigide, étanche, sans échange de chaleur ni autre travail</label><select id="classer-systemes-reponse-4" name="reponse-4" data-expected="isole" data-hint="Examinez à la fois matière, chaleur et travail." aria-describedby="classer-systemes-reponse-4-feedback"><option value="">Choisir une réponse</option>
-<option value="ouvert">Ouvert</option>
-<option value="ferme">Fermé non isolé</option>
-<option value="isole">Isolé</option></select><p id="classer-systemes-reponse-4-feedback" class="field-feedback"></p>
+<label for="definitions-cours-reponse-4">4. Paramètre proportionnel à la quantité de matière</label><select id="definitions-cours-reponse-4" name="reponse-4" data-expected="extensif" data-hint="Reprenez la définition des paramètres extensifs." aria-describedby="definitions-cours-reponse-4-feedback"><option value="">Choisir une réponse</option>
+<option value="extensif">Extensif</option>
+<option value="intensif">Intensif</option></select><p id="definitions-cours-reponse-4-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="definitions-cours-reponse-5">5. Paramètre indépendant de la quantité de matière</label><select id="definitions-cours-reponse-5" name="reponse-5" data-expected="intensif" data-hint="La température et la pression en sont des exemples." aria-describedby="definitions-cours-reponse-5-feedback"><option value="">Choisir une réponse</option>
+<option value="extensif">Extensif</option>
+<option value="intensif">Intensif</option></select><p id="definitions-cours-reponse-5-feedback" class="field-feedback"></p>
 </div>
 </div>
 <div class="exercise-actions">
@@ -203,33 +211,7 @@
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Commencez par la matière : si elle peut traverser, le système est ouvert.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>En l’absence d’échange de matière, recherchez un transfert possible de chaleur ou de travail.</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><ol>
-<li>Tasse : système ouvert.</li>
-<li>Bouteille : fermé, avec transfert thermique possible.</li>
-<li>Gaz sous piston : fermé et adiabatique, mais non isolé puisqu’il peut échanger du travail.</li>
-<li>Enceinte idéale : isolée.</li>
-</ol></details><p class="inline-resource"><a href="https://uel.unisciel.fr/chimie/chimther/chimther_ch02/co/apprendre_ch2_02.html" target="_blank" rel="noopener noreferrer">UEL / Unisciel — Définition d’un système thermodynamique</a> <span>(français, nouvel onglet)</span></p></section><section class="exercise-card" id="exercice-concentration"><p class="eyebrow">EXERCICE 2</p>
-<h3>Quantité de matière et concentration</h3>
-<p class="exercise-origin">Application complémentaire</p>
-<p>Une solution homogène contient 0,20 mol de soluté dans 0,50 L. On réunit ensuite deux portions identiques, sans réaction ni variation de température, en supposant les volumes additifs.</p>
-<form class="exercise-form" data-exercise="concentration" novalidate>
-<div class="exercise-fields">
-<div class="exercise-field">
-<label for="concentration-reponse-1">1. Concentration de la première portion <span class="muted">(mol·L⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="concentration-reponse-1" name="reponse-1" data-expected="0.4" data-hint="La concentration est n/V ; utilisez ici le volume en litres." aria-describedby="concentration-reponse-1-feedback" data-tolerance="0.005" placeholder="Votre réponse"><p id="concentration-reponse-1-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="concentration-reponse-2">2. Quantité de soluté après réunion <span class="muted">(mol)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="concentration-reponse-2" name="reponse-2" data-expected="0.4" data-hint="Les quantités de matière s’additionnent." aria-describedby="concentration-reponse-2-feedback" data-tolerance="0.005" placeholder="Votre réponse"><p id="concentration-reponse-2-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="concentration-reponse-3">3. Concentration après réunion <span class="muted">(mol·L⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="concentration-reponse-3" name="reponse-3" data-expected="0.4" data-hint="La quantité et le volume sont multipliés par le même facteur." aria-describedby="concentration-reponse-3-feedback" data-tolerance="0.005" placeholder="Votre réponse"><p id="concentration-reponse-3-feedback" class="field-feedback"></p>
-</div>
-</div>
-<div class="exercise-actions">
-<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
-</div>
-<p class="exercise-feedback" role="status" aria-live="polite"></p>
-</form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Écrivez c = n/V avant de remplacer les nombres.</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><p>c = 0,20/0,50 = 0,40 mol·L⁻¹. Après réunion, n = 0,40 mol et V = 1,00 L, donc c = 0,40 mol·L⁻¹. La quantité est extensive, la concentration est intensive.</p></details><p class="inline-resource"><a href="https://uel.unisciel.fr/chimie/chimther/chimther_ch02/co/apprendre_ch2_02.html" target="_blank" rel="noopener noreferrer">UEL / Unisciel — Définition d’un système thermodynamique</a> <span>(français, nouvel onglet)</span></p></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Relisez les trois définitions de système, puis celles des paramètres extensifs et intensifs.</p></details><details class="exercise-solution"><summary>Correction</summary><p>1. Ouvert. 2. Fermé. 3. Isolé. 4. Extensif. 5. Intensif.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Décrire un système</h3>
@@ -251,5 +233,6 @@
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
 <script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
 <script src="exercices.js" defer></script>
+<script src="interactions.js" defer></script>
 </body>
 </html>
