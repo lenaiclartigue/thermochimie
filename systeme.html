@@ -30,23 +30,12 @@
 <p>Portion étudiée délimitée par une frontière (réelle ou imaginaire) appelée paroi, qui la sépare de son environnement (milieu extérieur).</p>
 </div>
 <p><b>Univers thermodynamique :</b> environnement + système en interaction.</p>
-<div class="definition">
+<figure class="course-figure " id="figure-systeme-univers"><button class="figure-open" type="button" data-image-full="assets/images/systeme-univers.png" data-image-title="Système, environnement et paroi" aria-label="Agrandir : Système, environnement et paroi" aria-describedby="figure-systeme-univers-caption"><img src="assets/images/systeme-univers.png" width="2047" height="660" loading="lazy" decoding="async" alt="Schéma du cours : univers, environnement, système et paroi ; flèches pour les échanges de matière et d’énergie."><span class="figure-expand" aria-hidden="true">Agrandir le schéma ↗</span></button><figcaption id="figure-systeme-univers-caption">Le système et son environnement constituent l’univers thermodynamique. La paroi délimite le système.</figcaption></figure><div class="definition">
 <h3>Système physico-chimique</h3>
 <p>Ensemble de constituants physico-chimiques susceptibles d’évoluer par transformation physique (changement d’état) ou transformation chimique (réaction chimique).</p>
 </div>
 <p>Un <b>constituant chimique</b> est une espèce chimique : atome, molécule ou ion. Un <b>constituant physico-chimique</b> est une espèce chimique dans un état donné : liquide, solide, gaz ou dissous.</p>
-<div class="method-grid">
-<div>
-<h3>Transformation chimique</h3>
-<p>A + B → C</p>
-<p>Les espèces chimiques changent.</p>
-</div>
-<div>
-<h3>Transformation physique</h3>
-<p>D(l) → D(g)</p>
-<p>L’état physique change.</p>
-</div>
-</div></section><section class="course-section" data-source-slides="7"><h2 id="types-systemes">Système ouvert, fermé ou isolé</h2>
+<figure class="course-figure " id="figure-transformations"><button class="figure-open" type="button" data-image-full="assets/images/transformations.png" data-image-title="Transformations chimique et physique" aria-label="Agrandir : Transformations chimique et physique" aria-describedby="figure-transformations-caption"><img src="assets/images/transformations.png" width="2048" height="582" loading="lazy" decoding="async" alt="De l’état initial à l’état final : A plus B donne C par transformation chimique ; D gazeux devient D liquide par transformation physique."><span class="figure-expand" aria-hidden="true">Agrandir le schéma ↗</span></button><figcaption id="figure-transformations-caption">E.I. : état initial ; E.F. : état final. Transformation chimique : A + B → C. Transformation physique : D(g) → D(l).</figcaption></figure></section><section class="course-section" data-source-slides="7"><h2 id="types-systemes">Système ouvert, fermé ou isolé</h2>
 <div class="definition">
 <h3>Système ouvert</h3>
 <p>Échange possible de matière et d’énergie avec l’extérieur.</p>
@@ -62,9 +51,10 @@
 <div class="course-interactive" id="system-exchanges">
 <h3>Retrouver les échanges sur le schéma</h3>
 <p>Choisissez un type de système pour faire apparaître les échanges possibles.</p>
-<div class="choice-buttons" role="group" aria-label="Type de système">
-<button type="button" data-system-kind="ouvert" aria-pressed="true">Ouvert</button><button type="button" data-system-kind="ferme" aria-pressed="false">Fermé</button><button type="button" data-system-kind="isole" aria-pressed="false">Isolé</button>
+<div class="choice-buttons system-object-choices" role="group" aria-label="Choisir un type de système">
+<button type="button" class="system-object" data-system-kind="ouvert" aria-pressed="true"><img src="assets/images/systeme-ouvert-verre.png" width="1254" height="1254" loading="lazy" decoding="async" alt="Un verre sans couvercle contenant de l’eau."><span class="system-object-label">Ouvert</span><span class="system-object-name">Verre ouvert</span></button><button type="button" class="system-object" data-system-kind="ferme" aria-pressed="false"><img src="assets/images/systeme-ferme-bouteille.png" width="1254" height="1254" loading="lazy" decoding="async" alt="Une bouteille d’eau fermée par un bouchon vissé."><span class="system-object-label">Fermé</span><span class="system-object-name">Bouteille fermée</span></button><button type="button" class="system-object" data-system-kind="isole" aria-pressed="false"><img src="assets/images/systeme-isole-thermos.png" width="1254" height="1254" loading="lazy" decoding="async" alt="Un thermos fermé, illustrant le modèle d’un système isolé."><span class="system-object-label">Isolé</span><span class="system-object-name">Thermos idéal</span></button>
 </div>
+<p class="system-model-note">Le thermos représente ici le modèle idéal d’un système isolé.</p>
 <svg viewbox="0 0 600 220" role="img" aria-labelledby="system-diagram-title system-diagram-desc"><title id="system-diagram-title">Échanges entre le système et son environnement</title>
 <desc id="system-diagram-desc">Système ouvert : échanges possibles de matière et d’énergie.</desc><rect x="10" y="10" width="580" height="200" rx="12" fill="#eaf0f3"></rect><text x="32" y="42">Environnement</text><rect x="60" y="70" width="210" height="110" rx="10" fill="#fff" stroke="#172e42" stroke-width="2"></rect><text x="165" y="130" text-anchor="middle">Système</text><text x="150" y="200" text-anchor="middle" font-size="14">Paroi</text><g id="matter-arrow"><path d="M250 100H440m-13-8 13 8-13 8M263 92l-13 8 13 8" fill="none" stroke="#ba572d" stroke-width="3"></path><text x="465" y="107">Matière</text></g><g id="energy-arrow"><path d="M250 155H440m-13-8 13 8-13 8M263 147l-13 8 13 8" fill="none" stroke="#226956" stroke-width="3"></path><text x="465" y="162">Énergie</text></g></svg><p id="system-exchanges-result" role="status">Ouvert : échanges possibles de matière et d’énergie.</p>
 </div>
@@ -234,5 +224,6 @@
 <script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
 <script src="exercices.js" defer></script>
 <script src="interactions.js" defer></script>
+<html><head><script src="illustrations.js" defer></script></head></html>
 </body>
 </html>

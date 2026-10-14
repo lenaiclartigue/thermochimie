@@ -1,6 +1,6 @@
 # Thermochimie · Licence
 
-Version du 14 octobre 2026 : mise en interaction du diaporama du chapitre 2. Conception du parcours : Lénaïc Lartigue.
+Version illustrée du 14 octobre 2026 : mise en interaction du diaporama du chapitre 2. Conception du parcours : Lénaïc Lartigue.
 
 Site statique pour GitHub Pages. Les six parties suivent le cours commun : **Comprendre → QCM → Exercices → Discussion**. Les chapitres 1 et 3 ne sont pas développés ici.
 
@@ -28,6 +28,12 @@ L’accueil présente six encarts. Les deux façons de déterminer une enthalpie
 - Les exercices acceptent une validation partielle, proposent des indices et une rubrique **Correction** à ouvrir volontairement.
 - Les lectures facultatives sont placées dans des encarts **Pour aller plus loin** au fil de l’onglet Comprendre. `ressources.html` reste un récapitulatif. Les pages externes peuvent dépasser le programme : elles ne définissent pas le contenu évalué.
 
+## Images intégrées
+
+Les neuf exports fournis sont conservés à l’identique et placés près des notions correspondantes. Le fond blanc du site rend leur transparence lisible. Ils s’agrandissent dans une fenêtre fermable, avec un zoom. Trois illustrations générées dans le même style — verre ouvert, bouteille fermée, thermos — servent de boutons pour le schéma des échanges. Le thermos représente un système isolé idéal.
+
+Les correspondances et les prompts de génération figurent dans `IMAGES_DU_SITE.md`. Les images sont dans **`assets/images/`** et la fenêtre d’agrandissement est gérée par **`illustrations.js`**.
+
 ## Fichiers communs
 
 - `fiche-pratique.html` : relations du cours, unités et aide mathématique ; impression possible.
@@ -42,7 +48,7 @@ L’accueil présente six encarts. Les deux façons de déterminer une enthalpie
 
 ## Mettre à jour GitHub Pages
 
-L’archive est **complète et cumulative**. Décompresser puis déposer tous les fichiers à la racine du dépôt `lenaiclartigue/thermochimie`, en remplaçant les fichiers existants. Ajouter notamment le nouveau fichier **`interactions.js`**. Ne pas déposer seulement le ZIP ni placer les fichiers dans un sous-dossier.
+L’archive est **complète et cumulative**. Décompresser puis déposer tous les fichiers à la racine du dépôt `lenaiclartigue/thermochimie`, en remplaçant les fichiers existants. Ajouter aussi le dossier **`assets`** complet, ainsi que **`illustrations.js`** et **`interactions.js`**. Le dossier `assets` doit être au même niveau que `index.html`. Ne pas déposer seulement le ZIP ni placer les fichiers dans un sous-dossier.
 
 Conserver `Deploy from a branch → main → /(root)`. Après le déploiement GitHub, ouvrir [le site](https://lenaiclartigue.github.io/thermochimie/) et actualiser la page si nécessaire. Cette livraison ne déploie rien sur GitHub.
 
@@ -62,7 +68,7 @@ Les encarts de définition utilisent `definition` ; les ressources utilisent `fu
 
 Les réponses et résultats sont conservés **dans ce navigateur uniquement**, sans envoi automatique à l’enseignant ni synchronisation. Le meilleur score QCM sert de repère ; 80 % est un objectif de travail. L’historique conserve jusqu’à 100 tentatives. Les exercices conservent les dernières saisies, les étapes vérifiées et la consultation de la correction. L’export JSON rassemble les résultats locaux.
 
-Les questions et exercices ayant changé, leurs réponses et leur progression repartent de zéro. Les anciennes tentatives QCM restent visibles, marquées « Version antérieure du quiz ». Les anciennes réponses d’exercices ne sont pas reprises dans le bilan courant.
+Lors de la révision précédente recentrée sur le diaporama, les questions et exercices avaient changé : leurs réponses et leur progression étaient reparties de zéro. Cette mise à jour des images conserve les mêmes questions, réponses et clés de sauvegarde. Les anciennes tentatives QCM restent visibles, marquées « Version antérieure du quiz ». Les anciennes réponses d’exercices ne sont pas reprises dans le bilan courant.
 
 Clés actuelles : `thermo-progress-six-slides-v3`, `thermo-answers-six-slides-v3`, `thermo-exercises-slides-v2`. L’historique conserve la clé `thermo-attempts-six-v1`. L’effacement global supprime aussi les clés de la version précédente.
 

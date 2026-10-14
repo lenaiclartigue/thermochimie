@@ -59,3 +59,7 @@ Ces adaptations n’ajoutent pas de chapitre ni de nouveau type de problème. El
 Retrait des huit exercices supplémentaires, des scénarios numériques inventés et des questions dépassant le support. Retrait de Kirchhoff, des relations en γ pour l’adiabatique réversible, de l’atomisation, des développements sur la détente libre, les frottements et la réversibilité, de la dérivée totale U(T,V) et du modèle monoatomique, et du développement sur la bombe calorimétrique. La fiche pratique a été réécrite dans le même périmètre.
 
 Les supports sources et les corrections du fascicule de TD ne sont pas modifiés par cette archive. Le relevé des erreurs de TD remis séparément reste un document de vérification pour l’enseignant ; les énoncés correspondants ne sont pas ajoutés au site.
+
+## Mise à jour illustrée
+
+Les neuf images fournies sont intégrées sans retouche de leur contenu. Le verre, la bouteille et le thermos sont trois illustrations générées, de même style, liées aux définitions déjà présentes. Le thermos représente un modèle idéal. La transformation physique est affichée dans le sens de l’export : D(g) → D(l). Aucun QCM, exercice ou résultat attendu n’est modifié par cette mise à jour. Voir `IMAGES_DU_SITE.md`.

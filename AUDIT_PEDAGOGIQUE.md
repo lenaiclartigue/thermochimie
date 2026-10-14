@@ -29,3 +29,7 @@ Le corps du cours, les QCM, les exercices et la fiche pratique ont été révis�
 Le site n’a pas été déployé sur GitHub lors de cette préparation. L’authentification giscus n’est pas testée par le serveur local. Les références externes précédemment sélectionnées sont conservées ; cette révision ne prétend pas constituer une nouvelle recherche exhaustive sur Internet.
 
 Les fichiers PowerPoint et PDF originaux ne sont pas modifiés. Le relevé séparé relatif aux corrections de TD reste distinct : les erreurs relevées dans ces documents ne doivent pas être considérées comme corrigées dans les PDF par la seule mise à jour du site. Aucun corrigé enseignant de TD n’est publié dans cette archive.
+
+## Vérification de la version illustrée
+
+Les neuf fichiers sources sont identiques octet par octet aux exports fournis. Trois images générées ont été ajoutées pour le sélecteur de système ; aucun texte scientifique n’a été généré dans ces images. Les images, légendes et fenêtres d’agrandissement ont été contrôlées sur ordinateur et à 390 px, ainsi que le zoom, la fermeture, le retour du focus et l’impression. Les questions, exercices, scripts de sauvegarde, licence et configuration giscus sont conservés.
