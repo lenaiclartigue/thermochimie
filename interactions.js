@@ -237,7 +237,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   const fmt=n=>n.toLocaleString('fr-FR',{maximumFractionDigits:4});
   function hess(){
     const host=document.getElementById('hess-builder');if(!host)return;
-    const form=host.closest('form'),inputs=[1,2,3].map(i=>document.getElementById('propane-reponse-'+i));
+    const form=host.closest('.course-hess-builder'),inputs=[1,2,3].map(i=>document.getElementById('propane-reponse-'+i));
     const labels=['C₃H₈(g)','O₂(g)','CO₂(g)','H₂O(l)','C(graphite)','H₂(g)'];
     const reactions=[[-1,-5,3,4,0,0],[0,-1,1,0,-1,0],[0,-.5,0,1,0,-1]],energy=[-2220,-394,-286],target=[1,0,0,0,-3,-4];
     const term=(n,i)=>(Math.abs(n-1)<1e-8?'':fmt(n)+' ')+labels[i];
@@ -256,11 +256,11 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
       cancellation.innerHTML='<p>Les quantités identiques présentes des deux côtés sont barrées. Les états physiques doivent être identiques.</p><div class="table-wrap"><table><thead><tr><th>Espèce</th><th>Réactifs additionnés</th><th>Produits additionnés</th></tr></thead><tbody>'+labels.map((label,i)=>{const c=Math.min(left[i],right[i]);return left[i]+right[i]>1e-8?`<tr><th>${label}</th><td>${remaining(left[i],c,i)}</td><td>${remaining(right[i],c,i)}</td></tr>`:'';}).join('')+'</tbody></table></div><div class="formula">'+side(sum,-1)+' → '+side(sum,1)+'</div>';
       const correct=sum.every((v,i)=>Math.abs(v-target[i])<1e-8);host.dataset.complete=String(correct);
       status.textContent=correct?'La somme donne la réaction de formation recherchée. Appliquez maintenant ces mêmes multiplicateurs aux enthalpies.':'La somme ne donne pas encore la réaction recherchée. Vérifiez le sens de la combustion du propane et les coefficients de C et H₂.';
-      expression.innerHTML='<p>Expression à calculer, en kJ·mol⁻¹ :</p><div class="formula">'+k.map((v,i)=>'('+fmt(v)+') × ('+fmt(energy[i])+')').join(' + ')+'</div><p>Calculez cette somme sur votre brouillon, puis saisissez le résultat dans la question 4.</p>';
+      expression.innerHTML='<p>Expression à calculer, en kJ·mol⁻¹ :</p><div class="formula">'+k.map((v,i)=>'('+fmt(v)+') × ('+fmt(energy[i])+')').join(' + ')+'</div><p>La somme des enthalpies suit les mêmes coefficients que la somme des équations.</p>';
     }
     inputs.forEach(x=>x.addEventListener('input',draw));
     form.querySelectorAll('[data-hess-direction]').forEach(b=>b.addEventListener('click',()=>{const input=document.getElementById(b.dataset.hessInput),value=parse(input.value);input.value=String((Number.isFinite(value)&&value!==0?Math.abs(value):1)*Number(b.dataset.hessDirection));input.dispatchEvent(new Event('input',{bubbles:true}));}));
-    form.addEventListener('exercise-reset',draw);draw();
+    draw();
   }
   function balances(){
     document.querySelectorAll('[data-balance-builder]').forEach(host=>{

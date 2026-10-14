@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
@@ -68,7 +68,24 @@
 <p>L’exercice du propane utilise les combustions du propane, du carbone et du dihydrogène pour retrouver la réaction de formation :</p>
 <div class="formula">3 C(gr) + 4 H₂(g) → C₃H₈(g)</div>
 <p>Commencez par retrouver les coefficients et le sens de chaque réaction. Additionnez ensuite les enthalpies correspondantes.</p>
-</section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Cycles de Hess · CC BY-NC-ND 4.0</p>
+</section><section class="course-section" id="comprendre-propane"><h2>Assembler un cycle : exemple du propane</h2><p>Modifiez le sens et le coefficient de chaque équation pour observer les espèces qui s’annulent.</p><p>Retrouver la réaction <b>3 C(graphite) + 4 H₂(g) → C₃H₈(g)</b> à partir des équations ci-dessous.</p>
+<ol>
+<li>C₃H₈(g) + 5 O₂(g) → 3 CO₂(g) + 4 H₂O(l), ΔrH°₁ = −2220 kJ·mol⁻¹.</li>
+<li>C(graphite) + O₂(g) → CO₂(g), ΔrH°₂ = −394 kJ·mol⁻¹.</li>
+<li>H₂(g) + ½ O₂(g) → H₂O(l), ΔrH°₃ = −286 kJ·mol⁻¹.</li>
+</ol>
+<p>Un multiplicateur négatif inverse l’équation.</p>
+<div class="course-hess-builder"><div class="exercise-field">
+<label for="propane-reponse-1">1. Multiplicateur de l’équation 1</label><input type="text" inputmode="decimal" autocomplete="off" id="propane-reponse-1" placeholder="Votre réponse"><div class="coefficient-controls" role="group" aria-label="Sens de l’équation 1"><button type="button" data-hess-direction="1" data-hess-input="propane-reponse-1">Sens direct (+)</button><button type="button" data-hess-direction="-1" data-hess-input="propane-reponse-1">Sens inverse (−)</button></div></div>
+<div class="exercise-field">
+<label for="propane-reponse-2">2. Multiplicateur de l’équation 2</label><input type="text" inputmode="decimal" autocomplete="off" id="propane-reponse-2" placeholder="Votre réponse"><div class="coefficient-controls" role="group" aria-label="Sens de l’équation 2"><button type="button" data-hess-direction="1" data-hess-input="propane-reponse-2">Sens direct (+)</button><button type="button" data-hess-direction="-1" data-hess-input="propane-reponse-2">Sens inverse (−)</button></div></div>
+<div class="exercise-field">
+<label for="propane-reponse-3">3. Multiplicateur de l’équation 3</label><input type="text" inputmode="decimal" autocomplete="off" id="propane-reponse-3" placeholder="Votre réponse"><div class="coefficient-controls" role="group" aria-label="Sens de l’équation 3"><button type="button" data-hess-direction="1" data-hess-input="propane-reponse-3">Sens direct (+)</button><button type="button" data-hess-direction="-1" data-hess-input="propane-reponse-3">Sens inverse (−)</button></div></div>
+<div class="course-interactive reasoning-builder" id="hess-builder">
+<h4>Assembler les équations</h4><p>Saisissez les trois multiplicateurs ci-dessus. Les boutons changent leur signe ; leur valeur absolue fixe le facteur. Observez les espèces communes qui s’éliminent, et reliez cette somme à l’enthalpie de la réaction globale.</p>
+<div id="hess-transformed"></div><div id="hess-cancellations"></div><p id="hess-status" role="status"></p><div id="hess-energy-expression"></div>
+<noscript>Activez JavaScript pour visualiser l’assemblage. Les trois équations et les règles de Hess sont indiquées dans l’énoncé.</noscript></div>
+</div></section><section class="thermal-widget" id="cycle-hydrazine-guide" data-guided-hydrazine></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Cycles de Hess · CC BY-NC-ND 4.0</p>
 <p class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></p>
 </div>
 <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
@@ -124,7 +141,7 @@
 </div>
 <div id="pane-exercises" role="tabpanel" aria-labelledby="tab-exercises" hidden>
 <h2>Exercices</h2>
-<p>Après le QCM, cherchez sur votre brouillon puis saisissez vos réponses. Vous pouvez vérifier une étape à la fois. Les indices et la correction s’ouvrent à votre demande.</p>
+<p>Après le QCM, construisez votre raisonnement sur votre brouillon, puis saisissez les résultats demandés. Les étapes du calcul figurent dans la correction détaillée, consultable après une tentative.</p>
 <p class="muted">Vos réponses sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
 <nav class="exercise-index" aria-label="Choisir un exercice"><ul>
 <li><a href="#exercice-hcl">Former HCl avec les enthalpies de dissociation</a></li>
@@ -136,23 +153,17 @@
 <p>Calculer l’enthalpie standard de formation du chlorure d’hydrogène gazeux : <b>½ H₂(g) + ½ Cl₂(g) → HCl(g)</b>.</p>
 <p>Enthalpies molaires de dissociation : H₂ = 436 ; Cl₂ = 243 ; HCl = 432 kJ·mol⁻¹, à la même température.</p>
 <form class="exercise-form" data-exercise="hcl" novalidate>
-<div class="exercise-fields">
+<p class="muted">Résultat numérique : une différence de ±2 % est acceptée pour les arrondis. Respectez le signe et l’unité indiquée.</p><div class="exercise-fields">
 <div class="exercise-field">
-<label for="hcl-reponse-1">1. Contribution de dissociation de ½ H₂ et ½ Cl₂ <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hcl-reponse-1" name="reponse-1" data-expected="339.5" data-hint="Additionnez une demi-dissociation de chaque réactif." aria-describedby="hcl-reponse-1-feedback" data-tolerance="0.1" placeholder="Votre réponse" data-mistakes="[{&quot;value&quot;: 679, &quot;message&quot;: &quot;Les réactifs sont pris avec un coefficient ½ : seule une demi-mole de chaque liaison est rompue.&quot;}]"><p id="hcl-reponse-1-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="hcl-reponse-2">2. Contribution de formation de HCl à partir de H(g) et Cl(g) <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hcl-reponse-2" name="reponse-2" data-expected="-432" data-hint="Former la liaison est la transformation inverse de sa dissociation." aria-describedby="hcl-reponse-2-feedback" data-tolerance="0.1" placeholder="Votre réponse"><p id="hcl-reponse-2-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="hcl-reponse-3">3. Enthalpie de formation de HCl(g) <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hcl-reponse-3" name="reponse-3" data-expected="-92.5" data-hint="Additionnez les deux étapes du chemin fictif." aria-describedby="hcl-reponse-3-feedback" data-tolerance="0.1" placeholder="Votre réponse" data-mistakes="[{&quot;value&quot;: 247, &quot;message&quot;: &quot;Vérifiez les coefficients ½ des dissociations de H₂ et Cl₂.&quot;}]"><p id="hcl-reponse-3-feedback" class="field-feedback"></p>
+<label for="hcl-reponse-3">Enthalpie de formation de HCl(g) <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hcl-reponse-3" name="reponse-3" data-expected="-92.5" data-hint="Additionnez les deux étapes du chemin fictif." aria-describedby="hcl-reponse-3-feedback" data-tolerance="0" placeholder="Votre réponse" data-mistakes='[{"value": 247, "message": "Vérifiez les coefficients ½ des dissociations de H₂ et Cl₂."}]' data-relative-tolerance="0.02"><p id="hcl-reponse-3-feedback" class="field-feedback"></p>
 </div>
 </div>
 <div class="exercise-actions">
-<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
+<button class="button" type="submit">Vérifier ma réponse</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Faites passer les réactifs par les mêmes atomes gazeux, puis reformez HCl.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Une liaison rompue coûte de l’énergie ; la même liaison formée apporte la contribution opposée.</p></details><details class="exercise-solution"><summary>Correction</summary><p>½ × 436 + ½ × 243 = 339,5 kJ·mol⁻¹. La formation de H–Cl contribue −432 kJ·mol⁻¹. ΔfH°(HCl,g) = 339,5 − 432 = <b>−92,5 kJ·mol⁻¹</b>.</p></details></section><section class="exercise-card" id="exercice-propane"><p class="eyebrow">EXERCICE 2</p>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Faites passer les réactifs par les mêmes atomes gazeux, puis reformez HCl.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Une liaison rompue coûte de l’énergie ; la même liaison formée apporte la contribution opposée.</p></details><details class="exercise-solution"><summary>Correction détaillée</summary><p><b>1. Passer par les atomes gazeux.</b> On dissocie ½ mol de H₂ et ½ mol de Cl₂ : Q₁ = ½ × 436 + ½ × 243 = 339,5 kJ pour une mole de HCl formée.</p><p><b>2. Former HCl.</b> H(g) + Cl(g) → HCl(g) est l’inverse de la dissociation de HCl. Sa contribution est donc −432 kJ·mol⁻¹.</p><p><b>3. Additionner les étapes.</b> Les atomes intermédiaires s’annulent. ΔfH°(HCl,g) = 339,5 − 432 = <b>−92,5 kJ·mol⁻¹</b>. La formation est exothermique.</p></details></section><section class="exercise-card" id="exercice-propane"><p class="eyebrow">EXERCICE 2</p>
 <h3>Construire le cycle du propane</h3>
 <p class="exercise-origin">Exercice du diaporama · diapositive 31</p>
 <p>Retrouver la réaction <b>3 C(graphite) + 4 H₂(g) → C₃H₈(g)</b> à partir des équations ci-dessous.</p>
@@ -162,45 +173,31 @@
 <li>H₂(g) + ½ O₂(g) → H₂O(l), ΔrH°₃ = −286 kJ·mol⁻¹.</li>
 </ol>
 <p>Un multiplicateur négatif inverse l’équation.</p>
-<form class="exercise-form" data-exercise="propane" novalidate>
-<div class="exercise-fields">
+<p>Déterminez l’enthalpie standard de formation du propane, en kJ·mol⁻¹.</p><form class="exercise-form" data-exercise="propane" novalidate>
+<p class="muted">Résultat numérique : une différence de ±2 % est acceptée pour les arrondis. Respectez le signe et l’unité indiquée.</p><div class="exercise-fields">
 <div class="exercise-field">
-<label for="propane-reponse-1">1. Multiplicateur de l’équation 1</label><input type="text" inputmode="decimal" autocomplete="off" id="propane-reponse-1" name="reponse-1" data-expected="-1" data-hint="Le propane doit être un produit dans la réaction cible." aria-describedby="propane-reponse-1-feedback" data-tolerance="0.001" placeholder="Votre réponse"><div class="coefficient-controls" role="group" aria-label="Sens de l’équation 1"><button type="button" data-hess-direction="1" data-hess-input="propane-reponse-1">Sens direct (+)</button><button type="button" data-hess-direction="-1" data-hess-input="propane-reponse-1">Sens inverse (−)</button></div><p id="propane-reponse-1-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="propane-reponse-2">2. Multiplicateur de l’équation 2</label><input type="text" inputmode="decimal" autocomplete="off" id="propane-reponse-2" name="reponse-2" data-expected="3" data-hint="La réaction cible consomme trois carbones." aria-describedby="propane-reponse-2-feedback" data-tolerance="0.001" placeholder="Votre réponse"><div class="coefficient-controls" role="group" aria-label="Sens de l’équation 2"><button type="button" data-hess-direction="1" data-hess-input="propane-reponse-2">Sens direct (+)</button><button type="button" data-hess-direction="-1" data-hess-input="propane-reponse-2">Sens inverse (−)</button></div><p id="propane-reponse-2-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="propane-reponse-3">3. Multiplicateur de l’équation 3</label><input type="text" inputmode="decimal" autocomplete="off" id="propane-reponse-3" name="reponse-3" data-expected="4" data-hint="La réaction cible consomme quatre H₂." aria-describedby="propane-reponse-3-feedback" data-tolerance="0.001" placeholder="Votre réponse"><div class="coefficient-controls" role="group" aria-label="Sens de l’équation 3"><button type="button" data-hess-direction="1" data-hess-input="propane-reponse-3">Sens direct (+)</button><button type="button" data-hess-direction="-1" data-hess-input="propane-reponse-3">Sens inverse (−)</button></div><p id="propane-reponse-3-feedback" class="field-feedback"></p>
-</div>
-<div class="exercise-field">
-<label for="propane-reponse-4">4. Enthalpie de formation du propane <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="propane-reponse-4" name="reponse-4" data-expected="-106" data-hint="Appliquez les mêmes multiplicateurs aux enthalpies." aria-describedby="propane-reponse-4-feedback" data-tolerance="0.2" placeholder="Votre réponse" data-mistakes="[{&quot;value&quot;: -4546, &quot;message&quot;: &quot;Le propane doit être formé : la première combustion est inversée, et son enthalpie change de signe.&quot;}]"><p id="propane-reponse-4-feedback" class="field-feedback"></p>
+<label for="propane-reponse-4">Enthalpie de formation du propane <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="propane-reponse-4" name="reponse-4" data-expected="-106" data-hint="Appliquez les mêmes multiplicateurs aux enthalpies." aria-describedby="propane-reponse-4-feedback" data-tolerance="0" placeholder="Votre réponse" data-mistakes='[{"value": -4546, "message": "Le propane doit être formé : la première combustion est inversée, et son enthalpie change de signe."}]' data-relative-tolerance="0.02"><p id="propane-reponse-4-feedback" class="field-feedback"></p>
 </div>
 </div>
-<div class="course-interactive reasoning-builder" id="hess-builder">
-<h4>Assembler les équations</h4><p>Saisissez les trois multiplicateurs ci-dessus. Les boutons changent leur signe ; leur valeur absolue fixe le facteur. Observez les espèces communes qui s’éliminent, puis calculez l’enthalpie dans la question 4.</p>
-<div id="hess-transformed"></div><div id="hess-cancellations"></div><p id="hess-status" role="status"></p><div id="hess-energy-expression"></div>
-<noscript>Activez JavaScript pour visualiser l’assemblage. Les trois équations et les règles de Hess sont indiquées dans l’énoncé.</noscript></div>
 <div class="exercise-actions">
-<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
+<button class="button" type="submit">Vérifier ma réponse</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Commencez par les espèces qui ne figurent que dans une des équations.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Vérifiez que O₂, CO₂ et H₂O s’annulent avant d’additionner les enthalpies.</p></details><details class="exercise-solution"><summary>Correction</summary><p>Combinaison : <b>−équation 1 + 3 × équation 2 + 4 × équation 3</b>. Les 5 O₂, 3 CO₂ et 4 H₂O s’annulent. Il reste 3 C(graphite) + 4 H₂(g) → C₃H₈(g).</p>
-<p>ΔfH° = −(−2220) + 3(−394) + 4(−286) = <b>−106 kJ·mol⁻¹</b>, avec les données arrondies du cours.</p></details></section><section class="exercise-card" id="exercice-hess-sens-coefficients"><p class="eyebrow">EXERCICE 3</p>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Commencez par les espèces qui ne figurent que dans une des équations.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Vérifiez que O₂, CO₂ et H₂O s’annulent avant d’additionner les enthalpies.</p></details><details class="exercise-solution"><summary>Correction détaillée</summary><p><b>1. Orienter les équations.</b> Le propane est un produit : on inverse l’équation 1, ce qui change le signe de son enthalpie. On multiplie l’équation 2 par 3 et l’équation 3 par 4.</p><p><b>2. Écrire les transformations.</b><br>3 CO₂(g) + 4 H₂O(l) → C₃H₈(g) + 5 O₂(g), +2 220 kJ·mol⁻¹ ;<br>3 C(graphite) + 3 O₂(g) → 3 CO₂(g), −1 182 kJ·mol⁻¹ ;<br>4 H₂(g) + 2 O₂(g) → 4 H₂O(l), −1 144 kJ·mol⁻¹.</p><p><b>3. Simplifier.</b> Les 3 CO₂, 4 H₂O et 5 O₂ s’annulent. Il reste 3 C(graphite) + 4 H₂(g) → C₃H₈(g).</p><p><b>4. Calculer.</b> ΔfH° = −(−2 220) + 3(−394) + 4(−286) = <b>−106 kJ·mol⁻¹</b>, avec les données du cours.</p></details></section><section class="exercise-card" id="exercice-hess-sens-coefficients"><p class="eyebrow">EXERCICE 3</p>
 <h3>Choisir le sens et le coefficient</h3>
 <p class="exercise-origin">Entraînement sur les règles de Hess</p>
 <p>On part de H₂O(l) → H₂O(g), ΔH₁ = +40,7 kJ pour une mole d’eau à 100 °C. Les transformations suivantes sont prises à cette même température.</p>
 <form class="exercise-form" data-exercise="hess-sens-coefficients" novalidate>
-<div class="exercise-fields">
+<p class="muted">Résultat numérique : une différence de ±2 % est acceptée pour les arrondis. Respectez le signe et l’unité indiquée.</p><div class="exercise-fields">
 <div class="exercise-field">
-<label for="hess-sens-coefficients-reponse-1">1. ΔH pour condenser une mole de vapeur <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hess-sens-coefficients-reponse-1" name="reponse-1" data-expected="-40.7" data-hint="Inversez la transformation." aria-describedby="hess-sens-coefficients-reponse-1-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="hess-sens-coefficients-reponse-1-feedback" class="field-feedback"></p>
+<label for="hess-sens-coefficients-reponse-1">ΔH pour condenser une mole de vapeur <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hess-sens-coefficients-reponse-1" name="reponse-1" data-expected="-40.7" data-hint="Inversez la transformation." aria-describedby="hess-sens-coefficients-reponse-1-feedback" data-tolerance="0" placeholder="Votre réponse" data-relative-tolerance="0.02"><p id="hess-sens-coefficients-reponse-1-feedback" class="field-feedback"></p>
 </div>
 <div class="exercise-field">
-<label for="hess-sens-coefficients-reponse-2">2. ΔH pour vaporiser deux moles d’eau <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hess-sens-coefficients-reponse-2" name="reponse-2" data-expected="81.4" data-hint="Multipliez la transformation par 2." aria-describedby="hess-sens-coefficients-reponse-2-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="hess-sens-coefficients-reponse-2-feedback" class="field-feedback"></p>
+<label for="hess-sens-coefficients-reponse-2">ΔH pour vaporiser deux moles d’eau <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hess-sens-coefficients-reponse-2" name="reponse-2" data-expected="81.4" data-hint="Multipliez la transformation par 2." aria-describedby="hess-sens-coefficients-reponse-2-feedback" data-tolerance="0" placeholder="Votre réponse" data-relative-tolerance="0.02"><p id="hess-sens-coefficients-reponse-2-feedback" class="field-feedback"></p>
 </div>
 <div class="exercise-field">
-<label for="hess-sens-coefficients-reponse-3">3. H₂O(l) d’un côté et H₂O(g) de l’autre peuvent-ils s’annuler ?</label><select id="hess-sens-coefficients-reponse-3" name="reponse-3" data-expected="non" data-hint="Les espèces simplifiées doivent avoir le même état physique." aria-describedby="hess-sens-coefficients-reponse-3-feedback"><option value="">Choisir une réponse</option>
+<label for="hess-sens-coefficients-reponse-3">H₂O(l) d’un côté et H₂O(g) de l’autre peuvent-ils s’annuler ?</label><select id="hess-sens-coefficients-reponse-3" name="reponse-3" data-expected="non" data-hint="Les espèces simplifiées doivent avoir le même état physique." aria-describedby="hess-sens-coefficients-reponse-3-feedback"><option value="">Choisir une réponse</option>
 <option value="oui">Oui</option>
 <option value="non">Non, leurs états physiques sont différents</option></select><p id="hess-sens-coefficients-reponse-3-feedback" class="field-feedback"></p>
 </div>
@@ -210,7 +207,7 @@
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Appliquez à l’enthalpie la même opération qu’à l’équation.</p></details><details class="exercise-solution"><summary>Correction</summary><p>1. −40,7 kJ. 2. 2 × 40,7 = +81,4 kJ. 3. Non : il faut ajouter le changement d’état pour relier le liquide et le gaz.</p></details></section><section class="thermal-widget" id="cycle-hydrazine-guide" data-guided-hydrazine></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Appliquez à l’enthalpie la même opération qu’à l’équation.</p></details><details class="exercise-solution"><summary>Correction</summary><p>1. −40,7 kJ. 2. 2 × 40,7 = +81,4 kJ. 3. Non : il faut ajouter le changement d’état pour relier le liquide et le gaz.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Cycles de Hess</h3>
@@ -231,8 +228,8 @@
 <p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
 <script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=f9535b63255c" defer></script>
-<script src="exercices.js?v=61c67d2c7d98" defer></script>
-<script src="interactions.js?v=d69c9382c644" defer></script>
-<script src="parcours-guides.js?v=18c063678d87" defer></script>
+<script src="exercices.js?v=2ff17aadcc01" defer></script>
+<script src="interactions.js?v=2ace4afcb618" defer></script>
+<script src="parcours-guides.js?v=b312a8bdff7b" defer></script>
 </body>
 </html>

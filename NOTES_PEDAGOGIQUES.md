@@ -134,10 +134,12 @@ Provenance : 7 exercices du PPT, 2 activités de restitution créées, 9 entraî
 
 Tests navigateur réussis : QCM/exercices et sauvegarde/export, états physiques et réactions, constructeur Hess et bilans, courbe complète, liens locaux et affichage mobile. La vérification ne comprend pas l’envoi de messages giscus ni un audit juridique des droits sur les sources.
 
-## Parcours progressifs ajoutés le 14 octobre 2026
+## Organisation des exemples et exercices — 14 octobre 2026
 
-Deux préparations guidées reprennent les données des exercices du diaporama : étalonnage par mélange d’eaux et réaction Zn/Cu²⁺. Six étapes : système, états, transformations, expressions, bilan, isolement de l’inconnue. Le calcul reste à faire dans les champs de l’exercice original.
+Les exemples interactifs de bilans thermiques (étalonnage et Zn/Cu²⁺), l’assembleur du propane et le cycle de l’hydrazine se trouvent dans **Comprendre**. Ils servent à construire le concept et expliquent les étapes et les calculs. Les données restent celles du diaporama et du TD ; les interfaces et rétroactions sont des ajouts pédagogiques.
 
-Un parcours complémentaire reprend les quatre équations du TD 2.3, exercice 6 (hydrazine) : construction du chemin indirect, inversion, multiplication, simplification puis calcul. Résultat vérifié : −543,74 kJ·mol⁻¹. Le H₂ auxiliaire est ajouté fictivement aux deux états extrêmes et s’annule ; le chemin n’est pas un mécanisme réactionnel.
+Dans **Exercices**, les calculs ne demandent plus les contributions intermédiaires : l’étudiant saisit le résultat final. Les questions indépendantes, conversions, coefficients stœchiométriques et restitutions conceptuelles conservent leurs réponses propres. Les 18 activités et les 40 QCM sont conservés. La correction est accessible après une tentative et détaille les étapes des calculs remaniés.
 
-Ces trois parcours sont non notés et ne modifient pas les 40 QCM ni les 18 exercices existants. Leur état est enregistré localement, exportable et effaçable. Le nouveau fichier `parcours-guides.js` doit être téléversé avec les autres fichiers de cette archive cumulative. Les interfaces et rétroactions sont des ajouts pédagogiques ; les données proviennent des supports indiqués ci-dessus.
+Les résultats thermochimiques non nuls ont une tolérance relative de ±2 %. Les coefficients, conversions et valeurs nulles conservent leurs contrôles spécifiques. Les anciennes réponses intermédiaires sont retirées du suivi ; les réponses finales existantes sont conservées. Les parcours du cours restent non notés. Tout le suivi reste local, exportable et effaçable.
+
+Archive cumulative : téléverser tous les fichiers, dont `parcours-guides.js`, à la racine du dépôt GitHub Pages. Aucune publication automatique.

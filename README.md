@@ -76,7 +76,7 @@ Les encarts de définition utilisent `definition` ; les ressources utilisent `fu
 
 ## Sauvegarde et changement de version
 
-Les réponses et résultats sont conservés **dans ce navigateur uniquement**, sans envoi automatique à l’enseignant ni synchronisation. Le meilleur score QCM sert de repère ; 80 % est un objectif de travail. L’historique conserve jusqu’à 100 tentatives. Les exercices conservent les dernières saisies, les étapes vérifiées et la consultation de la correction. L’export JSON rassemble les résultats locaux.
+Les réponses et résultats sont conservés **dans ce navigateur uniquement**, sans envoi automatique à l’enseignant ni synchronisation. Le meilleur score QCM sert de repère ; 80 % est un objectif de travail. L’historique conserve jusqu’à 100 tentatives. Les exercices conservent les dernières saisies, les résultats vérifiés et la consultation de la correction. L’export JSON rassemble les résultats locaux.
 
 Les réponses des exercices conservés restent utilisables. L’exercice hydrogénation/H-U est remplacé par un exercice limité au calcul par les enthalpies de formation, avec un nouvel identifiant. Son ancien résultat n’est plus affiché dans le bilan ; il reste dans les données locales exportables.
 
@@ -102,12 +102,14 @@ Dans Calorimétrie, une coupe interactive présente double paroi argentée, vide
 
 ## Courbe complète du diaporama animée
 
-La figure des changements d’état est maintenant une courbe SVG interactive T(K) en fonction du temps, avec cinq étapes : chauffage du solide, fusion (S + L), chauffage du liquide, vaporisation (L + V), chauffage de la vapeur. Animation à démarrage manuel, pause, curseur et choix direct des étapes. Courbe schématique avec calculs pour 3 mol d’eau de −10 à 120 °C : données glace/vapeur/fusion du TD, données liquide/vaporisation du diaporama pour cohérence avec le second exemple. Axes non à l’échelle ; aucune durée physique calculée. Total : 165,8334 kJ. Les 40 QCM et 18 exercices restent inchangés. Cette courbe précède le complément numérique sur les 3 mol d’eau, conservé. L’image source reste dans les assets.
+La figure des changements d’état est maintenant une courbe SVG interactive T(K) en fonction du temps, avec cinq étapes : chauffage du solide, fusion (S + L), chauffage du liquide, vaporisation (L + V), chauffage de la vapeur. Animation à démarrage manuel, pause, curseur et choix direct des étapes. Courbe schématique avec calculs pour 3 mol d’eau de −10 à 120 °C : données glace/vapeur/fusion du TD, données liquide/vaporisation du diaporama pour cohérence avec le second exemple. Axes non à l’échelle ; aucune durée physique calculée. Total : 165,8334 kJ. Les 40 QCM et 18 activités sont conservés ; la saisie des exercices a été simplifiée dans la révision décrite ci-dessous. Cette courbe précède le complément numérique sur les 3 mol d’eau, conservé. L’image source reste dans les assets.
 
-## Parcours progressifs ajoutés le 14 octobre 2026
+## Organisation des exemples et exercices — 14 octobre 2026
 
-Deux préparations guidées reprennent les données des exercices du diaporama : étalonnage par mélange d’eaux et réaction Zn/Cu²⁺. Six étapes : système, états, transformations, expressions, bilan, isolement de l’inconnue. Le calcul reste à faire dans les champs de l’exercice original.
+Les exemples interactifs de bilans thermiques (étalonnage et Zn/Cu²⁺), l’assembleur du propane et le cycle de l’hydrazine se trouvent dans **Comprendre**. Ils servent à construire le concept et expliquent les étapes et les calculs. Les données restent celles du diaporama et du TD ; les interfaces et rétroactions sont des ajouts pédagogiques.
 
-Un parcours complémentaire reprend les quatre équations du TD 2.3, exercice 6 (hydrazine) : construction du chemin indirect, inversion, multiplication, simplification puis calcul. Résultat vérifié : −543,74 kJ·mol⁻¹. Le H₂ auxiliaire est ajouté fictivement aux deux états extrêmes et s’annule ; le chemin n’est pas un mécanisme réactionnel.
+Dans **Exercices**, les calculs ne demandent plus les contributions intermédiaires : l’étudiant saisit le résultat final. Les questions indépendantes, conversions, coefficients stœchiométriques et restitutions conceptuelles conservent leurs réponses propres. Les 18 activités et les 40 QCM sont conservés. La correction est accessible après une tentative et détaille les étapes des calculs remaniés.
 
-Ces trois parcours sont non notés et ne modifient pas les 40 QCM ni les 18 exercices existants. Leur état est enregistré localement, exportable et effaçable. Le nouveau fichier `parcours-guides.js` doit être téléversé avec les autres fichiers de cette archive cumulative. Les interfaces et rétroactions sont des ajouts pédagogiques ; les données proviennent des supports indiqués ci-dessus.
+Les résultats thermochimiques non nuls ont une tolérance relative de ±2 %. Les coefficients, conversions et valeurs nulles conservent leurs contrôles spécifiques. Les anciennes réponses intermédiaires sont retirées du suivi ; les réponses finales existantes sont conservées. Les parcours du cours restent non notés. Tout le suivi reste local, exportable et effaçable.
+
+Archive cumulative : téléverser tous les fichiers, dont `parcours-guides.js`, à la racine du dépôt GitHub Pages. Aucune publication automatique.
