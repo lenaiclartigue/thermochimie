@@ -1,6 +1,6 @@
 # Thermochimie · Licence
 
-Version « audit complet et deux animations sur 3 mol d’eau » du 14 octobre 2026 : mise en interaction du diaporama du chapitre 2. Conception du parcours : Lénaïc Lartigue.
+Version « audit, animations et parcours progressifs de bilans et Hess » du 14 octobre 2026 : mise en interaction du diaporama du chapitre 2. Conception du parcours : Lénaïc Lartigue.
 
 Site statique pour GitHub Pages. Les six parties suivent le cours commun : **Comprendre → QCM → Exercices → Discussion**. Le chapitre 3 n’est pas développé ici ; les prérequis du chapitre 1 sont rappelés dans la première partie.
 
@@ -103,3 +103,11 @@ Dans Calorimétrie, une coupe interactive présente double paroi argentée, vide
 ## Courbe complète du diaporama animée
 
 La figure des changements d’état est maintenant une courbe SVG interactive T(K) en fonction du temps, avec cinq étapes : chauffage du solide, fusion (S + L), chauffage du liquide, vaporisation (L + V), chauffage de la vapeur. Animation à démarrage manuel, pause, curseur et choix direct des étapes. Courbe schématique avec calculs pour 3 mol d’eau de −10 à 120 °C : données glace/vapeur/fusion du TD, données liquide/vaporisation du diaporama pour cohérence avec le second exemple. Axes non à l’échelle ; aucune durée physique calculée. Total : 165,8334 kJ. Les 40 QCM et 18 exercices restent inchangés. Cette courbe précède le complément numérique sur les 3 mol d’eau, conservé. L’image source reste dans les assets.
+
+## Parcours progressifs ajoutés le 14 octobre 2026
+
+Deux préparations guidées reprennent les données des exercices du diaporama : étalonnage par mélange d’eaux et réaction Zn/Cu²⁺. Six étapes : système, états, transformations, expressions, bilan, isolement de l’inconnue. Le calcul reste à faire dans les champs de l’exercice original.
+
+Un parcours complémentaire reprend les quatre équations du TD 2.3, exercice 6 (hydrazine) : construction du chemin indirect, inversion, multiplication, simplification puis calcul. Résultat vérifié : −543,74 kJ·mol⁻¹. Le H₂ auxiliaire est ajouté fictivement aux deux états extrêmes et s’annule ; le chemin n’est pas un mécanisme réactionnel.
+
+Ces trois parcours sont non notés et ne modifient pas les 40 QCM ni les 18 exercices existants. Leur état est enregistré localement, exportable et effaçable. Le nouveau fichier `parcours-guides.js` doit être téléversé avec les autres fichiers de cette archive cumulative. Les interfaces et rétroactions sont des ajouts pédagogiques ; les données proviennent des supports indiqués ci-dessus.

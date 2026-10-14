@@ -115,3 +115,11 @@ Précisions apportées : calorie notée comme valeur arrondie ; composition fixe
 Provenance : 7 exercices du PPT, 2 activités de restitution créées, 9 entraînements ajoutés dont un adapté du TD. Les 40 QCM sont des questions rédigées pour le site. Le rapport enseignant séparé détaille 38 blocs de provenance ; aucune attribution mot à mot ni proportion exacte de texte original n’est revendiquée. Les fichiers de cours et corrigés source ne sont pas modifiés.
 
 Tests navigateur réussis : QCM/exercices et sauvegarde/export, états physiques et réactions, constructeur Hess et bilans, courbe complète, liens locaux et affichage mobile. La vérification ne comprend pas l’envoi de messages giscus ni un audit juridique des droits sur les sources.
+
+## Parcours progressifs ajoutés le 14 octobre 2026
+
+Deux préparations guidées reprennent les données des exercices du diaporama : étalonnage par mélange d’eaux et réaction Zn/Cu²⁺. Six étapes : système, états, transformations, expressions, bilan, isolement de l’inconnue. Le calcul reste à faire dans les champs de l’exercice original.
+
+Un parcours complémentaire reprend les quatre équations du TD 2.3, exercice 6 (hydrazine) : construction du chemin indirect, inversion, multiplication, simplification puis calcul. Résultat vérifié : −543,74 kJ·mol⁻¹. Le H₂ auxiliaire est ajouté fictivement aux deux états extrêmes et s’annule ; le chemin n’est pas un mécanisme réactionnel.
+
+Ces trois parcours sont non notés et ne modifient pas les 40 QCM ni les 18 exercices existants. Leur état est enregistré localement, exportable et effaçable. Le nouveau fichier `parcours-guides.js` doit être téléversé avec les autres fichiers de cette archive cumulative. Les interfaces et rétroactions sont des ajouts pédagogiques ; les données proviennent des supports indiqués ci-dessus.
