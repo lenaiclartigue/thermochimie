@@ -31,3 +31,6 @@ Les durées sont des estimations de travail avec activités et quiz. Ajuster apr
 ## Découpage en six parties
 
 Travail et chaleur sont regroupés avec le premier principe. Les contenus antérieurs ont été regroupés sans réécriture complète : leur répartition détaillée sera discutée avec l’enseignant. Les deux voies de détermination d’une enthalpie de réaction sont indiquées sur l’accueil et dans la partie correspondante.
+
+## Enrichissement du 14 octobre 2026
+Textes et graphique originaux. Vérifications scientifiques : Richard Fitzpatrick (University of Texas), Exact and Inexact Differentials, https://farside.ph.utexas.edu/teaching/sm1/Thermalhtml/node38.html ; OpenStax, University Physics Volume 2, §3.4, https://openstax.org/books/university-physics-volume-2/pages/3-4-thermodynamic-processes . Attention : certaines références comptent le travail fourni positivement ; le site conserve le travail reçu positif. Aucun texte ni visuel de ces références n’est reproduit.

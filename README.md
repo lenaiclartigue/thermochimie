@@ -17,7 +17,7 @@ Conception du parcours : Lénaïc Lartigue. Le chapitre 1 est un prérequis ; le
 
 index.html présente le titre « Thermochimie » et six encarts cliquables. Il explique les deux voies pour déterminer une enthalpie de réaction : calcul à partir de données tabulées et de cycles de Hess ; mesure expérimentale par calorimétrie.
 
-Les contenus antérieurs sont conservés et regroupés pour cette étape. La répartition et le contenu détaillé restent à discuter avec l’enseignant. Cette version comprend les mêmes 40 questions et huit activités interactives. Les deux parties regroupant deux anciens modules ont dix questions ; les quatre autres en ont cinq. Un sélecteur permet de choisir entre les activités des parties regroupées.
+Les contenus antérieurs sont conservés et regroupés pour cette étape. La répartition et le contenu détaillé restent à discuter avec l’enseignant. Cette version comprend 45 questions, huit activités initiales et un guide des intégrales interactif. Le premier principe comporte quinze questions, l’enthalpie dix ; les quatre autres parties en ont cinq. Un sélecteur permet de choisir entre les activités des parties regroupées.
 
 ## Fichiers communs
 
@@ -64,3 +64,6 @@ Les contenus pédagogiques originaux sont sous CC BY-NC-ND 4.0. Le partage sans 
 Le pied de page affiche le nom de la licence. Un clic ouvre les explications et la référence de citation dans une fenêtre du site. LICENSE.md et conditions.js doivent rester identiques lorsque le texte est modifié.
 
 Le guide Utiliser le site décrit la navigation, les quiz, les scores, les forums et les fenêtres. Le rendu visuel du nouvel accueil reste à vérifier dans le navigateur après publication ; les liens, les questions et la syntaxe ont été contrôlés localement.
+
+## Compléments pédagogiques
+La partie Premier principe développe les différentielles exactes, les chemins, les transformations adiabatiques et les pressions intérieure/extérieure. `integrales.html` et `integrales.js` apportent un formulaire et une somme de Riemann interactive originale, sans dépendance supplémentaire.
