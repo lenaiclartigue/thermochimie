@@ -1,27 +1,29 @@
-# Thermochimie · Licence — GitHub Pages
+# Thermochimie — site GitHub Pages à pages séparées
 
-Site entièrement statique : HTML, CSS et JavaScript. Aucun serveur supplémentaire, compte étudiant, clé API ou abonnement externe.
+Chaque page possède son propre fichier HTML. Le texte des leçons et les quiz sont directement dans le fichier du module, sans fichier cours.js ni chargement de données.
 
-## Publication dans le compte lenaiclartigue
+## Fichiers à déposer à la racine du dépôt
 
-1. Créer un dépôt public nommé `thermochimie` (distinct de NanoBioMat).
-2. Décompresser cette archive et déposer les fichiers directement à la racine du dépôt, notamment `index.html`, `style.css`, `app.js` et `cours.js`. Ne pas déposer uniquement le ZIP. Conserver `.nojekyll` si possible ; son absence ne bloque pas ces fichiers ordinaires.
-3. Dans Settings → Pages, choisir Deploy from a branch, puis la branche main et / (root), et enregistrer.
+- index.html : accueil et liste des modules.
+- module-01.html à module-08.html : un fichier par module.
+- style.css : présentation commune.
+- app.js : fonctions communes des quiz et laboratoires.
+- LICENSE.md : conditions de consultation et réutilisation.
+- NOTES_PEDAGOGIQUES.md : points à relire dans les supports sources.
 
-L’adresse attendue, une fois le déploiement GitHub réussi, est https://lenaiclartigue.github.io/thermochimie/ . Ce dépôt et ce déploiement n’ont pas été créés par l’assistant.
+Conserver Settings → Pages → Deploy from a branch → main → /(root).
+Remplacer les anciens index.html, app.js, style.css et README.md. Ajouter les huit pages. L’ancien cours.js peut être supprimé ; il n’est plus utilisé. Ne pas déposer uniquement l’archive ZIP.
 
-## Contenu
+## Modifier une leçon
 
-8 modules écrits, 40 questions de quiz corrigées, 8 laboratoires interactifs, 8 applications numériques avec indices, renvois aux TD et fiches imprimables. Sources pédagogiques : supports de Mireille Le Guennec et Lénaïc Lartigue et fascicule XLG1CU040 2026–2027. Le chapitre 1 est un prérequis ; le chapitre 3 reste prévu en séance.
+Ouvrir le HTML du module concerné. Le bloc pane-course contient les paragraphes, formules, exemples et l’application. Les commentaires HTML indiquent les zones de modification. Les blocs pane-quiz et pane-td contiennent le quiz et la préparation des TD.
 
-Le contenu est une adaptation pédagogique à relire avant diffusion. Les durées sont des estimations. Les quiz sont formatifs. Le site fonctionne également en ouvrant index.html localement. La copie automatique d’une question peut être indisponible en mode fichier : sélectionner et copier le texte manuellement.
+Pour une question de quiz, modifier l’intitulé, les options, data-correct (0 = première réponse, 1 = deuxième, etc.) et data-explanation. Pour une application numérique, modifier aussi data-answer et data-tolerance dans le formulaire.
+
+Les calculs interactifs des laboratoires sont dans la fonction renderLab de app.js. Les styles communs se modifient dans style.css.
 
 ## Fonctionnement
 
-Les leçons sont dans cours.js. Le navigateur corrige les quiz et conserve la progression locale si le stockage est autorisé. Pas de suivi centralisé ni d’identification des visiteurs. Le cours et ses corrections sont publics et peuvent être copiés. Aucun service externe n’est nécessaire pour lire le cours et réaliser les activités.
+Accès libre. Aucune connexion ni service externe. Progression conservée localement dans le navigateur, aucun suivi enseignant. Les étudiants peuvent ouvrir directement une page de module. Le cours reste à relire avant diffusion. Les durées sont indicatives. Le site s’ouvre aussi localement avec index.html.
 
-Aucune licence ouverte n’a été attribuée automatiquement aux supports. Les mentions d’auteur sont conservées ; contacter l’auteur avant redistribution ou réutilisation.
-
-## Vérifications
-
-Syntaxe JavaScript, références de l’interface et structure des huit modules vérifiées. Le rendu en navigateur reste à vérifier sur ordinateur et téléphone. NOTES_PEDAGOGIQUES.md indique les incohérences repérées dans les documents sources ; ceux-ci n’ont pas été modifiés.
+Sources : cours de Mireille Le Guennec et Lénaïc Lartigue et fascicule XLG1CU040 2026–2027. Chapitre 1 prérequis ; chapitre 3 prévu en séance. Le dépôt GitHub n’a pas été modifié automatiquement.
