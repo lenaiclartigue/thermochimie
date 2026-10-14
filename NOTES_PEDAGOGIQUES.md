@@ -1,36 +1,45 @@
-# Points à relire avant diffusion
+# Mise en œuvre pédagogique
 
-## Adaptations apportées
+Version du 14 octobre 2026. Le détail des vérifications et des corrections figure dans `AUDIT_PEDAGOGIQUE.md`.
 
-- L’enceinte de Sabatier avec piston est décrite comme fermée et adiabatique. Un échange de travail empêche de la considérer comme isolée.
-- Qp = ΔH et Qv = ΔU sont accompagnés de leurs conditions : travail de pression seul, cadre mécanique approprié, énergies macroscopiques négligées.
-- L’énergie interne est présentée comme énergie microscopique, et non comme toute l’énergie totale sans distinction.
-- La chaleur est un transfert, plutôt qu’une énergie stockée.
-- La loi de Joule d’un gaz parfait à composition fixe n’est pas étendue automatiquement aux réactions chimiques.
-- Les enthalpies standard de formation nulles sont réservées aux éléments dans leur état de référence.
-- Les capacités totales, massiques et molaires et leurs unités sont distinguées.
-- La définition d’état standard ne fixe pas T à 298 K. L’état standard d’un soluté est présenté comme convention idéale extrapolée, pas comme une solution réelle infiniment diluée à 1 mol/L.
-- La bombe seule échange de la chaleur avec le milieu calorimétrique. Le bilan adiabatique porte sur l’ensemble, pas sur une réaction dont la chaleur serait nulle.
-- L’enthalpie négative n’est pas présentée comme un critère suffisant de spontanéité.
-- Les températures d’ébullition de l’eau sont arrondies à 100 °C dans les exemples du support. La pression et l’approximation sont à rappeler selon le niveau souhaité.
+## Progression retenue
 
-## Incohérences des TD à vérifier
+1. Délimiter le système et reconnaître les échanges possibles.
+2. Écrire le premier principe, distinguer fonctions d'état et transferts, puis calculer le travail selon le chemin.
+3. Introduire H et comprendre les conditions qui relient ΔH à la chaleur échangée.
+4. Relier l'enthalpie à l'avancement et définir les enthalpies de changement d'état, de formation, de combustion et de dissociation.
+5. Construire un cycle de Hess et exploiter des données cohérentes en température et en phase.
+6. Construire un bilan calorimétrique et passer du signal de température à une enthalpie de réaction.
 
-- Section 2.3, exercice 1 : ΔfH°(H₂O,l) = −295,8 kJ/mol, tandis que l’exercice 2 donne −285,8 kJ/mol. Vérifier la donnée avant d’en faire un quiz chiffré. Le site n’utilise pas la première valeur.
-- Lampe à carbure : plusieurs capacités calorifiques apparaissent négatives dans le tableau (CaO, CO₂ et H₂O gazeuse). Vérifier les signes et le document original avant adaptation. Ces valeurs ne sont pas utilisées ici.
-- Section 2.4, exercice 1 : l’enthalpie de vaporisation notée « 44,3 6 kJ/mol » diffère de 40,7 kJ/mol employée pour l’exemple à 100 °C dans le support. Clarifier la valeur et la température associée avant correction complète du TD.
-- Section 2.3, exercice 3 (méthane) : préciser la pression du volume de 1 m³ et la température d’application de la valeur de vaporisation utilisée pour la condensation.
-- Dans l’exercice Zn/Cu²⁺, la variation totale ΔH peut être calculée avec les approximations fournies. La concentration de Cu²⁺ manque pour déduire l’avancement et ΔrH. Le terme de capacité du zinc est conservé comme approximation pédagogique, et non comme description exacte de tous les produits finaux.
+Le guide des intégrales accompagne la deuxième partie. La présentation des deux méthodes de détermination d'une enthalpie de réaction clôt la quatrième partie et ouvre les deux suivantes.
 
-## Périmètre de cette version
+## Points à faire verbaliser
 
-Le cours écrit couvre les thèmes des 43 diapositives, avec exemples, questions regroupées par partie et laboratoires. Il ne prétend pas reproduire mot à mot une présentation orale. Les cycles complexes et les problèmes de synthèse restent à discuter en séance ; les références de TD sont des renvois, pas des corrigés complets du fascicule.
+- « Adiabatique » porte sur l'absence de chaleur échangée, pas sur une température constante ni sur l'absence de travail.
+- Pour une fonction d'état, l'intégrale de la différentielle exacte dépend des extrémités ; Q et W dépendent du chemin.
+- Le travail de pression fait intervenir la pression extérieure. Une transformation lente ne suffit pas à garantir la réversibilité.
+- H est une fonction d'état ; ce n'est pas une quantité de chaleur contenue dans le système.
+- L'équation de réaction, ses coefficients, les phases et la température appartiennent à la définition de la donnée thermochimique.
+- Une enthalpie de réaction négative n'indique à elle seule ni la vitesse ni la spontanéité d'une transformation.
+- L'ensemble calorimétrique peut être adiabatique alors que la réaction chauffe la solution et le récipient.
+- Une mesure ne donne pas automatiquement une enthalpie standard ; l'avancement et les hypothèses doivent être explicités.
 
-Les durées sont des estimations de travail avec activités et quiz. Ajuster après retour du premier groupe de 32 étudiants. La version n’a pas été essayée par des étudiants et n’a pas fait l’objet d’une validation visuelle en navigateur dans cette session.
+## Utilisation asynchrone
 
-## Découpage en six parties
+Dans chaque partie, demander à l'étudiant de lire le cours, de prévoir le résultat avant de modifier un paramètre, puis de confronter sa prévision au calcul. Les quiz donnent un retour immédiat ; les exercices du fascicule préparent le travail en séance.
 
-Travail et chaleur sont regroupés avec le premier principe. Les contenus antérieurs ont été regroupés sans réécriture complète : leur répartition détaillée sera discutée avec l’enseignant. Les deux voies de détermination d’une enthalpie de réaction sont indiquées sur l’accueil et dans la partie correspondante.
+Le score local aide à se repérer. Il ne prouve ni l'identité, ni une maîtrise durable, ni la réalisation des exercices. Pour préparer les séances, demander une question précise dans le fil du chapitre, un raisonnement écrit sur un exercice ciblé ou, si cela est utile, l'export des résultats. Le site ne collecte pas automatiquement ces éléments.
 
-## Enrichissement du 14 octobre 2026
-Textes et graphique originaux. Vérifications scientifiques : Richard Fitzpatrick (University of Texas), Exact and Inexact Differentials, https://farside.ph.utexas.edu/teaching/sm1/Thermalhtml/node38.html ; OpenStax, University Physics Volume 2, §3.4, https://openstax.org/books/university-physics-volume-2/pages/3-4-thermodynamic-processes . Attention : certaines références comptent le travail fourni positivement ; le site conserve le travail reçu positif. Aucun texte ni visuel de ces références n’est reproduit.
+Les durées affichées restent indicatives : les ajuster après une première utilisation par le groupe. La compréhension et la charge de travail n'ont pas encore été mesurées auprès d'étudiants.
+
+## Réserves sur les supports
+
+Avant de donner en autonomie les exercices concernés, reprendre les données de l'eau, les signes des capacités calorifiques de la lampe à carbure, les phases et données de l'exercice sur le benzène, et les conditions manquantes du volume de méthane. Le rapport indique les pages et les vérifications.
+
+L'exemple Zn/Cu²⁺ permet un bilan énergétique avec les approximations fournies ; il ne permet pas de déduire une enthalpie molaire de réaction sans l'avancement. Le terme thermique du zinc est expliqué comme une étape d'un chemin fictif, pas comme l'affirmation que tout le zinc subsiste à la fin.
+
+Les fichiers PowerPoint et PDF originaux ne sont pas modifiés par cette livraison. Le site ne fournit pas un corrigé intégral du fascicule et ne remplace pas les séances d'exercices.
+
+## Suite utile après un premier essai
+
+Observer d'abord où les étudiants se bloquent : choix du système, intégrale du travail, phases dans Hess ou bilan du calorimètre. Les activités de cette version sont surtout des calculateurs guidés. Une animation de piston, un tracé expérimental de température avec étalonnage ou des questions demandant un raisonnement libre pourraient ensuite cibler ces difficultés ; ils ne sont pas inclus dans cette version.

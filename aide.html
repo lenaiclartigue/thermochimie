@@ -1,7 +1,68 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Utiliser le site · Thermochimie</title><link rel="stylesheet" href="style.css"></head><body><header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main><section class="method"><p class="eyebrow">MODE D’EMPLOI</p><h1 class="module-heading">Utiliser le site</h1><p>Ce guide explique la navigation et les outils du cours. Vous pouvez ouvrir directement un module depuis l’accueil et revenir aux autres pages à tout moment.</p>
-<section><h2>Dans un module</h2><table><thead><tr><th>Onglet</th><th>Ce que vous y trouvez</th></tr></thead><tbody><tr><td>Comprendre</td><td>Les notions du cours, les exemples commentés et une application numérique. Les indices et résolutions s’ouvrent en cliquant dessus.</td></tr><tr><td>Expérimenter</td><td>Un laboratoire numérique. Modifiez les données dans les limites indiquées pour observer le résultat du calcul, selon les hypothèses précisées.</td></tr><tr><td>Se tester</td><td>Des questions. Sélectionnez une réponse par question, puis cliquez sur « Valider mes réponses ». Le score et les explications s’affichent.</td></tr><tr><td>Discussion</td><td>Un fil consacré au module. Cliquez sur « Afficher les échanges » pour lire les messages et participer.</td></tr><tr><td>Préparer les TD</td><td>Les exercices du fascicule associés au module et les points à préparer pour les séances.</td></tr></tbody></table></section>
-<section><h2>Réponses et scores</h2><p>Après validation d’un quiz, les réponses sont conservées dans votre navigateur. Vous les retrouvez en revenant sur le module. Le bouton « Recommencer » efface les réponses sélectionnées pour une nouvelle tentative ; les tentatives déjà enregistrées restent dans l’historique.</p><p>La page « Mes résultats » affiche les scores et le détail de la dernière tentative, et permet de télécharger toutes les tentatives conservées. L’historique est limité aux 100 dernières tentatives corrigées. Le meilleur score de chaque module sert au repère de progression ; 80 % indique un objectif atteint, sans constituer une note officielle.</p><p>Les résultats ne sont pas envoyés automatiquement à l’enseignant. Pour les lui transmettre, téléchargez votre bilan depuis « Mes résultats », puis envoyez-le par mail. Le nom saisi pour l’export est facultatif et figure seulement dans le fichier téléchargé.</p><p>La sauvegarde dépend du navigateur et de l’appareil utilisés. Un autre appareil ne retrouve pas automatiquement votre historique. Effacer les données du navigateur peut le supprimer. Si le stockage est bloqué, les quiz restent utilisables mais les résultats ne sont pas conservés.</p><a class="button" href="resultats.html">Voir mes résultats</a></section>
-<section><h2>Poser une question</h2><p>Utilisez le forum général pour une question sur l’organisation du cours ou plusieurs modules. Utilisez la discussion d’un module pour une question sur sa notion. Décrivez ce que vous avez essayé et l’étape qui vous bloque.</p><p>La lecture du forum se fait dans le site. Pour publier ou répondre, un compte GitHub et une autorisation giscus sont nécessaires ; la connexion peut ouvrir une fenêtre GitHub avant de revenir au fil intégré. Les messages sont publics. Vous pouvez toujours poser votre question par mail ou pendant une séance à distance.</p><a class="button" href="forum.html">Ouvrir le forum général</a></section>
-<section><h2>Imprimer et effacer la progression</h2><p>Dans l’onglet « Comprendre », « Imprimer ma fiche » ouvre l’impression du cours du module. Vous pouvez choisir une imprimante ou enregistrer en PDF si votre navigateur le propose.</p><p>Le lien « Ma progression », en bas de chaque page, ouvre une fenêtre avec le bouton « Effacer ma progression locale ». Il efface les réponses, scores et tentatives enregistrés sur cet appareil. Fermez cette fenêtre avec la croix ou la touche Échap.</p></section>
-<section><h2>Consulter les conditions de réutilisation</h2><p>Le bouton « Conditions d’utilisation et citation », en bas de chaque page, ouvre les conditions dans une fenêtre du site. La croix, la touche Échap ou un clic à l’extérieur permettent de la fermer. La consultation et les copies personnelles pour apprendre sont autorisées selon ces conditions ; le partage sans modification est autorisé avec attribution et sans usage commercial, conformément à la licence CC BY-NC-ND 4.0. Pour partager une version adaptée ou pour une utilisation commerciale, contactez l’auteur.</p></section>
-</section></main><footer><div><strong>Thermochimie · Licence</strong><p>Conception du parcours : Lénaïc Lartigue.</p></div><div><a href="integrales.html" class="text-link">Guide des intégrales</a><br><a href="aide.html" class="text-link">Utiliser le site</a><br><button id="privacy" class="text-link">Ma progression</button><p><button id="show-license" type="button" class="text-link">CC BY-NC-ND 4.0 · Conditions et citation</button></p></div></footer><dialog id="license-dialog" class="license-dialog" aria-labelledby="license-title"><button class="close" type="button" aria-label="Fermer les conditions">×</button><h2 id="license-title">Conditions d’utilisation et citation</h2><div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2><p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses et l’historique des quiz restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p><button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div><script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Utiliser le site · Thermochimie</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main><section class="method"><p class="eyebrow">MODE D’EMPLOI</p>
+<h1 class="module-heading">Utiliser le site</h1>
+<p>Ce guide explique la navigation et les outils du cours. Vous pouvez ouvrir directement un module depuis l’accueil et revenir aux autres pages à tout moment.</p>
+<section><h2>Dans un module</h2>
+<table>
+<thead><tr>
+<th>Onglet</th>
+<th>Ce que vous y trouvez</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Comprendre</td>
+<td>Les notions du cours, les exemples commentés et une application numérique. Les indices et résolutions s’ouvrent en cliquant dessus.</td>
+</tr>
+<tr>
+<td>Expérimenter</td>
+<td>Un laboratoire numérique. Modifiez les données dans les limites indiquées pour observer le résultat du calcul, selon les hypothèses précisées.</td>
+</tr>
+<tr>
+<td>Se tester</td>
+<td>Des questions. Sélectionnez une réponse par question, puis cliquez sur « Valider mes réponses ». Le score et les explications s’affichent.</td>
+</tr>
+<tr>
+<td>Discussion</td>
+<td>Un fil consacré au module. Cliquez sur « Afficher les échanges » pour lire les messages et participer.</td>
+</tr>
+<tr>
+<td>Préparer les TD</td>
+<td>Les exercices du fascicule associés au module et les points à préparer pour les séances.</td>
+</tr>
+</tbody>
+</table></section>
+<section><h2>Réponses et scores</h2>
+<p>Après validation d’un quiz, les réponses sont conservées dans votre navigateur. Vous les retrouvez en revenant sur le module. Le bouton « Recommencer » efface les réponses sélectionnées pour une nouvelle tentative ; les tentatives déjà enregistrées restent dans l’historique.</p>
+<p>La page « Mes résultats » affiche les scores et le détail de la dernière tentative, et permet de télécharger toutes les tentatives conservées. L’historique est limité aux 100 dernières tentatives corrigées. Les tentatives d’une version antérieure sont conservées et signalées. Après une révision des questions, les réponses à sélectionner et la progression repartent sur la nouvelle version. Le meilleur score de chaque module sert au repère de progression ; 80 % indique un objectif atteint, sans constituer une note officielle.</p>
+<p>Les résultats ne sont pas envoyés automatiquement à l’enseignant. Pour les lui transmettre, téléchargez votre bilan depuis « Mes résultats », puis envoyez-le par mail. Le nom saisi pour l’export est facultatif et figure seulement dans le fichier téléchargé.</p>
+<p>La sauvegarde dépend du navigateur et de l’appareil utilisés. Un autre appareil ne retrouve pas automatiquement votre historique. Effacer les données du navigateur peut le supprimer. Si le stockage est bloqué, les quiz restent utilisables mais les résultats ne sont pas conservés.</p>
+<a class="button" href="resultats.html">Voir mes résultats</a></section>
+<section><h2>Poser une question</h2>
+<p>Utilisez le forum général pour une question sur l’organisation du cours ou plusieurs modules. Utilisez la discussion d’un module pour une question sur sa notion. Décrivez ce que vous avez essayé et l’étape qui vous bloque.</p>
+<p>La lecture du forum se fait dans le site. Pour publier ou répondre, un compte GitHub et une autorisation giscus sont nécessaires ; la connexion peut ouvrir une fenêtre GitHub avant de revenir au fil intégré. Les messages sont publics. Vous pouvez toujours poser votre question par mail ou pendant une séance à distance.</p>
+<a class="button" href="forum.html">Ouvrir le forum général</a></section>
+<section><h2>Imprimer et effacer la progression</h2>
+<p>Dans l’onglet « Comprendre », « Imprimer ma fiche » ouvre l’impression du cours du module. Vous pouvez choisir une imprimante ou enregistrer en PDF si votre navigateur le propose.</p>
+<p>Le lien « Ma progression », en bas de chaque page, ouvre une fenêtre avec le bouton « Effacer ma progression locale ». Il efface les réponses, scores et tentatives enregistrés sur cet appareil. Fermez cette fenêtre avec la croix ou la touche Échap.</p></section>
+<section><h2>Consulter les conditions de réutilisation</h2>
+<p>Le bouton « Conditions d’utilisation et citation », en bas de chaque page, ouvre les conditions dans une fenêtre du site. La croix, la touche Échap ou un clic à l’extérieur permettent de la fermer. La consultation et les copies personnelles pour apprendre sont autorisées selon ces conditions ; le partage sans modification est autorisé avec attribution et sans usage commercial, conformément à la licence CC BY-NC-ND 4.0. Pour partager une version adaptée ou pour une utilisation commerciale, contactez l’auteur.</p></section>
+</section></main><footer><div>
+<strong>Thermochimie · Licence</strong><p>Conception du parcours : Lénaïc Lartigue.</p>
+</div>
+<div>
+<a href="integrales.html" class="text-link">Guide des intégrales</a><br><a href="aide.html" class="text-link">Utiliser le site</a><br><button id="privacy" class="text-link">Ma progression</button><p><button id="show-license" type="button" class="text-link">CC BY-NC-ND 4.0 · Conditions et citation</button></p>
+</div></footer><dialog id="license-dialog" class="license-dialog" aria-labelledby="license-title"><button class="close" type="button" aria-label="Fermer les conditions">×</button><h2 id="license-title">Conditions d’utilisation et citation</h2>
+<div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2>
+<p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses et l’historique des quiz restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
+<button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
+<script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
+</body>
+</html>
