@@ -6,11 +6,11 @@
 
 Le parcours en six parties est cohérent pour préparer la théorie à distance avant les exercices. L'enthalpie en constitue le centre, avec une ouverture finale vers Hess et la calorimétrie. L'audit a conduit à corriger les conditions d'application des formules, réorganiser plusieurs développements, préciser les modèles des exemples et enrichir l'autoévaluation.
 
-La version corrigée comporte **56 questions**, **huit applications numériques**, **neuf activités interactives de calcul** et **un guide des intégrales avec somme de Riemann**. Les vérifications fonctionnelles locales ont réussi. Il reste à corriger certaines données du fascicule avant de donner les exercices concernés en autonomie, et à éprouver la charge de travail auprès du groupe. Cet audit n'est pas une validation des apprentissages par des étudiants.
+Après la refonte demandée, cette version comporte **56 questions QCM**, **15 exercices à résoudre**, dont **sept issus du diaporama**, et **une fiche pratique pour tout le chapitre**. Les onglets suivent Comprendre → QCM → Exercices → Discussion. Les calculateurs automatiques et la préparation des TD ont été retirés. Les vérifications fonctionnelles locales de cette refonte ont réussi. Il reste à corriger certaines données du fascicule avant de donner les exercices concernés en autonomie, et à éprouver la charge de travail auprès du groupe. Cet audit n'est pas une validation des apprentissages par des étudiants.
 
 ## Corpus et méthode
 
-Le contrôle porte sur les onze pages HTML, les scripts et les styles, les formules et exemples, toutes les questions et leurs corrections, les activités et la documentation. Le cours a été confronté aux 43 diapositives de `XLG1CU040_Cours_26-27_ChapII_enseignant(1).pptx`, aux 21 diapositives de `X12C010_Bilan thermique.pptx` et au chapitre 2 du fascicule `TD_XLG1CU040_2026-2027(1).pdf` (pages 8 à 17 du PDF). Les signes et valeurs suspects des pages 11, 14 et 16 ont été vérifiés sur leur rendu visuel, au-delà de l'extraction de texte.
+Le contrôle scientifique initial a porté sur les onze pages HTML de cette étape, les scripts et les styles, les formules et exemples, toutes les questions et leurs corrections, les activités et la documentation. Le cours a été confronté aux 43 diapositives de `XLG1CU040_Cours_26-27_ChapII_enseignant(1).pptx`, aux 21 diapositives de `X12C010_Bilan thermique.pptx` et au chapitre 2 du fascicule `TD_XLG1CU040_2026-2027(1).pdf` (pages 8 à 17 du PDF). Les signes et valeurs suspects des pages 11, 14 et 16 ont été vérifiés sur leur rendu visuel, au-delà de l'extraction de texte.
 
 Les références externes sont des ressources institutionnelles ou des publications originales de leurs producteurs : UEL/Unisciel, OpenStax, University of Texas, LearnChemE, ChemCollective, IUPAC et NIST. Le croisement porte sur les définitions, les hypothèses, les calculs et la progression pédagogique. Il ne consiste pas à recopier une source : certaines ressources emploient une convention de travail opposée ou présentent elles-mêmes des simplifications ou des coquilles. Les textes et activités ajoutés au site sont rédigés pour ce parcours ; aucun média tiers n'a été incorporé.
 
@@ -22,8 +22,8 @@ Les références externes sont des ressources institutionnelles ou des publicati
 | Premier principe | Premier principe placé avant son exploitation ; force et travail de pression explicités ; fonctions d'état et différentielles exactes ; intégration selon p extérieure ; distinction isobare/monobare et quasi-statique/réversible ; adiabatique clarifié. | Expliquer pourquoi une même variation de U peut correspondre à des W et Q différents. |
 | Enthalpie | Reconstruction autour de H = U + pV ; conditions de Q = ΔH démontrées ; ΔH = ΔU + Δ(pV) ; capacités totale, massique et molaire ; chauffage et changements d'état séparés. | Choisir un bilan adapté avant de remplacer une variation d'enthalpie par une chaleur. |
 | Enthalpie de réaction | Définition par l'avancement ; états standard et de référence ; quatre enthalpies particulières ; rôle des coefficients et des phases ; complément de Kirchhoff ; distinction des deux méthodes uniquement en fin de partie. | Distinguer ΔH, ΔrH et ΔrH°, et relier « par mole » à l'équation retenue. |
-| Hess | Combinaisons d'équations détaillées ; contrôle des phases et annulations ; exemple complet du propane ; chemins fictifs distincts d'un mécanisme ; correction de l'exemple de condensation selon la température. | Construire l'équation cible, avant d'additionner les valeurs. |
-| Calorimétrie | Frontière du système global et contribution de réaction distinguées ; chemin fictif Zn/Cu²⁺ explicité ; méthode d'étalonnage et de calcul de l'avancement ; nouvelle activité ΔT → ΔrH ; bombe et conversion ΔrU/ΔrH précisées. | Passer d'une variation de température à une énergie, puis diviser par Δξ sans attribuer automatiquement le symbole standard. |
+| Hess | Combinaisons d'équations détaillées ; contrôle des phases et annulations ; exercice guidé du propane ; chemins fictifs distincts d'un mécanisme ; correction de l'exemple de condensation selon la température. | Construire l'équation cible, avant d'additionner les valeurs. |
+| Calorimétrie | Frontière du système global et contribution de réaction distinguées ; chemin fictif Zn/Cu²⁺ explicité ; méthode d'étalonnage et de calcul de l'avancement ; exercice ΔT → ΔrH ; bombe et conversion ΔrU/ΔrH précisées. | Passer d'une variation de température à une énergie, puis diviser par Δξ sans attribuer automatiquement le symbole standard. |
 
 ### Conditions scientifiques désormais explicites
 
@@ -59,14 +59,16 @@ Les numéros de page ci-dessous correspondent aux pages du PDF, en comptant la c
 | UEL/Unisciel [R1, R2] | Organisation francophone des variables d'état et relation de Kirchhoff. Certains anciens médias ne sont pas consultables dans cet environnement. | Définitions consolidées et complément de température placé après l'enthalpie de réaction, sans dépendance à ces médias. |
 | OpenStax Chemistry 2e [R3, R4] | Parcours enthalpie, équations thermochimiques, Hess et bilans calorimétriques. | Contrôle des signes, unités, phases et raisonnements ; exemples du cours conservés avec leurs hypothèses. |
 | OpenStax University Physics et University of Texas [R5, R6] | Transformations, réversibilité et différentielles exactes/non exactes. La convention de travail doit être vérifiée avant toute transposition. | Développement des points demandés sur les chemins et les intégrales, en gardant le travail reçu positif. |
-| LearnChemE [R7] | Modules organisés autour de questions de compréhension, d'exemples et d'activités. Les pages d'introduction et d'équations ont été consultées ; les vidéos et tout le contenu visuel des tests n'ont pas été évalués. | Consigne de prévision avant manipulation, questions sur les confusions usuelles et renforcement de Hess et de la calorimétrie. Aucun questionnaire n'est copié. |
+| LearnChemE [R7] | Modules organisés autour de questions de compréhension, d'exemples et d'activités. Les pages d'introduction et d'équations ont été consultées ; les vidéos et tout le contenu visuel des tests n'ont pas été évalués. | Questions sur les confusions usuelles et renforcement de Hess et de la calorimétrie ; la refonte utilise des exercices à résoudre avant validation. Aucun questionnaire n'est copié. |
 | ChemCollective [R11] | Laboratoire virtuel documenté sur Hess, avec démarche expérimentale. Le laboratoire externe n'a pas été exécuté pendant cet audit. | Point de comparaison pour une future activité expérimentale plus riche ; pas d'intégration externe dans cette livraison. |
 | IUPAC [R12–R14] | Terminologie des états standard et de la dissociation des liaisons, vérifiée à partir des définitions indexées ; accès direct limité à certaines pages. | Distinction état standard/état de référence et dissociation spécifique/enthalpie moyenne de liaison. |
 | NIST [R8–R10] | Tables et données originales de l'eau et du benzène. | Confirmation des incohérences numériques, distinction des températures et des phases. |
 
-Le principal écart avec un module asynchrone très scénarisé reste la nature des activités : ce sont surtout des calculateurs guidés, accompagnés de questions et d'explications. Ils ne simulent pas encore l'incertitude d'une mesure ni toute la manipulation expérimentale. Cette limite est pédagogique ; elle n'empêche pas leur emploi pour préparer les TD.
+Les exercices demandent désormais une réponse avant vérification et permettent de reprendre chaque étape. Ils ne simulent pas l'incertitude d'une mesure ni toute une manipulation expérimentale. La validation automatique porte sur des résultats et des choix, pas sur l'ensemble du raisonnement écrit.
 
-## Vérifications techniques effectuées
+## Historique : vérifications techniques avant la refonte
+
+Cette section documente l’étape précédente de l’audit. Les calculateurs, le guide autonome et les cinq anciens onglets décrits ci-dessous ont depuis été remplacés. Les contrôles de la version livrée sont indiqués dans la section suivante.
 
 Vérifications réalisées dans **Chromium 153.0.8010.0**, à partir d'un serveur local, notamment en largeur 1365 px et 390 px :
 
@@ -82,7 +84,24 @@ Vérifications réalisées dans **Chromium 153.0.8010.0**, à partir d'un serveu
 
 Les captures de l'accueil, du cours d'enthalpie, de la calorimétrie et du guide des intégrales ont été examinées. Il ne s'agit pas d'un audit d'accessibilité exhaustif : lecteur d'écran, autres navigateurs et appareils physiques n'ont pas été testés. Le service giscus réel, l'authentification GitHub et le déploiement publié n'ont pas été validés pendant cet audit.
 
-La révision des quiz ouvre une nouvelle progression locale pour éviter qu'un ancien score valide les nouvelles questions. L'historique existant des six parties reste lisible avec une mention de version antérieure. Aucun suivi central des étudiants n'est ajouté.
+La révision scientifique initiale des quiz avait ouvert une nouvelle progression locale pour éviter qu'un ancien score valide les nouvelles questions. La présente refonte conserve cette version de QCM et ses scores. L'historique existant des six parties reste lisible avec une mention de version antérieure. Aucun suivi central des étudiants n'est ajouté.
+
+## Vérifications de la refonte livrée
+
+Contrôles effectués localement le 14 octobre 2026 dans Chromium 153.0.8010.0 :
+
+- Chargement des douze pages principales ; treizième fichier HTML conservé pour rediriger l'ancienne adresse des intégrales vers le premier principe.
+- Ordre et navigation clavier des quatre onglets, liens directs du cours vers les exercices et restauration du bon panneau après rechargement.
+- 56 réponses QCM et 15 exercices vérifiés avec une grille indépendante des attributs de correction HTML.
+- Saisie décimale française, notation scientifique et signe moins ; erreur, validation partielle, indices, correction consultable et remise à zéro d'un exercice.
+- Conservation des réponses après rechargement ; bilan, export JSON comprenant QCM et exercices ; export également possible avec les seuls exercices ; effacement global.
+- Impression du cours lorsque l'onglet Exercices est ouvert ; affichage à 390 px de toutes les pages et panneaux, sans débordement global.
+- Liens internes et ancres, absence de doublons d'identifiants, syntaxe JavaScript ; aucune erreur JavaScript observée sur les parcours testés.
+- Licence et configuration giscus strictement inchangées par rapport à l'archive précédente.
+
+Les captures des définitions, d'un exercice du diaporama, de la fiche et de l'intégration ont été examinées. Une notation de borne finale mal rendue a été remplacée par un indice HTML. Les définitions et exercices ont été recroisés avec les diapositives ; `NOTES_PEDAGOGIQUES.md` donne la correspondance.
+
+Le service giscus réel et l'authentification ne sont pas testés dans ce contrôle local. Aucun commentaire ni résultat n'a été transmis. Les fichiers sources et le dépôt GitHub n'ont pas été modifiés. La fiche pratique et les exercices restent à éprouver auprès des étudiants.
 
 ## Références consultées le 14 octobre 2026
 
@@ -100,3 +119,7 @@ La révision des quiz ouvre une nouvelle progression locale pour éviter qu'un a
 - **[R12]** IUPAC Gold Book, [Standard state](https://goldbook.iupac.org/terms/view/S05925).
 - **[R13]** IUPAC Gold Book, [Standard thermodynamic quantities](https://goldbook.iupac.org/terms/view/S05927).
 - **[R14]** IUPAC Gold Book, [Bond-dissociation enthalpy](https://goldbook.iupac.org/terms/view/08146).
+
+## Ressources intégrées au parcours
+
+Les références commentées figurent désormais au fil du cours et près des exercices. `ressources.html` rassemble sept ressources thématiques ; `RESSOURCES_EN_LIGNE.md` donne aussi la correspondance pour les quinze exercices. Femto-physique complète le premier principe, les capacités thermiques et les transitions ; Exo7 accompagne l'explication des intégrales dans le cours, avec les pages 1–2 sur les aires et les rectangles. La fiche pratique remplace le guide autonome et couvre l'ensemble du chapitre.

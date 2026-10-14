@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main data-current-module="5"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties du cours"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
+<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main data-current-module="5"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties du cours"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
 <p>Ma progression</p>
 <progress id="progress" value="0" max="6"></progress><small id="progress-label"></small><p class="muted">Progression locale à ce navigateur.</p>
 </div></aside><article><div class="lesson-head">
@@ -15,40 +15,34 @@
 <h1 class="module-heading">Cycles de Hess</h1>
 <p>Calculer une enthalpie de réaction à partir de données tabulées et de transformations connues.</p>
 </div>
-<div class="tabs" role="tablist" aria-label="Sections de la partie">
-<button id="tab-course" role="tab" aria-controls="pane-course" aria-selected="true" tabindex="0">Comprendre</button><button id="tab-lab" role="tab" aria-controls="pane-lab" aria-selected="false" tabindex="-1">Expérimenter</button><button id="tab-quiz" role="tab" aria-controls="pane-quiz" aria-selected="false" tabindex="-1">Se tester</button><button id="tab-discussion" role="tab" aria-controls="pane-discussion" aria-selected="false" tabindex="-1">Discussion</button><button id="tab-td" role="tab" aria-controls="pane-td" aria-selected="false" tabindex="-1">Préparer les TD</button>
+<div class="tabs" role="tablist" aria-label="Étapes de la partie">
+<button id="tab-course" role="tab" aria-controls="pane-course" aria-selected="true" tabindex="0">Comprendre</button><button id="tab-quiz" role="tab" aria-controls="pane-quiz" aria-selected="false" tabindex="-1">QCM</button><button id="tab-exercises" role="tab" aria-controls="pane-exercises" aria-selected="false" tabindex="-1">Exercices</button><button id="tab-discussion" role="tab" aria-controls="pane-discussion" aria-selected="false" tabindex="-1">Discussion</button>
 </div>
 <div id="pane-course" role="tabpanel" aria-labelledby="tab-course">
-<section><h3>Comprendre la notion</h3>
+<nav class="lesson-outline" aria-label="Dans cette partie"><p><b>Dans cette partie</b></p>
+<ul><li><a href="#notion-5">Construire le cycle, étape par étape</a></li></ul></nav><section><h3>Comprendre la notion</h3>
+<div class="definition">
+<h3>Loi de Hess</h3>
+<p>Soit une réaction globale qui mène d’un état initial à un état final. Une suite de réactions successives peut mener de l’un à l’autre : la variation d’enthalpie accompagnant la réaction globale est la somme des enthalpies des réactions successives.</p>
+</div>
 <p>Parce que H est une fonction d’état, une transformation globale possède la même variation d’enthalpie quel que soit le chemin permettant de relier ses états initial et final.</p>
 <p>Inverser une réaction change le signe de son enthalpie. Multiplier ses coefficients par k multiplie son enthalpie par k. Additionner les équations permet d’éliminer les espèces intermédiaires présentes des deux côtés.</p>
-<p>Les enthalpies de dissociation concernent les espèces gazeuses. Le calcul par liaisons demande de compter les liaisons rompues puis formées, et d’ajouter les éventuelles étapes d’atomisation ou de changement de phase. Les valeurs moyennes de liaison donnent une estimation.</p></section><section><h3>Combustion et autres étapes du cycle</h3>
+<p>Les enthalpies de dissociation concernent les espèces gazeuses. Le calcul par liaisons demande de compter les liaisons rompues puis formées, et d’ajouter les éventuelles étapes d’atomisation ou de changement de phase. Les valeurs moyennes de liaison donnent une estimation.</p>
+<p class="inline-resource"><a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax : loi de Hess et exemples corrigés</a> <span>(anglais, nouvel onglet)</span></p></section><section><h3>Combustion et autres étapes du cycle</h3>
 <p>Une combustion complète d’un composé carboné approprié utilise O₂ et produit CO₂ et H₂O, dont on doit préciser la phase. Pour CH₄(g) : CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l), si l’eau finale est liquide. Le dioxygène est ajouté en quantité suffisante dans les exercices de combustion totale.</p>
-<p>Dans l’exemple du propane, les données arrondies du cours donnent ΔfH°(C₃H₈) = 3 × (−394) + 4 × (−286) − (−2220) = −106 kJ·mol⁻¹. Les combustions des éléments sont combinées à la combustion inversée du propane.</p>
+<p class="course-exercise-link"><a href="#exercice-propane">À vous de chercher : construire le cycle du propane</a></p>
 <p>Certains cycles comportent une ionisation M(g) → M⁺(g) + e⁻ ou un attachement électronique M(g) + e⁻ → M⁻(g). Leur sens et leurs valeurs doivent être repris tels qu’ils sont définis dans les données. Ne donnez pas automatiquement le même signe à ces deux processus.</p></section><div class="formula">Δ<sub>r</sub>H° = somme des enthalpies des étapes ajustées</div>
-<section class="example"><h3>Un exemple commenté</h3>
-<p>Pour ½ H₂(g) + ½ Cl₂(g) → HCl(g), on rompt les demi-moles de liaisons H–H et Cl–Cl puis on forme H–Cl : ½ × 436 + ½ × 243 − 432 = −92,5 kJ·mol⁻¹.</p></section><section><h3>Avant de regarder la correction</h3>
+<section><h3>Dissocier puis former les liaisons</h3>
+<p>Le chemin fictif peut passer par des atomes gazeux communs aux réactifs et aux produits. On additionne les étapes de dissociation, puis les étapes de formation des liaisons, avec leurs signes.</p>
+<p class="course-exercise-link"><a href="#exercice-hcl">À vous de chercher : former HCl(g) à partir des données de dissociation</a></p></section><section><h3>Avant de regarder la correction</h3>
 <p>Pourquoi faut-il changer le signe d’une enthalpie lorsque l’on inverse une réaction ?</p>
-<details><summary>Afficher le raisonnement</summary><p>On échange les états initial et final : Hf − Hi devient Hi − Hf.</p></details></section><section class="practice"><h3>Application numérique</h3>
-<p>A → B : +35 kJ·mol⁻¹ ; C → B : −15 kJ·mol⁻¹. Calculez ΔH pour A → C.</p>
-<form data-answer="50" data-tolerance="0.1" data-hint="La seconde réaction doit être inversée." class="practice-form">
-<label for="numeric-answer-7">Votre résultat en kJ·mol⁻¹</label><div class="answer-row">
-<input id="numeric-answer-7" type="text" inputmode="decimal" required class="numeric-answer"><span>kJ·mol⁻¹</span><button class="button" type="submit">Vérifier</button>
-</div>
-<p id="numeric-feedback-7" class="feedback numeric-feedback" role="status"></p>
-</form>
-<details><summary>Un indice</summary><p>La seconde réaction doit être inversée.</p></details><details><summary>La résolution</summary><p>A → B : +35 ; B → C : +15 ; total +50 kJ·mol⁻¹.</p></details></section><section><h2 id="notion-5">Construire le cycle, étape par étape</h2>
+<details><summary>Afficher le raisonnement</summary><p>On échange les états initial et final : Hf − Hi devient Hi − Hf.</p></details></section><section><h2 id="notion-5">Construire le cycle, étape par étape</h2>
 <p>Écrivez d’abord la réaction cible avec les phases. Pour chaque équation disponible, choisissez le sens et le multiplicateur, puis additionnez. Annulez une espèce seulement si sa formule et sa phase sont identiques de chaque côté. Vérifiez le bilan de matière et, pour les espèces ioniques, le bilan de charge.</p>
 <p>Les étapes forment un chemin de calcul : elles ne décrivent pas nécessairement un mécanisme réel. Toutes les données doivent correspondre à la même température. Sur un cycle fermé, la somme des variations d’enthalpie est nulle.</p>
-<details><summary>Cycle du propane entièrement écrit</summary><p>3 × [C(graphite) + O₂(g) → CO₂(g)]</p>
-<p>4 × [H₂(g) + ½ O₂(g) → H₂O(l)]</p>
-<p>−1 × [C₃H₈(g) + 5 O₂(g) → 3 CO₂(g) + 4 H₂O(l)]</p>
-<p>Après annulation de 5 O₂, 3 CO₂ et 4 H₂O : 3 C(graphite) + 4 H₂(g) → C₃H₈(g). L’enthalpie associée est −106 kJ·mol⁻¹ avec les données arrondies du cours.</p></details><h3>Une phase différente ne s’annule pas</h3>
+<h3>Une phase différente ne s’annule pas</h3>
 <p>Pour passer d’une combustion produisant 2 H₂O(g) à la combustion produisant 2 H₂O(l), ajoutez deux condensations à la même température. À 298 K, les valeurs arrondies −241,8 et −285,8 kJ·mol⁻¹ donnent Δ<sub>vap</sub>H° ≈ 44,0 kJ·mol⁻¹. Le passage à l’eau liquide rend donc la combustion plus exothermique d’environ 88,0 kJ par mole de combustible si deux moles d’eau sont produites.</p>
-<p>La valeur 40,7 kJ·mol⁻¹ utilisée pour vaporiser l’eau vers 100 °C correspond à une autre température.</p></section><button id="print" class="text-link">Imprimer ma fiche</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Cycles de Hess · CC BY-NC-ND 4.0 · lenaiclartigue.github.io/thermochimie/</p>
-</div>
-<div id="pane-lab" role="tabpanel" aria-labelledby="tab-lab" hidden>
-<label for="lab-choice">Activité<select id="lab-choice"><option value="7">Construire un cycle de Hess</option></select></label><div id="lab-content"></div>
+<p>La valeur 40,7 kJ·mol⁻¹ utilisée pour vaporiser l’eau vers 100 °C correspond à une autre température.</p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Cycles de Hess · CC BY-NC-ND 4.0 · lenaiclartigue.github.io/thermochimie/</p>
+<div class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></div>
 </div>
 <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
 <h3>7 questions pour faire le point</h3>
@@ -105,6 +99,69 @@
 </div>
 <button class="button" type="submit">Valider mes réponses</button> <button class="button secondary" type="reset">Recommencer</button><div id="quiz-result" role="status"></div>
 </form>
+<div class="step-next"><a class="button" href="#pane-exercises">Passer aux exercices</a></div>
+</div>
+<div id="pane-exercises" role="tabpanel" aria-labelledby="tab-exercises" hidden>
+<h2>Exercices</h2>
+<p>Après le QCM, cherchez les réponses sur votre brouillon puis saisissez-les ici. Vous pouvez vérifier une étape à la fois, demander un indice et ouvrir la correction après votre recherche.</p>
+<p class="muted">Les réponses vérifiées sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
+<nav class="exercise-index" aria-label="Choisir un exercice"><ul>
+<li><a href="#exercice-hcl">Former HCl avec les enthalpies de dissociation</a></li>
+<li><a href="#exercice-propane">Construire le cycle du propane</a></li>
+</ul></nav><section class="exercise-card" id="exercice-hcl"><p class="eyebrow">EXERCICE 1</p>
+<h3>Former HCl avec les enthalpies de dissociation</h3>
+<p class="exercise-origin">Exercice du diaporama · diapositive 29</p>
+<p>Calculer l’enthalpie standard de formation du chlorure d’hydrogène gazeux : <b>½ H₂(g) + ½ Cl₂(g) → HCl(g)</b>.</p>
+<p>Enthalpies molaires de dissociation : H₂ = 436 ; Cl₂ = 243 ; HCl = 432 kJ·mol⁻¹, à la même température.</p>
+<form class="exercise-form" data-exercise="hcl" novalidate>
+<div class="exercise-fields">
+<div class="exercise-field">
+<label for="hcl-reponse-1">1. Contribution de dissociation de ½ H₂ et ½ Cl₂ <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hcl-reponse-1" name="reponse-1" data-expected="339.5" data-hint="Additionnez une demi-dissociation de chaque réactif." aria-describedby="hcl-reponse-1-feedback" data-tolerance="0.1" placeholder="Votre réponse"><p id="hcl-reponse-1-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="hcl-reponse-2">2. Contribution de formation de HCl à partir de H(g) et Cl(g) <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hcl-reponse-2" name="reponse-2" data-expected="-432" data-hint="Former la liaison est la transformation inverse de sa dissociation." aria-describedby="hcl-reponse-2-feedback" data-tolerance="0.1" placeholder="Votre réponse"><p id="hcl-reponse-2-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="hcl-reponse-3">3. Enthalpie de formation de HCl(g) <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hcl-reponse-3" name="reponse-3" data-expected="-92.5" data-hint="Additionnez les deux étapes du chemin fictif." aria-describedby="hcl-reponse-3-feedback" data-tolerance="0.1" placeholder="Votre réponse"><p id="hcl-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Faites passer les réactifs par les mêmes atomes gazeux, puis reformez HCl.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Une liaison rompue coûte de l’énergie ; la même liaison formée apporte la contribution opposée.</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><p>½ × 436 + ½ × 243 = 339,5 kJ·mol⁻¹. La formation de H–Cl contribue −432 kJ·mol⁻¹. ΔfH°(HCl,g) = 339,5 − 432 = <b>−92,5 kJ·mol⁻¹</b>.</p></details><p class="inline-resource"><a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax — Hess’s Law, dans Enthalpy</a> <span>(anglais, nouvel onglet)</span></p></section><section class="exercise-card" id="exercice-propane"><p class="eyebrow">EXERCICE 2</p>
+<h3>Construire le cycle du propane</h3>
+<p class="exercise-origin">Exercice du diaporama · diapositive 31</p>
+<p>Retrouver la réaction <b>3 C(graphite) + 4 H₂(g) → C₃H₈(g)</b> à partir des équations ci-dessous.</p>
+<ol>
+<li>C₃H₈(g) + 5 O₂(g) → 3 CO₂(g) + 4 H₂O(l), ΔrH°₁ = −2220 kJ·mol⁻¹.</li>
+<li>C(graphite) + O₂(g) → CO₂(g), ΔrH°₂ = −394 kJ·mol⁻¹.</li>
+<li>H₂(g) + ½ O₂(g) → H₂O(l), ΔrH°₃ = −286 kJ·mol⁻¹.</li>
+</ol>
+<p>Un multiplicateur négatif inverse l’équation.</p>
+<form class="exercise-form" data-exercise="propane" novalidate>
+<div class="exercise-fields">
+<div class="exercise-field">
+<label for="propane-reponse-1">1. Multiplicateur de l’équation 1</label><input type="text" inputmode="decimal" autocomplete="off" id="propane-reponse-1" name="reponse-1" data-expected="-1" data-hint="Le propane doit être un produit dans la réaction cible." aria-describedby="propane-reponse-1-feedback" data-tolerance="0.001" placeholder="Votre réponse"><p id="propane-reponse-1-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="propane-reponse-2">2. Multiplicateur de l’équation 2</label><input type="text" inputmode="decimal" autocomplete="off" id="propane-reponse-2" name="reponse-2" data-expected="3" data-hint="La réaction cible consomme trois carbones." aria-describedby="propane-reponse-2-feedback" data-tolerance="0.001" placeholder="Votre réponse"><p id="propane-reponse-2-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="propane-reponse-3">3. Multiplicateur de l’équation 3</label><input type="text" inputmode="decimal" autocomplete="off" id="propane-reponse-3" name="reponse-3" data-expected="4" data-hint="La réaction cible consomme quatre H₂." aria-describedby="propane-reponse-3-feedback" data-tolerance="0.001" placeholder="Votre réponse"><p id="propane-reponse-3-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="propane-reponse-4">4. Enthalpie de formation du propane <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="propane-reponse-4" name="reponse-4" data-expected="-106" data-hint="Appliquez les mêmes multiplicateurs aux enthalpies." aria-describedby="propane-reponse-4-feedback" data-tolerance="0.2" placeholder="Votre réponse"><p id="propane-reponse-4-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Commencez par les espèces qui ne figurent que dans une des équations.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Vérifiez que O₂, CO₂ et H₂O s’annulent avant d’additionner les enthalpies.</p></details><details class="exercise-solution"><summary>Correction détaillée — à ouvrir après recherche</summary><p>Combinaison : <b>−équation 1 + 3 × équation 2 + 4 × équation 3</b>. Les 5 O₂, 3 CO₂ et 4 H₂O s’annulent. Il reste 3 C(graphite) + 4 H₂(g) → C₃H₈(g).</p>
+<p>ΔfH° = −(−2220) + 3(−394) + 4(−286) = <b>−106 kJ·mol⁻¹</b>, avec les données arrondies du cours.</p></details><p class="inline-resource"><a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax — Hess’s Law, dans Enthalpy</a> <span>(anglais, nouvel onglet)</span></p></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Cycles de Hess</h3>
@@ -113,29 +170,18 @@
 <div class="giscus"></div>
 <p class="muted">Vous pouvez aussi poser vos questions par mail ou pendant une séance à distance.</p>
 </div>
-<div id="pane-td" role="tabpanel" aria-labelledby="tab-td" hidden>
-<h3>Pour la prochaine séance</h3>
-<p>2.3, exercices 1 et 2 pour débuter ; exercices 5 et 6 à discuter en séance.</p>
-<ol class="td-list">
-<li>Définissez le système et les transformations en jeu.</li>
-<li>Écrivez les relations avant l’application numérique.</li>
-<li>Vérifiez les unités et justifiez le signe.</li>
-<li>Notez l’étape qui vous pose problème.</li>
-</ol>
-<section class="example"><h3>Une question ?</h3>
-<button id="open-discussion" class="button">Ouvrir la discussion de cette partie</button></section>
-</div>
 <div class="lesson-bottom">
 <a class="button secondary" href="enthalpie-reaction.html">Partie précédente</a><a class="button" href="calorimetrie.html">Partie suivante</a>
 </div></article></section></main><footer><div>
 <strong>Thermochimie · Licence</strong><p>Conception du parcours : Lénaïc Lartigue.</p>
 </div>
 <div>
-<a href="integrales.html" class="text-link">Guide des intégrales</a><br><a href="aide.html" class="text-link">Utiliser le site</a><br><button id="privacy" class="text-link">Ma progression</button><p><button id="show-license" type="button" class="text-link">CC BY-NC-ND 4.0 · Conditions et citation</button></p>
+<a href="ressources.html" class="text-link">Ressources en ligne</a><br><a href="fiche-pratique.html" class="text-link">Fiche pratique : formules et méthodes</a><br><a href="aide.html" class="text-link">Utiliser le site</a><br><button id="privacy" class="text-link">Ma progression</button><p><button id="show-license" type="button" class="text-link">CC BY-NC-ND 4.0 · Conditions et citation</button></p>
 </div></footer><dialog id="license-dialog" class="license-dialog" aria-labelledby="license-title"><button class="close" type="button" aria-label="Fermer les conditions">×</button><h2 id="license-title">Conditions d’utilisation et citation</h2>
 <div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2>
-<p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses et l’historique des quiz restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
+<p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
 <script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
+<script src="exercices.js" defer></script>
 </body>
 </html>

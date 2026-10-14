@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche pratique · Thermochimie</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main class="practical-guide"><p class="eyebrow">FORMULES ET MÉTHODES</p>
+<h1 class="module-heading">Fiche pratique de thermochimie</h1>
+<p>Choisir la relation, vérifier ses conditions, puis remplacer les nombres. Les énergies reçues par le système sont positives.</p>
+<button class="button secondary" id="print-practical">Imprimer la fiche pratique</button><nav class="lesson-outline" aria-label="Sommaire de la fiche"><ul>
+<li><a href="#unites">Notations et unités</a></li>
+<li><a href="#systeme">Décrire un système</a></li>
+<li><a href="#premier-principe">Premier principe et fonctions d’état</a></li>
+<li><a href="#travail">Calculer le travail</a></li>
+<li><a href="#enthalpie">Enthalpie et capacités calorifiques</a></li>
+<li><a href="#reaction">Enthalpies de réaction et Hess</a></li>
+<li><a href="#calorimetrie">Bilans calorimétriques</a></li>
+<li><a href="#integrales">Primitives et intégrales</a></li>
+</ul></nav><section id="unites"><h2>Notations et unités</h2>
+<p>ΔX = Xf − Xi. U et H sont en J ; Q et W sont des transferts d’énergie en J. ΔrH est en J·mol⁻¹ ou kJ·mol⁻¹ d’avancement. ξ et Δξ sont en mol. Le symbole ° précise les états standard ; la température reste à indiquer.</p>
+<div class="table-scroll"><table>
+<tr>
+<th>Conversion</th>
+<th>Usage</th>
+</tr>
+<tr>
+<td>1 bar = 10⁵ Pa ; 1 L = 10⁻³ m³</td>
+<td>Pa × m³ = J ; 1 bar·L = 100 J</td>
+</tr>
+<tr>
+<td>1 kJ = 10³ J ; 1 g = 10⁻³ kg</td>
+<td>Conserver des unités cohérentes dans chaque produit</td>
+</tr>
+<tr>
+<td>T/K = θ/°C + 273,15</td>
+<td>Kelvins pour pV = nRT et les lois Cp(T) tabulées en K</td>
+</tr>
+<tr>
+<td>ΔT/K = Δθ/°C</td>
+<td>Une différence de 1 °C vaut 1 K</td>
+</tr>
+<tr>
+<td>R = 8,314 J·mol⁻¹·K⁻¹</td>
+<td>Énergies en J ; R = 0,008314 en kJ·mol⁻¹·K⁻¹</td>
+</tr>
+<tr>
+<td>p° = 1 bar ; c° = 1 mol·L⁻¹</td>
+<td>Conventions standard utilisées dans le cours</td>
+</tr>
+</table></div></section><section id="systeme"><h2>Décrire un système</h2>
+<section class="formula-entry"><h3>Quantités et composition</h3>
+<div class="formula">n = m/M ; c = n/V ; xᵢ = nᵢ/Σⱼnⱼ ; Σᵢxᵢ = 1</div>
+<p>M est la masse molaire. Pour c en mol·L⁻¹, utiliser V en L. Pour c en mol·m⁻³, utiliser V en m³. Quantités et volumes sont extensifs ; c et x sont intensifs.</p></section><section class="formula-entry"><h3>Gaz parfait</h3>
+<div class="formula">pV = nRT</div>
+<p>Modèle du gaz parfait. Avec R en unités SI : p en Pa, V en m³ et T en K. À n fixé, deux variables parmi p, V et T suffisent à fixer la troisième.</p></section><a href="systeme.html">Revoir les définitions de système ouvert, fermé et isolé</a></section><section id="premier-principe"><h2>Premier principe et fonctions d’état</h2>
+<section class="formula-entry"><h3>Bilan d’énergie</h3>
+<div class="formula">ΔU = Uf − Ui = Q + W<br>dU = δQ + δW</div>
+<p>Système fermé ; variations d’énergie cinétique et potentielle macroscopiques négligées. Reçu : signe positif ; cédé : signe négatif. Q et W dépendent du chemin.</p></section><section class="formula-entry"><h3>Intégrer une fonction d’état</h3>
+<div class="formula">∫<sub>A</sub><sup>B</sup> dU = U(B) − U(A) ; ∮dU = 0<br>∫<sub>A</sub><sup>B</sup> dH = H(B) − H(A) ; ∮dH = 0</div>
+<p>Les différentielles dU et dH sont exactes. L’intégrale sur un cycle est nulle. Les intégrales ∫δQ et ∫δW donnent Q et W ; elles ne sont pas des différences Qf−Qi ou Wf−Wi.</p></section><section class="formula-entry"><h3>Différentielle totale à composition fixe</h3>
+<div class="formula">dU = (∂U/∂T)<sub>V</sub> dT + (∂U/∂V)<sub>T</sub> dV</div>
+<p>Cette écriture utilise les variables indépendantes T et V. Si la composition change, elle ne suffit plus à décrire toute la variation de U.</p></section><section class="formula-entry"><h3>Cas usuels</h3>
+<div class="formula">Isochore : Wpression = 0 ; ΔU = QV<br>Adiabatique : Q = 0 ; ΔU = W<br>Isolé : Q = W = 0 ; ΔU = 0</div>
+<p>Pour ΔU = QV, aucun autre travail ne doit intervenir. Adiabatique ne signifie pas température constante. Les énergies macroscopiques restent négligées.</p></section><section class="formula-entry"><h3>Énergie interne d’un gaz parfait</h3>
+<div class="formula">ΔU = n∫<sub>Ti</sub><sup>Tf</sup> CV,m(T) dT<br>Si CV,m constante : ΔU = nCV,mΔT</div>
+<p>Quantité et composition fixes. Isotherme : ΔU = 0 et Q = −W. Pour un gaz parfait monoatomique dans le modèle utilisé : CV,m = 3R/2 et ΔU = 3Δ(pV)/2.</p></section></section><section id="travail"><h2>Calculer le travail</h2>
+<section class="formula-entry"><h3>Force et déplacement</h3>
+<div class="formula">δW = F⃗ext · dr⃗<br>Travail de pression : δW = −pext dV ; W = −∫<sub>Vi</sub><sup>Vf</sup> pext(V) dV</div>
+<p>Pour un piston de section S : dV = S dx avec le déplacement orienté vers la détente. pext est la pression extérieure effective qui s’oppose à ce déplacement. Le signe du travail reçu est négatif pour une détente contre une pression positive.</p></section><section class="formula-entry"><h3>Pression extérieure constante : monobare</h3>
+<div class="formula">W = −p₀(Vf − Vi)</div>
+<p>p₀ = pext constante. Pas besoin de supposer la transformation réversible. Une pression intérieure constante seule ne justifie pas cette simplification.</p></section><section class="formula-entry"><h3>Isotherme réversible d’un gaz parfait</h3>
+<div class="formula">W = −nRT ln(Vf/Vi)</div>
+<p>Gaz parfait, quantité et température constantes, évolution mécaniquement réversible sans frottement : pext est identifiée à p = nRT/V dans la limite réversible. Le logarithme porte sur un rapport sans dimension.</p></section><section class="formula-entry"><h3>Pression variable connue</h3>
+<div class="formula">W = −[F(Vf) − F(Vi)] si F′(V) = pext(V)</div>
+<p>Conserver pext dans l’intégrale. Exemple avec V en L et pext = 2−0,5V en bar : W = −100[2V−0,25V²]<sub>Vi</sub><sup>Vf</sup>, en J.</p></section><section class="formula-entry"><h3>Complément : adiabatique réversible</h3>
+<div class="formula">pV<sup>γ</sup> = constante ; γ = Cp,m/CV,m<br>W = (pfVf − piVi)/(γ−1) = nCV,m(Tf−Ti)</div>
+<p>Gaz parfait fermé, composition et capacités thermiques fixes, transformation adiabatique réversible. Ces expressions ne sont pas générales pour toute transformation adiabatique.</p></section><p><a href="premier-principe.html#integrale-travail">Comprendre l’aire sous la courbe et le rôle des rectangles</a></p></section><section id="enthalpie"><h2>Enthalpie et capacités calorifiques</h2>
+<section class="formula-entry"><h3>Définition de H</h3>
+<div class="formula">H = U + pV<br>ΔH = ΔU + Δ(pV)<br>dH = dU + p dV + V dp</div>
+<p>p est la pression du système. Pour une variation finie quelconque, conserver Δ(pV). Si p est constante aux états considérés : ΔH = ΔU + pΔV.</p></section><section class="formula-entry"><h3>Quand Q = ΔH ?</h3>
+<div class="formula">Qp = ΔH</div>
+<p>Système fermé, seul travail de pression, variations d’énergies macroscopiques négligées, pext = p₀ constante et états initial et final en équilibre mécanique à p₀. Le trajet peut être irréversible.</p></section><section class="formula-entry"><h3>Capacités totale, molaire et massique</h3>
+<div class="formula">Cp = (∂H/∂T)<sub>p,composition</sub><br>Cp = nCp,m = mcp ; Cp,m = M cp</div>
+<p>Cp en J·K⁻¹ ; Cp,m en J·mol⁻¹·K⁻¹ ; cp en J·g⁻¹·K⁻¹ ou J·kg⁻¹·K⁻¹. Adapter l’unité de m et de M. À volume constant, CV = (∂U/∂T)<sub>V,composition</sub>.</p></section><section class="formula-entry"><h3>Chauffer sans réaction ni transition</h3>
+<div class="formula">ΔH = ∫Cp(T)dT = n∫Cp,m(T)dT<br>À capacité constante : ΔH = CpΔT = nCp,mΔT = mcpΔT</div>
+<p>Pression, composition et phase fixes. Pour plusieurs constituants, sommer les contributions dans le modèle additif. Ajouter le récipient séparément s’il n’est pas déjà inclus.</p></section><section class="formula-entry"><h3>Capacité molaire polynomiale</h3>
+<div class="formula">Cp,m(T) = a + bT + cT²<br>ΔH = n[a(Tf−Ti) + b(Tf²−Ti²)/2 + c(Tf³−Ti³)/3]</div>
+<p>Loi et coefficients valables sur l’intervalle choisi ; utiliser l’unité de température prévue, généralement K.</p></section><section class="formula-entry"><h3>Changement d’état</h3>
+<div class="formula">ΔHtransition = ntransformé ΔtrHm<br>ΔHtotal = ΣΔHchauffage + ΣΔHtransition</div>
+<p>ΔtrHm est en J·mol⁻¹ ou kJ·mol⁻¹ à la température précisée. Avec une chaleur latente massique L : ΔH = mtransformée L. L’inversion de la transformation change le signe. On fractionne le chemin à chaque transition.</p></section></section><section id="reaction"><h2>Enthalpies de réaction et Hess</h2>
+<section class="formula-entry"><h3>Réaction et avancement</h3>
+<div class="formula">ΔrH = (∂H/∂ξ)<sub>T,p</sub><br>ΔH = ∫<sub>ξi</sub><sup>ξf</sup> ΔrH dξ<br>Si ΔrH constante : ΔH = ΔrH Δξ</div>
+<p>À T et p fixées. Si ξi = 0, Δξ = ξ. L’approximation ΔH ≈ Δξ ΔrH° demande aussi de pouvoir assimiler ΔrH à sa valeur standard.</p></section><section class="formula-entry"><h3>Calculer l’avancement</h3>
+<div class="formula">ni,f − ni,i = νi Δξ</div>
+<p>νi est signé : négatif pour un réactif, positif pour un produit. Pour une réaction totale, comparer les quantités initiales des réactifs divisées par leurs coefficients positifs afin d’identifier le limitant.</p></section><section class="formula-entry"><h3>À partir des enthalpies de formation</h3>
+<div class="formula">ΔrH° = Σi νi ΔfHi°<br>= Σproduits ν ΔfH° − Σréactifs ν ΔfH°</div>
+<p>Les ν de la première somme sont signés. Ceux de l’écriture produits moins réactifs sont positifs. Même température, phases indiquées et équation équilibrée. ΔfH° = 0 pour les éléments dans leur état de référence, pas pour toute forme d’un corps simple.</p></section><section class="formula-entry"><h3>Cycles de Hess</h3>
+<div class="formula">ΔrH°cible = Σj kj ΔrH°j</div>
+<p>Multiplier chaque équation et son enthalpie par le même kj. Un coefficient négatif inverse le sens. Annuler seulement des espèces identiques, dans la même phase. Sur un cycle fermé, la somme des variations d’enthalpie est nulle.</p></section><section class="formula-entry"><h3>Dissocier et former des liaisons</h3>
+<div class="formula">ΔrH ≈ ΣDliaisons rompues − ΣDliaisons formées</div>
+<p>Pour les espèces gazeuses. Les valeurs moyennes de liaison donnent une estimation ; des données spécifiques permettent un cycle adapté. Ajouter les transitions de phase nécessaires. La dissociation de la liaison stable demande de l’énergie.</p></section><section class="formula-entry"><h3>Kirchhoff et approximation d’Ellingham</h3>
+<div class="formula">ΔrH°(T₂) = ΔrH°(T₁) + ∫<sub>T₁</sub><sup>T₂</sup> ΔrCp°(T)dT<br>ΔrCp° = Σi νi Cp,m,i°</div>
+<p>Même ensemble de phases sur l’intervalle ; sinon fractionner le calcul et ajouter les transitions. À ΔrCp° constante : correction ΔrCp°(T₂−T₁). L’approximation d’Ellingham du cours néglige cette correction sur l’intervalle retenu.</p></section><p><a href="enthalpie-reaction.html">Définitions : formation, combustion, changement d’état et dissociation</a></p></section><section id="calorimetrie"><h2>Bilans calorimétriques</h2>
+<section class="formula-entry"><h3>Calorimètre à pression constante</h3>
+<div class="formula">ΔHensemble = ΔHréaction + ΣΔHchauffage + ΣΔHtransition = 0</div>
+<p>Ensemble fermé et adiabatique, seulement travail de pression, conditions mécaniques de Qp = ΔH. Chaque terme appartient au chemin de calcul. Adiabatique porte sur la frontière extérieure : la réaction peut chauffer les autres constituants.</p></section><section class="formula-entry"><h3>Étalonnage par mélange de deux eaux</h3>
+<div class="formula">Ccal(Tf−T₁) + m₁c(Tf−T₁) + m₂c(Tf−T₂) = 0<br>Ccal = −[m₁c(Tf−T₁) + m₂c(Tf−T₂)]/(Tf−T₁)</div>
+<p>Le calorimètre et l’eau 1 partent de T₁. Pas de réaction, de changement d’état ni de perte thermique. Le calcul de Ccal demande Tf ≠ T₁.</p></section><section class="formula-entry"><h3>Réaction : modèle simplifié</h3>
+<div class="formula">ΔHréaction ≈ −(msolution csolution + Ccal) ΔT<br>ΔrH ≈ ΔHréaction/Δξ</div>
+<p>Même température initiale pour tous, capacités constantes, pas d’autres contributions. Si les températures initiales diffèrent, calculer chaque chauffage avec sa propre ΔT. La mesure ne donne pas automatiquement une valeur standard.</p></section><section class="formula-entry"><h3>Complément : bombe calorimétrique</h3>
+<div class="formula">QV = ΔU ; ΔUensemble ≈ 0</div>
+<p>La bombe est rigide et échange de la chaleur avec le bain. L’adiabaticité concerne le dispositif complet. Les calculs détaillés ne sont pas demandés dans ce parcours.</p></section><section class="formula-entry"><h3>Relier énergie interne et enthalpie de réaction</h3>
+<div class="formula">ΔrH° = ΔrU° + Δνg RT<br>Δνg = Σproduits gazeux ν − Σréactifs gazeux ν<br>Δng = Δνg Δξ</div>
+<p>Gaz parfaits, température fixée, contribution pV des phases condensées négligée. Δνg est sans unité. Avec R en J·mol⁻¹·K⁻¹, convertir la correction en kJ·mol⁻¹ si nécessaire.</p></section></section><section id="integrales"><h2>Primitives et intégrales utiles</h2>
+<p>L’intégrale additionne les contributions le long de l’intervalle. Si F′ = f, alors ∫<sub>a</sub><sup>b</sup> f(x)dx = F(b)−F(a). Calculer une primitive pour W ne transforme pas W en fonction d’état : la fonction pext(V) dépend du chemin.</p>
+<div class="table-scroll"><table>
+<tr>
+<th>Fonction</th>
+<th>Primitive, à une constante près</th>
+<th>Application</th>
+</tr>
+<tr>
+<td>k constante</td>
+<td>kx</td>
+<td>Pression ou capacité constante</td>
+</tr>
+<tr>
+<td>xᵃ, a ≠ −1</td>
+<td>xᵃ⁺¹/(a+1)</td>
+<td>Capacités polynomiales</td>
+</tr>
+<tr>
+<td>1/x</td>
+<td>ln|x|</td>
+<td>Isotherme réversible d’un gaz parfait</td>
+</tr>
+<tr>
+<td>a + bx + cx²</td>
+<td>ax + bx²/2 + cx³/3</td>
+<td>Loi Cp(T)</td>
+</tr>
+</table></div>
+<p>Pour x positif : ∫<sub>a</sub><sup>b</sup> dx/x = ln(b/a), avec b/a sans dimension. Inverser les bornes change le signe de l’intégrale.</p>
+<p><a href="https://exo7.emath.fr/cours/ch_int.pdf" target="_blank" rel="noopener noreferrer">Exo7 — aire sous une courbe et rectangles, pages 1–2 (PDF, français, nouvel onglet)</a></p>
+<p><a href="premier-principe.html#integrale-travail">Revenir à l’explication du travail et des rectangles dans le cours</a></p></section><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Fiche pratique · CC BY-NC-ND 4.0 · lenaiclartigue.github.io/thermochimie/</p></main><footer><div>
+<strong>Thermochimie · Licence</strong><p>Conception du parcours : Lénaïc Lartigue.</p>
+</div>
+<div>
+<a href="ressources.html" class="text-link">Ressources en ligne</a><br><a href="fiche-pratique.html" class="text-link">Fiche pratique : formules et méthodes</a><br><a href="aide.html" class="text-link">Utiliser le site</a><br><button id="privacy" class="text-link">Ma progression</button><p><button id="show-license" type="button" class="text-link">CC BY-NC-ND 4.0 · Conditions et citation</button></p>
+</div></footer><dialog id="license-dialog" class="license-dialog" aria-labelledby="license-title"><button class="close" type="button" aria-label="Fermer les conditions">×</button><h2 id="license-title">Conditions d’utilisation et citation</h2>
+<div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2>
+<p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
+<button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
+<script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
+<script src="exercices.js" defer></script>
+</body>
+</html>
