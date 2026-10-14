@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Calorimétrie · Thermochimie</title>
-<link rel="stylesheet" href="style.css?v=3d3140cf6cb8">
+<link rel="stylesheet" href="style.css?v=ae86e08d1fa1">
 </head>
 <body>
 <header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main data-current-module="6"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties du cours"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
@@ -36,6 +36,27 @@
 <p>Le vase Dewar limite les échanges de chaleur avec l’extérieur. Un thermomètre mesure la variation de température ; un agitateur homogénéise la solution. La double paroi argentée limite les pertes par rayonnement et le vide entre les parois limite les pertes par conduction.</p>
 <p>Cette description concerne le calorimètre à pression constante étudié ici. La bombe calorimétrique, abordée plus loin, travaille à volume constant.</p>
 <p>Dans le modèle du cours, l’ensemble calorimétrique est <b>adiabatique</b>. Les constituants peuvent échanger de la chaleur entre eux.</p>
+
+<section class="thermal-widget" id="calorimetre-explorer" aria-labelledby="calo-explore-title" data-source-slides="33–35">
+<p class="eyebrow">EXPLORER LE DISPOSITIF</p><h3 id="calo-explore-title">À quoi sert chaque élément du calorimètre ?</h3>
+<p>Choisissez un élément sur le schéma ou avec les boutons. Il est mis en évidence et son rôle apparaît sous le dessin.</p>
+<svg class="calo-explore-svg" viewBox="0 0 520 350" role="group" aria-label="Coupe simplifiée du calorimètre">
+<g data-calo-shape="wall" role="button" tabindex="0" aria-label="Double paroi argentée"><path d="M130 70V290Q130 325 165 325H345Q380 325 380 290V70H357V285Q357 302 340 302H170Q153 302 153 285V70Z" fill="#e2e8ec" stroke="#788f9b" stroke-width="3"/><path d="M160 75V280Q160 294 175 294H335Q350 294 350 280V75" fill="none" stroke="#788f9b" stroke-width="4"/></g>
+<g data-calo-shape="vacuum" role="button" tabindex="0" aria-label="Vide entre les parois"><path d="M141 80V288Q141 313 168 313H342Q369 313 369 288V80" fill="none" stroke="#c9d4d9" stroke-width="9" stroke-dasharray="6 4"/></g>
+<path d="M163 182H347V278Q347 291 334 291H176Q163 291 163 278Z" fill="#b4dfe7"/>
+<path d="M164 182Q208 172 255 182T347 182" fill="none" stroke="#4b9fac" stroke-width="2"/>
+<rect x="124" y="65" width="262" height="17" rx="5" fill="#627981"/>
+<g data-calo-shape="thermometer" role="button" tabindex="0" aria-label="Thermomètre"><rect x="196" y="22" width="18" height="203" rx="9" fill="#fff" stroke="#637983" stroke-width="2"/><path d="M205 65V225" stroke="#c94f3d" stroke-width="5"/><circle cx="205" cy="229" r="12" fill="#c94f3d"/><path d="M210 38h6m-6 13h6m-6 13h6" stroke="#637983"/></g>
+<g data-calo-shape="stirrer" role="button" tabindex="0" aria-label="Agitateur"><path d="M300 28V248" stroke="#637983" stroke-width="8"/><g id="calo-paddle"><ellipse cx="300" cy="248" rx="30" ry="8" fill="#637983"/></g></g>
+<g fill="#3e525c" font-size="15"><text x="5" y="110">Double paroi</text><path d="M100 115L130 130" stroke="#637983"/><text x="397" y="285">Vide</text><path d="M395 280L369 270" stroke="#637983"/><text x="10" y="36">Thermomètre</text><path d="M118 32H194" stroke="#637983"/><text x="355" y="36">Agitateur</text><path d="M350 32H305" stroke="#637983"/><text x="235" y="213">Solution</text></g>
+</svg>
+<div class="thermal-controls" role="group" aria-label="Éléments du calorimètre"><button class="button secondary" type="button" data-calo-part="wall" aria-pressed="true">Double paroi argentée</button><button class="button secondary" type="button" data-calo-part="vacuum" aria-pressed="false">Vide</button><button class="button secondary" type="button" data-calo-part="thermometer" aria-pressed="false">Thermomètre</button><button class="button secondary" type="button" data-calo-part="stirrer" aria-pressed="false">Agitateur</button></div>
+<div id="calo-part-info" class="calo-part-info" aria-live="polite"></div>
+<button type="button" class="button secondary" id="calo-stir">Animer l’agitateur</button>
+<p>Le dispositif limite les échanges thermiques avec l’extérieur. Dans le modèle adiabatique du cours, ces échanges sont négligés, mais <strong>des échanges de chaleur restent possibles entre le contenu et le calorimètre</strong>.</p>
+<p class="muted">Schéma de principe : les dimensions et le mouvement de l’agitateur sont illustratifs.</p>
+</section>
+
 <div class="figure-pair">
 <figure class="course-figure " id="figure-calorimetre-coupe"><img src="assets/images/calorimetre-coupe.png" width="813" height="1292" loading="lazy" decoding="async" alt="Schéma en coupe du calorimètre avec double paroi, liquide, thermomètre et agitateur."><figcaption id="figure-calorimetre-coupe-caption">Coupe du calorimètre : récipient, double paroi, thermomètre et agitateur.</figcaption></figure><figure class="course-figure " id="figure-calorimetre-materiel"><img src="assets/images/calorimetre-materiel.png" width="1503" height="1167" loading="lazy" decoding="async" alt="Photographie des éléments d’un calorimètre : récipient isolant, récipients intérieurs, couvercle, agitateur et thermomètre."><figcaption id="figure-calorimetre-materiel-caption">Les éléments du dispositif présentés dans le diaporama.</figcaption></figure>
 </div>
@@ -266,6 +287,6 @@
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
 <script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=c48a66870f67" defer></script>
 <script src="exercices.js?v=61c67d2c7d98" defer></script>
-<script src="interactions.js?v=e46ba91aa311" defer></script>
+<script src="interactions.js?v=de046b64f168" defer></script>
 </body>
 </html>

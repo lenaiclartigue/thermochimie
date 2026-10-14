@@ -26,3 +26,7 @@ Les schémas d’énergie, piston, états physiques, liaisons et dissolution son
 ## États de référence : révision des schémas
 
 L’activité Cu/Pb/Hg est dessinée en SVG dans `interactions.js` : trois cartes solide/liquide/gaz, même nombre de particules, couleurs orangée/violette/bleue et symbole de l’élément. Les pointillés schématisent la cohésion ; ils sont absents du gaz parfait. L’animation est facultative, avec pause. Aucun fichier d’image supplémentaire ni service externe n’est requis. Les coordonnées ne reproduisent pas une structure cristalline réelle et l’échelle des distances n’est pas quantitative.
+
+## Courbe de chauffage et calorimètre interactifs (14 octobre 2026)
+
+Ajout pédagogique dans Comprendre fondé sur les diapositives 21–22 et 33–35 : courbe T(Q) calculée avec les données de l’exercice des 3 mol d’eau, proportions molaires liquide/vapeur, et exploration du rôle des éléments du Dewar. Qchauffage = 18,072 kJ ; Qvap = 122,100 kJ ; Qtotal = 140,172 kJ. L’axe n’est pas un temps ; aucune cinétique de chauffage n’est supposée. Calculs non arrondis en interne, affichage arrondi. La coupe est schématique, les données et figures originales sont conservées. Démarrage manuel, pause et commande par curseur ; prédiction au début du palier sans modification des 40 QCM et 18 exercices.

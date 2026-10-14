@@ -97,3 +97,7 @@ Le cycle du propane utilise les trois équations et les enthalpies de la diapo 3
 Les bilans des deux exercices de calorimétrie distinguent les températures initiales 18/40 °C et 18/20 °C. La réaction Zn/Cu²⁺ porte une contribution négative, opposée aux trois chauffages. Le signe ne s’applique pas une deuxième fois devant un terme C(Tf−Ti).
 
 Contrôles : branches correctes, incomplètes et fausses, sauvegarde/restauration des préparations, présence dans le bilan exportable, remise à zéro, indices de signe/J-kJ/coefficients/température et affichage sur ordinateur et téléphone. Les 40 QCM et 18 exercices ont aussi été revérifiés.
+
+## Courbe de chauffage et calorimètre interactifs (14 octobre 2026)
+
+Ajout pédagogique dans Comprendre fondé sur les diapositives 21–22 et 33–35 : courbe T(Q) calculée avec les données de l’exercice des 3 mol d’eau, proportions molaires liquide/vapeur, et exploration du rôle des éléments du Dewar. Qchauffage = 18,072 kJ ; Qvap = 122,100 kJ ; Qtotal = 140,172 kJ. L’axe n’est pas un temps ; aucune cinétique de chauffage n’est supposée. Calculs non arrondis en interne, affichage arrondi. La coupe est schématique, les données et figures originales sont conservées. Démarrage manuel, pause et commande par curseur ; prédiction au début du palier sans modification des 40 QCM et 18 exercices.

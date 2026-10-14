@@ -293,3 +293,102 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   function init(){hess();balances();}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
+
+// Chauffage de l'exercice du diaporama et découverte du calorimètre.
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const f = (n, digits = 3) => n.toLocaleString('fr-FR', {minimumFractionDigits: digits, maximumFractionDigits: digits});
+  const heating = $('chauffage-interactif');
+  if (heating) {
+    const limit = 18072, total = 140172, range = $('heating-energy');
+    let frame = 0, last = 0, pausedAtPlateau = false;
+    function stop() {
+      cancelAnimationFrame(frame); frame = 0; last = 0;
+      $('heating-play').textContent = 'Animer';
+      $('heating-play').setAttribute('aria-pressed', 'false');
+    }
+    function render() {
+      const q = Number(range.value), heat = Math.min(q, limit), vap = Math.max(0, q-limit);
+      const t = 20 + heat / (3 * 75.3), nv = vap / 40700, nl = 3 - nv;
+      const x = 65 + q / total * 540, y = 220 - (t - 20) / 80 * 130;
+      $('heating-point').setAttribute('cx', x); $('heating-point').setAttribute('cy', y);
+      $('heating-trace').setAttribute('d', q <= limit ? `M65 220L${x} ${y}` : `M65 220L${65+limit/total*540} 90H${x}`);
+      $('heating-q').textContent = f(q/1000) + ' kJ';
+      $('heating-t').textContent = f(t,2) + ' °C';
+      $('heating-state').textContent = q < limit ? 'Liquide' : q === limit ? 'Début de vaporisation' : q < total ? 'Liquide + vapeur' : 'Vapeur';
+      range.setAttribute('aria-valuetext', `${f(q/1000)} kilojoules, ${f(t,2)} degrés Celsius, ${f(nv)} mole de vapeur`);
+      $('heating-liquid').textContent = f(nl) + ' mol'; $('heating-vapour').textContent = f(nv) + ' mol';
+      $('heating-liquid-bar').style.width = (nl/3*100)+'%'; $('heating-vapour-bar').style.width = (nv/3*100)+'%';
+      $('heating-calculation').innerHTML = `<p><strong>1. Chauffage du liquide</strong><br>Q<sub>chauffage</sub> = n C<sub>p,m</sub> (T − Tᵢ)<br>= 3 × 75,3 × (${f(t,2)} − 20) ≈ <strong>${f(heat,1)} J = ${f(heat/1000)} kJ</strong></p>` +
+        `<p><strong>2. Vaporisation à 100 °C</strong><br>Q<sub>vap</sub> = n<sub>vaporisée</sub> Δ<sub>vap</sub>H°<br>= ${f(nv)} × 40,7 ≈ <strong>${f(vap/1000)} kJ</strong>${q < limit ? '<br>Cette étape n’a pas encore commencé.' : ''}</p>` +
+        `<p><strong>Q<sub>total</sub> = ${f(heat/1000)} + ${f(vap/1000)} = ${f(q/1000)} kJ</strong></p><p class="muted">Les valeurs affichées sont arrondies ; les calculs utilisent les valeurs non arrondies. Une variation de 1 °C correspond à une variation de 1 K.</p>`;
+      $('heating-explanation').textContent = q < limit ? 'Avant le palier, la chaleur reçue augmente la température du liquide.' : q < total ? 'Pendant le palier, la température reste à 100 °C. La chaleur reçue vaporise progressivement l’eau : ΔT = 0 ne signifie pas Q = 0.' : 'Toute l’eau est vaporisée : 18,072 kJ pour chauffer le liquide, puis 122,100 kJ pour le vaporiser, soit 140,172 kJ (environ 140,2 kJ).';
+      if (q !== limit) $('heating-prediction').hidden = true;
+    }
+    function tick(time) {
+      if (document.hidden || heating.closest('[hidden]')) { stop(); return; }
+      const dt = last ? Math.min(100, time-last) : 0; last = time;
+      let next = Math.min(total, Number(range.value) + dt * total / 25000);
+      if (!pausedAtPlateau && Number(range.value) < limit && next >= limit) {
+        range.value = limit; pausedAtPlateau = true; stop(); render();
+        $('heating-prediction').hidden = false; return;
+      }
+      range.value = Math.round(next); render();
+      if (next >= total) { stop(); return; }
+      frame = requestAnimationFrame(tick);
+    }
+    $('heating-play').addEventListener('click', () => {
+      if (frame) { stop(); return; }
+      if (Number(range.value) >= total) { range.value = 0; pausedAtPlateau = false; }
+      $('heating-play').textContent = 'Pause'; $('heating-play').setAttribute('aria-pressed', 'true');
+      frame = requestAnimationFrame(tick);
+    });
+    range.addEventListener('input', () => { stop(); pausedAtPlateau = Number(range.value) >= limit; render(); });
+    $('heating-reset').addEventListener('click', () => {
+      stop(); range.value = 0; pausedAtPlateau = false;
+      $('heating-prediction-feedback').textContent = ''; render();
+    });
+    heating.querySelectorAll('[data-heating-step]').forEach(b => b.addEventListener('click', () => {
+      stop(); range.value = b.dataset.heatingStep; pausedAtPlateau = true; render();
+      if (Number(range.value) === limit) $('heating-prediction').hidden = false;
+    }));
+    heating.querySelectorAll('[data-heating-answer]').forEach(b => b.addEventListener('click', () => {
+      $('heating-prediction-feedback').textContent = (b.dataset.heatingAnswer === 'plateau' ? 'Oui. ' : 'Pendant le palier, non. ') + 'À pression constante, la température du corps pur reste constante pendant sa vaporisation. La quantité de vapeur augmente. Cliquez sur « Animer » pour poursuivre.';
+    }));
+    new IntersectionObserver(entries => { if (!entries[0].isIntersecting) stop(); }).observe(heating);
+    document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
+    stop(); render();
+  }
+  const calo = $('calorimetre-explorer');
+  if (calo) {
+    const info = {
+      wall: ['Double paroi argentée', 'L’argenture limite les échanges thermiques par rayonnement. Les deux parois délimitent l’espace dans lequel le vide est réalisé.'],
+      vacuum: ['Vide entre les parois', 'Le vide limite les échanges thermiques par conduction entre les parois. L’isolation réelle n’est pas parfaite ; les pertes sont négligées dans le modèle du cours.'],
+      thermometer: ['Thermomètre', 'Il mesure la température du contenu. On relève les températures initiale et finale pour déterminer la variation ΔT utilisée dans le bilan thermique.'],
+      stirrer: ['Agitateur', 'Il homogénéise la température de la solution : on cherche une température uniforme dans le liquide. Le mouvement représenté est schématique.']
+    };
+    function select(part) {
+      calo.querySelectorAll('[data-calo-part]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.caloPart === part)));
+      calo.querySelectorAll('[data-calo-shape]').forEach(g => {
+        g.classList.toggle('calo-selected', g.dataset.caloShape === part);
+        g.setAttribute('aria-pressed', String(g.dataset.caloShape === part));
+      });
+      $('calo-part-info').innerHTML = `<h4>${info[part][0]}</h4><p>${info[part][1]}</p>`;
+    }
+    calo.querySelectorAll('[data-calo-part]').forEach(b => b.addEventListener('click', () => select(b.dataset.caloPart)));
+    calo.querySelectorAll('[data-calo-shape]').forEach(g => {
+      g.addEventListener('click', () => select(g.dataset.caloShape));
+      g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(g.dataset.caloShape); } });
+    });
+    function motion(on) {
+      calo.classList.toggle('stirring', on);
+      $('calo-stir').textContent = on ? 'Arrêter l’agitateur' : 'Animer l’agitateur';
+      $('calo-stir').setAttribute('aria-pressed', String(on));
+    }
+    $('calo-stir').addEventListener('click', () => { select('stirrer'); motion(!calo.classList.contains('stirring')); });
+    new IntersectionObserver(entries => { if (!entries[0].isIntersecting) motion(false); }).observe(calo);
+    document.addEventListener('visibilitychange', () => { if (document.hidden) motion(false); });
+    select('wall'); motion(false);
+  }
+})();
