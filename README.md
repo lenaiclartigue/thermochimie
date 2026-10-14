@@ -27,3 +27,15 @@ Les calculs interactifs des laboratoires sont dans la fonction renderLab de app.
 Accès libre. Aucune connexion ni service externe. Progression conservée localement dans le navigateur, aucun suivi enseignant. Les étudiants peuvent ouvrir directement une page de module. Le cours reste à relire avant diffusion. Les durées sont indicatives. Le site s’ouvre aussi localement avec index.html.
 
 Sources : cours de Mireille Le Guennec et Lénaïc Lartigue et fascicule XLG1CU040 2026–2027. Chapitre 1 prérequis ; chapitre 3 prévu en séance. Le dépôt GitHub n’a pas été modifié automatiquement.
+
+## Forum du cours
+
+Les liens du site pointent vers https://github.com/lenaiclartigue/thermochimie/discussions . Si le nom du dépôt est différent, modifier cette adresse dans les pages HTML.
+
+Activation par le propriétaire du dépôt : Settings → General → Features → Discussions (ou Set up discussions). Puis, dans Discussions, utiliser une catégorie de type Questions & Answers, permettant de marquer une réponse comme réponse retenue. Les étudiants ont besoin d’un compte GitHub pour participer ; le mail et les séances à distance restent possibles.
+
+Les liens ont été intégrés au site. L’activation dans le compte GitHub n’a pas été effectuée par l’assistant, qui ne dispose pas d’une connexion à ce compte dans cette session. Aucun message n’a été publié sur le forum.
+
+## Introduction pédagogique
+
+Le bloc d’accueil est centré sur l’enthalpie, avec ΔH = Qp et ses conditions d’application. Le premier principe et l’énergie interne restent expliqués dans les modules correspondants.
