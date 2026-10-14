@@ -125,26 +125,73 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     document.querySelectorAll('[data-notation]').forEach(b=>b.addEventListener('click',()=>{select('[data-notation]',b.dataset.notation,'notation');$('notation-result').innerHTML=labels[b.dataset.notation];}));markReady('notation-enthalpie');
   }
   function standard() {
-    if(!$('standard-temperature'))return;
-    const elements={Cu:{name:'cuivre',fusion:1084.62,boil:2562},Pb:{name:'plomb',fusion:327.46,boil:1748},Hg:{name:'mercure',fusion:-38.83,boil:356.73}};
-    const range=$('standard-temperature-range'),input=$('standard-temperature-number');
-    function draw(raw) {
+    const host=$('standard-temperature');if(!host)return;
+    const elements={
+      Cu:{name:'cuivre',fusion:1084.62,boil:2562,color:'#ad4b25',soft:'#fff0e7'},
+      Pb:{name:'plomb',fusion:327.46,boil:1748,color:'#69509c',soft:'#f2edfa'},
+      Hg:{name:'mercure',fusion:-38.83,boil:356.73,color:'#226d9b',soft:'#e9f4fb'}
+    };
+    const range=$('standard-temperature-range'),input=$('standard-temperature-number'),motion=$('standard-motion');
+    let symbol='Cu',state='s',playing=false,visible=false,frame=0,elapsed=0,last=0;
+    const bounce=(value,min,max)=>{const width=max-min,v=((value-min)%(2*width)+2*width)%(2*width);return min+(v>width?2*width-v:v);};
+    const gasStart=[[42,42],[120,40],[214,40],[280,65],[65,112],[161,100],[243,125],[39,190],[128,174],[215,198],[282,212],[173,230]];
+    function points(phase,time){
+      if(phase==='s')return Array.from({length:12},(_,i)=>[112+(i%4)*32+1.5*Math.sin(time*5+i),155+Math.floor(i/4)*32+1.5*Math.cos(time*5+i*1.7)]);
+      if(phase==='l')return Array.from({length:12},(_,i)=>{
+        const outer=i<8,k=outer?i:i-8,angle=(outer?k*Math.PI/4:k*Math.PI/2)+(outer?time*.24:-time*.42)+.09*Math.sin(i*2);
+        return [160+(outer?75:29)*Math.cos(angle),175+(outer?48:20)*Math.sin(angle)];
+      });
+      return gasStart.map(([x,y],i)=>[bounce(x+time*(18+(i%3)*6)*(i%2?1:-1),27,293),bounce(y+time*(14+(i%4)*4)*(i%3?1:-1),27,233)]);
+    }
+    function paint(time){
+      for(const phase of ['s','l','g']){
+        const pts=points(phase,time),e=elements[symbol],lines=[];
+        if(phase!=='g')for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+          const [x1,y1]=pts[i],[x2,y2]=pts[j],d=Math.hypot(x2-x1,y2-y1);
+          if(d<(phase==='s'?37:57))lines.push(`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`);
+        }
+        $('standard-links-'+phase).innerHTML=lines.join('');
+        $('standard-atoms-'+phase).innerHTML=pts.map(([x,y])=>`<g transform="translate(${x.toFixed(2)} ${y.toFixed(2)})"><circle r="12" fill="${e.color}"/><text text-anchor="middle" dy="5" fill="#fff" font-size="14" font-weight="600">${symbol}</text></g>`).join('');
+      }
+    }
+    function syncMotion(){
+      cancelAnimationFrame(frame);last=0;
+      motion.setAttribute('aria-pressed',String(playing));motion.textContent=playing?'Mettre en pause':'Animer les particules';host.dataset.motion=playing?'playing':'paused';
+      $('standard-motion-note').textContent=playing?'Mouvements illustratifs, sans échelle de vitesse.':'Schémas à l’arrêt. La cohésion reste visible.';
+      if(!playing||!visible||document.hidden)return;
+      function tick(now){
+        if(last&&now-last<40){frame=requestAnimationFrame(tick);return;}
+        if(last)elapsed+=Math.min((now-last)/1000,.1);last=now;paint(elapsed);frame=requestAnimationFrame(tick);
+      }
+      frame=requestAnimationFrame(tick);
+    }
+    function draw(raw){
       if(raw===''||!Number.isFinite(Number(raw)))return;
-      const t=Math.max(-100,Math.min(2800,Number(raw))),symbol=$('standard-element').value,e=elements[symbol];range.value=String(t);input.value=String(t);
-      const fusion=Math.abs(t-e.fusion)<0.005,boil=Math.abs(t-e.boil)<0.005;
-      const state=fusion?'sl':boil?'lg':t<e.fusion?'s':t<e.boil?'l':'g';
+      const t=Math.max(-100,Math.min(2800,Number(raw)));symbol=$('standard-element').value;const e=elements[symbol];range.value=String(t);input.value=String(t);
+      const fusion=Math.abs(t-e.fusion)<.005,boil=Math.abs(t-e.boil)<.005;
+      state=fusion?'sl':boil?'lg':t<e.fusion?'s':t<e.boil?'l':'g';
       const names={s:'solide',l:'liquide',g:'gazeux',sl:'solide et liquide',lg:'liquide et gaz'};
       const label=state==='sl'?`${symbol}(s) + ${symbol}(l)`:state==='lg'?`${symbol}(l) + ${symbol}(g)`:`${symbol}(${state})`;
-      $('standard-species').textContent=label;$('standard-species').setAttribute('font-size',state.length>1?'24':'30');$('standard-kelvin').textContent=`${num(t+273.15)} K · p° = 1 bar`;
+      host.style.setProperty('--element-color',e.color);host.style.setProperty('--element-soft',e.soft);host.dataset.element=symbol;host.dataset.state=state;
+      $('standard-species').textContent=label;$('standard-kelvin').textContent=`${num(t+273.15)} K · p° = 1 bar`;
       $('standard-thresholds').textContent=`Repères du cours : fusion ${num(e.fusion)} °C ; ébullition ${num(e.boil)} °C.`;
-      const text=(state.length>1?`À ${num(t)} °C, coexistence des phases ${names[state]}. `:`À ${num(t)} °C, l’état de référence du ${e.name} est ${names[state]} : ${label}. `)+'La température change ; la pression standard reste 1 bar.';
-      $('standard-result').textContent=text;$('standard-desc').textContent=text;
-      const solid=[[55,60],[95,60],[135,60],[55,100],[95,100],[135,100],[55,140],[95,140],[135,140]],liquid=[[51,111],[84,130],[116,112],[152,133],[51,145],[150,98],[85,98],[119,147],[118,80]],gas=[[45,43],[160,47],[99,83],[49,145],[154,142],[55,91],[135,102],[112,30],[90,151]];
-      const pts=state==='s'?solid:state==='l'?liquid:state==='g'?gas:solid.map((a,i)=>i<4?a:(state==='sl'?liquid:gas)[i]);
-      $('standard-particles').innerHTML=pts.map(([x,y])=>`<circle cx="${x}" cy="${y}" r="9" fill="#bd7650" stroke="#172e42"/>`).join('');
+      $('standard-result').textContent=(state.length>1?`Au seuil de ${num(t)} °C du cours : coexistence ${names[state]}. Les deux phases sont mises en évidence.`:`À ${num(t)} °C, l’état de référence du ${e.name} est ${names[state]} : ${label}.`)+' La pression standard reste 1 bar.';
+      for(const phase of ['s','l','g']){
+        const active=state.includes(phase),card=host.querySelector(`[data-state-card="${phase}"]`);card.dataset.active=String(active);
+        $('state-badge-'+phase).textContent=active?(state.length>1?'✓ Phase en coexistence':'✓ État à cette température'):'Repère à une autre température';
+        $('state-svg-title-'+phase).textContent=`${e.name} : organisation ${names[phase]}`;
+      }
+      paint(elapsed);
     }
     range.addEventListener('input',()=>draw(range.value));input.addEventListener('input',()=>draw(input.value));input.addEventListener('change',()=>{if(input.value==='')draw(range.value);});
-    $('standard-element').addEventListener('change',()=>draw(input.value));document.querySelectorAll('[data-standard-point]').forEach(b=>b.addEventListener('click',()=>{const e=elements[$('standard-element').value];draw({ambient:25,fusion:e.fusion,ebullition:e.boil}[b.dataset.standardPoint]);}));draw(25);markReady('standard-temperature');
+    $('standard-element').addEventListener('change',()=>draw(input.value));
+    host.querySelectorAll('[data-standard-point]').forEach(b=>b.addEventListener('click',()=>{const e=elements[$('standard-element').value];draw({ambient:25,fusion:e.fusion,ebullition:e.boil}[b.dataset.standardPoint]);}));
+    motion.addEventListener('click',()=>{playing=!playing;syncMotion();});
+    document.addEventListener('visibilitychange',syncMotion);
+    if('IntersectionObserver' in window)new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;syncMotion();}).observe(host);else visible=true;
+    // No automatic animation, including when reduced motion is requested.
+    const preference=window.matchMedia('(prefers-reduced-motion: reduce)');preference.addEventListener?.('change',()=>{if(preference.matches){playing=false;syncMotion();}});
+    draw(25);syncMotion();markReady('standard-temperature');
   }
   function formation() {
     if(!$('formation-interactive'))return;
@@ -153,8 +200,8 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     $('formation-choice').addEventListener('change',draw);draw();markReady('formation-interactive');
   }
   function combustion() {
-    if(!$('combustion-interactive'))return;let water='g';
-    function draw(){const propane=$('combustion-choice').value==='C3H8';$('combustion-equation').textContent=propane?`C₃H₈(g) + 5 O₂(g) → 3 CO₂(g) + 4 H₂O(${water})`:`CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(${water})`;$('combustion-note').textContent=water==='g'?'L’eau est gazeuse : convention retenue ici quand l’énoncé ne précise pas sa phase.':'L’eau est liquide : ce choix doit être précisé. C’est le cas de l’exercice du méthane et du cycle du propane du diaporama.';select('[data-combustion-water]',water,'combustionWater');}
+    if(!$('combustion-interactive'))return;let water='l';
+    function draw(){const propane=$('combustion-choice').value==='C3H8';$('combustion-equation').textContent=propane?`C₃H₈(g) + 5 O₂(g) → 3 CO₂(g) + 4 H₂O(${water})`:`CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(${water})`;$('combustion-note').textContent=water==='l'?'L’eau est liquide : convention retenue dans ce cours, sauf indication contraire. Les exercices du méthane et du propane utilisent H₂O(l).':'L’eau est gazeuse : ce choix doit être indiqué dans l’énoncé et les données doivent correspondre à H₂O(g).';select('[data-combustion-water]',water,'combustionWater');}
     $('combustion-choice').addEventListener('change',draw);document.querySelectorAll('[data-combustion-water]').forEach(b=>b.addEventListener('click',()=>{water=b.dataset.combustionWater;draw();}));draw();markReady('combustion-interactive');
   }
   function bond() {
@@ -181,5 +228,68 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
     document.querySelectorAll('[data-solution-step]').forEach(b=>b.addEventListener('click',()=>draw(b.dataset.solutionStep)));draw('solid');markReady('dissolution-interactive');
   }
   function init(){for(const fn of [piston,notation,standard,formation,combustion,bond,phases,solution])fn();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+
+// Build the reasoning within the existing exercises, using their original data.
+(() => {
+  const parse=s=>{s=String(s).trim().replace(/[\s\u00a0\u202f]/g,'').replace(/−/g,'-').replace(',','.');return /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(s)?Number(s):NaN;};
+  const fmt=n=>n.toLocaleString('fr-FR',{maximumFractionDigits:4});
+  function hess(){
+    const host=document.getElementById('hess-builder');if(!host)return;
+    const form=host.closest('form'),inputs=[1,2,3].map(i=>document.getElementById('propane-reponse-'+i));
+    const labels=['C₃H₈(g)','O₂(g)','CO₂(g)','H₂O(l)','C(graphite)','H₂(g)'];
+    const reactions=[[-1,-5,3,4,0,0],[0,-1,1,0,-1,0],[0,-.5,0,1,0,-1]],energy=[-2220,-394,-286],target=[1,0,0,0,-3,-4];
+    const term=(n,i)=>(Math.abs(n-1)<1e-8?'':fmt(n)+' ')+labels[i];
+    const side=(r,sign)=>r.map((v,i)=>v*sign>1e-8?term(Math.abs(v),i):'').filter(Boolean).join(' + ')||'∅';
+    function draw(){
+      const k=inputs.map(x=>parse(x.value)),all=k.every(Number.isFinite);
+      document.getElementById('hess-transformed').innerHTML=k.map((v,i)=>`<p><strong>Équation ${i+1} :</strong> ${Number.isFinite(v)?(v===0?'multiplicateur nul : aucune contribution.':side(reactions[i].map(x=>x*v),-1)+' → '+side(reactions[i].map(x=>x*v),1)):'choisissez son multiplicateur.'}</p>`).join('');
+      const cancellation=document.getElementById('hess-cancellations'),status=document.getElementById('hess-status'),expression=document.getElementById('hess-energy-expression');
+      cancellation.replaceChildren();expression.replaceChildren();host.dataset.complete='false';
+      form.querySelectorAll('[data-hess-direction]').forEach(b=>{const value=parse(document.getElementById(b.dataset.hessInput).value);b.setAttribute('aria-pressed',String(Number.isFinite(value)&&value!==0&&Math.sign(value)===Number(b.dataset.hessDirection)));});
+      if(!all){status.textContent='Renseignez les trois multiplicateurs pour visualiser leur somme.';return;}
+      const left=labels.map(()=>0),right=labels.map(()=>0);
+      reactions.forEach((r,i)=>r.forEach((n,j)=>{const v=n*k[i];if(v<0)left[j]-=v;else right[j]+=v;}));
+      const sum=right.map((v,i)=>v-left[i]);
+      const remaining=(total,cancel,i)=>`${cancel>1e-8?'<del>'+term(cancel,i)+'</del>':''}${total-cancel>1e-8?(cancel>1e-8?' + ':'')+term(total-cancel,i):''}`||'—';
+      cancellation.innerHTML='<p>Les quantités identiques présentes des deux côtés sont barrées. Les états physiques doivent être identiques.</p><div class="table-wrap"><table><thead><tr><th>Espèce</th><th>Réactifs additionnés</th><th>Produits additionnés</th></tr></thead><tbody>'+labels.map((label,i)=>{const c=Math.min(left[i],right[i]);return left[i]+right[i]>1e-8?`<tr><th>${label}</th><td>${remaining(left[i],c,i)}</td><td>${remaining(right[i],c,i)}</td></tr>`:'';}).join('')+'</tbody></table></div><div class="formula">'+side(sum,-1)+' → '+side(sum,1)+'</div>';
+      const correct=sum.every((v,i)=>Math.abs(v-target[i])<1e-8);host.dataset.complete=String(correct);
+      status.textContent=correct?'La somme donne la réaction de formation recherchée. Appliquez maintenant ces mêmes multiplicateurs aux enthalpies.':'La somme ne donne pas encore la réaction recherchée. Vérifiez le sens de la combustion du propane et les coefficients de C et H₂.';
+      expression.innerHTML='<p>Expression à calculer, en kJ·mol⁻¹ :</p><div class="formula">'+k.map((v,i)=>'('+fmt(v)+') × ('+fmt(energy[i])+')').join(' + ')+'</div><p>Calculez cette somme sur votre brouillon, puis saisissez le résultat dans la question 4.</p>';
+    }
+    inputs.forEach(x=>x.addEventListener('input',draw));
+    form.querySelectorAll('[data-hess-direction]').forEach(b=>b.addEventListener('click',()=>{const input=document.getElementById(b.dataset.hessInput),value=parse(input.value);input.value=String((Number.isFinite(value)&&value!==0?Math.abs(value):1)*Number(b.dataset.hessDirection));input.dispatchEvent(new Event('input',{bubbles:true}));}));
+    form.addEventListener('exercise-reset',draw);draw();
+  }
+  function balances(){
+    document.querySelectorAll('[data-balance-builder]').forEach(host=>{
+      const form=host.closest('form'),rows=[...host.querySelectorAll('[data-balance-term]')],tf=Number(host.dataset.finalTemperature);
+      function draw(check=false){
+        let valid=true,answered=0;const expressions=[];
+        for(const row of rows){
+          const temp=row.querySelector('[data-initial-expected]'),sign=row.querySelector('[data-sign-expected]'),ti=temp?parse(temp.value):NaN;
+          const expression=temp?row.dataset.capacity+'('+fmt(tf)+' − '+(Number.isFinite(ti)?fmt(ti):'Tinitiale')+')':row.dataset.capacity;
+          row.querySelector('.balance-expression').textContent=expression;expressions.push(expression);
+          const feedback=row.querySelector('.balance-feedback');feedback.textContent='';feedback.className='balance-feedback';
+          const tempOk=!temp||temp.value===temp.dataset.initialExpected,signOk=sign.value===sign.dataset.signExpected;
+          if(temp?.value)answered++;if(sign.value)answered++;
+          if(!tempOk||!signOk)valid=false;
+          if(check){
+            const missing=(temp&&!temp.value)||!sign.value;
+            feedback.classList.add(tempOk&&signOk?'good':'bad');
+            feedback.textContent=missing?'Complétez les choix de cette contribution.':!tempOk?'Reprenez la température initiale de ce constituant dans l’énoncé.':!signOk?(temp?'Le signe suit Tf − Tinitiale : un constituant qui se réchauffe reçoit de la chaleur ; celui qui refroidit en cède.':'La réaction fournit la chaleur reçue par le calorimètre, la solution et le zinc : sa contribution est négative.'):(temp?'Température et signe cohérents.':'Signe cohérent avec le bilan.');
+          }
+        }
+        host.querySelector('.balance-equation').textContent=expressions.join(' + ')+' = 0';
+        host.querySelector('.balance-status').textContent=check?(valid?'Votre bilan est cohérent. Passez au calcul demandé dans l’exercice.':'Votre bilan reste à compléter ou à reprendre ; les indications figurent sous chaque contribution.'):'Associez chaque terme à sa température initiale et à son signe, puis vérifiez votre bilan.';
+        host.dataset.valid=String(valid);form.dataset.preparationValid=String(check&&valid);return valid;
+      }
+      host.querySelectorAll('[data-preparation]').forEach(x=>x.addEventListener('input',()=>draw(false)));
+      host.querySelector('[data-check-balance]').addEventListener('click',()=>{form.dataset.preparationChecked='true';draw(true);form.dispatchEvent(new Event('preparation-check'));});
+      form.addEventListener('exercise-reset',()=>draw(false));draw(form.dataset.preparationChecked==='true');
+    });
+  }
+  function init(){hess();balances();}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();

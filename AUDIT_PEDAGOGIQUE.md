@@ -1,39 +1,99 @@
-# Activités interactives et enthalpies — 14 octobre 2026
+# Relecture complète du site de thermochimie
 
-## Modifications
+14 octobre 2026 — version « construction de Hess et des bilans calorimétriques ».
 
-- Définition d’une intégrale, lien avec une primitive et calcul F(b)−F(a) avant l’illustration par les rectangles. Deux vidéos distinctes de terminale d’Yvan Monka : calcul par primitive et représentation par l’aire.
-- Retour des illustrations homogènes verre/bouteille/thermos, en taille modérée. Images du cours affichées directement, sans visionneuse ni bouton agrandir.
-- Piston animé et manipulable : état initial de 2 L, pression extérieure constante de 1 bar, détente et compression avec signe et valeur de W. Le mouvement respecte la préférence de réduction des animations.
-- Lecture interactive des symboles Δ, indice de transformation, H, ° et T ; distinction entre variation en J et grandeur molaire de réaction.
-- Activité sur les états standard de référence de Cu, Pb et Hg, avec températures issues de la diapo 24, coexistence aux transitions et distinction état standard / état de référence.
-- Définition du corps simple ; formation de CH₄, H₂O, CO₂ et NH₃ à partir des corps simples de référence, pour une mole de produit.
-- Combustion : eau gazeuse par défaut suivant la demande de l’enseignant ; exceptions explicites des exercices du diaporama conservées avec eau liquide.
-- Dissociation de liaison en phase gazeuse pour isoler la liaison des effets intermoléculaires des phases condensées ; activité H₂, Cl₂, HCl avec données du cours.
-- Dissolution : séparation des ions d’un réseau et solvatation par l’eau. Orientation de l’eau représentée autour de Na⁺ et Cl⁻ ; distinction avec la dissolution moléculaire sans formation nécessaire d’ions.
-- Retrait de la relation H/U de réaction du cours, de la fiche et des questions qui l’évaluaient. Les parties de TD non couvertes sont signalées dans `COUVERTURE_TD.md`.
+## Bilan
 
-## Diagnostic des interactions signalées
+Les six parties, la fiche pratique, les pages d’aide et de résultats, les 40 QCM et les 18 exercices ont été relus. Les relations et les réponses numériques du parcours sont cohérentes après les corrections ci-dessous. Les sept exercices d’origine gardent les données du PowerPoint. Les rappels rédigés pour préparer les TD restent identifiés comme des compléments.
 
-Les fichiers HTML et `interactions.js` récupérés sur GitHub correspondaient à la dernière archive. Le blocage signalé n’a pas été reproduit dans les contrôles locaux avec ces fichiers. Sa cause dans le navigateur de l’utilisateur n’est donc pas établie.
+La relecture ne vaut pas correction des documents sources : plusieurs ambiguïtés ou données du fascicule de TD restent à harmoniser avant leur distribution. Le détail figure dans `COUVERTURE_TD.md`.
 
-L’initialisation attend désormais explicitement la disponibilité du document. Les scripts et la feuille de style sont référencés avec une empreinte de version : une nouvelle page demande la nouvelle version du fichier, ce qui évite de réutiliser silencieusement un ancien script conservé en cache. Il faut déposer tous les fichiers de l’archive ensemble. La présente livraison n’a pas été publiée sur GitHub.
+## Corrections effectuées
 
-## Vérifications
+| Emplacement | Point corrigé ou clarifié |
+| --- | --- |
+| Combustion, partie 4 et fiche | H₂O(l) par défaut, H₂O(g) seulement si indiqué. Texte, boutons, équations et documentation concordent. L’enthalpie molaire est rapportée à une mole de combustible. |
+| États de référence, partie 4 | Solide ordonné, liquide compact désordonné, gaz espacé ; une couleur par élément et symbole dans chaque disque. Cohésion représentée en phases condensées, négligée pour le gaz parfait. |
+| États de référence, partie 4 | Une phase est mise en évidence selon T ; deux aux seuils. Les autres cartes servent de comparaison à d’autres températures. Animation sur demande et pause. |
+| Enthalpie, partie 3 | Qp=ΔH : seul travail de pression, pext constante et pᵢ=pf=pext aux états d’équilibre initial et final. |
+| Capacités, partie 3 | Q=CΔT : capacité constante, sans changement d’état ni réaction ; conditions fixées et usage de Cp à pression constante. |
+| Réaction, partie 4 | ΔH≈ξΔrH° : contribution à T,p constantes, avancement initial nul et enthalpie molaire assimilée à la valeur standard constante. |
+| Tables de formation, partie 4 | Les coefficients sont positifs dans chacune des deux sommes « produits moins réactifs », pour éviter de soustraire deux fois le signe des réactifs. |
+| Calorimétrie | La description du vase Dewar concerne le dispositif à pression constante ; la bombe calorimétrique fonctionne à volume constant. |
+| Exercice sur le système isolé | Suppression de deux propositions également vraies (ΔU=Q et ΔU=W, puisque Q=W=ΔU=0). Les nouveaux choix sont clairement distincts. |
+| Aide et résultats | Suppression des instructions périmées sur l’agrandissement des images. L’effacement global retire désormais aussi le score et les commentaires QCM affichés. |
 
-- 40 réponses QCM et 18 exercices vérifiés dans Chromium avec une grille indépendante des valeurs attendues dans le HTML ; les sept exercices originaux du diaporama conservent leurs données.
-- Réponses fausses, validation partielle, correction à la demande, décimales françaises, sauvegarde, restauration, export et effacement.
-- Migration ciblée : seule la progression du quiz de calorimétrie modifié repart de zéro. Les autres résultats restent conservés. L’ancien exercice H/U n’est plus proposé ; son résultat ancien reste exportable.
-- Trois types de systèmes et quatre combinaisons Q/W reçus/cédés, avec flèches, textes et états des boutons.
-- Piston : animation jusqu’aux positions finales, curseur, remise à zéro, W positif en compression et négatif en détente.
-- Cu, Pb et Hg : états de part et d’autre de chaque transition, coexistence exactement aux seuils, conversion °C/K, boutons et saisie.
-- Quatre formations, quatre combustions selon phase de l’eau, six cas de liaison, six changements d’état et trois étapes de dissolution.
-- Inspection des nouveaux visuels à 390 px et sur ordinateur ; contrôle des pages sans débordement horizontal global.
-- Rectangles, primitives, navigation, licence, impression et anciennes adresses conservés. Les schémas/illustrations ont été inspectés visuellement.
-- Identifiants et liens locaux vérifiés, scripts syntaxiquement valides, absence d’erreur JavaScript dans les scénarios testés.
+## Relecture par partie
 
-## Limites
+| Partie | Points contrôlés | Conclusion |
+| --- | --- | --- |
+| 1 — Décrire un système | Frontières, ouvert/fermé/isolé, grandeurs, unités, quantités et rappels utiles aux TD | Définitions présentes ; rappels distingués du diaporama. |
+| 2 — Premier principe | Signes reçus/cédés, système fermé, fonction d’état, cycle, différentielles, travail, p/pext, monobare/isobare, intégrales | Conditions précisées ; travail isotherme limité au cas réversible ; adiabatique distingué d’isotherme et d’isolé. |
+| 3 — Enthalpie | H=U+pV, Qp, capacités totales/molaires/massiques, chauffage et palier | Chaleur latente explicitée ; unités et signes cohérents. |
+| 4 — Réaction | Δ/indice/°/T, standard et référence, corps simple, formation, combustion, dissociation, dissolution, H/U | Convention liquide corrigée ; réactions équilibrées ; Δνg compte uniquement les gaz ; schémas clarifiés. |
+| 5 — Hess | Sens des flèches, coefficients, états physiques, passage par les atomes gazeux, exemples HCl/propane | Sommes d’équations et signes cohérents ; données à la même température ou approximation annoncée. |
+| 6 — Calorimétrie | Contributions, températures initiales, étalonnage, Zn/Cu²⁺, fusion partielle, QV et conversion H/U | Bilans et résultats recalculés ; grandeurs totales et molaires distinguées. |
+| Fiche et aide | Concordance des formules, unités, conventions, parcours, sauvegarde et forum | Mise en cohérence avec les fonctions actuellement présentes. |
 
-Les comportements ont été testés localement dans Chromium. Cela ne constitue pas une validation sur tous les navigateurs ni dans la session de l’utilisateur. L’authentification giscus reste extérieure à ces tests. Les paramètres giscus, adresses des pages et conditions de réutilisation sont conservés.
+Résultats de contrôle principaux : eau 18,072 + 122,1 = 140,172 kJ ; benzène −597,2 kJ·mol⁻¹ ; HCl −92,5 kJ·mol⁻¹ ; propane −106 kJ·mol⁻¹ avec les données arrondies ; calorimètre 159,51 J·K⁻¹ ; Zn/Cu²⁺ −7,87912 kJ ; hydrogénation −136,95 kJ·mol⁻¹, puis ΔrU°≈−134,47 kJ·mol⁻¹ à 298 K. Le résultat de Zn/Cu²⁺ est une variation totale, pas une enthalpie molaire déterminée sans connaître l’avancement.
 
-Les PowerPoint, le fascicule et le corrigé enseignant ne sont pas modifiés ni inclus. Le choix de retirer la relation H/U laisse des questions de TD hors périmètre ; les incohérences des données des énoncés signalées précédemment restent aussi à traiter. Le relevé de couverture a été mis à jour en conséquence.
+## Ce qui reste à harmoniser dans les supports sources
+
+Les points déjà repérés ont été conservés, car modifier les énoncés ou leurs données sans les signaler changerait le support commun :
+
+- Sabatier : « enceinte isolée » à concilier avec le travail du piston ; différences de quantités entre le fascicule et l’ancien corrigé.
+- Cycle du gaz : hypothèse de réversibilité mécanique à expliciter pour le calcul du travail isotherme.
+- Éthylène : valeur de formation de H₂O(l) imprimée −295,8 contre −285,8 dans la correction manuscrite.
+- Méthane : pression du volume gazeux et température de la donnée de vaporisation/condensation à préciser.
+- Benzène : phase de l’eau et données de combustion à considérer ensemble.
+- Lampe à carbure : signe/résultat du corrigé et capacités thermiques imprimées à vérifier.
+- Eau/glace : 44,36 kJ·mol⁻¹ annoncé à 100 °C, contre 40,7 kJ·mol⁻¹ ailleurs dans les supports.
+- Corrigé ancien : reprendre les applications numériques avec les valeurs du fascicule distribué.
+
+Les températures Cu/Pb/Hg de la diapositive 24 sont reprises comme repères pédagogiques. L’activité n’est pas un calcul précis de diagramme de phases ; les valeurs des transitions et leurs conditions de pression pourraient faire l’objet d’une harmonisation ultérieure dans le support commun.
+
+## Vérifications techniques réalisées
+
+- Chargement des 12 pages principales et redirection de l’ancienne page des intégrales.
+- 40 QCM et 18 exercices : bonnes réponses, réponse fausse, étapes partielles, décimales françaises, indices/correction, restauration et remise à zéro.
+- Historique, export JSON, export avec exercices seuls et effacement global.
+- Systèmes, signes Q/W, piston, rectangles et primitives, notations, formations, combustions, liaisons, changements d’état et dissolution.
+- Cu/Pb/Hg : phases juste avant, au seuil et juste après chaque transition ; conversion °C/K ; trois couleurs distinctes ; cohésion présente en solide/liquide et absente du schéma de gaz parfait.
+- Animation facultative, pause, arrêt lorsque l’onglet de cours est masqué et démarrage à l’arrêt avec préférence de réduction des mouvements.
+- Inspection visuelle à 390 et 1365 px ; absence de débordement horizontal global dans les scénarios contrôlés.
+- Syntaxe JavaScript, liens et ancres internes, identifiants uniques et versions des fichiers communs.
+- Les huit liens pédagogiques externes répondent lors du contrôle. Cela ne vérifie pas la lecture vidéo complète, ni la disponibilité future de ces services.
+
+Tests locaux dans Chromium. L’authentification réelle giscus n’a pas été testée ; sa configuration est conservée. Aucun résultat n’est envoyé à l’enseignant et aucun hébergement autre que le site statique GitHub Pages n’a été ajouté. Cette archive n’est pas déployée automatiquement.
+
+## Améliorations proposées, sans ajout de programme
+
+| Priorité | Proposition | Application concrète |
+| --- | --- | --- |
+| 1 | Faire prédire avant de manipuler | Avant le piston ou le changement d’état : choisir le signe de W ou la phase attendue, puis observer et expliquer. Utiliser les données déjà présentes. |
+| 1 | Construire réellement un cycle de Hess | Reprendre le propane du diaporama : inverser/multiplier les trois équations, afficher les espèces qui s’annulent, puis demander la somme des enthalpies. |
+| 1 | Construire le bilan calorimétrique terme par terme | Reprendre eau chaude/eau froide ou Zn/Cu²⁺ : associer chaque contribution à sa température initiale et à son signe avant le calcul. |
+| 2 | Mieux guider les erreurs de calcul | Distinguer oubli du signe, coefficient stœchiométrique, confusion J/kJ et confusion quantité totale/grandeur molaire dans les retours des exercices. |
+| 2 | Alléger la lecture de la partie 4 | Garder visibles définition, équation et exemple essentiel ; rendre dépliables les détails déjà présents. Les objectifs et le contenu scientifique resteraient identiques. |
+| 2 | Ajouter une courte synthèse à compléter | Pour chaque partie, trois relations ou conditions à retrouver sans regarder, avant le QCM. |
+| 3 | Essai avec quelques étudiants | Faire tester une partie par deux ou trois étudiants, notamment sur Firefox et téléphone ; relever où ils hésitent et ce qu’ils interprètent mal avant d’ajouter d’autres interactions. |
+
+Les activités de construction du cycle de Hess et du bilan calorimétrique ainsi que les retours ciblés sont maintenant implantés. Les autres pistes restent proposées pour la suite. La priorité pédagogique serait Hess puis le bilan calorimétrique, où la manipulation peut aider à construire le raisonnement plutôt qu’à afficher seulement un résultat.
+
+## Sources de la relecture
+
+- Support principal fourni : `XLG1CU040_Cours_26-27_ChapII_enseignant(1).pptx`, 43 diapositives ; repères particulièrement concernés : 15–21, 23–25, 30–31 et 42–43.
+- Fascicule `TD_XLG1CU040_2026-2027(1).pdf` et corrigé enseignant : correspondance détaillée conservée dans `COUVERTURE_TD.md` ; sources non modifiées et corrigé non diffusé.
+- [IUPAC — standard state](https://goldbook.iupac.org/terms/view/S05925) et [reference state](https://goldbook.iupac.org/terms/view/R05233) : distinction entre conventions standard et forme de référence de l’élément.
+- [OpenStax, Chemistry 2e, 10.1](https://openstax.org/books/chemistry-2e/pages/10-1-intermolecular-forces) : organisation et mobilité des particules, distinction intermoléculaire/intramoléculaire. Aucune illustration de cette source n’est reproduite.
+- [OpenStax, Chemistry 2e, 5.3](https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy) : équations thermochimiques et enthalpies.
+
+Les références externes ont servi de contrôle, sans introduire leur programme plus étendu dans le cours commun. Les dessins sont réalisés pour ce site ; leur caractère schématique et les approximations sont explicités.
+
+## Vérification de la construction des raisonnements
+
+Le cycle du propane utilise les trois équations et les enthalpies de la diapo 31. La combinaison −1, 3, 4 élimine 5 O₂(g), 3 CO₂(g) et 4 H₂O(l), puis donne 3 C(graphite) + 4 H₂(g) → C₃H₈(g). Une combinaison fausse n’est pas validée. L’enthalpie finale n’est pas calculée automatiquement par l’assemblage.
+
+Les bilans des deux exercices de calorimétrie distinguent les températures initiales 18/40 °C et 18/20 °C. La réaction Zn/Cu²⁺ porte une contribution négative, opposée aux trois chauffages. Le signe ne s’applique pas une deuxième fois devant un terme C(Tf−Ti).
+
+Contrôles : branches correctes, incomplètes et fausses, sauvegarde/restauration des préparations, présence dans le bilan exportable, remise à zéro, indices de signe/J-kJ/coefficients/température et affichage sur ordinateur et téléphone. Les 40 QCM et 18 exercices ont aussi été revérifiés.

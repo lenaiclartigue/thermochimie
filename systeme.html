@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Décrire un système · Thermochimie</title>
-<link rel="stylesheet" href="style.css?v=d29bfa8568e1">
+<link rel="stylesheet" href="style.css?v=3d3140cf6cb8">
 </head>
 <body>
 <header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main data-current-module="1"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties du cours"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
@@ -24,7 +24,7 @@
 <li><a href="#definitions-systeme">Définir le système étudié</a></li>
 <li><a href="#types-systemes">Système ouvert, fermé ou isolé</a></li>
 <li><a href="#parametres-systeme">Paramètres de description</a></li>
-<li><a href="#rappels-chapitre1">Rappels du chapitre 1 : quantités, gaz et avancement</a></li>
+<li><a href="#rappels-chapitre1">Rappels et méthodes utiles aux TD</a></li>
 </ul></nav><section class="course-section" data-source-slides="5–6"><h2 id="definitions-systeme">Définir le système étudié</h2>
 <div class="definition">
 <h3>Système thermodynamique</h3>
@@ -104,8 +104,8 @@
 <td>kg</td>
 </tr>
 </table></div>
-</section><section class="course-section" data-source-td="chapitre-2"><h2 id="rappels-chapitre1">Rappels du chapitre 1 : quantités, gaz et avancement</h2>
-<p>Ces relations du chapitre 1 servent aussi aux bilans de thermochimie. Avant le bilan énergétique, déterminez les quantités de matière et écrivez l’équation équilibrée.</p>
+</section><section class="course-section" data-source-td="chapitre-2"><h2 id="rappels-chapitre1">Rappels et méthodes utiles aux TD</h2>
+<p>Ces rappels du chapitre 1 et ces méthodes de calcul servent à préparer les bilans de thermochimie. Ils explicitent les étapes utilisées dans le fascicule de TD ; ce sont des compléments au diaporama. Avant le bilan énergétique, déterminez les quantités de matière et écrivez l’équation équilibrée.</p>
 <div class="table-wrap"><table>
 <thead><tr>
 <th>À déterminer</th>
@@ -134,10 +134,10 @@
 </tr>
 </tbody>
 </table></div>
-<details class="method-detail"><summary>Retrouver l’avancement et le réactif limitant</summary><p>Dans nᵢ = nᵢ,₀ + νᵢξ, νᵢ est négatif pour un réactif et positif pour un produit. Si la réaction est totale, comparez nᵢ,₀/|νᵢ| pour les réactifs : le plus petit rapport donne ξ<sub>max</sub>. Pour une réaction limitée par un équilibre, déterminez ξ à partir de l’information donnée sur l’état final.</p>
+<details class="method-detail"><summary>Retrouver l’avancement et le réactif limitant</summary><p class="muted"><strong>Rappel utile aux TD :</strong> le tableau d’avancement sert notamment à déterminer la composition du mélange de Sabatier (2.1, exercice 1) ; le réactif limitant intervient dans la neutralisation (2.4, exercice 2).</p><p>Dans nᵢ = nᵢ,₀ + νᵢξ, νᵢ est négatif pour un réactif et positif pour un produit. Si la réaction est totale, comparez nᵢ,₀/|νᵢ| pour les réactifs : le plus petit rapport donne ξ<sub>max</sub>. Pour une réaction limitée par un équilibre, déterminez ξ à partir de l’information donnée sur l’état final.</p>
 <p>La somme des lignes du tableau donne n<sub>tot</sub>(ξ). Ne confondez pas une mole de réactif et une mole d’avancement : leur rapport dépend du coefficient stœchiométrique.</p>
 <p>À l’équilibre d’une réaction entre gaz parfaits, K° = ∏ᵢ(pᵢ/p°)<sup>νᵢ</sup> : produits au numérateur, réactifs au dénominateur, avec leurs coefficients comme exposants. Les rapports pᵢ/p° sont sans unité.</p></details>
-<details class="method-detail"><summary>Volumes disponibles, gaz dissous et débit</summary><p>Dans un récipient contenant un liquide et un gaz, V<sub>gaz</sub> = V<sub>récipient</sub> − V<sub>liquide</sub>. C’est ce volume libre qui intervient dans pV = nRT.</p>
+<details class="method-detail"><summary>Volumes disponibles, gaz dissous et débit</summary><p class="muted"><strong>Méthodes utiles aux TD :</strong> volume libre et gaz dissous pour la fermentation (2.3, exercice 5), débit pour la lampe à carbure (2.3, exercice 8). Ces relations permettent de traduire les données de l’énoncé en quantités de matière ou en durée.</p><p>Dans un récipient contenant un liquide et un gaz, V<sub>gaz</sub> = V<sub>récipient</sub> − V<sub>liquide</sub>. C’est ce volume libre qui intervient dans pV = nRT.</p>
 <p>Si l’énoncé donne la concentration maximale de gaz dissous, n<sub>dissous,max</sub> = c<sub>max</sub>V<sub>liquide</sub>. Après saturation, la quantité restant dans la phase gazeuse est la quantité totale disponible moins la quantité dissoute.</p>
 <p>Pour un débit volumique constant D : durée = volume de gaz disponible / D. Le volume et le débit doivent se rapporter aux mêmes conditions de température et de pression.</p>
 <p>Pour un sel hydraté, la masse molaire inclut l’eau de cristallisation : M(sel·xH₂O) = M(sel) + xM(H₂O).</p></details></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Décrire un système · CC BY-NC-ND 4.0</p>
@@ -310,8 +310,8 @@
 <div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2>
 <p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
-<script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=6e363c55a6ac" defer></script>
-<script src="exercices.js?v=e57b80f52189" defer></script>
-<script src="interactions.js?v=793eea70e58b" defer></script>
+<script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=c48a66870f67" defer></script>
+<script src="exercices.js?v=61c67d2c7d98" defer></script>
+<script src="interactions.js?v=e46ba91aa311" defer></script>
 </body>
 </html>

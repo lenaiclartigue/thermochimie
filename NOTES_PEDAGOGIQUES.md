@@ -11,7 +11,7 @@ Le support principal est `XLG1CU040_Cours_26-27_ChapII_enseignant(1).pptx`, 43 d
 | Décrire un système | 5–8 | Systèmes, constituants, échanges, paramètres et unités |
 | Premier principe | 9–13 | U, fonction d’état, Q, W, signes, monobare, transformations |
 | Enthalpie | 15–17 et 21–22 | H, Qp, capacités, chauffage et changement d’état |
-| Enthalpie de réaction | 18–25, 28 et 30 | États standard, avancement, Ellingham, formation, combustion, changement d’état, dissociation |
+| Enthalpie de réaction | 18–25, 28, 30 et 42–43 | États standard, avancement, Ellingham, formation, combustion, changement d’état, dissociation, relation H/U |
 | Cycles de Hess | 27–31 | Loi de Hess, dissociation, ionisation, attachement électronique, HCl, propane |
 | Calorimétrie | 33–43 | Calorimètre, bilans, étalonnage, Zn/Cu²⁺ |
 
@@ -50,7 +50,7 @@ Les définitions suivent le support, avec ces corrections ou conditions explicit
 4. **Unités, diapo 16** : Q est une énergie en J ; C est une capacité en J·K⁻¹. Distinguer capacité totale, molaire et massique.
 5. **État standard de référence, diapos 23–24** : la convention ΔfH° = 0 concerne l’élément dans son état de référence, pas toute forme de corps simple.
 6. **Calorimètre, diapos 34–37** : l’isolement est thermique ; le modèle est adiabatique à pression constante.
-7. **Variation de H, diapos 42–43** : utiliser ΔH = ΔU + Δ(pV) pour une variation finie. La relation molaire H/U n’est plus enseignée dans cette version.
+7. **Variation de H, diapos 42–43** : utiliser ΔH = ΔU + Δ(pV) pour une variation finie. La relation molaire H/U est rétablie avec gaz parfaits, température commune et contribution pV des phases condensées négligeable.
 
 Ces adaptations n’ajoutent pas de chapitre ni de nouveau type de problème. Elles sont signalées ici pour que l’enseignant puisse les vérifier.
 
@@ -63,7 +63,7 @@ Les paragraphes ci-dessous sont rédigés pour le site : ils ne sont pas présen
 | 1 | Quantités, gaz parfaits, pressions partielles, avancement, K°, volume libre, gaz dissous, débit et masse molaire d’un sel hydraté | Rappels du chapitre 1 mobilisés en 2.1 ex.1 ; 2.3 ex.4, 5, 8 ; 2.4 ex.2 |
 | 2 | Définition du cycle, bilan des étapes, intégrale isotherme, condition pext=p, lecture p(T)/p(V) | 2.1 ex.2 ; condition mécanique explicitée plutôt que laissée implicite |
 | 3 | Chauffage en cinq étapes et bilan Q/W/ΔU de vaporisation | 2.2 ex.1 et 2.4 ex.1 |
-| 4 | Dissolution ; passage Q/ξ | 2.2 ex.4, 2.3 ex.5 et 7, 2.4 ex.2–4 |
+| 4 | Dissolution ; passage Q/ξ ; application de la relation H/U du diaporama | 2.2 ex.4, 2.3 ex.5 et 7, 2.4 ex.2–4 |
 | 5 | Phases identiques pour les simplifications, sublimation du graphite, valeurs moyennes de liaison | 2.3 ex.1, 3, 5 et 7 |
 | 6 | Fusion partielle, enthalpie molaire et application QV=ΔU | 2.4 ex.1–3 |
 
@@ -78,13 +78,40 @@ Les lois en γ d’une adiabatique réversible, Kirchhoff, le modèle monoatomiq
 - Diapo 20 : Δ, indice du type de transformation, H, ° et température sont expliqués dans une activité. ΔH (J) et ΔrH (J·mol⁻¹) restent distingués.
 - Diapos 18, 23–24 : l’activité sur Cu, Pb et Hg utilise les températures du support, sans les remplacer. Elle porte sur l’état standard **de référence** et distingue celui-ci des états standard possibles d’une phase donnée. Aux seuils, elle affiche les phases en coexistence.
 - Formation : définition du corps simple ajoutée ; quatre exemples, dont CH₄ et H₂O demandés, font apparaître les corps simples et les coefficients pour une mole de produit.
-- Combustion : la convention H₂O(g) sauf indication contraire suit la demande explicite de l’enseignant. La diapo 30 et l’exercice du propane précisent H₂O(l) : ces exceptions restent inchangées.
+- Combustion : convention corrigée à la demande de l’enseignant, H₂O(l) sauf indication contraire. Elle est cohérente avec les diapos 30–31, le texte du cours, le bouton initial, l’équation affichée et la fiche pratique.
 - Liaisons : la phase gazeuse permet de ne pas mêler l’énergie de liaison aux interactions intermoléculaires d’une phase condensée. Les trois valeurs affichées, H₂ 436, Cl₂ 243, HCl 432 kJ·mol⁻¹, proviennent de l’exercice du diaporama.
 - Dissolution : schéma de NaCl choisi comme exemple pédagogique demandé. Il distingue séparation du réseau et solvatation, puis indique que ces phénomènes sont couplés dans la dissolution réelle. L’eau est orientée avec O vers Na⁺ et H vers Cl⁻. Le glucose reste un exemple de dissolution moléculaire sans production nécessaire d’ions.
-- Retrait de la relation H/U de réaction, de la question QCM associée et du volet d’exercice correspondant. Les TD dépendants sont explicitement signalés dans `COUVERTURE_TD.md`.
+- La relation H/U, retirée dans la version précédente, est rétablie à la demande de l’enseignant dans le cours et la fiche. Un exemple reprend les données de l’hydrogénation du TD 2.2 ex.2 et développe la conversion en ΔrU° ; cette conversion est une explication rédigée pour le site, pas une question de cet énoncé. La conversion H/U ne modifie pas les données ni les réponses attendues des QCM et exercices interactifs.
 
 Ces activités sont des mises en forme pédagogiques rédigées pour le site, non des images directement tirées des diapositives. Elles n’ajoutent pas de nouvelles données thermochimiques aux sept exercices d’origine.
 
 ## Images et intégrales
 
 Les illustrations du verre, de la bouteille et du thermos sont rétablies en taille modérée. Les images du cours sont affichées directement et le dessin du piston est remplacé par un piston interactif. Une définition de l’intégrale et du calcul F(b)−F(a) précède les rectangles. Deux vidéos françaises de terminale d’Yvan Monka sont proposées : [calcul par une primitive](https://youtu.be/8ci1RrNH1L0) et [interprétation par une aire](https://youtu.be/jkxNKkmEXZA). Les liens figurent dans le support de l’auteur, consulté le 14 octobre 2026 : https://www.maths-et-tiques.fr/telech/20IntegTC1.pdf.
+
+## Clarification de la provenance des compléments
+
+Les trois développements signalés par l’enseignant sont conservés et identifiés dans le texte : avancement/limitant (Sabatier et neutralisation), volumes/gaz dissous/débit (fermentation et lampe à carbure), lecture des diagrammes (cycle du gaz). Leur ajout répondait à la demande de couvrir les prérequis des TD ; ils ne constituent pas des extraits mot à mot du diaporama.
+
+La diapositive 21 nomme explicitement les chaleurs latentes de fusion et de vaporisation. L’explication du palier et la distinction Q, enthalpie molaire, L massique sont développées pour le site ; la relation L = ΔchangementH/M prolonge la distinction entre grandeurs molaires et massiques et explicite la notation utilisée dans le bilan de fusion. L’exemple garde les 3 mol d’eau et 40,7 kJ·mol⁻¹ du cours. Aucune donnée numérique des exercices n’est modifiée.
+
+## Relecture et schémas des états physiques
+
+- Les températures de Cu, Pb et Hg restent celles de la diapositive 24. Les dessins sont des représentations pédagogiques, pas une simulation quantitative de l’équilibre des phases ou des structures cristallines.
+- Les trois organisations sont visibles simultanément ; l’état de référence à la température choisie est mis en évidence. Deux cartes sont signalées à un seuil de coexistence. Chaque carte comporte le même nombre de particules pour éviter de suggérer une disparition de matière ; elles ne décrivent pas des proportions de phase.
+- Une couleur et un symbole identifient chaque élément. Les pointillés montrent la cohésion entre voisins dans le solide et le liquide. Les interactions sont négligées dans le modèle du gaz parfait. Les disques représentent des atomes métalliques, pas des molécules ; le texte distingue intermoléculaire et intramoléculaire pour les corps moléculaires.
+- Le mouvement est déclenché volontairement, peut être arrêté et cesse quand l’activité est masquée. Les atomes du solide vibrent, ceux du liquide se réorganisent, ceux du gaz se déplacent dans tout le volume représenté. Les vitesses ne sont pas calculées à partir de T.
+- Conditions de Qp=ΔH, de Q=CΔT et de ΔH≈ξΔrH° précisées ; combustion rapportée à une mole ; coefficients positifs explicités dans la double somme des enthalpies de formation.
+- Dans l’exercice du système isolé, les choix ΔU=Q et ΔU=W étaient également vrais puisque les trois termes sont nuls. Ils sont remplacés par deux affirmations fausses sans ambiguïté ; la bonne réponse ΔU=0 est conservée.
+- Aide actualisée après suppression de la visionneuse ; effacement global corrigé pour retirer aussi le score et les commentaires QCM encore visibles sur la page.
+
+Ces clarifications sont rédigées pour le site. Leur but est de rendre explicites les conditions des relations déjà enseignées, sans ajouter un chapitre de mécanique statistique ou de théorie des liaisons.
+
+## Construction des raisonnements dans les exercices
+
+La livraison ajoute des manipulations aux exercices existants, sans nouveau problème ni nouvelles données :
+
+- Diapo 31 : les multiplicateurs du cycle du propane pilotent les trois équations affichées. Les espèces identiques de même phase sont éliminées en quantités égales des deux côtés ; le bilan restant est comparé à la formation d’une mole de propane. L’expression pondérée des trois enthalpies est indiquée, mais sa valeur finale doit être calculée par l’étudiant.
+- Diapos 38–39 et 40–41 : préparation des bilans d’étalonnage et Zn/Cu²⁺. L’étudiant associe chaque constituant à sa température initiale et au signe de sa contribution. Le signe qualitatif n’est pas multiplié une seconde fois dans l’expression : les termes de chauffage portent déjà Tf−Ti. Le résultat numérique demeure à calculer dans l’exercice.
+- Les retours reconnaissent certains cas de signe opposé, de facteur 1 000 lié aux unités et des erreurs précises (coefficients ½ ou 3, température initiale du zinc). Ils sont des indices, pas un diagnostic exhaustif du raisonnement.
+- Les choix préparatoires des bilans sont sauvegardés dans le même enregistrement que les réponses de l’exercice, restaurés et inclus dans l’export. Ils ne changent pas le nombre de réponses notées ; les 40 QCM et les 18 exercices restent en place.

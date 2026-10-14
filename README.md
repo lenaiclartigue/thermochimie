@@ -1,6 +1,6 @@
 # Thermochimie · Licence
 
-Version « activités interactives et enthalpies » du 14 octobre 2026 : mise en interaction du diaporama du chapitre 2. Conception du parcours : Lénaïc Lartigue.
+Version « construction de Hess et des bilans calorimétriques » du 14 octobre 2026 : mise en interaction du diaporama du chapitre 2. Conception du parcours : Lénaïc Lartigue.
 
 Site statique pour GitHub Pages. Les six parties suivent le cours commun : **Comprendre → QCM → Exercices → Discussion**. Le chapitre 3 n’est pas développé ici ; les prérequis du chapitre 1 sont rappelés dans la première partie.
 
@@ -17,7 +17,9 @@ Site statique pour GitHub Pages. Les six parties suivent le cours commun : **Com
 
 **40 questions de compréhension et 18 exercices**, soit trois par partie. Les sept exercices du diaporama conservent leur énoncé et leurs données. Les deux activités de restitution sont conservées et neuf entraînements courts sont ajoutés, avec une origine clairement indiquée.
 
-Le cours reprend les définitions et les notations du diaporama, avec les activités interactives demandées. La relation entre enthalpie et énergie interne de réaction a été retirée du cours, de la fiche, du QCM et de l’exercice qui l’utilisait. **Les questions de TD qui demandent cette relation ne sont donc plus couvertes** : elles sont signalées dans `COUVERTURE_TD.md` pour adapter la sélection des TD. Les autres compléments nécessaires aux TD sont conservés.
+Le cours reprend les définitions et les notations du diaporama, avec les activités interactives demandées. Les compléments « avancement », « volumes/gaz dissous/débit » et « lecture p(T)/p(V) » sont identifiés comme rappels ou méthodes utiles aux TD, avec les exercices concernés. La chaleur latente, nommée dans la diapositive 21, est expliquée dans la partie Enthalpie et la fiche pratique : palier, grandeurs molaires et massiques, unités et signes.
+
+La relation ΔrH° = ΔrU° + ΔνgRT (diapos 42–43) est rétablie dans la partie Enthalpie de réaction, avec ses conditions et un exemple de calcul, puis rappelée en calorimétrie et dans la fiche pratique. `COUVERTURE_TD.md` indique les prérequis disponibles pour les TD et les points des énoncés restant à harmoniser. Les 40 QCM et les 18 exercices sont conservés, avec leurs données numériques. Les choix de la question d’exercice sur le système isolé ont été clarifiés ; les clés de sauvegarde et les réponses correctes sont conservées. Le relevé complet de cette relecture et les améliorations proposées figurent dans `AUDIT_PEDAGOGIQUE.md`.
 
 L’accueil présente six encarts. Les deux façons de déterminer une enthalpie de réaction ouvrent vers Hess et la calorimétrie à la fin de `enthalpie-reaction.html`.
 
@@ -28,17 +30,19 @@ L’accueil présente six encarts. Les deux façons de déterminer une enthalpie
 - Piston mobile : compression ou détente depuis 2 L contre 1 bar, volume réglable, signe et valeur du travail. Animation désactivée si le navigateur demande une réduction des mouvements.
 - Intégrale : définition, primitive, calcul F(b)−F(a), rectangles conservés et deux vidéos de Yvan Monka (calcul / interprétation par l’aire).
 - Lecture de ΔrH°T : explication de chaque symbole au clic.
-- État standard de référence : température réglable pour Cu, Pb et Hg, avec les transitions du diaporama, températures en °C et K et coexistence aux seuils.
+- État standard de référence : trois représentations comparatives solide/liquide/gaz pour Cu, Pb et Hg. Couleurs propres aux éléments, cohésion visible en phases condensées, mouvement sur demande avec pause, état stable mis en évidence et deux phases aux seuils. Les températures sont celles du diaporama.
 - Formation de CH₄, H₂O, CO₂ et NH₃ à partir des corps simples de référence, pour une mole de produit.
 - Combustion du méthane ou du propane, avec choix explicite H₂O(g) ou H₂O(l).
 - Changements d’état, rupture/formation d’une liaison et dissolution d’un solide ionique avec solvatation orientée de l’eau.
-- Exercices à validation partielle, indices et **Correction** ouverte à la demande.
+- Cycle du propane : sens et multiplicateurs modifiables, équations transformées, élimination visible des espèces communes et expression de l’enthalpie à calculer.
+- Bilans d’étalonnage et de Zn/Cu²⁺ : choix des températures initiales et des signes, construction de la somme et vérification du raisonnement avant le calcul. Ces choix sont sauvegardés et inclus dans l’export de l’exercice.
+- Exercices à validation partielle, retours ciblés pour certaines erreurs de signe, d’unité, de coefficient ou de température, indices et **Correction** ouverte à la demande.
 
 Toutes les activités sont réalisées en HTML/SVG/JavaScript, sans service externe ni extension. Les images du diaporama sont affichées directement, sans fenêtre d’agrandissement. Les trois illustrations d’objets sont de taille modérée ; le piston basse résolution est remplacé par l’activité.
 
 ## Conventions à retenir
 
-Dans les exercices du parcours, l’eau de combustion est gazeuse sauf indication contraire. Les exercices originaux du méthane et du propane indiquent explicitement H₂O(l) : leurs données et phases sont conservées. La distinction entre état standard et état standard de référence est explicite. La dissociation de liaison concerne la phase gazeuse ; pour la dissolution, le modèle séparation d’ions / solvatation concerne un solide ionique, et ne doit pas être généralisé à la formation d’ions lors de toute dissolution.
+Dans les exercices du parcours, l’eau de combustion est liquide, H₂O(l), sauf indication contraire. L’activité démarre avec H₂O(l) ; H₂O(g) reste un choix explicite pour comparer les équations. Les données et phases des exercices originaux du méthane et du propane sont conservées. La distinction entre état standard et état standard de référence est explicite. La dissociation de liaison concerne la phase gazeuse ; pour la dissolution, le modèle séparation d’ions / solvatation concerne un solide ionique, et ne doit pas être généralisé à la formation d’ions lors de toute dissolution.
 
 ## Fichiers communs
 

@@ -22,3 +22,7 @@ Les fichiers PNG fournis par l’enseignant sont conservés sans retouche des pi
 Les trois illustrations d’objets sont reprises à l’identique de l’archive illustrée précédente : aucun nouveau contenu n’a été généré. Leurs tailles sont contrôlées par CSS (110 px de hauteur sur ordinateur, 90 px sur téléphone). Le thermos reste un modèle idéal d’isolement.
 
 Les schémas d’énergie, piston, états physiques, liaisons et dissolution sont dessinés en SVG dans le site. Les réactions et formules sont du texte HTML. Aucun texte scientifique ni nombre n’est confié à une image générée.
+
+## États de référence : révision des schémas
+
+L’activité Cu/Pb/Hg est dessinée en SVG dans `interactions.js` : trois cartes solide/liquide/gaz, même nombre de particules, couleurs orangée/violette/bleue et symbole de l’élément. Les pointillés schématisent la cohésion ; ils sont absents du gaz parfait. L’animation est facultative, avec pause. Aucun fichier d’image supplémentaire ni service externe n’est requis. Les coordonnées ne reproduisent pas une structure cristalline réelle et l’échelle des distances n’est pas quantitative.

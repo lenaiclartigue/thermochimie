@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Enthalpie de réaction · Thermochimie</title>
-<link rel="stylesheet" href="style.css?v=d29bfa8568e1">
+<link rel="stylesheet" href="style.css?v=3d3140cf6cb8">
 </head>
 <body>
 <header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main data-current-module="4"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties du cours"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
@@ -25,6 +25,7 @@
 <li><a href="#etats-standard">États standard d’un constituant</a></li>
 <li><a href="#enthalpies-particulieres">Les enthalpies particulières du cours</a></li>
 <li><a href="#tables-formation">Utiliser les enthalpies de formation</a></li>
+<li><a href="#energie-enthalpie-reaction">Relier ΔrH° et ΔrU°</a></li>
 <li><a href="#deux-methodes">Deux façons de déterminer une enthalpie de réaction</a></li>
 </ul></nav><section class="course-section" data-source-slides="19–20"><h2 id="definition-reaction">Définir l’enthalpie de réaction</h2>
 <div class="definition">
@@ -37,8 +38,8 @@
 <h3>Enthalpie standard de réaction</h3>
 <p>L’enthalpie standard de réaction ΔrH° se rapporte à une réaction où les réactifs dans leur état standard se transforment en produits dans leur état standard.</p>
 </div>
-<div class="formula">ΔH = Q<sub>p</sub> = ξ Δ<sub>r</sub>H°</div>
-<p>Dans le modèle utilisé dans le cours, ξ est l’avancement de la transformation. ΔH est en J ; Δ<sub>r</sub>H° est en J·mol⁻¹. Si Δ<sub>r</sub>H° &lt; 0, la réaction est exothermique ; si Δ<sub>r</sub>H° &gt; 0, elle est endothermique.</p>
+<div class="formula">ΔH = Q<sub>p</sub> ≈ ξ Δ<sub>r</sub>H°</div>
+<p>Cette écriture s’applique à la contribution de réaction à température et pression constantes, avec seul travail de pression, avancement initial nul et Δ<sub>r</sub>H assimilée à une valeur standard constante. ξ est l’avancement de la transformation. ΔH est en J ; Δ<sub>r</sub>H° est en J·mol⁻¹. Si Δ<sub>r</sub>H° &lt; 0, la réaction est exothermique ; si Δ<sub>r</sub>H° &gt; 0, elle est endothermique.</p>
 <p><b>Approximation d’Ellingham :</b> Δ<sub>r</sub>H° est considérée constante dans l’intervalle de température étudié.</p>
 <p>Pour une transformation d’avancement initial nul, Q<sub>réaction</sub> ≈ ξΔ<sub>r</sub>H° : la chaleur totale dépend de la quantité transformée. Pour retrouver la grandeur molaire, divisez par ξ, déterminé par le tableau d’avancement. Pour une réaction totale, utilisez le réactif limitant.</p>
 <div class="course-interactive notation-widget" id="notation-enthalpie">
@@ -99,8 +100,24 @@
 <button type="button" data-standard-point="ambient">25 °C</button><button type="button" data-standard-point="fusion">À la fusion</button><button type="button" data-standard-point="ebullition">À l’ébullition</button>
 </div>
 <p id="standard-thresholds"></p>
-<svg viewbox="0 0 580 180" role="img" aria-labelledby="standard-title standard-desc"><title id="standard-title">État physique du corps simple de référence</title>
-<desc id="standard-desc">Cuivre solide à 25 degrés Celsius.</desc><rect x="15" y="15" width="180" height="150" rx="10" fill="#eef3f5"></rect><g id="standard-particles"></g><text id="standard-species" x="380" y="75" text-anchor="middle" font-size="30">Cu(s)</text><text id="standard-kelvin" x="380" y="115" text-anchor="middle">298,15 K · p° = 1 bar</text></svg><p id="standard-result" role="status"></p>
+<div class="standard-current"><strong id="standard-species">Cu(s)</strong><span id="standard-kelvin">298,15 K · p° = 1 bar</span></div>
+<p id="standard-result" role="status"></p>
+<p class="state-comparison-intro">Les trois dessins servent à <strong>comparer les organisations possibles</strong>. Seul l’état mis en évidence correspond à la température choisie ; à un seuil de transition, deux phases peuvent coexister.</p>
+<div class="state-comparison"><section class="state-card" data-state-card="s" aria-labelledby="state-title-s">
+<h4 id="state-title-s">Solide</h4><p class="state-badge" id="state-badge-s"></p>
+<svg viewBox="0 0 320 260" role="img" aria-labelledby="state-svg-title-s state-svg-desc-s"><title id="state-svg-title-s">Solide : organisation des atomes</title><desc id="state-svg-desc-s">Atomes proches et ordonnés. Ils vibrent autour de positions fixes ; la cohésion maintient l’organisation.</desc><rect x="12" y="12" width="296" height="236" rx="12" fill="#fff" stroke="#c4d0d5"/><g id="standard-links-s" class="cohesion-links"></g><g id="standard-atoms-s"></g></svg>
+<p>Atomes proches et ordonnés. Ils vibrent autour de positions fixes ; la cohésion maintient l’organisation.</p></section><section class="state-card" data-state-card="l" aria-labelledby="state-title-l">
+<h4 id="state-title-l">Liquide</h4><p class="state-badge" id="state-badge-l"></p>
+<svg viewBox="0 0 320 260" role="img" aria-labelledby="state-svg-title-l state-svg-desc-l"><title id="state-svg-title-l">Liquide : organisation des atomes</title><desc id="state-svg-desc-l">Atomes proches et désordonnés. Ils se déplacent les uns par rapport aux autres ; la cohésion subsiste.</desc><rect x="12" y="12" width="296" height="236" rx="12" fill="#fff" stroke="#c4d0d5"/><g id="standard-links-l" class="cohesion-links"></g><g id="standard-atoms-l"></g></svg>
+<p>Atomes proches et désordonnés. Ils se déplacent les uns par rapport aux autres ; la cohésion subsiste.</p></section><section class="state-card" data-state-card="g" aria-labelledby="state-title-g">
+<h4 id="state-title-g">Gaz</h4><p class="state-badge" id="state-badge-g"></p>
+<svg viewBox="0 0 320 260" role="img" aria-labelledby="state-svg-title-g state-svg-desc-g"><title id="state-svg-title-g">Gaz : organisation des atomes</title><desc id="state-svg-desc-g">Atomes très espacés et mobiles. Les interactions entre atomes sont négligées dans le modèle du gaz parfait.</desc><rect x="12" y="12" width="296" height="236" rx="12" fill="#fff" stroke="#c4d0d5"/><g id="standard-links-g" class="cohesion-links"></g><g id="standard-atoms-g"></g></svg>
+<p>Atomes très espacés et mobiles. Les interactions entre atomes sont négligées dans le modèle du gaz parfait.</p></section></div>
+<div class="state-controls"><button type="button" class="button secondary" id="standard-motion" aria-pressed="false">Animer les particules</button><span class="muted" id="standard-motion-note">Schémas à l’arrêt.</span></div>
+<div class="state-legend"><p><span class="cohesion-key" aria-hidden="true"></span><strong>Pointillés :</strong> cohésion entre atomes voisins, représentée de façon schématique. Dans le liquide, les voisins peuvent changer ; dans le gaz parfait, ces interactions sont négligées.</p>
+<p><strong>Une couleur par élément :</strong> cuivre orangé, plomb violet, mercure bleu. Le symbole inscrit dans chaque particule identifie aussi l’élément. La couleur reste la même pendant un changement d’état.</p></div>
+<p class="muted">Cu, Pb et Hg sont des éléments métalliques : chaque disque représente un atome, pas une molécule. Les pointillés ne représentent pas des liaisons covalentes entre paires d’atomes. Tailles, distances et mouvements sont illustratifs ; dans un gaz, les distances réelles sont beaucoup plus grandes relativement à la taille des atomes.</p>
+<p><strong>Dans un corps moléculaire</strong>, les interactions <em>intermoléculaires</em> agissent entre les molécules. Les liaisons <em>intramoléculaires</em>, à l’intérieur de chaque molécule, restent présentes lors d’un changement d’état : vaporiser H₂O ne rompt pas ses liaisons O–H.</p>
 <p class="muted">Températures de transition reprises du diaporama. Aux températures de changement d’état, les deux phases peuvent coexister. Ces repères sont utilisés tels quels pour cette illustration.</p>
 <p><strong>À distinguer :</strong> un état standard est défini pour un constituant et une phase donnés à la température choisie. L’état standard <em>de référence d’un élément</em> retient sa forme la plus stable. Le symbole ° ne signifie pas « à 25 °C ».</p>
 </div></section><section class="course-section" data-source-slides="21, 23–24, 28, 30"><h2 id="enthalpies-particulieres">Les enthalpies particulières du cours</h2>
@@ -158,14 +175,14 @@
 <p>États de référence indiqués dans le cours : H₂(g), Cl₂(g), O₂(g), N₂(g) et carbone graphite. L’état de référence d’un élément peut dépendre de la température.</p>
 <div class="definition">
 <h3>Enthalpie standard de combustion</h3>
-<p>Variation d’enthalpie associée à la combustion d’une substance à pression constante, dans les états standard indiqués. La combustion complète étudiée dans le cours est exothermique et totale.</p>
-<p>Dans les exercices de ce parcours, <strong>l’eau formée est prise gazeuse, sauf indication contraire</strong>. Il faut toujours écrire sa phase et utiliser les données qui lui correspondent. L’exercice du méthane du diaporama précise H₂O(l) : il constitue une indication contraire.</p>
+<p>Variation d’enthalpie associée à la combustion complète d’une mole de substance dans le dioxygène, à pression constante, dans les états standard indiqués. La combustion complète étudiée dans le cours est exothermique et totale.</p>
+<p>Dans les exercices de ce parcours, <strong>l’eau formée par combustion est prise liquide, H₂O(l), sauf indication contraire</strong>. Écrivez toujours sa phase et utilisez les données correspondantes. Cette convention pour les équations de combustion ne signifie pas que l’eau est liquide à toute température.</p>
 </div>
 <div class="course-interactive" id="combustion-interactive">
 <h3>Écrire une combustion complète</h3>
 <label for="combustion-choice">Combustible</label><select id="combustion-choice"><option value="CH4">Méthane CH₄(g)</option>
 <option value="C3H8">Propane C₃H₈(g)</option></select><div class="choice-buttons" role="group" aria-label="État de l’eau produite">
-<button type="button" data-combustion-water="g" aria-pressed="true">H₂O(g) · par défaut</button><button type="button" data-combustion-water="l" aria-pressed="false">H₂O(l) · si précisé</button>
+<button type="button" data-combustion-water="l" aria-pressed="true">H₂O(l) · par défaut</button><button type="button" data-combustion-water="g" aria-pressed="false">H₂O(g) · si précisé</button>
 </div>
 <div id="combustion-equation" class="formula" role="status"></div>
 <p id="combustion-note"></p>
@@ -214,7 +231,21 @@
 <p class="muted">Le découpage en séparation puis solvatation est un chemin de compréhension. Dans la dissolution réelle, les deux phénomènes sont couplés. Le dernier dessin est un zoom sur un ion de chaque type ; les ions restent des ions.</p>
 </div></section><section class="course-section" data-source-slides="25"><h2 id="tables-formation">Utiliser les enthalpies de formation</h2>
 <div class="formula">Δ<sub>r</sub>H° = ∑ νᵢ Δ<sub>f</sub>H°(produits) − ∑ νᵢ Δ<sub>f</sub>H°(réactifs)</div>
-<p>On multiplie chaque donnée par le coefficient de l’espèce dans l’équation. On calcule ensuite la somme pour les produits moins la somme pour les réactifs.</p>
+<p>Dans ces deux sommes, les coefficients de l’équation équilibrée sont pris positifs. On multiplie chaque donnée par le coefficient de l’espèce, puis on calcule la somme des produits moins celle des réactifs. Ce mode d’écriture inclut déjà le signe « moins » des réactifs.</p>
+</section><section class="course-section" data-source-slides="42–43"><h2 id="energie-enthalpie-reaction">Relier enthalpie et énergie interne de réaction</h2>
+<p>La définition H = U + pV donne, entre deux états, ΔH = ΔU + Δ(pV). À la même température T, pour des gaz parfaits et en négligeant la contribution pV des phases condensées, pV = n<sub>g</sub>RT. La relation entre les grandeurs molaires de réaction s’écrit alors :</p>
+<div class="formula">Δ<sub>r</sub>H° = Δ<sub>r</sub>U° + Δν<sub>g</sub> RT<br>Δ<sub>r</sub>U° = Δ<sub>r</sub>H° − Δν<sub>g</sub> RT</div>
+<p>Les deux grandeurs se rapportent à <strong>la même équation équilibrée et à la même température</strong>. Le symbole ° indique les états standard. Le terme Δν<sub>g</sub> compte uniquement les espèces gazeuses :</p>
+<div class="formula">Δν<sub>g</sub> = ∑ coefficients des produits gazeux<br>− ∑ coefficients des réactifs gazeux</div>
+<p>Les coefficients sont pris positifs dans chacune des deux sommes. Les solides, les liquides et les espèces aqueuses n’y figurent pas. Δν<sub>g</sub> peut être positif, négatif ou nul ; s’il est nul, Δ<sub>r</sub>H° = Δ<sub>r</sub>U° dans ce modèle.</p>
+<p>Utilisez T en kelvins. Avec R = 8,314 J·mol⁻¹·K⁻¹, le terme Δν<sub>g</sub>RT est en J·mol⁻¹ : divisez-le par 1 000 avant de le combiner à une enthalpie exprimée en kJ·mol⁻¹.</p>
+<details class="method-detail"><summary>Exemple : passer de ΔrH° à ΔrU° pour l’hydrogénation</summary>
+<p>On reprend l’équation et les données du TD 2.2, exercice 2, à 298 K :</p>
+<div class="formula">C₂H₄(g) + H₂(g) → C₂H₆(g)<br>Δ<sub>r</sub>H° = −136,95 kJ·mol⁻¹</div>
+<ol><li>Compter les coefficients gazeux : Δν<sub>g</sub> = 1 − (1 + 1) = −1.</li>
+<li>Calculer le terme correctif : Δν<sub>g</sub>RT = −1 × 8,314 × 298 = −2 477,6 J·mol⁻¹, soit −2,48 kJ·mol⁻¹.</li>
+<li>Isoler Δ<sub>r</sub>U° : −136,95 − (−2,48) = <strong>−134,47 kJ·mol⁻¹</strong>.</li></ol>
+<p>Il faut soustraire le terme Δν<sub>g</sub>RT avec son signe : ici, cela revient à ajouter 2,48 kJ·mol⁻¹.</p></details>
 </section><section class="course-section" data-source-slides="25–41 ; transition demandée"><h2 id="deux-methodes">Deux façons de déterminer une enthalpie de réaction</h2>
 <div class="method-grid">
 <div>
@@ -314,7 +345,7 @@
 <label for="benzene-reponse-1">1. Somme des enthalpies de formation des réactifs pondérées par les coefficients <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="benzene-reponse-1" name="reponse-1" data-expected="680.1" data-hint="N’oubliez pas le coefficient 3 devant C₂H₂." aria-describedby="benzene-reponse-1-feedback" data-tolerance="0.1" placeholder="Votre réponse"><p id="benzene-reponse-1-feedback" class="field-feedback"></p>
 </div>
 <div class="exercise-field">
-<label for="benzene-reponse-2">2. Enthalpie standard ΔrH° <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="benzene-reponse-2" name="reponse-2" data-expected="-597.2" data-hint="Produits moins réactifs." aria-describedby="benzene-reponse-2-feedback" data-tolerance="0.2" placeholder="Votre réponse"><p id="benzene-reponse-2-feedback" class="field-feedback"></p>
+<label for="benzene-reponse-2">2. Enthalpie standard ΔrH° <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="benzene-reponse-2" name="reponse-2" data-expected="-597.2" data-hint="Produits moins réactifs." aria-describedby="benzene-reponse-2-feedback" data-tolerance="0.2" placeholder="Votre réponse" data-mistakes="[{&quot;value&quot;: -143.8, &quot;message&quot;: &quot;Vérifiez le coefficient 3 devant C₂H₂ dans la somme des réactifs.&quot;}]"><p id="benzene-reponse-2-feedback" class="field-feedback"></p>
 </div>
 </div>
 <div class="exercise-actions">
@@ -388,8 +419,8 @@
 <div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2>
 <p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
 <button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
-<script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=6e363c55a6ac" defer></script>
-<script src="exercices.js?v=e57b80f52189" defer></script>
-<script src="interactions.js?v=793eea70e58b" defer></script>
+<script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=c48a66870f67" defer></script>
+<script src="exercices.js?v=61c67d2c7d98" defer></script>
+<script src="interactions.js?v=e46ba91aa311" defer></script>
 </body>
 </html>
