@@ -39,3 +39,17 @@ Les liens ont été intégrés au site. L’activation dans le compte GitHub n�
 ## Introduction pédagogique
 
 Le bloc d’accueil est centré sur l’enthalpie, avec ΔH = Qp et ses conditions d’application. Le premier principe et l’énergie interne restent expliqués dans les modules correspondants.
+
+## Forum intégré giscus
+
+Une cinquième section Discussion est ajoutée à chaque module. Le chargement du service externe commence après un clic sur Afficher les échanges. Chaque module possède un fil stable, identifié par « Thermochimie · Module XX ». Les messages sont stockés dans GitHub Discussions et sont publics.
+
+Pour activer : autoriser https://github.com/apps/giscus sur le dépôt du cours, puis ouvrir https://giscus.app/fr . Saisir lenaiclartigue/thermochimie, sélectionner une catégorie de commentaires, et récupérer les valeurs data-repo-id, data-category et data-category-id dans le script généré. Les reporter dans giscus-config.js. Ces identifiants sont publics ; aucun jeton secret n’est à fournir. La catégorie de type Announcements est recommandée par giscus. Tant que les identifiants manquent, aucun script externe n’est chargé et un lien GitHub reste proposé.
+
+Cette autorisation sur le compte GitHub n’a pas été réalisée par l’assistant. La connexion réelle à giscus reste à tester après configuration.
+
+## Enregistrement des quiz
+
+Les choix de la dernière tentative sont conservés par module. Chaque correction enregistre date, réponses et score dans l’historique local, limité à 100 tentatives. resultats.html permet de voir ce bilan et de télécharger un export JSON pouvant être transmis par mail. Les meilleurs scores alimentent la progression. Aucun nom n’est exigé pour s’entraîner ; le nom facultatif saisi lors de l’export figure uniquement dans le fichier téléchargé.
+
+Il n’y a pas de stockage central ni de tableau de résultats de classe. Le forum public ne doit pas être utilisé pour collecter les notes nominatives. Une collecte automatique serait une fonctionnalité distincte nécessitant un stockage supplémentaire.
