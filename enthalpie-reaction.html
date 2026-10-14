@@ -25,6 +25,7 @@
 <li><a href="#etats-standard">États standard d’un constituant</a></li>
 <li><a href="#enthalpies-particulieres">Les enthalpies particulières du cours</a></li>
 <li><a href="#tables-formation">Utiliser les enthalpies de formation</a></li>
+<li><a href="#energie-enthalpie-reaction">Relier enthalpie et énergie interne de réaction</a></li>
 <li><a href="#deux-methodes">Deux façons de déterminer une enthalpie de réaction</a></li>
 </ul></nav><section class="course-section" data-source-slides="19–20"><h2 id="definition-reaction">Définir l’enthalpie de réaction</h2>
 <div class="definition">
@@ -39,7 +40,8 @@
 </div>
 <div class="formula">ΔH = Q<sub>p</sub> = ξ Δ<sub>r</sub>H°</div>
 <p>Dans le modèle utilisé dans le cours, ξ est l’avancement de la transformation. ΔH est en J ; Δ<sub>r</sub>H° est en J·mol⁻¹. Si Δ<sub>r</sub>H° &lt; 0, la réaction est exothermique ; si Δ<sub>r</sub>H° &gt; 0, elle est endothermique.</p>
-<p><b>Approximation d’Ellingham :</b> Δ<sub>r</sub>H° est considérée constante dans l’intervalle de température étudié.</p></section><section class="course-section" data-source-slides="18"><h2 id="etats-standard">États standard d’un constituant</h2>
+<p><b>Approximation d’Ellingham :</b> Δ<sub>r</sub>H° est considérée constante dans l’intervalle de température étudié.</p>
+<p>Pour une transformation d’avancement initial nul, Q<sub>réaction</sub> ≈ ξΔ<sub>r</sub>H° : la chaleur totale dépend de la quantité transformée. Pour retrouver la grandeur molaire, divisez par ξ, déterminé par le tableau d’avancement. Pour une réaction totale, utilisez le réactif limitant.</p></section><section class="course-section" data-source-slides="18"><h2 id="etats-standard">États standard d’un constituant</h2>
 <p>La pression standard vaut p° = 1 bar ; la concentration standard vaut C° = 1 mol·L⁻¹. Il existe un état standard pour chaque température considérée.</p>
 <div class="definition">
 <h3>Constituant gazeux</h3>
@@ -73,7 +75,6 @@
 <h3>Enthalpie standard de combustion</h3>
 <p>Variation d’enthalpie associée à la combustion d’une substance à pression constante, dans les états standard indiqués. La combustion complète étudiée dans le cours est exothermique et totale.</p>
 </div>
-<p class="course-exercise-link"><a href="#exercice-combustion-methane">Écrire la réaction de combustion du méthane</a></p>
 <div class="definition">
 <h3>Enthalpie de dissociation de liaison</h3>
 <p>Variation d’enthalpie de la réaction A–B(g) → A(g) + B(g). La dissociation de la liaison considérée demande de l’énergie : ΔdissH° &gt; 0.</p>
@@ -81,10 +82,18 @@
 <p>Les liaisons sont rompues dans les espèces gazeuses. L’opération inverse, la formation de la liaison, change le signe de l’enthalpie.</p>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
 <p>Les définitions et les équations thermochimiques sont également présentées dans la section « Enthalpy » de <a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax, Chemistry 2e</a>.</p>
-<p class="resource-meta">Lecture facultative · anglais · nouvel onglet</p></aside></section><section class="course-section" data-source-slides="25"><h2 id="tables-formation">Utiliser les enthalpies de formation</h2>
+<p class="resource-meta">Lecture facultative · anglais · nouvel onglet</p></aside><div class="definition" id="enthalpie-dissolution">
+<h3>Enthalpie de dissolution</h3>
+<p>Dans les exercices du fascicule, elle décrit le passage d’une substance à l’état dissous, par exemple A(s) → A(aq). Elle est rapportée à une mole de substance dissoute, dans les conditions indiquées.</p>
+<p>Ne pas confondre <strong>dissolution</strong> dans un solvant et <strong>dissociation d’une liaison</strong> en phase gazeuse. Dans un cycle, les états (s), (l), (g) et (aq) font partie de l’équation.</p>
+</div></section><section class="course-section" data-source-slides="25"><h2 id="tables-formation">Utiliser les enthalpies de formation</h2>
 <div class="formula">Δ<sub>r</sub>H° = ∑ νᵢ Δ<sub>f</sub>H°(produits) − ∑ νᵢ Δ<sub>f</sub>H°(réactifs)</div>
 <p>On multiplie chaque donnée par le coefficient de l’espèce dans l’équation. On calcule ensuite la somme pour les produits moins la somme pour les réactifs.</p>
-<p class="course-exercise-link"><a href="#exercice-benzene">Calculer l’enthalpie de la réaction 3 C₂H₂(g) → C₆H₆(g)</a></p></section><section class="course-section" data-source-slides="25–41 ; transition demandée"><h2 id="deux-methodes">Deux façons de déterminer une enthalpie de réaction</h2>
+</section><section class="course-section" data-source-td="chapitre-2"><h2 id="energie-enthalpie-reaction">Relier enthalpie et énergie interne de réaction</h2>
+<p>À une même température, H = U + pV conduit, pour les gaz parfaits et en négligeant la contribution pV des phases condensées, à :</p>
+<div class="formula">Δ<sub>r</sub>H° = Δ<sub>r</sub>U° + Δν<sub>g</sub>RT<br>Δν<sub>g</sub> = ∑ coefficients des produits gazeux − ∑ coefficients des réactifs gazeux</div>
+<p>Comptez seulement les espèces marquées (g), avec les coefficients de l’équation telle qu’elle est écrite. Les solides, liquides et espèces dissoutes ne sont pas comptés dans Δν<sub>g</sub>. Utilisez T en kelvins. Avec R = 8,314 J·mol⁻¹·K⁻¹, le terme Δν<sub>g</sub>RT est en J·mol⁻¹.</p>
+<p>Pour chercher l’énergie interne de réaction, isolez Δ<sub>r</sub>U° = Δ<sub>r</sub>H° − Δν<sub>g</sub>RT. Inversement, si Δ<sub>r</sub>H° − Δ<sub>r</sub>U° est donné, sa division par RT permet de retrouver Δν<sub>g</sub> et de vérifier les phases dans l’équation.</p></section><section class="course-section" data-source-slides="25–41 ; transition demandée"><h2 id="deux-methodes">Deux façons de déterminer une enthalpie de réaction</h2>
 <div class="method-grid">
 <div>
 <h3>À partir de données tabulées</h3>
@@ -171,6 +180,7 @@
 <nav class="exercise-index" aria-label="Choisir un exercice"><ul>
 <li><a href="#exercice-benzene">Former le benzène à partir de l’acétylène</a></li>
 <li><a href="#exercice-combustion-methane">Équilibrer la combustion du méthane</a></li>
+<li><a href="#exercice-hydrogenation-simple">Passer de ΔrH° à ΔrU°</a></li>
 </ul></nav><section class="exercise-card" id="exercice-benzene"><p class="eyebrow">EXERCICE 1</p>
 <h3>Former le benzène à partir de l’acétylène</h3>
 <p class="exercise-origin">Exercice du diaporama · diapositive 25</p>
@@ -213,7 +223,30 @@
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Équilibrez successivement C, H, puis O.</p></details><details class="exercise-solution"><summary>Correction</summary><p><b>CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l)</b>.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Équilibrez successivement C, H, puis O.</p></details><details class="exercise-solution"><summary>Correction</summary><p><b>CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l)</b>.</p></details></section><section class="exercise-card" id="exercice-hydrogenation-simple"><p class="eyebrow">EXERCICE 3</p>
+<h3>Passer de ΔrH° à ΔrU°</h3>
+<p class="exercise-origin">Entraînement à partir du TD 2.2, exercice 2</p>
+<p>C₂H₄(g) + H₂(g) → C₂H₆(g), à 298 K.</p>
+<p>En kJ·mol⁻¹ : Δ<sub>f</sub>H°(C₂H₄,g) = 52,28 ; Δ<sub>f</sub>H°(C₂H₆,g) = −84,67 ; Δ<sub>f</sub>H°(H₂,g) = 0. R = 8,314 J·mol⁻¹·K⁻¹. Les gaz sont parfaits.</p>
+<form class="exercise-form" data-exercise="hydrogenation-simple" novalidate>
+<div class="exercise-fields">
+<div class="exercise-field">
+<label for="hydrogenation-simple-reponse-1">1. Enthalpie de réaction ΔrH° <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hydrogenation-simple-reponse-1" name="reponse-1" data-expected="-136.95" data-hint="Produits moins réactifs." aria-describedby="hydrogenation-simple-reponse-1-feedback" data-tolerance="0.02" placeholder="Votre réponse"><p id="hydrogenation-simple-reponse-1-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="hydrogenation-simple-reponse-2">2. Variation des coefficients gazeux Δνg</label><input type="text" inputmode="decimal" autocomplete="off" id="hydrogenation-simple-reponse-2" name="reponse-2" data-expected="-1" data-hint="1 − (1 + 1)." aria-describedby="hydrogenation-simple-reponse-2-feedback" data-tolerance="0.001" placeholder="Votre réponse"><p id="hydrogenation-simple-reponse-2-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="hydrogenation-simple-reponse-3">3. Énergie interne de réaction ΔrU° <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hydrogenation-simple-reponse-3" name="reponse-3" data-expected="-134.472428" data-hint="ΔrU° = ΔrH° − Δνg RT ; divisez RT par 1000 pour passer en kJ·mol⁻¹." aria-describedby="hydrogenation-simple-reponse-3-feedback" data-tolerance="0.05" placeholder="Votre réponse"><p id="hydrogenation-simple-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Écrivez séparément la somme des enthalpies de formation et le compte des coefficients gazeux.</p></details><details class="exercise-solution"><summary>Correction</summary><p>ΔrH° = −84,67 − 52,28 = −136,95 kJ·mol⁻¹ ; Δνg = −1.</p>
+<p>ΔrU° = −136,95 − (−1 × 8,314 × 298 / 1000) ≈ −134,47 kJ·mol⁻¹.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Enthalpie de réaction</h3>

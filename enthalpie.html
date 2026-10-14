@@ -25,6 +25,8 @@
 <li><a href="#capacite-calorifique">Capacité calorifique</a></li>
 <li><a href="#chauffage">Variation d’enthalpie avec la température</a></li>
 <li><a href="#changement-etat">Chauffage et changement d’état</a></li>
+<li><a href="#etapes-chauffage">Décomposer un chauffage en plusieurs étapes</a></li>
+<li><a href="#bilan-vaporisation">Relier chaleur, travail et énergie interne lors d’une vaporisation</a></li>
 </ul></nav><section class="course-section" data-source-slides="15"><h2 id="fonction-enthalpie">Fonction enthalpie</h2>
 <div class="definition">
 <h3>Enthalpie H</h3>
@@ -81,7 +83,20 @@
 <p>Pour chauffer puis vaporiser l’eau, on additionne deux contributions : le chauffage de l’eau liquide puis sa vaporisation.</p>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
 <p>La partie « Chaleur latente » du cours de changements de phase est présentée par <a href="https://femto-physique.fr/thermodynamique/changements-de-phase.php" target="_blank" rel="noopener noreferrer">Femto-physique</a>.</p>
-<p class="resource-meta">Lecture facultative · français · nouvel onglet</p></aside><figure class="course-figure figure-medium" id="figure-changements-etat"><button class="figure-open" type="button" data-image-full="assets/images/changements-etat.png" data-image-title="Chauffage et changements d’état" aria-label="Agrandir : Chauffage et changements d’état" aria-describedby="figure-changements-etat-caption"><img src="assets/images/changements-etat.png" width="1077" height="1071" loading="lazy" decoding="async" alt="Température en kelvins en fonction du temps : chauffage du solide, palier solide et liquide, chauffage du liquide, palier liquide et vapeur, chauffage de la vapeur."><span class="figure-expand" aria-hidden="true">Agrandir le schéma ↗</span></button><figcaption id="figure-changements-etat-caption">S : solide ; L : liquide ; V : vapeur. Les paliers correspondent à la coexistence S + L puis L + V.</figcaption></figure><p class="course-exercise-link"><a href="#exercice-vaporisation">Résoudre l’exercice du cours : vaporiser 3 moles d’eau</a></p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Enthalpie · CC BY-NC-ND 4.0</p>
+<p class="resource-meta">Lecture facultative · français · nouvel onglet</p></aside><figure class="course-figure figure-medium" id="figure-changements-etat"><button class="figure-open" type="button" data-image-full="assets/images/changements-etat.png" data-image-title="Chauffage et changements d’état" aria-label="Agrandir : Chauffage et changements d’état" aria-describedby="figure-changements-etat-caption"><img src="assets/images/changements-etat.png" width="1077" height="1071" loading="lazy" decoding="async" alt="Température en kelvins en fonction du temps : chauffage du solide, palier solide et liquide, chauffage du liquide, palier liquide et vapeur, chauffage de la vapeur."><span class="figure-expand" aria-hidden="true">Agrandir le schéma ↗</span></button><figcaption id="figure-changements-etat-caption">S : solide ; L : liquide ; V : vapeur. Les paliers correspondent à la coexistence S + L puis L + V.</figcaption></figure></section><section class="course-section" data-source-td="chapitre-2"><h2 id="etapes-chauffage">Décomposer un chauffage en plusieurs étapes</h2>
+<p>Quand l’état initial et l’état final traversent plusieurs phases, découpez le chemin à chaque changement d’état. À la pression du TD, avec fusion à 0 °C et ébullition à 100 °C, passer de glace à Tᵢ &lt; 0 °C à de la vapeur à T<sub>f</sub> &gt; 100 °C demande cinq contributions :</p>
+<ol>
+<li>Chauffer la glace : Q₁ = m c<sub>glace</sub>(0 − Tᵢ).</li>
+<li>Fondre la glace : Q₂ = n Δ<sub>fus</sub>H.</li>
+<li>Chauffer l’eau liquide : Q₃ = m c<sub>eau</sub>(100 − 0).</li>
+<li>Vaporiser l’eau : Q₄ = n Δ<sub>vap</sub>H.</li>
+<li>Chauffer la vapeur : Q₅ = m c<sub>vapeur</sub>(T<sub>f</sub> − 100).</li>
+</ol>
+<div class="formula">Q<sub>total</sub> = Q₁ + Q₂ + Q₃ + Q₄ + Q₅</div>
+<p>Utilisez la capacité de la phase présente et l’enthalpie de changement d’état à la température de l’étape. Lors d’un changement d’état inverse, le signe de l’enthalpie change : la condensation de la vapeur en liquide libère la chaleur que la vaporisation absorbe, à la même température.</p></section><section class="course-section" data-source-td="chapitre-2"><h2 id="bilan-vaporisation">Relier chaleur, travail et énergie interne lors d’une vaporisation</h2>
+<p>Pour vaporiser n moles de liquide déjà à sa température d’ébullition, sous pression extérieure constante :</p>
+<div class="formula">Q<sub>p</sub> = ΔH = n Δ<sub>vap</sub>H<br>W = −p<sub>ext</sub>(V<sub>gaz</sub> − V<sub>liquide</sub>)<br>ΔU = Q<sub>p</sub> + W</div>
+<p>Si la vapeur est assimilée à un gaz parfait et si le volume liquide est négligé devant celui de la vapeur, pV<sub>gaz</sub> = nRT donne W ≈ −nRT, puis ΔU ≈ nΔ<sub>vap</sub>H − nRT. Cette approximation doit être annoncée. Une partie de la chaleur reçue sert à fournir du travail au milieu extérieur ; toute la chaleur reçue ne devient donc pas une augmentation de U.</p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Enthalpie · CC BY-NC-ND 4.0</p>
 <p class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></p>
 </div>
 <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
@@ -139,7 +154,11 @@
 <h2>Exercices</h2>
 <p>Après le QCM, cherchez sur votre brouillon puis saisissez vos réponses. Vous pouvez vérifier une étape à la fois. Les indices et la correction s’ouvrent à votre demande.</p>
 <p class="muted">Vos réponses sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
-<nav class="exercise-index" aria-label="Choisir un exercice"><ul><li><a href="#exercice-vaporisation">Vaporiser trois moles d’eau</a></li></ul></nav><section class="exercise-card" id="exercice-vaporisation"><p class="eyebrow">EXERCICE 1</p>
+<nav class="exercise-index" aria-label="Choisir un exercice"><ul>
+<li><a href="#exercice-vaporisation">Vaporiser trois moles d’eau</a></li>
+<li><a href="#exercice-chauffage-simple">Isoler l’étape de chauffage</a></li>
+<li><a href="#exercice-condensation-simple">Inverser un changement d’état</a></li>
+</ul></nav><section class="exercise-card" id="exercice-vaporisation"><p class="eyebrow">EXERCICE 1</p>
 <h3>Vaporiser trois moles d’eau</h3>
 <p class="exercise-origin">Exercice du diaporama · diapositives 21–22</p>
 <p>Calculer la quantité de chaleur nécessaire à la vaporisation de <b>3 moles d’eau initialement à 20 °C</b>.</p>
@@ -163,7 +182,51 @@
 </form>
 <details class="exercise-hint"><summary>Indice 1</summary><p>Il y a deux étapes : chauffer le liquide, puis changer de phase à température constante.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Le terme Cp,m ΔT est en J·mol⁻¹ ici ; l’enthalpie de vaporisation est en kJ·mol⁻¹.</p></details><details class="exercise-solution"><summary>Correction</summary><p>Chauffage de 20 à 100 °C : Q₁ = 3 × 75,3 × (100−20) = 18 072 J ≈ <b>18,1 kJ</b>.</p>
 <p>Vaporisation : Q₂ = 3 × 40,7 = <b>122,1 kJ</b>.</p>
-<p>Q = Q₁ + Q₂ ≈ <b>140,2 kJ</b>.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
+<p>Q = Q₁ + Q₂ ≈ <b>140,2 kJ</b>.</p></details></section><section class="exercise-card" id="exercice-chauffage-simple"><p class="eyebrow">EXERCICE 2</p>
+<h3>Isoler l’étape de chauffage</h3>
+<p class="exercise-origin">Entraînement avec les données de l’exercice du cours</p>
+<p>On chauffe 3 mol d’eau liquide de 20 à 100 °C, à pression constante, sans vaporisation. C<sub>p,m</sub> = 75,3 J·mol⁻¹·K⁻¹ est constante.</p>
+<form class="exercise-form" data-exercise="chauffage-simple" novalidate>
+<div class="exercise-fields">
+<div class="exercise-field">
+<label for="chauffage-simple-reponse-1">1. Capacité de ces 3 mol d’eau <span class="muted">(J·K⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="chauffage-simple-reponse-1" name="reponse-1" data-expected="225.9" data-hint="C = n Cp,m." aria-describedby="chauffage-simple-reponse-1-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="chauffage-simple-reponse-1-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="chauffage-simple-reponse-2">2. Écart de température <span class="muted">(K)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="chauffage-simple-reponse-2" name="reponse-2" data-expected="80" data-hint="Tf − Ti." aria-describedby="chauffage-simple-reponse-2-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="chauffage-simple-reponse-2-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="chauffage-simple-reponse-3">3. Chaleur reçue <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="chauffage-simple-reponse-3" name="reponse-3" data-expected="18.072" data-hint="Q = C ΔT ; convertir J en kJ." aria-describedby="chauffage-simple-reponse-3-feedback" data-tolerance="0.05" placeholder="Votre réponse"><p id="chauffage-simple-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Distinguez la capacité molaire et celle de toute la quantité d’eau.</p></details><details class="exercise-solution"><summary>Correction</summary><p>C = 3 × 75,3 = 225,9 J·K⁻¹ ; ΔT = 80 K ; Q = 225,9 × 80 = 18 072 J = 18,072 kJ.</p></details></section><section class="exercise-card" id="exercice-condensation-simple"><p class="eyebrow">EXERCICE 3</p>
+<h3>Inverser un changement d’état</h3>
+<p class="exercise-origin">Entraînement sur le signe des changements d’état</p>
+<p>À la même température de 100 °C, on condense 3 mol de vapeur d’eau en liquide. On utilise Δ<sub>vap</sub>H = +40,7 kJ·mol⁻¹, comme dans l’exercice du cours.</p>
+<form class="exercise-form" data-exercise="condensation-simple" novalidate>
+<div class="exercise-fields">
+<div class="exercise-field">
+<label for="condensation-simple-reponse-1">1. Enthalpie molaire de condensation <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="condensation-simple-reponse-1" name="reponse-1" data-expected="-40.7" data-hint="La condensation est l’inverse de la vaporisation." aria-describedby="condensation-simple-reponse-1-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="condensation-simple-reponse-1-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="condensation-simple-reponse-2">2. Chaleur échangée pour les 3 mol <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="condensation-simple-reponse-2" name="reponse-2" data-expected="-122.1" data-hint="Multipliez par n." aria-describedby="condensation-simple-reponse-2-feedback" data-tolerance="0.05" placeholder="Votre réponse"><p id="condensation-simple-reponse-2-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="condensation-simple-reponse-3">3. Le système eau…</label><select id="condensation-simple-reponse-3" name="reponse-3" data-expected="cede" data-hint="Interprétez le signe de Q." aria-describedby="condensation-simple-reponse-3-feedback"><option value="">Choisir une réponse</option>
+<option value="recoit">reçoit de la chaleur</option>
+<option value="cede">cède de la chaleur</option></select><p id="condensation-simple-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Inverser le changement d’état inverse le signe.</p></details><details class="exercise-solution"><summary>Correction</summary><p>ΔcondH = −40,7 kJ·mol⁻¹ ; Q = 3 × (−40,7) = −122,1 kJ. L’eau cède de la chaleur.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Enthalpie</h3>
@@ -186,6 +249,6 @@
 <script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
 <script src="exercices.js" defer></script>
 <script src="interactions.js" defer></script>
-<html><head><script src="illustrations.js" defer></script></head></html>
+<script src="illustrations.js" defer></script>
 </body>
 </html>

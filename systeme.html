@@ -24,6 +24,7 @@
 <li><a href="#definitions-systeme">Définir le système étudié</a></li>
 <li><a href="#types-systemes">Système ouvert, fermé ou isolé</a></li>
 <li><a href="#parametres-systeme">Paramètres de description</a></li>
+<li><a href="#rappels-chapitre1">Rappels du chapitre 1 : quantités, gaz et avancement</a></li>
 </ul></nav><section class="course-section" data-source-slides="5–6"><h2 id="definitions-systeme">Définir le système étudié</h2>
 <div class="definition">
 <h3>Système thermodynamique</h3>
@@ -51,12 +52,12 @@
 <div class="course-interactive" id="system-exchanges">
 <h3>Retrouver les échanges sur le schéma</h3>
 <p>Choisissez un type de système pour faire apparaître les échanges possibles.</p>
-<div class="choice-buttons system-object-choices" role="group" aria-label="Choisir un type de système">
-<button type="button" class="system-object" data-system-kind="ouvert" aria-pressed="true"><img src="assets/images/systeme-ouvert-verre.png" width="1254" height="1254" loading="lazy" decoding="async" alt="Un verre sans couvercle contenant de l’eau."><span class="system-object-label">Ouvert</span><span class="system-object-name">Verre ouvert</span></button><button type="button" class="system-object" data-system-kind="ferme" aria-pressed="false"><img src="assets/images/systeme-ferme-bouteille.png" width="1254" height="1254" loading="lazy" decoding="async" alt="Une bouteille d’eau fermée par un bouchon vissé."><span class="system-object-label">Fermé</span><span class="system-object-name">Bouteille fermée</span></button><button type="button" class="system-object" data-system-kind="isole" aria-pressed="false"><img src="assets/images/systeme-isole-thermos.png" width="1254" height="1254" loading="lazy" decoding="async" alt="Un thermos fermé, illustrant le modèle d’un système isolé."><span class="system-object-label">Isolé</span><span class="system-object-name">Thermos idéal</span></button>
+<div class="choice-buttons" role="group" aria-label="Type de système">
+<button type="button" data-system-kind="ouvert" aria-pressed="true" class="system-choice"><svg viewbox="0 0 60 60" aria-hidden="true" fill="none" stroke="#172e42" stroke-width="2"><path d="M13 12l4 38h26l4-38"></path><path d="M16 28h28l-2 20H18z" fill="#bfdae2" stroke="none"></path><ellipse cx="30" cy="12" rx="17" ry="4"></ellipse></svg><span><strong>Ouvert</strong><small>Verre ouvert</small></span></button><button type="button" data-system-kind="ferme" aria-pressed="false" class="system-choice"><svg viewbox="0 0 60 60" aria-hidden="true" fill="none" stroke="#172e42" stroke-width="2"><path d="M24 13v7l-9 10v20q15 5 30 0V30l-9-10v-7z"></path><rect x="23" y="7" width="14" height="7" rx="2" fill="#172e42"></rect><path d="M17 35h26v13H17z" fill="#bfdae2" stroke="none"></path></svg><span><strong>Fermé</strong><small>Bouteille fermée</small></span></button><button type="button" data-system-kind="isole" aria-pressed="false" class="system-choice"><svg viewbox="0 0 60 60" aria-hidden="true" fill="none" stroke="#172e42" stroke-width="2"><rect x="16" y="14" width="28" height="39" rx="6" fill="#e4eaec"></rect><rect x="20" y="7" width="20" height="10" rx="3" fill="#172e42"></rect><path d="M21 23v22"></path></svg><span><strong>Isolé</strong><small>Thermos idéal</small></span></button>
 </div>
-<p class="system-model-note">Le thermos représente ici le modèle idéal d’un système isolé.</p>
 <svg viewbox="0 0 600 220" role="img" aria-labelledby="system-diagram-title system-diagram-desc"><title id="system-diagram-title">Échanges entre le système et son environnement</title>
 <desc id="system-diagram-desc">Système ouvert : échanges possibles de matière et d’énergie.</desc><rect x="10" y="10" width="580" height="200" rx="12" fill="#eaf0f3"></rect><text x="32" y="42">Environnement</text><rect x="60" y="70" width="210" height="110" rx="10" fill="#fff" stroke="#172e42" stroke-width="2"></rect><text x="165" y="130" text-anchor="middle">Système</text><text x="150" y="200" text-anchor="middle" font-size="14">Paroi</text><g id="matter-arrow"><path d="M250 100H440m-13-8 13 8-13 8M263 92l-13 8 13 8" fill="none" stroke="#ba572d" stroke-width="3"></path><text x="465" y="107">Matière</text></g><g id="energy-arrow"><path d="M250 155H440m-13-8 13 8-13 8M263 147l-13 8 13 8" fill="none" stroke="#226956" stroke-width="3"></path><text x="465" y="162">Énergie</text></g></svg><p id="system-exchanges-result" role="status">Ouvert : échanges possibles de matière et d’énergie.</p>
+<p class="muted">Le thermos représente un système isolé idéal. Les flèches indiquent les échanges possibles, dans les deux sens.</p>
 </div>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
 <p>Retrouvez une autre présentation des systèmes ouverts, fermés et isolés dans le cours de <a href="https://uel.unisciel.fr/chimie/chimther/chimther_ch02/co/apprendre_ch2_02.html" target="_blank" rel="noopener noreferrer">Unisciel</a>.</p>
@@ -103,7 +104,43 @@
 <td>kg</td>
 </tr>
 </table></div>
-<p class="course-exercise-link"><a href="#exercice-definitions-cours">Compléter les définitions du cours</a></p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Décrire un système · CC BY-NC-ND 4.0</p>
+</section><section class="course-section" data-source-td="chapitre-2"><h2 id="rappels-chapitre1">Rappels du chapitre 1 : quantités, gaz et avancement</h2>
+<p>Ces relations du chapitre 1 servent aussi aux bilans de thermochimie. Avant le bilan énergétique, déterminez les quantités de matière et écrivez l’équation équilibrée.</p>
+<div class="table-wrap"><table>
+<thead><tr>
+<th>À déterminer</th>
+<th>Relation et unités</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Quantité de matière</td>
+<td>n = m/M ; n en mol, m et M dans des unités de masse cohérentes. Pour une solution : n = cV, avec V en L si c est en mol·L⁻¹.</td>
+</tr>
+<tr>
+<td>Masse d’un liquide</td>
+<td>m = ρV ; utiliser les unités de volume de la masse volumique ρ.</td>
+</tr>
+<tr>
+<td>Gaz parfait</td>
+<td>pV = nRT ; T en K, p en Pa et V en m³ avec R = 8,314 J·mol⁻¹·K⁻¹. Si le volume molaire est donné : V = nV<sub>m</sub>.</td>
+</tr>
+<tr>
+<td>Conversions</td>
+<td>T/K = θ/°C + 273,15 ; 1 bar = 10⁵ Pa ; 1 L = 10⁻³ m³ ; 1 bar·L = 100 J.</td>
+</tr>
+<tr>
+<td>Mélange gazeux idéal</td>
+<td>n<sub>tot</sub> = ∑ nᵢ ; xᵢ = nᵢ/n<sub>tot</sub> ; pᵢ = xᵢp. Les pressions partielles s’additionnent pour donner p.</td>
+</tr>
+</tbody>
+</table></div>
+<details class="method-detail"><summary>Retrouver l’avancement et le réactif limitant</summary><p>Dans nᵢ = nᵢ,₀ + νᵢξ, νᵢ est négatif pour un réactif et positif pour un produit. Si la réaction est totale, comparez nᵢ,₀/|νᵢ| pour les réactifs : le plus petit rapport donne ξ<sub>max</sub>. Pour une réaction limitée par un équilibre, déterminez ξ à partir de l’information donnée sur l’état final.</p>
+<p>La somme des lignes du tableau donne n<sub>tot</sub>(ξ). Ne confondez pas une mole de réactif et une mole d’avancement : leur rapport dépend du coefficient stœchiométrique.</p>
+<p>À l’équilibre d’une réaction entre gaz parfaits, K° = ∏ᵢ(pᵢ/p°)<sup>νᵢ</sup> : produits au numérateur, réactifs au dénominateur, avec leurs coefficients comme exposants. Les rapports pᵢ/p° sont sans unité.</p></details>
+<details class="method-detail"><summary>Volumes disponibles, gaz dissous et débit</summary><p>Dans un récipient contenant un liquide et un gaz, V<sub>gaz</sub> = V<sub>récipient</sub> − V<sub>liquide</sub>. C’est ce volume libre qui intervient dans pV = nRT.</p>
+<p>Si l’énoncé donne la concentration maximale de gaz dissous, n<sub>dissous,max</sub> = c<sub>max</sub>V<sub>liquide</sub>. Après saturation, la quantité restant dans la phase gazeuse est la quantité totale disponible moins la quantité dissoute.</p>
+<p>Pour un débit volumique constant D : durée = volume de gaz disponible / D. Le volume et le débit doivent se rapporter aux mêmes conditions de température et de pression.</p>
+<p>Pour un sel hydraté, la masse molaire inclut l’eau de cristallisation : M(sel·xH₂O) = M(sel) + xM(H₂O).</p></details></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Décrire un système · CC BY-NC-ND 4.0</p>
 <p class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></p>
 </div>
 <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
@@ -161,7 +198,11 @@
 <h2>Exercices</h2>
 <p>Après le QCM, cherchez sur votre brouillon puis saisissez vos réponses. Vous pouvez vérifier une étape à la fois. Les indices et la correction s’ouvrent à votre demande.</p>
 <p class="muted">Vos réponses sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
-<nav class="exercise-index" aria-label="Choisir un exercice"><ul><li><a href="#exercice-definitions-cours">Compléter les définitions du cours</a></li></ul></nav><section class="exercise-card" id="exercice-definitions-cours"><p class="eyebrow">EXERCICE 1</p>
+<nav class="exercise-index" aria-label="Choisir un exercice"><ul>
+<li><a href="#exercice-definitions-cours">Compléter les définitions du cours</a></li>
+<li><a href="#exercice-parametres-simples">Reconnaître les paramètres</a></li>
+<li><a href="#exercice-conversions-simples">Préparer les unités d’un bilan</a></li>
+</ul></nav><section class="exercise-card" id="exercice-definitions-cours"><p class="eyebrow">EXERCICE 1</p>
 <h3>Compléter les définitions du cours</h3>
 <p class="exercise-origin">Activité sur les diapositives 7–8</p>
 <p>Associez chaque définition à son terme.</p>
@@ -201,7 +242,55 @@
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Relisez les trois définitions de système, puis celles des paramètres extensifs et intensifs.</p></details><details class="exercise-solution"><summary>Correction</summary><p>1. Ouvert. 2. Fermé. 3. Isolé. 4. Extensif. 5. Intensif.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Relisez les trois définitions de système, puis celles des paramètres extensifs et intensifs.</p></details><details class="exercise-solution"><summary>Correction</summary><p>1. Ouvert. 2. Fermé. 3. Isolé. 4. Extensif. 5. Intensif.</p></details></section><section class="exercise-card" id="exercice-parametres-simples"><p class="eyebrow">EXERCICE 2</p>
+<h3>Reconnaître les paramètres</h3>
+<p class="exercise-origin">Entraînement sur les paramètres du cours</p>
+<p>Pour chaque grandeur, indiquez si elle est extensive ou intensive.</p>
+<form class="exercise-form" data-exercise="parametres-simples" novalidate>
+<div class="exercise-fields">
+<div class="exercise-field">
+<label for="parametres-simples-reponse-1">1. Volume V</label><select id="parametres-simples-reponse-1" name="reponse-1" data-expected="extensif" data-hint="Une grandeur extensive est proportionnelle à la quantité de matière." aria-describedby="parametres-simples-reponse-1-feedback"><option value="">Choisir une réponse</option>
+<option value="extensif">Extensif</option>
+<option value="intensif">Intensif</option></select><p id="parametres-simples-reponse-1-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="parametres-simples-reponse-2">2. Température T</label><select id="parametres-simples-reponse-2" name="reponse-2" data-expected="intensif" data-hint="Une grandeur extensive est proportionnelle à la quantité de matière." aria-describedby="parametres-simples-reponse-2-feedback"><option value="">Choisir une réponse</option>
+<option value="extensif">Extensif</option>
+<option value="intensif">Intensif</option></select><p id="parametres-simples-reponse-2-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="parametres-simples-reponse-3">3. Pression p</label><select id="parametres-simples-reponse-3" name="reponse-3" data-expected="intensif" data-hint="Une grandeur extensive est proportionnelle à la quantité de matière." aria-describedby="parametres-simples-reponse-3-feedback"><option value="">Choisir une réponse</option>
+<option value="extensif">Extensif</option>
+<option value="intensif">Intensif</option></select><p id="parametres-simples-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Pensez à la réunion de deux portions identiques.</p></details><details class="exercise-solution"><summary>Correction</summary><p>V est extensif ; T et p sont intensifs.</p></details></section><section class="exercise-card" id="exercice-conversions-simples"><p class="eyebrow">EXERCICE 3</p>
+<h3>Préparer les unités d’un bilan</h3>
+<p class="exercise-origin">Entraînement sur les rappels du chapitre 1</p>
+<p>On dispose de 180 g d’eau, de masse molaire 18 g·mol⁻¹. La température est de 25 °C et la pression de 1 bar.</p>
+<form class="exercise-form" data-exercise="conversions-simples" novalidate>
+<div class="exercise-fields">
+<div class="exercise-field">
+<label for="conversions-simples-reponse-1">1. Quantité de matière <span class="muted">(mol)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="conversions-simples-reponse-1" name="reponse-1" data-expected="10" data-hint="n = m/M." aria-describedby="conversions-simples-reponse-1-feedback" data-tolerance="0.001" placeholder="Votre réponse"><p id="conversions-simples-reponse-1-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="conversions-simples-reponse-2">2. Température absolue <span class="muted">(K)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="conversions-simples-reponse-2" name="reponse-2" data-expected="298.15" data-hint="Ajoutez 273,15 à la température en °C." aria-describedby="conversions-simples-reponse-2-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="conversions-simples-reponse-2-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="conversions-simples-reponse-3">3. Pression <span class="muted">(Pa)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="conversions-simples-reponse-3" name="reponse-3" data-expected="100000" data-hint="1 bar = 10⁵ Pa." aria-describedby="conversions-simples-reponse-3-feedback" data-tolerance="1" placeholder="Votre réponse"><p id="conversions-simples-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Vérifiez les unités avant le bilan.</p></details><details class="exercise-solution"><summary>Correction</summary><p>n = 180/18 = 10 mol ; T = 25 + 273,15 = 298,15 K ; p = 100 000 Pa.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Décrire un système</h3>
@@ -224,6 +313,6 @@
 <script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
 <script src="exercices.js" defer></script>
 <script src="interactions.js" defer></script>
-<html><head><script src="illustrations.js" defer></script></head></html>
+<script src="illustrations.js" defer></script>
 </body>
 </html>

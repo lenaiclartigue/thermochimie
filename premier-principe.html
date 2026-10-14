@@ -26,6 +26,7 @@
 <li><a href="#chaleur-travail">Chaleur et travail</a></li>
 <li><a href="#transformations">Transformations à paramètre constant</a></li>
 <li><a href="#integrale-travail">Comprendre l’intégrale du travail</a></li>
+<li><a href="#travail-et-diagrammes">Choisir le calcul du travail et lire un diagramme</a></li>
 </ul></nav><section class="course-section" data-source-slides="9–10"><h2 id="energie-interne">Énergie interne et premier principe</h2>
 <div class="definition">
 <h3>Énergie interne U</h3>
@@ -47,7 +48,12 @@
 <div class="formula">dU = δQ + δW</div>
 <p><b>dU</b> est une différentielle totale exacte. <b>δQ et δW</b> représentent les transferts élémentaires de chaleur et de travail, qui dépendent du chemin.</p>
 <div class="formula">∫<sub>i</sub><sup>f</sup> dU = U<sub>f</sub> − U<sub>i</sub><br>∫<sub>i</sub><sup>f</sup> δQ = Q ; ∫<sub>i</sub><sup>f</sup> δW = W</div>
-<p>Sur un cycle, le système retrouve son état initial : ΔU = 0 et Q + W = 0.</p></section><section class="course-section" data-source-slides="11–12"><h2 id="chaleur-travail">Chaleur et travail</h2>
+<div class="definition" id="definition-cycle">
+<h3>Qu’est-ce qu’un cycle ?</h3>
+<p>Un cycle est une suite de transformations à l’issue de laquelle le système revient à son état de départ : <strong>l’état final est le même que l’état initial</strong>. Sur un diagramme d’état, le trajet est fermé.</p>
+<div class="formula">A → B → C → A<br>ΔU<sub>cycle</sub> = 0 ; ΔH<sub>cycle</sub> = 0<br>Q<sub>cycle</sub> + W<sub>cycle</sub> = 0</div>
+<p>On additionne les variations et les échanges de toutes les étapes. Q et W ne sont pas nécessairement nuls séparément. Ici H désigne l’enthalpie, une autre fonction d’état présentée dans la partie suivante.</p>
+</div></section><section class="course-section" data-source-slides="11–12"><h2 id="chaleur-travail">Chaleur et travail</h2>
 <div class="definition">
 <h3>Chaleur Q</h3>
 <p>Mode de transfert d’énergie lié à une différence de température.</p>
@@ -64,7 +70,19 @@
 <p>À pression extérieure positive, une augmentation de volume donne W &lt; 0 ; une diminution de volume donne W &gt; 0.</p>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
 <p>Les échanges de chaleur et le travail des forces de pression sont illustrés dans le cours de <a href="https://femto-physique.fr/thermodynamique/premier-principe.php" target="_blank" rel="noopener noreferrer">Femto-physique</a>.</p>
-<p class="resource-meta">Lecture facultative · français · nouvel onglet</p></aside></section><section class="course-section" data-source-slides="13"><h2 id="transformations">Transformations à paramètre constant</h2>
+<p class="resource-meta">Lecture facultative · français · nouvel onglet</p></aside><div class="course-interactive" id="energy-exchanges">
+<h3>Énergie reçue ou cédée : choisir le signe</h3>
+<p>On adopte toujours le point de vue du <strong>système</strong>. Choisissez la forme du transfert, puis son sens.</p>
+<div class="choice-buttons" role="group" aria-label="Forme du transfert">
+<button type="button" data-energy-kind="Q" aria-pressed="true">Chaleur Q</button><button type="button" data-energy-kind="W" aria-pressed="false">Travail W</button>
+</div>
+<div class="choice-buttons" role="group" aria-label="Sens du transfert">
+<button type="button" data-energy-direction="recu" aria-pressed="true">Reçue par le système</button><button type="button" data-energy-direction="cede" aria-pressed="false">Cédée par le système</button>
+</div>
+<svg viewbox="0 0 580 210" role="img" aria-labelledby="energy-title energy-description"><title id="energy-title">Convention de signe des transferts d’énergie</title>
+<desc id="energy-description">Une flèche entre dans le système : chaleur reçue, Q positif.</desc><rect x="10" y="10" width="560" height="190" rx="12" fill="#eaf0f3"></rect><text x="32" y="43">Milieu extérieur</text><rect x="340" y="65" width="200" height="120" rx="10" fill="white" stroke="#172e42" stroke-width="2"></rect><text x="440" y="105" text-anchor="middle">Système</text><path id="transfer-arrow" d="M90 145H410m-14-9 14 9-14 9" fill="none" stroke="#226956" stroke-width="4"></path><text id="transfer-symbol" x="200" y="116" text-anchor="middle" fill="#226956" font-weight="bold">Q &gt; 0</text></svg><p id="energy-result" role="status">Chaleur reçue : Q &gt; 0. Le transfert entre dans le système (endothermique).</p>
+<p class="muted">Le signe indique le sens du transfert, pas la valeur de l’énergie interne. Pour connaître ΔU, on additionne Q et W.</p>
+</div></section><section class="course-section" data-source-slides="13"><h2 id="transformations">Transformations à paramètre constant</h2>
 <div class="table-scroll"><table>
 <tr>
 <th>Transformation</th>
@@ -100,7 +118,7 @@
 </table></div>
 <p>Les relations sur W concernent le travail des forces de pression. <b>Adiabatique ne signifie pas isotherme :</b> l’absence de chaleur échangée n’impose pas une température constante.</p>
 <p><b>Isobare</b> concerne la pression du système ; <b>monobare</b> concerne la pression extérieure utilisée pour calculer W.</p>
-<p class="course-exercise-link"><a href="#exercice-relations-cours">Compléter les relations entre Q, W et ΔU</a></p></section><section class="course-section" data-source-slides="12 ; aide mathématique demandée"><h2 id="integrale-travail">Comprendre l’intégrale du travail</h2>
+</section><section class="course-section" data-source-slides="12 ; aide mathématique demandée"><h2 id="integrale-travail">Comprendre l’intégrale du travail</h2>
 <p>Si la pression varie, on additionne les petits travaux le long de la transformation :</p>
 <div class="formula">W = −∫<sub>Vᵢ</sub><sup>V<sub>f</sub></sup> p<sub>ext</sub>(V) dV</div>
 <p>Sur le graphique, un rectangle représente une petite variation de volume multipliée par une pression : son aire vaut p<sub>ext</sub> × ΔV. La somme des aires approche l’intégrale. <b>La courbe reste la même quand on augmente le nombre de rectangles :</b> les rectangles deviennent plus étroits et suivent mieux cette courbe.</p>
@@ -120,8 +138,62 @@
 </div>
 <p>Les rectangles illustrent <b>l’intégrale</b>. Une <b>primitive</b> permet de calculer sa valeur : si F′(V) = p<sub>ext</sub>(V), l’intégrale vaut F(V<sub>f</sub>) − F(V<sub>i</sub>). À pression constante, un seul rectangle donne déjà l’aire exacte.</p>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
-<p>Pour revoir les aires, les rectangles et les primitives, commencez par les pages 1–2 du chapitre « Intégrales » d’ <a href="https://exo7.emath.fr/cours/ch_int.pdf" target="_blank" rel="noopener noreferrer">Exo7</a>.</p>
-<p class="resource-meta">Lecture facultative · français, PDF · nouvel onglet</p></aside><p><a href="fiche-pratique.html#travail">Retrouver les intégrales utiles au calcul du travail dans la fiche pratique.</a></p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Premier principe, travail et chaleur · CC BY-NC-ND 4.0</p>
+<p>Pour voir simplement le lien entre une intégrale et une aire, regardez la vidéo <a href="https://youtu.be/jkxNKkmEXZA" target="_blank" rel="noopener noreferrer">Déterminer une intégrale par calculs d’aire — Yvan Monka</a>.</p>
+<p class="muted">Facultatif · niveau terminale · vidéo en français · nouvel onglet</p></aside></section><section class="course-section" data-source-td="chapitre-2"><h2 id="travail-et-diagrammes">Choisir le calcul du travail et lire un diagramme</h2>
+<p>La formule de départ est toujours W = −∫ p<sub>ext</sub> dV. Le nom de la transformation ne suffit pas : il faut connaître la pression extérieure le long du chemin.</p>
+<div class="table-wrap"><table>
+<thead><tr>
+<th>Situation</th>
+<th>Calcul du travail de pression</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Isochore : V constant</td>
+<td>dV = 0, donc W = 0.</td>
+</tr>
+<tr>
+<td>Monobare : p<sub>ext</sub> constante</td>
+<td>W = −p<sub>ext</sub>(V<sub>f</sub> − V<sub>i</sub>).</td>
+</tr>
+<tr>
+<td>Gaz parfait, quantité fixe, isotherme réversible</td>
+<td>p<sub>ext</sub> = p = nRT/V dans la limite réversible. Donc W = −nRT ∫ dV/V = −nRT ln(V<sub>f</sub>/V<sub>i</sub>).</td>
+</tr>
+<tr>
+<td>Gaz parfait, quantité fixe, isobare avec p = p<sub>ext</sub>
+</td>
+<td>W = −p(V<sub>f</sub> − V<sub>i</sub>) = −nR(T<sub>f</sub> − T<sub>i</sub>).</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>p</strong> est la pression du gaz ; <strong>p<sub>ext</sub></strong> est la pression exercée par le milieu extérieur. Pour remplacer p<sub>ext</sub> par p, il faut l’équilibre mécanique dans la limite d’une transformation réversible. Une transformation lente ne suffit pas à elle seule à garantir la réversibilité : des frottements peuvent subsister.</p>
+<p>Dans l’isotherme réversible, nRT est constant et une primitive de 1/V est ln(V). La différence des logarithmes donne ln(V<sub>f</sub>/V<sub>i</sub>) ; le rapport est sans unité. Comme p<sub>i</sub>V<sub>i</sub> = p<sub>f</sub>V<sub>f</sub>, on peut aussi écrire W = nRT ln(p<sub>f</sub>/p<sub>i</sub>).</p>
+<details class="method-detail"><summary>Reconnaître les étapes d’un cycle sur p(T) et p(V)</summary><p>Pour une quantité fixe de gaz parfait, utilisez pV = nRT. Les diagrammes ci-dessous ont p en ordonnée ; T ou V est en abscisse.</p>
+<div class="table-wrap"><table>
+<thead><tr>
+<th>Transformation</th>
+<th>Diagramme p(T)</th>
+<th>Diagramme p(V)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Isotherme</td>
+<td>Segment vertical : T constante</td>
+<td>Hyperbole : p = nRT/V</td>
+</tr>
+<tr>
+<td>Isobare</td>
+<td>Segment horizontal</td>
+<td>Segment horizontal</td>
+</tr>
+<tr>
+<td>Isochore</td>
+<td>Droite p = (nR/V)T passant par l’origine si T est en K</td>
+<td>Segment vertical : V constant</td>
+</tr>
+</tbody>
+</table></div>
+<p>Repérez d’abord la grandeur constante, puis le sens de la flèche. Calculez W pour chaque étape ; déduisez Q ou ΔU avec ΔU = Q + W. Pour l’ensemble du cycle, la somme des ΔU doit être nulle.</p></details></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Premier principe, travail et chaleur · CC BY-NC-ND 4.0</p>
 <p class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></p>
 </div>
 <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
@@ -193,7 +265,11 @@
 <h2>Exercices</h2>
 <p>Après le QCM, cherchez sur votre brouillon puis saisissez vos réponses. Vous pouvez vérifier une étape à la fois. Les indices et la correction s’ouvrent à votre demande.</p>
 <p class="muted">Vos réponses sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
-<nav class="exercise-index" aria-label="Choisir un exercice"><ul><li><a href="#exercice-relations-cours">Retrouver les relations du premier principe</a></li></ul></nav><section class="exercise-card" id="exercice-relations-cours"><p class="eyebrow">EXERCICE 1</p>
+<nav class="exercise-index" aria-label="Choisir un exercice"><ul>
+<li><a href="#exercice-relations-cours">Retrouver les relations du premier principe</a></li>
+<li><a href="#exercice-signes-energie">Attribuer les signes aux échanges</a></li>
+<li><a href="#exercice-travail-cycle-simple">Calculer un travail et fermer un cycle</a></li>
+</ul></nav><section class="exercise-card" id="exercice-relations-cours"><p class="eyebrow">EXERCICE 1</p>
 <h3>Retrouver les relations du premier principe</h3>
 <p class="exercise-origin">Activité sur les diapositives 10–13</p>
 <p>Complétez les relations du cours. Le travail considéré est celui des forces de pression.</p>
@@ -235,7 +311,51 @@
 </div>
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
-<details class="exercise-hint"><summary>Indice 1</summary><p>Partez de ΔU = Q + W et identifiez le terme nul pour chaque transformation.</p></details><details class="exercise-solution"><summary>Correction</summary><p>1. W = 0. 2. ΔU = Q. 3. ΔU = W. 4. ΔU = 0 et W = −Q. 5. Q = W = ΔU = 0.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Partez de ΔU = Q + W et identifiez le terme nul pour chaque transformation.</p></details><details class="exercise-solution"><summary>Correction</summary><p>1. W = 0. 2. ΔU = Q. 3. ΔU = W. 4. ΔU = 0 et W = −Q. 5. Q = W = ΔU = 0.</p></details></section><section class="exercise-card" id="exercice-signes-energie"><p class="eyebrow">EXERCICE 2</p>
+<h3>Attribuer les signes aux échanges</h3>
+<p class="exercise-origin">Entraînement sur le premier principe</p>
+<p>Un système fermé reçoit 200 J de chaleur et cède 80 J sous forme de travail. Les variations d’énergie cinétique et potentielle macroscopiques sont négligées.</p>
+<form class="exercise-form" data-exercise="signes-energie" novalidate>
+<div class="exercise-fields">
+<div class="exercise-field">
+<label for="signes-energie-reponse-1">1. Chaleur Q <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="signes-energie-reponse-1" name="reponse-1" data-expected="200" data-hint="Énergie reçue : signe positif." aria-describedby="signes-energie-reponse-1-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="signes-energie-reponse-1-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="signes-energie-reponse-2">2. Travail W <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="signes-energie-reponse-2" name="reponse-2" data-expected="-80" data-hint="Énergie cédée : signe négatif." aria-describedby="signes-energie-reponse-2-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="signes-energie-reponse-2-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="signes-energie-reponse-3">3. Variation ΔU <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="signes-energie-reponse-3" name="reponse-3" data-expected="120" data-hint="ΔU = Q + W." aria-describedby="signes-energie-reponse-3-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="signes-energie-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Adoptez le point de vue du système pour les deux échanges.</p></details><details class="exercise-solution"><summary>Correction</summary><p>Q = +200 J ; W = −80 J ; ΔU = 200 − 80 = +120 J.</p></details></section><section class="exercise-card" id="exercice-travail-cycle-simple"><p class="eyebrow">EXERCICE 3</p>
+<h3>Calculer un travail et fermer un cycle</h3>
+<p class="exercise-origin">Entraînement sur les relations du cours</p>
+<p>Un gaz se détend de 1 à 3 L contre une pression extérieure constante de 1 bar. On considère uniquement le travail des forces de pression.</p>
+<p>Question 3, indépendante : un cycle comporte trois étapes dont les variations d’énergie interne sont +200 J, −80 J et ΔU₃.</p>
+<form class="exercise-form" data-exercise="travail-cycle-simple" novalidate>
+<div class="exercise-fields">
+<div class="exercise-field">
+<label for="travail-cycle-simple-reponse-1">1. Variation de volume <span class="muted">(L)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="travail-cycle-simple-reponse-1" name="reponse-1" data-expected="2" data-hint="ΔV = Vf − Vi." aria-describedby="travail-cycle-simple-reponse-1-feedback" data-tolerance="0.001" placeholder="Votre réponse"><p id="travail-cycle-simple-reponse-1-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="travail-cycle-simple-reponse-2">2. Travail de la détente <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="travail-cycle-simple-reponse-2" name="reponse-2" data-expected="-200" data-hint="W = −pext ΔV et 1 bar·L = 100 J." aria-describedby="travail-cycle-simple-reponse-2-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="travail-cycle-simple-reponse-2-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="travail-cycle-simple-reponse-3">3. Variation ΔU₃ fermant le cycle <span class="muted">(J)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="travail-cycle-simple-reponse-3" name="reponse-3" data-expected="-120" data-hint="La somme des trois ΔU est nulle." aria-describedby="travail-cycle-simple-reponse-3-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="travail-cycle-simple-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Indice 1</summary><p>La détente fournit du travail ; un cycle revient au même état.</p></details><details class="exercise-solution"><summary>Correction</summary><p>ΔV = 3 − 1 = 2 L ; W = −1 × 2 × 100 = −200 J.</p>
+<p>Sur le cycle : 200 − 80 + ΔU₃ = 0, donc ΔU₃ = −120 J.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Premier principe, travail et chaleur</h3>
@@ -258,6 +378,6 @@
 <script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
 <script src="exercices.js" defer></script>
 <script src="interactions.js" defer></script>
-<html><head><script src="illustrations.js" defer></script></head></html>
+<script src="illustrations.js" defer></script>
 </body>
 </html>

@@ -15,6 +15,29 @@
     byId('system-exchanges-result').textContent = description;
     byId('system-diagram-desc').textContent = description;
   }));
+  if (byId('energy-exchanges')) {
+    let kind = 'Q', direction = 'recu';
+    function drawEnergy() {
+      const received = direction === 'recu';
+      const label = kind === 'Q' ? 'Chaleur' : 'Travail';
+      const sign = received ? '> 0' : '< 0';
+      const explanation = kind === 'Q'
+        ? (received ? 'Le transfert entre dans le système (endothermique).' : 'Le transfert sort du système (exothermique).')
+        : (received ? 'Le transfert entre dans le système, par exemple lors d’une compression contre une pression positive.' : 'Le transfert sort du système, par exemple lors d’une détente contre une pression positive.');
+      const description = `${label} ${received ? (kind === 'Q' ? 'reçue' : 'reçu') : (kind === 'Q' ? 'cédée' : 'cédé')} : ${kind} ${sign}. ${explanation}`;
+      document.querySelectorAll('[data-energy-kind]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.energyKind === kind)));
+      document.querySelectorAll('[data-energy-direction]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.energyDirection === direction)));
+      byId('transfer-arrow').setAttribute('d', received ? 'M90 145H410m-14-9 14 9-14 9' : 'M410 145H90m14-9-14 9 14 9');
+      byId('transfer-arrow').setAttribute('stroke', received ? '#226956' : '#a64e28');
+      byId('transfer-symbol').setAttribute('fill', received ? '#226956' : '#a64e28');
+      byId('transfer-symbol').textContent = `${kind} ${sign}`;
+      byId('energy-result').textContent = description;
+      byId('energy-description').textContent = description;
+    }
+    document.querySelectorAll('[data-energy-kind]').forEach(b => b.addEventListener('click', () => {kind = b.dataset.energyKind; drawEnergy();}));
+    document.querySelectorAll('[data-energy-direction]').forEach(b => b.addEventListener('click', () => {direction = b.dataset.energyDirection; drawEnergy();}));
+    drawEnergy();
+  }
   const slider = byId('rectangle-count');
   if (!slider) return;
   let mode = 'variable';

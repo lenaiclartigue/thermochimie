@@ -23,8 +23,10 @@
 <ul>
 <li><a href="#calorimetre">Définition et description du calorimètre</a></li>
 <li><a href="#bilan-thermique">Établir le bilan thermique</a></li>
+<li><a href="#fusion-totale-partielle">Vérifier si toute la glace peut fondre</a></li>
 <li><a href="#etalonnage">Déterminer la capacité du calorimètre</a></li>
 <li><a href="#chaleur-reaction">Déterminer une chaleur de réaction</a></li>
+<li><a href="#volume-constant">Chaleur mesurée à volume constant</a></li>
 <li><a href="#energie-enthalpie">Relier énergie interne et enthalpie de réaction</a></li>
 </ul></nav><section class="course-section" data-source-slides="33–35"><h2 id="calorimetre">Définition et description du calorimètre</h2>
 <div class="definition">
@@ -64,15 +66,50 @@
 <p>Pour chaque contribution, écrire ΔT = T<sub>f</sub> − T<sub>initiale</sub>. La capacité calorifique donnée peut être molaire, massique ou celle de tout le calorimètre : ses unités indiquent comment l’utiliser.</p>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
 <p>Les transferts entre un corps chaud, un corps froid et le calorimètre sont illustrés dans la section « Calorimetry » de <a href="https://openstax.org/books/chemistry-2e/pages/5-2-calorimetry" target="_blank" rel="noopener noreferrer">OpenStax, Chemistry 2e</a>.</p>
-<p class="resource-meta">Lecture facultative · anglais · nouvel onglet</p></aside></section><section class="course-section" data-source-slides="37–39"><h2 id="etalonnage">Déterminer la capacité du calorimètre</h2>
+<p class="resource-meta">Lecture facultative · anglais · nouvel onglet</p></aside></section><section class="course-section" data-source-td="chapitre-2"><h2 id="fusion-totale-partielle">Vérifier si toute la glace peut fondre</h2>
+<p>Considérons de l’eau et le calorimètre initialement à Tᵢ &gt; 0 °C, puis de la glace à 0 °C. Avant de chercher une température finale positive, comparez la chaleur que l’eau et le récipient peuvent céder en refroidissant jusqu’à 0 °C à celle nécessaire pour fondre toute la glace.</p>
+<div class="formula">Q<sub>disponible</sub> = (C<sub>cal</sub> + m<sub>eau</sub>c<sub>eau</sub>)(Tᵢ − 0)<br>Q<sub>fusion totale</sub> = n<sub>glace</sub>Δ<sub>fus</sub>H = m<sub>glace</sub>L<sub>fus</sub>
+</div>
+<p>L<sub>fus</sub> = Δ<sub>fus</sub>H/M est la chaleur de fusion par unité de masse. Utilisez des unités cohérentes : par exemple J·g⁻¹ et g.</p>
+<div class="table-wrap"><table>
+<thead><tr>
+<th>Comparaison</th>
+<th>État final</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Q<sub>disponible</sub> &lt; Q<sub>fusion totale</sub>
+</td>
+<td>T<sub>f</sub> = 0 °C ; glace et eau coexistent. Masse fondue = Q<sub>disponible</sub>/L<sub>fus</sub> ; masse restante = masse initiale de glace − masse fondue.</td>
+</tr>
+<tr>
+<td>Égalité</td>
+<td>Toute la glace vient de fondre ; T<sub>f</sub> = 0 °C.</td>
+</tr>
+<tr>
+<td>Q<sub>disponible</sub> &gt; Q<sub>fusion totale</sub>
+</td>
+<td>Toute la glace fond, puis l’eau obtenue se réchauffe : T<sub>f</sub> &gt; 0 °C, tant qu’aucun autre changement d’état n’intervient.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Dans ce dernier cas, pour le mélange eau/glace du TD :</p>
+<div class="formula">(C<sub>cal</sub> + m<sub>eau</sub>c<sub>eau</sub>)(T<sub>f</sub> − Tᵢ)<br>+ m<sub>glace</sub>L<sub>fus</sub> + m<sub>glace</sub>c<sub>eau</sub>(T<sub>f</sub> − 0) = 0</div>
+<p>Si la glace part sous 0 °C, ajoutez d’abord son chauffage jusqu’à 0 °C au bilan. Il ne faut jamais calculer une fusion totale puis accepter une température finale négative : cela signale que l’hypothèse de fusion totale ne convient pas.</p></section><section class="course-section" data-source-slides="37–39"><h2 id="etalonnage">Déterminer la capacité du calorimètre</h2>
 <p>Le cours propose deux méthodes : dissoudre un sel dont l’enthalpie de dissolution est connue, ou mélanger de l’eau froide et de l’eau chaude.</p>
 <p>Pour le mélange, le calorimètre et l’eau froide partent de T₁ ; l’eau chaude part de T₂ :</p>
 <div class="formula">C<sub>calo</sub>(T<sub>f</sub>−T₁) + m₁c<sub>eau</sub>(T<sub>f</sub>−T₁) + m₂c<sub>eau</sub>(T<sub>f</sub>−T₂) = 0</div>
-<p class="course-exercise-link"><a href="#exercice-etalonnage">Résoudre l’exercice du cours : mélanger les deux eaux</a></p></section><section class="course-section" data-source-slides="37, 40–41"><h2 id="chaleur-reaction">Déterminer une chaleur de réaction</h2>
+</section><section class="course-section" data-source-slides="37, 40–41"><h2 id="chaleur-reaction">Déterminer une chaleur de réaction</h2>
 <p>Une fois la capacité du calorimètre connue, on écrit le bilan en ajoutant la contribution de la réaction à celles des variations de température et des éventuels changements d’état.</p>
 <div class="formula">ξ Δ<sub>r</sub>H° + ∑ Q<sub>chauffage</sub> + ∑ Q<sub>changement d’état</sub> = 0</div>
 <p>Dans l’exercice Zn/Cu²⁺ du cours, on calcule les trois contributions thermiques indiquées dans le bilan, puis on détermine la variation d’enthalpie libérée par la réaction.</p>
-<figure class="course-figure figure-medium" id="figure-calorimetre-zinc-cuivre"><button class="figure-open" type="button" data-image-full="assets/images/calorimetre-zinc-cuivre.png" data-image-title="Montage de la réaction Zn/Cu²⁺" aria-label="Agrandir : Montage de la réaction Zn/Cu²⁺" aria-describedby="figure-calorimetre-zinc-cuivre-caption"><img src="assets/images/calorimetre-zinc-cuivre.png" width="964" height="829" loading="lazy" decoding="async" alt="Calorimètre avec solution d’ions Cu2+ aqueux, ajout de zinc solide, thermomètre et agitateur."><span class="figure-expand" aria-hidden="true">Agrandir le schéma ↗</span></button><figcaption id="figure-calorimetre-zinc-cuivre-caption">Montage de l’exercice : introduction de Zn(s) dans la solution contenant Cu²⁺(aq), avec thermomètre et agitateur.</figcaption></figure><p class="course-exercise-link"><a href="#exercice-zinc-cuivre">Résoudre l’exercice du cours : réaction entre Zn et Cu²⁺</a></p></section><section class="course-section" data-source-slides="42–43"><h2 id="energie-enthalpie">Relier énergie interne et enthalpie de réaction</h2>
+<figure class="course-figure figure-medium" id="figure-calorimetre-zinc-cuivre"><button class="figure-open" type="button" data-image-full="assets/images/calorimetre-zinc-cuivre.png" data-image-title="Montage de la réaction Zn/Cu²⁺" aria-label="Agrandir : Montage de la réaction Zn/Cu²⁺" aria-describedby="figure-calorimetre-zinc-cuivre-caption"><img src="assets/images/calorimetre-zinc-cuivre.png" width="964" height="829" loading="lazy" decoding="async" alt="Calorimètre avec solution d’ions Cu2+ aqueux, ajout de zinc solide, thermomètre et agitateur."><span class="figure-expand" aria-hidden="true">Agrandir le schéma ↗</span></button><figcaption id="figure-calorimetre-zinc-cuivre-caption">Montage de l’exercice : introduction de Zn(s) dans la solution contenant Cu²⁺(aq), avec thermomètre et agitateur.</figcaption></figure><div>
+<p>Une fois Q<sub>réaction</sub> obtenu, Δ<sub>r</sub>H ≈ Q<sub>réaction</sub>/ξ. Pour des solutions, les quantités initiales se calculent avec n = cV ; les coefficients de la réaction permettent de trouver le réactif limitant. Chaque solution et le calorimètre gardent leur propre température initiale dans les termes de chauffage.</p>
+<p>Pour une dissolution d’une quantité n de substance, Δ<sub>dissol</sub>H ≈ Q<sub>dissolution</sub>/n. Si le contenu refroidit, sa contribution de chauffage est négative : la dissolution reçoit une chaleur positive dans ce bilan adiabatique.</p>
+</div></section><section class="course-section" data-source-td="chapitre-2"><h2 id="volume-constant">Chaleur mesurée à volume constant</h2>
+<p>Dans l’exercice de la bombe calorimétrique, le récipient de réaction est rigide : V est constant et le travail de pression est nul. En ne considérant que ce travail, le premier principe donne :</p>
+<div class="formula">Q<sub>V, réaction</sub> = ΔU<sub>réaction</sub><br>Δ<sub>r</sub>U ≈ Q<sub>V, réaction</sub>/ξ</div>
+<p>Une énergie « libérée » ou « dégagée » par la réaction doit être affectée d’un signe négatif du point de vue du système réactionnel. On convertit ensuite Δ<sub>r</sub>U en Δ<sub>r</sub>H avec Δν<sub>g</sub>RT. À volume constant, la chaleur de réaction mesurée ne donne donc pas directement ΔH.</p></section><section class="course-section" data-source-slides="42–43"><h2 id="energie-enthalpie">Relier énergie interne et enthalpie de réaction</h2>
 <p>Le cours utilise H = U + pV. Pour les gaz parfaits, en négligeant le volume des phases condensées devant celui des gaz, on obtient :</p>
 <div class="formula">Δ<sub>r</sub>H° = Δ<sub>r</sub>U° + Δν<sub>g</sub> RT</div>
 <p>Δν<sub>g</sub> est la somme des coefficients stœchiométriques des produits gazeux moins celle des réactifs gazeux. Seules les espèces gazeuses sont comptées. Utiliser T en kelvins et des unités d’énergie cohérentes avec R.</p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Calorimétrie · CC BY-NC-ND 4.0</p>
@@ -136,6 +173,7 @@
 <nav class="exercise-index" aria-label="Choisir un exercice"><ul>
 <li><a href="#exercice-etalonnage">Déterminer la capacité du calorimètre</a></li>
 <li><a href="#exercice-zinc-cuivre">Réaction entre Zn et Cu²⁺</a></li>
+<li><a href="#exercice-fusion-partielle-simple">Toute la glace fond-elle ?</a></li>
 </ul></nav><section class="exercise-card" id="exercice-etalonnage"><p class="eyebrow">EXERCICE 1</p>
 <h3>Déterminer la capacité du calorimètre</h3>
 <p class="exercise-origin">Exercice du diaporama · diapositives 38–39</p>
@@ -180,7 +218,30 @@
 <details class="exercise-hint"><summary>Indice 1</summary><p>Calculez chaque contribution thermique avec sa température initiale.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>La somme de la contribution de réaction et des trois contributions de chauffage est nulle.</p></details><details class="exercise-solution"><summary>Correction</summary><p>Q<sub>calo</sub> = 160 × (28−18) = 1 600 J.</p>
 <p>Q<sub>solution</sub> = 150 × 4,18 × (28−18) = 6 270 J.</p>
 <p>Q<sub>Zn</sub> = 3 × 0,380 × (28−20) = 9,12 J.</p>
-<p>ΔH<sub>réaction</sub> = −(1 600 + 6 270 + 9,12) ≈ <b>−7,9 kJ</b>.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
+<p>ΔH<sub>réaction</sub> = −(1 600 + 6 270 + 9,12) ≈ <b>−7,9 kJ</b>.</p></details></section><section class="exercise-card" id="exercice-fusion-partielle-simple"><p class="eyebrow">EXERCICE 3</p>
+<h3>Toute la glace fond-elle ?</h3>
+<p class="exercise-origin">Entraînement sur le bilan thermique avec fusion</p>
+<p>Dans un calorimètre adiabatique, l’eau et le récipient peuvent céder 1 000 J en refroidissant jusqu’à 0 °C. La glace est initialement à 0 °C ; la faire fondre entièrement demanderait 2 000 J. On utilise L<sub>fus</sub> = 334 J·g⁻¹.</p>
+<form class="exercise-form" data-exercise="fusion-partielle-simple" novalidate>
+<div class="exercise-fields">
+<div class="exercise-field">
+<label for="fusion-partielle-simple-reponse-1">1. État final</label><select id="fusion-partielle-simple-reponse-1" name="reponse-1" data-expected="partielle" data-hint="Comparez 1000 J et 2000 J." aria-describedby="fusion-partielle-simple-reponse-1-feedback"><option value="">Choisir une réponse</option>
+<option value="partielle">Il reste de la glace avec de l’eau liquide</option>
+<option value="totale">Toute la glace a fondu</option></select><p id="fusion-partielle-simple-reponse-1-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="fusion-partielle-simple-reponse-2">2. Température finale <span class="muted">(°C)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="fusion-partielle-simple-reponse-2" name="reponse-2" data-expected="0" data-hint="La coexistence glace/eau reste à la température de fusion." aria-describedby="fusion-partielle-simple-reponse-2-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="fusion-partielle-simple-reponse-2-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="fusion-partielle-simple-reponse-3">3. Masse de glace fondue <span class="muted">(g)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="fusion-partielle-simple-reponse-3" name="reponse-3" data-expected="2.9940119760479043" data-hint="m fondue = Q disponible / Lfus." aria-describedby="fusion-partielle-simple-reponse-3-feedback" data-tolerance="0.02" placeholder="Votre réponse"><p id="fusion-partielle-simple-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Indice 1</summary><p>La chaleur disponible ne suffit pas à fondre toute la glace.</p></details><details class="exercise-solution"><summary>Correction</summary><p>1 000 &lt; 2 000 J : la fusion est partielle. T<sub>f</sub> = 0 °C ; m<sub>fondue</sub> = 1000/334 ≈ 2,99 g.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Calorimétrie</h3>
@@ -203,6 +264,6 @@
 <script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
 <script src="exercices.js" defer></script>
 <script src="interactions.js" defer></script>
-<html><head><script src="illustrations.js" defer></script></head></html>
+<script src="illustrations.js" defer></script>
 </body>
 </html>

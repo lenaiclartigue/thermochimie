@@ -1,49 +1,50 @@
 # Thermochimie · Licence
 
-Version illustrée du 14 octobre 2026 : mise en interaction du diaporama du chapitre 2. Conception du parcours : Lénaïc Lartigue.
+Version « parcours et TD » du 14 octobre 2026 : mise en interaction du diaporama du chapitre 2. Conception du parcours : Lénaïc Lartigue.
 
-Site statique pour GitHub Pages. Les six parties suivent le cours commun : **Comprendre → QCM → Exercices → Discussion**. Les chapitres 1 et 3 ne sont pas développés ici.
+Site statique pour GitHub Pages. Les six parties suivent le cours commun : **Comprendre → QCM → Exercices → Discussion**. Le chapitre 3 n’est pas développé ici ; les prérequis du chapitre 1 sont rappelés dans la première partie.
 
 ## Contenu de cette version
 
 | Fichier | Partie | Questions QCM | Activités |
 | --- | --- | ---: | ---: |
-| `systeme.html` | Décrire un système | 6 | 1 : compléter les définitions |
-| `premier-principe.html` | Premier principe, travail et chaleur | 8 | 1 : compléter les relations |
-| `enthalpie.html` | Enthalpie | 6 | 1 exercice du diaporama |
-| `enthalpie-reaction.html` | Enthalpie de réaction | 8 | 2 exercices du diaporama |
-| `hess.html` | Cycles de Hess | 6 | 2 exercices du diaporama |
-| `calorimetrie.html` | Calorimétrie | 6 | 2 exercices du diaporama |
+| `systeme.html` | Décrire un système | 6 | 3 |
+| `premier-principe.html` | Premier principe, travail et chaleur | 8 | 3 |
+| `enthalpie.html` | Enthalpie | 6 | 3 |
+| `enthalpie-reaction.html` | Enthalpie de réaction | 8 | 3 |
+| `hess.html` | Cycles de Hess | 6 | 3 |
+| `calorimetrie.html` | Calorimétrie | 6 | 3 |
 
-Les **40 questions de compréhension et les 9 activités** utilisent les notions du diaporama. Les sept exercices originaux conservent leurs données ; les énoncés sont répartis en étapes de saisie. Les huit exercices numériques supplémentaires de la version précédente ont été retirés. Dans les deux premières parties, on complète directement les définitions ou relations des diapositives.
+**40 questions de compréhension et 18 exercices**, soit trois par partie. Les sept exercices du diaporama conservent leur énoncé et leurs données. Les deux activités de restitution sont conservées et neuf entraînements courts sont ajoutés, avec une origine clairement indiquée.
 
-Les ajouts théoriques hors du diaporama ont été retirés du cours et de la fiche pratique, notamment Kirchhoff, les relations de l’adiabatique réversible et la présentation détaillée de la bombe calorimétrique. Les explications mathématiques sur l’intégrale, la primitive et les rectangles sont conservées à la demande de l’enseignant. La correspondance avec les diapositives et les adaptations scientifiques sont indiquées dans `NOTES_PEDAGOGIQUES.md`.
+Les méthodes requises par les 18 exercices du fascicule sont expliquées avant leur utilisation : travail isotherme et diagrammes, cycle, phases et dissolution, fusion partielle, relation ΔrH/ΔrU dès la partie 4 et QV=ΔU en calorimétrie. Voir **`COUVERTURE_TD.md`** pour la correspondance et les anomalies des énoncés qui restent à harmoniser. Les ajouts rédigés sont identifiés dans `NOTES_PEDAGOGIQUES.md`.
 
 L’accueil présente six encarts. Les deux façons de déterminer une enthalpie de réaction ouvrent vers Hess et la calorimétrie à la fin de `enthalpie-reaction.html`.
 
 ## Interactions
 
-- Le schéma ouvert / fermé / isolé fait apparaître les échanges autorisés.
+- Le schéma ouvert / fermé / isolé utilise trois petits dessins intégrés au HTML ; les boutons affichent les échanges autorisés.
+- Le schéma d’énergie propose chaleur ou travail, reçus ou cédés, avec flèche, signe et commentaire mis à jour ensemble.
 - L’illustration du travail compare quatre rectangles à un découpage réglable de 4 à 64 rectangles. La courbe reste fixe. L’explication distingue approximation par rectangles et calcul par primitive ; le cas d’une pression constante montre pourquoi un seul rectangle suffit.
 - Les exercices acceptent une validation partielle, proposent des indices et une rubrique **Correction** à ouvrir volontairement.
 - Les lectures facultatives sont placées dans des encarts **Pour aller plus loin** au fil de l’onglet Comprendre. `ressources.html` reste un récapitulatif. Les pages externes peuvent dépasser le programme : elles ne définissent pas le contenu évalué.
 
 ## Images intégrées
 
-Les neuf exports fournis sont conservés à l’identique et placés près des notions correspondantes. Le fond blanc du site rend leur transparence lisible. Ils s’agrandissent dans une fenêtre fermable, avec un zoom. Trois illustrations générées dans le même style — verre ouvert, bouteille fermée, thermos — servent de boutons pour le schéma des échanges. Le thermos représente un système isolé idéal.
+Les neuf exports fournis sont conservés à l’identique, en vignettes compactes, agrandissables dans une fenêtre fermable avec zoom. Les grandes images générées du verre, de la bouteille et du thermos sont remplacées par des dessins SVG directement intégrés aux boutons. Les schémas interactifs ne dépendent d’aucun fichier image.
 
-Les correspondances et les prompts de génération figurent dans `IMAGES_DU_SITE.md`. Les images sont dans **`assets/images/`** et la fenêtre d’agrandissement est gérée par **`illustrations.js`**.
+Voir `IMAGES_DU_SITE.md`. Les images du diaporama sont dans `assets/images/` et la fenêtre d’agrandissement est gérée par `illustrations.js`.
 
 ## Fichiers communs
 
 - `fiche-pratique.html` : relations du cours, unités et aide mathématique ; impression possible.
 - `integrales.html` : redirection conservée vers les intégrales dans le premier principe.
 - `forum.html` : forum intégré ; `resultats.html` : bilan local et export JSON ; `aide.html` : mode d’emploi.
-- `app.js` : navigation, QCM, scores et historique ; `exercices.js` : réponses et vérification des exercices ; **`interactions.js`** : schéma des systèmes et rectangles.
+- `app.js` : navigation, QCM, scores et historique ; `exercices.js` : réponses et vérification des exercices ; **`interactions.js`** : schémas des systèmes, échanges d’énergie et rectangles.
 - `style.css` : présentation, affichage mobile et impression.
 - `giscus-config.js` : configuration des discussions.
 - `LICENSE.md` et `conditions.js` : conditions de réutilisation et citation, affichées dans une fenêtre du site.
-- `NOTES_PEDAGOGIQUES.md`, `AUDIT_PEDAGOGIQUE.md`, `RESSOURCES_EN_LIGNE.md` : correspondances, changements et références.
+- `COUVERTURE_TD.md`, `NOTES_PEDAGOGIQUES.md`, `AUDIT_PEDAGOGIQUE.md`, `RESSOURCES_EN_LIGNE.md` : correspondances, changements et références.
 - `.nojekyll` : désactivation du traitement Jekyll.
 
 ## Mettre à jour GitHub Pages
@@ -56,7 +57,7 @@ L’ancien `integrales.js` n’est plus utilisé ; la nouvelle illustration est 
 
 ## Modifier le site
 
-Chaque partie possède son fichier HTML, avec les panneaux `pane-course`, `pane-quiz`, `pane-exercises` et `pane-discussion`. Les sections de cours et questions portent un attribut `data-source-slides` pour faciliter la vérification par l’enseignant ; il n’est pas affiché aux étudiants.
+Chaque partie possède son fichier HTML, avec les panneaux `pane-course`, `pane-quiz`, `pane-exercises` et `pane-discussion`. Les sections de cours et questions portent un attribut `data-source-slides` ou `data-source-td` pour faciliter la vérification par l’enseignant ; il n’est pas affiché aux étudiants.
 
 Pour un QCM, modifier ensemble la question, les propositions, `data-correct` (index à partir de 0) et `data-explanation`. Conserver un nom radio propre à chaque question (`q0`, `q1`, etc.). Si l’ordre ou la signification des questions change, changer aussi la version et les clés de sauvegarde dans `app.js`.
 
@@ -68,7 +69,7 @@ Les encarts de définition utilisent `definition` ; les ressources utilisent `fu
 
 Les réponses et résultats sont conservés **dans ce navigateur uniquement**, sans envoi automatique à l’enseignant ni synchronisation. Le meilleur score QCM sert de repère ; 80 % est un objectif de travail. L’historique conserve jusqu’à 100 tentatives. Les exercices conservent les dernières saisies, les étapes vérifiées et la consultation de la correction. L’export JSON rassemble les résultats locaux.
 
-Lors de la révision précédente recentrée sur le diaporama, les questions et exercices avaient changé : leurs réponses et leur progression étaient reparties de zéro. Cette mise à jour des images conserve les mêmes questions, réponses et clés de sauvegarde. Les anciennes tentatives QCM restent visibles, marquées « Version antérieure du quiz ». Les anciennes réponses d’exercices ne sont pas reprises dans le bilan courant.
+Les réponses aux neuf exercices déjà présents et les résultats QCM sont conservés : leurs identifiants, champs et réponses attendues ne changent pas. Neuf exercices portent de nouveaux identifiants. Une formulation du QCM de Hess distingue mieux chemin indirect et cycle fermé, sans changer les réponses possibles ni la bonne réponse. Aucun redémarrage de la progression n’est nécessaire pour cette livraison.
 
 Clés actuelles : `thermo-progress-six-slides-v3`, `thermo-answers-six-slides-v3`, `thermo-exercises-slides-v2`. L’historique conserve la clé `thermo-attempts-six-v1`. L’effacement global supprime aussi les clés de la version précédente.
 

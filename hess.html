@@ -23,12 +23,19 @@
 <ul>
 <li><a href="#loi-hess">Loi et diagramme de Hess</a></li>
 <li><a href="#liaisons">Utiliser les enthalpies de dissociation</a></li>
+<li><a href="#phases-et-liaisons">Conserver les phases dans les cycles</a></li>
 <li><a href="#autres-enthalpies">Autres enthalpies indiquées dans le cours</a></li>
 <li><a href="#cycle-propane">Construire un cycle avec des combustions</a></li>
 </ul></nav><section class="course-section" data-source-slides="27"><h2 id="loi-hess">Loi et diagramme de Hess</h2>
 <div class="definition">
 <h3>Loi de Hess</h3>
 <p>Soit une réaction globale qui mène d’un état initial à un état final. Une suite de réactions successives peut mener de l’un à l’autre : la variation d’enthalpie accompagnant la réaction globale est la somme des enthalpies des réactions successives.</p>
+</div>
+<div class="definition">
+<h3>Pourquoi parle-t-on de cycle ?</h3>
+<p>Un cycle ramène au point de départ. Dans le diagramme de Hess, on peut suivre le chemin indirect de l’état initial à l’état final, puis revenir par le chemin direct pris en sens inverse. La boucle est alors fermée.</p>
+<div class="formula">∑ ΔH<sub>étapes indirectes</sub> − ΔH<sub>chemin direct</sub> = 0</div>
+<p>L’enthalpie étant une fonction d’état, les deux chemins reliant les mêmes états ont donc la même variation d’enthalpie.</p>
 </div>
 <figure class="course-figure " id="figure-cycle-hess"><button class="figure-open" type="button" data-image-full="assets/images/cycle-hess.png" data-image-title="Chemin direct et étapes du cycle de Hess" aria-label="Agrandir : Chemin direct et étapes du cycle de Hess" aria-describedby="figure-cycle-hess-caption"><img src="assets/images/cycle-hess.png" width="1293" height="880" loading="lazy" decoding="async" alt="Cycle de Hess du cours : réactifs vers produits directement, ou par les états 1, 2 et 3 ; quatre enthalpies de réaction pour les étapes successives."><span class="figure-expand" aria-hidden="true">Agrandir le schéma ↗</span></button><figcaption id="figure-cycle-hess-caption">Le chemin direct et le chemin passant par les états intermédiaires 1, 2 et 3 relient les mêmes états initial et final.</figcaption></figure><div class="formula">Δ<sub>r</sub>H° = Δ<sub>r</sub>H°₁ + Δ<sub>r</sub>H°₂ + …</div>
 <p>On prend les données dans le bon sens du cycle choisi et avec la bonne stœchiométrie.</p>
@@ -43,7 +50,13 @@
 <p>Pour former HCl(g) à partir de H₂(g) et Cl₂(g), on peut décomposer le calcul en deux étapes : dissocier les liaisons des réactifs, puis former la liaison H–Cl.</p>
 <div class="formula">½ H₂(g) + ½ Cl₂(g) → HCl(g)</div>
 <p>La dissociation demande de l’énergie ; la formation de la liaison correspond à la transformation inverse.</p>
-<p class="course-exercise-link"><a href="#exercice-hcl">Résoudre l’exercice du cours sur HCl(g)</a></p></section><section class="course-section" data-source-slides="28"><h2 id="autres-enthalpies">Autres enthalpies indiquées dans le cours</h2>
+</section><section class="course-section" data-source-td="chapitre-2"><h2 id="phases-et-liaisons">Conserver les phases dans les cycles</h2>
+<p>On ne simplifie une espèce présente de part et d’autre d’une somme d’équations que si sa formule <strong>et son état physique</strong> sont identiques. H₂O(l) et H₂O(g), ou une substance pure et la même substance dissoute (aq), ne s’annulent pas directement.</p>
+<p>Pour les relier, ajoutez la transformation manquante avec son enthalpie : vaporisation, condensation, sublimation ou dissolution. Toutes les données combinées doivent correspondre à la même température, ou à l’approximation en température explicitement retenue dans le cours.</p>
+<p>Par exemple, pour deux moles d’eau et à la même température : Δ<sub>r</sub>H°<sub>combustion avec H₂O(l)</sub> = Δ<sub>r</sub>H°<sub>combustion avec H₂O(g)</sub> − 2Δ<sub>vap</sub>H°. La condensation apporte une contribution négative.</p>
+<details class="method-detail"><summary>Passer par les atomes gazeux</summary><p>Pour employer des enthalpies de liaison, tous les atomes intermédiaires doivent être gazeux. Un carbone initialement graphite doit donc passer par C(graphite) → C(g) : on ajoute son enthalpie de sublimation.</p>
+<p>Comptez les liaisons dans chaque molécule : H₂C=CH₂ possède quatre liaisons C–H et une liaison C=C. Le bilan est « énergie nécessaire aux liaisons rompues » moins « énergie libérée par les liaisons formées », avec les changements d’état nécessaires.</p>
+<p>Les enthalpies de liaison moyennes fournissent une estimation : leur valeur dépend de l’environnement chimique. Un calcul avec ces moyennes peut donc différer d’un calcul fondé sur les enthalpies de formation des espèces précises.</p></details></section><section class="course-section" data-source-slides="28"><h2 id="autres-enthalpies">Autres enthalpies indiquées dans le cours</h2>
 <div class="definition">
 <h3>Enthalpie d’ionisation</h3>
 <p>M(g) → M⁺(g) + e⁻ ; Δ<sub>ion</sub>H° &gt; 0.</p>
@@ -55,7 +68,7 @@
 <p>L’exercice du propane utilise les combustions du propane, du carbone et du dihydrogène pour retrouver la réaction de formation :</p>
 <div class="formula">3 C(gr) + 4 H₂(g) → C₃H₈(g)</div>
 <p>Commencez par retrouver les coefficients et le sens de chaque réaction. Additionnez ensuite les enthalpies correspondantes.</p>
-<p class="course-exercise-link"><a href="#exercice-propane">Construire le cycle du propane</a></p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Cycles de Hess · CC BY-NC-ND 4.0</p>
+</section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Cycles de Hess · CC BY-NC-ND 4.0</p>
 <p class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></p>
 </div>
 <div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
@@ -99,7 +112,7 @@
 </div>
 <div class="quiz-item" data-source-slides="31" data-correct="0" data-explanation="Les espèces intermédiaires communes s’éliminent.">
 <fieldset>
-<legend>6. Dans un cycle, l’addition des équations doit donner…</legend>
+<legend>6. Pour construire le chemin indirect d’un diagramme de Hess, l’addition des équations doit donner…</legend>
 <label class="quiz-option"><input type="radio" name="q5" value="0" required><span>la réaction recherchée</span></label><label class="quiz-option"><input type="radio" name="q5" value="1" required><span>uniquement une combustion</span></label><label class="quiz-option"><input type="radio" name="q5" value="2" required><span>toujours une réaction nulle</span></label>
 </fieldset>
 <p class="feedback" role="status"></p>
@@ -116,6 +129,7 @@
 <nav class="exercise-index" aria-label="Choisir un exercice"><ul>
 <li><a href="#exercice-hcl">Former HCl avec les enthalpies de dissociation</a></li>
 <li><a href="#exercice-propane">Construire le cycle du propane</a></li>
+<li><a href="#exercice-hess-sens-coefficients">Choisir le sens et le coefficient</a></li>
 </ul></nav><section class="exercise-card" id="exercice-hcl"><p class="eyebrow">EXERCICE 1</p>
 <h3>Former HCl avec les enthalpies de dissociation</h3>
 <p class="exercise-origin">Exercice du diaporama · diapositive 29</p>
@@ -169,7 +183,30 @@
 <p class="exercise-feedback" role="status" aria-live="polite"></p>
 </form>
 <details class="exercise-hint"><summary>Indice 1</summary><p>Commencez par les espèces qui ne figurent que dans une des équations.</p></details><details class="exercise-hint"><summary>Indice 2</summary><p>Vérifiez que O₂, CO₂ et H₂O s’annulent avant d’additionner les enthalpies.</p></details><details class="exercise-solution"><summary>Correction</summary><p>Combinaison : <b>−équation 1 + 3 × équation 2 + 4 × équation 3</b>. Les 5 O₂, 3 CO₂ et 4 H₂O s’annulent. Il reste 3 C(graphite) + 4 H₂(g) → C₃H₈(g).</p>
-<p>ΔfH° = −(−2220) + 3(−394) + 4(−286) = <b>−106 kJ·mol⁻¹</b>, avec les données arrondies du cours.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
+<p>ΔfH° = −(−2220) + 3(−394) + 4(−286) = <b>−106 kJ·mol⁻¹</b>, avec les données arrondies du cours.</p></details></section><section class="exercise-card" id="exercice-hess-sens-coefficients"><p class="eyebrow">EXERCICE 3</p>
+<h3>Choisir le sens et le coefficient</h3>
+<p class="exercise-origin">Entraînement sur les règles de Hess</p>
+<p>On part de H₂O(l) → H₂O(g), ΔH₁ = +40,7 kJ pour une mole d’eau à 100 °C. Les transformations suivantes sont prises à cette même température.</p>
+<form class="exercise-form" data-exercise="hess-sens-coefficients" novalidate>
+<div class="exercise-fields">
+<div class="exercise-field">
+<label for="hess-sens-coefficients-reponse-1">1. ΔH pour condenser une mole de vapeur <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hess-sens-coefficients-reponse-1" name="reponse-1" data-expected="-40.7" data-hint="Inversez la transformation." aria-describedby="hess-sens-coefficients-reponse-1-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="hess-sens-coefficients-reponse-1-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="hess-sens-coefficients-reponse-2">2. ΔH pour vaporiser deux moles d’eau <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hess-sens-coefficients-reponse-2" name="reponse-2" data-expected="81.4" data-hint="Multipliez la transformation par 2." aria-describedby="hess-sens-coefficients-reponse-2-feedback" data-tolerance="0.01" placeholder="Votre réponse"><p id="hess-sens-coefficients-reponse-2-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="hess-sens-coefficients-reponse-3">3. H₂O(l) d’un côté et H₂O(g) de l’autre peuvent-ils s’annuler ?</label><select id="hess-sens-coefficients-reponse-3" name="reponse-3" data-expected="non" data-hint="Les espèces simplifiées doivent avoir le même état physique." aria-describedby="hess-sens-coefficients-reponse-3-feedback"><option value="">Choisir une réponse</option>
+<option value="oui">Oui</option>
+<option value="non">Non, leurs états physiques sont différents</option></select><p id="hess-sens-coefficients-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Vérifier mes réponses</button><button class="button secondary" type="reset">Recommencer cet exercice</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Indice 1</summary><p>Appliquez à l’enthalpie la même opération qu’à l’équation.</p></details><details class="exercise-solution"><summary>Correction</summary><p>1. −40,7 kJ. 2. 2 × 40,7 = +81,4 kJ. 3. Non : il faut ajouter le changement d’état pour relier le liquide et le gaz.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
 <div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
 <h3>Discussion · Cycles de Hess</h3>
@@ -192,6 +229,6 @@
 <script src="conditions.js"></script><script src="giscus-config.js"></script><script src="app.js" defer></script>
 <script src="exercices.js" defer></script>
 <script src="interactions.js" defer></script>
-<html><head><script src="illustrations.js" defer></script></head></html>
+<script src="illustrations.js" defer></script>
 </body>
 </html>

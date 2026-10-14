@@ -57,7 +57,7 @@
 <div class="formula">Extensifs : m, V, n<br>Intensifs : T, p, concentration, fraction molaire</div>
 <p>Un paramètre extensif est proportionnel à la quantité de matière. Un paramètre intensif en est indépendant.</p>
 </div>
-<a href="systeme.html#types-systemes">Revoir le schéma des échanges</a></section><section id="premier-principe"><h2>Premier principe et fonctions d’état</h2>
+<a href="systeme.html#types-systemes">Revoir le schéma des échanges</a><p><strong>Quantités et gaz :</strong> n = m/M ; m = ρV ; n = cV ; pV = nRT ; xᵢ = nᵢ/n<sub>tot</sub> ; pᵢ = xᵢp. Avancement : nᵢ = nᵢ,₀ + νᵢξ ; pour une réaction totale, ξ<sub>max</sub> est le plus petit nᵢ,₀/|νᵢ| des réactifs.</p></section><section id="premier-principe"><h2>Premier principe et fonctions d’état</h2>
 <div class="formula-entry">
 <h3>Bilan d’énergie</h3>
 <div class="formula">ΔU = U<sub>f</sub> − U<sub>i</sub> = Q + W<br>dU = δQ + δW</div>
@@ -73,7 +73,8 @@
 <h3>Transformations du cours</h3>
 <div class="formula">Isochore : W = 0 et ΔU = Q<sub>V</sub><br>Adiabatique : Q = 0 et ΔU = W<br>Isolé : Q = W = ΔU = 0<br>Isotherme, gaz parfait : ΔU = 0 et W = −Q</div>
 <p>Ces relations utilisent le travail des forces de pression. Pour l’isotherme du gaz parfait, la composition est fixe. Adiabatique ne signifie pas température constante.</p>
-</div></section><section id="travail"><h2>Calculer le travail</h2>
+</div>
+<p><strong>Cycle :</strong> suite de transformations ramenant le système à son état initial. Le trajet est fermé ; ΔU<sub>cycle</sub> = ΔH<sub>cycle</sub> = 0 et Q<sub>cycle</sub> + W<sub>cycle</sub> = 0.</p></section><section id="travail"><h2>Calculer le travail</h2>
 <div class="formula-entry">
 <h3>Expression générale</h3>
 <div class="formula">δW = −p<sub>ext</sub> dV<br>W = −∫<sub>Vᵢ</sub><sup>Vf</sup> p<sub>ext</sub>(V) dV</div>
@@ -84,7 +85,11 @@
 <div class="formula">W = −p<sub>ext</sub>(V<sub>f</sub> − V<sub>i</sub>)</div>
 <p>Si la pression extérieure est constante, elle sort de l’intégrale. Isobare désigne une pression du système constante ; monobare désigne une pression extérieure constante.</p>
 </div>
-<a href="premier-principe.html#integrale-travail">Manipuler les rectangles et relier l’aire à une primitive</a></section><section id="enthalpie"><h2>Enthalpie et capacités calorifiques</h2>
+<a href="premier-principe.html#integrale-travail">Manipuler les rectangles et relier l’aire à une primitive</a><div class="formula-card">
+<h3>Gaz parfait, quantité fixe, isotherme réversible</h3>
+<div class="formula">W = −nRT ln(V<sub>f</sub>/V<sub>i</sub>) = nRT ln(p<sub>f</sub>/p<sub>i</sub>)</div>
+<p>On utilise p<sub>ext</sub> = p = nRT/V dans la limite réversible. Isotherme seul n’autorise pas ce remplacement. À volume constant, W = 0. À pression constante avec p = p<sub>ext</sub>, W = −nR(T<sub>f</sub> − T<sub>i</sub>).</p>
+</div></section><section id="enthalpie"><h2>Enthalpie et capacités calorifiques</h2>
 <div class="formula-entry">
 <h3>Définition de H</h3>
 <div class="formula">H = U + pV<br>ΔH = ΔU + Δ(pV)</div>
@@ -137,7 +142,7 @@
 <div class="formula">A–B(g) → A(g) + B(g) : Δ<sub>diss</sub>H° &gt; 0<br>M(g) → M⁺(g) + e⁻ : Δ<sub>ion</sub>H° &gt; 0<br>M(g) + e⁻ → M⁻(g) : Δ<sub>AE</sub>H°</div>
 <p>Pour la formation d’une liaison à partir des atomes gazeux, on utilise l’opposé de son enthalpie de dissociation.</p>
 </div>
-<a href="enthalpie-reaction.html#enthalpies-particulieres">Revoir les définitions des enthalpies particulières</a></section><section id="calorimetrie"><h2>Bilans calorimétriques</h2>
+<a href="enthalpie-reaction.html#enthalpies-particulieres">Revoir les définitions des enthalpies particulières</a><p><strong>Phases :</strong> seules les espèces de même formule et dans le même état peuvent s’annuler dans la somme des équations. Ajouter, si nécessaire, les enthalpies de changement d’état ou de dissolution. La dissolution A(s) → A(aq) diffère de la dissociation d’une liaison gazeuse.</p></section><section id="calorimetrie"><h2>Bilans calorimétriques</h2>
 <div class="formula-entry">
 <h3>Somme des contributions</h3>
 <div class="formula">∑ Q<sub>p,i</sub> = 0<br>Q<sub>calo</sub> + Q<sub>chauffage</sub> + Q<sub>changement d’état</sub> + Q<sub>réaction</sub> = 0</div>
@@ -159,7 +164,12 @@
 <div class="formula">Δ<sub>r</sub>H° = Δ<sub>r</sub>U° + Δν<sub>g</sub> RT<br>Δν<sub>g</sub> = ∑ ν<sub>produits gazeux</sub> − ∑ ν<sub>réactifs gazeux</sub>
 </div>
 <p>Modèle des gaz parfaits, contribution pV des phases condensées négligée. Compter seulement les espèces gazeuses et utiliser T en kelvins.</p>
-</div></section><section id="integrales"><h2>Aide mathématique : primitives et intégrales</h2>
+</div>
+<div class="formula-card">
+<h3>Fusion partielle ou totale</h3>
+<p>Glace à 0 °C, eau et calorimètre initialement à Tᵢ &gt; 0 °C : comparer (C<sub>cal</sub> + m<sub>eau</sub>c<sub>eau</sub>)Tᵢ à m<sub>glace</sub>L<sub>fus</sub>. Si la première valeur est plus petite, T<sub>f</sub> = 0 °C et m<sub>fondue</sub> = Q<sub>disponible</sub>/L<sub>fus</sub>. Sinon toute la glace fond ; ajouter le chauffage de l’eau issue de la glace si T<sub>f</sub> &gt; 0 °C.</p>
+</div>
+<p><strong>Valeurs molaires :</strong> à pression constante, Δ<sub>r</sub>H ≈ Q<sub>réaction</sub>/ξ ; à volume constant avec seul travail de pression, Δ<sub>r</sub>U ≈ Q<sub>V, réaction</sub>/ξ. Le signe est celui de la chaleur reçue par le système réactionnel.</p></section><section id="integrales"><h2>Aide mathématique : primitives et intégrales</h2>
 <p>L’intégrale additionne les contributions sur un intervalle. Les rectangles en donnent une approximation. Si F′ = f, une primitive permet le calcul exact :</p>
 <div class="formula">∫<sub>a</sub><sup>b</sup> f(x) dx = F(b) − F(a)</div>
 <div class="table-scroll"><table>
@@ -186,8 +196,8 @@
 </table></div>
 <p>Inverser les bornes change le signe de l’intégrale. Trouver une primitive de pext(V) pour un chemin donné ne fait pas de W une fonction d’état : la courbe pext(V) peut changer avec le chemin.</p>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
-<p>Pour les aires et les rectangles, commencez par les pages 1–2 du chapitre <a href="https://exo7.emath.fr/cours/ch_int.pdf" target="_blank" rel="noopener noreferrer">Intégrales d’Exo7</a>.</p>
-<p class="resource-meta">Lecture facultative · français, PDF · nouvel onglet</p></aside><a href="premier-principe.html#integrale-travail">Revenir à l’illustration interactive des rectangles</a></section><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Fiche pratique · CC BY-NC-ND 4.0</p></main><footer><div>
+<p>Pour voir simplement le lien entre une intégrale et une aire, regardez la vidéo <a href="https://youtu.be/jkxNKkmEXZA" target="_blank" rel="noopener noreferrer">Déterminer une intégrale par calculs d’aire — Yvan Monka</a>.</p>
+<p class="muted">Facultatif · niveau terminale · vidéo en français · nouvel onglet</p></aside><a href="premier-principe.html#integrale-travail">Revenir à l’illustration interactive des rectangles</a></section><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Fiche pratique · CC BY-NC-ND 4.0</p></main><footer><div>
 <strong>Thermochimie · Licence</strong><p>Conception du parcours : Lénaïc Lartigue.</p>
 </div>
 <div>
