@@ -1,65 +1,80 @@
-# Thermochimie — site GitHub Pages à pages séparées
+# Thermochimie · Licence
 
-Chaque page possède son propre fichier HTML. Le texte des leçons et les quiz sont directement dans le fichier du module, sans fichier cours.js ni chargement de données.
+Version du 14 octobre 2026 : site statique à pages séparées, forums intégrés, résultats locaux, guide d’utilisation et conditions en fenêtre modale.
 
-## Fichiers à déposer à la racine du dépôt
+Cours asynchrone du chapitre 2 de XLG1CU040. Conception du parcours : Lénaïc Lartigue. Supports sources : cours de Mireille Le Guennec et Lénaïc Lartigue et fascicule de TD 2026–2027. Le chapitre 1 est un prérequis ; le chapitre 3 reste prévu en séance.
 
-- index.html : accueil et liste des modules.
-- module-01.html à module-08.html : un fichier par module.
-- style.css : présentation commune.
-- app.js : fonctions communes des quiz et laboratoires.
-- LICENSE.md : conditions de consultation et réutilisation.
-- NOTES_PEDAGOGIQUES.md : points à relire dans les supports sources.
+## Pages et fichiers
 
-Conserver Settings → Pages → Deploy from a branch → main → /(root).
-Remplacer les anciens index.html, app.js, style.css et README.md. Ajouter les huit pages. L’ancien cours.js peut être supprimé ; il n’est plus utilisé. Ne pas déposer uniquement l’archive ZIP.
+| Fichier | Fonction |
+| --- | --- |
+| index.html | Accueil et liste des huit modules |
+| module-01.html à module-08.html | Cours, applications, laboratoires, quiz, discussions et préparation des TD |
+| forum.html | Forum général intégré au site |
+| resultats.html | Historique local, détail de la dernière tentative et export des réponses et scores |
+| aide.html | Guide « Utiliser le site » destiné aux étudiants |
+| style.css | Présentation commune |
+| app.js | Navigation des onglets, calculs interactifs, quiz, enregistrement local, fenêtres et chargement du forum |
+| giscus-config.js | Identifiants publics du dépôt et de la catégorie GitHub Discussions |
+| LICENSE.md | Conditions de consultation et de réutilisation |
+| conditions.js | Texte de ces mêmes conditions affiché dans la fenêtre du site |
+| NOTES_PEDAGOGIQUES.md | Points de relecture des documents sources |
+| .nojekyll | Désactivation de Jekyll pour l’hébergement statique |
 
-## Modifier une leçon
+Le site comporte 12 pages HTML. Les textes et les questions des huit modules sont directement dans leurs fichiers HTML. Il n’utilise plus cours.js. L’encart « Fil conducteur » et la rubrique pédagogique « Comment travailler » ont été retirés. « Utiliser le site » explique uniquement les fonctionnalités disponibles.
 
-Ouvrir le HTML du module concerné. Le bloc pane-course contient les paragraphes, formules, exemples et l’application. Les commentaires HTML indiquent les zones de modification. Les blocs pane-quiz et pane-td contiennent le quiz et la préparation des TD.
+## Publication et mises à jour
 
-Pour une question de quiz, modifier l’intitulé, les options, data-correct (0 = première réponse, 1 = deuxième, etc.) et data-explanation. Pour une application numérique, modifier aussi data-answer et data-tolerance dans le formulaire.
+Toutes les livraisons sont des archives complètes et cumulatives. Utiliser uniquement la plus récente, la décompresser, puis déposer tous ses fichiers à la racine du dépôt lenaiclartigue/thermochimie, en remplaçant les versions précédentes. Ne pas déposer uniquement le ZIP. L’ancien cours.js peut être supprimé.
 
-Les calculs interactifs des laboratoires sont dans la fonction renderLab de app.js. Les styles communs se modifient dans style.css.
+Dans GitHub : Settings → Pages → Deploy from a branch → main → /(root).
+Le site est accessible à https://lenaiclartigue.github.io/thermochimie/ après un déploiement réussi. Vérifier le dernier déploiement dans Actions si une mise à jour n’apparaît pas, puis recharger la page sans cache si nécessaire.
 
-## Fonctionnement
+Aucun serveur supplémentaire n’est nécessaire pour le cours et les quiz. Le service externe giscus est utilisé uniquement pour les commentaires. Il n’existe pas de compte étudiant propre au site ni de stockage central des résultats.
 
-Accès libre. Aucune connexion ni service externe. Progression conservée localement dans le navigateur, aucun suivi enseignant. Les étudiants peuvent ouvrir directement une page de module. Le cours reste à relire avant diffusion. Les durées sont indicatives. Le site s’ouvre aussi localement avec index.html.
+## Modifier le contenu
 
-Sources : cours de Mireille Le Guennec et Lénaïc Lartigue et fascicule XLG1CU040 2026–2027. Chapitre 1 prérequis ; chapitre 3 prévu en séance. Le dépôt GitHub n’a pas été modifié automatiquement.
+Ouvrir le HTML du module concerné. Le bloc pane-course contient les leçons, formules, exemples et application numérique. Les commentaires HTML indiquent les zones de modification. pane-quiz contient les questions ; pane-td contient les références aux TD.
 
-## Forum du cours
+Pour une question de quiz, modifier son intitulé, ses options, data-correct (0 = première réponse, 1 = deuxième, etc.) et data-explanation. Pour une application numérique, modifier aussi data-answer et data-tolerance dans son formulaire. Garder les attributs id utilisés par app.js.
 
-Les liens du site pointent vers https://github.com/lenaiclartigue/thermochimie/discussions . Si le nom du dépôt est différent, modifier cette adresse dans les pages HTML.
+Les paramètres et les calculs des laboratoires se trouvent dans renderLab, dans app.js. Les styles communs se modifient dans style.css.
 
-Activation par le propriétaire du dépôt : Settings → General → Features → Discussions (ou Set up discussions). Puis, dans Discussions, utiliser une catégorie de type Questions & Answers, permettant de marquer une réponse comme réponse retenue. Les étudiants ont besoin d’un compte GitHub pour participer ; le mail et les séances à distance restent possibles.
+## Quiz et données locales
 
-Les liens ont été intégrés au site. L’activation dans le compte GitHub n’a pas été effectuée par l’assistant, qui ne dispose pas d’une connexion à ce compte dans cette session. Aucun message n’a été publié sur le forum.
+Chaque module comporte cinq questions. Le bouton « Valider mes réponses » affiche le score et les explications. L’étudiant peut recommencer ; le meilleur score de chaque module est conservé pour la progression. Un seuil de 80 % est un repère d’entraînement, pas une note officielle.
 
-## Introduction pédagogique
+Les choix de la dernière tentative validée sont restaurés lorsque l’étudiant revient sur le module. L’historique conserve au maximum 100 tentatives corrigées, avec date, réponses et score. « Recommencer » retire les choix mémorisés du module pour une nouvelle tentative, sans supprimer l’historique ni le meilleur score.
 
-Le bloc d’accueil est centré sur l’enthalpie, avec ΔH = Qp et ses conditions d’application. Le premier principe et l’énergie interne restent expliqués dans les modules correspondants.
+resultats.html affiche cet historique et le détail de la dernière tentative. Le bouton de téléchargement exporte toutes les tentatives conservées au format JSON. Un nom facultatif peut être ajouté à l’export ; il n’est pas envoyé au serveur. L’étudiant choisit ensuite de transmettre son fichier par mail.
 
-## Forum intégré giscus
+Les résultats restent dans le navigateur et sur l’appareil utilisés. Ils ne sont pas synchronisés entre appareils et ne sont pas transmis automatiquement à l’enseignant. Si le stockage du navigateur est bloqué ou effacé, la sauvegarde peut être indisponible ou perdue. « Ma progression » ouvre une fenêtre permettant d’effacer les réponses, scores et tentatives locales. Ces exports sont déclaratifs, pas des évaluations certifiées.
 
-Une cinquième section Discussion est ajoutée à chaque module. Le chargement du service externe commence après un clic sur Afficher les échanges. Chaque module possède un fil stable, identifié par « Thermochimie · Module XX ». Les messages sont stockés dans GitHub Discussions et sont publics.
+## Forums intégrés
 
-Pour activer : autoriser https://github.com/apps/giscus sur le dépôt du cours, puis ouvrir https://giscus.app/fr . Saisir lenaiclartigue/thermochimie, sélectionner une catégorie de commentaires, et récupérer les valeurs data-repo-id, data-category et data-category-id dans le script généré. Les reporter dans giscus-config.js. Ces identifiants sont publics ; aucun jeton secret n’est à fournir. La catégorie de type Announcements est recommandée par giscus. Tant que les identifiants manquent, aucun script externe n’est chargé et un lien GitHub reste proposé.
+forum.html affiche le fil général. Chaque module possède aussi un onglet Discussion. Le bouton « Afficher les échanges » charge le forum giscus dans la page. Il n’y a plus de lien de navigation envoyant le lecteur vers GitHub.
 
-Cette autorisation sur le compte GitHub n’a pas été réalisée par l’assistant. La connexion réelle à giscus reste à tester après configuration.
+Configuration actuelle :
 
-## Enregistrement des quiz
+- dépôt : lenaiclartigue/thermochimie ;
+- identifiant : R_kgDOVHuUzw ;
+- catégorie : Announcements ;
+- identifiant de catégorie : DIC_kwDOVHuUz84DIZGT ;
+- correspondance : pathname, avec correspondance stricte ;
+- langue française, thème clair, zone de commentaire en haut.
 
-Les choix de la dernière tentative sont conservés par module. Chaque correction enregistre date, réponses et score dans l’historique local, limité à 100 tentatives. resultats.html permet de voir ce bilan et de télécharger un export JSON pouvant être transmis par mail. Les meilleurs scores alimentent la progression. Aucun nom n’est exigé pour s’entraîner ; le nom facultatif saisi lors de l’export figure uniquement dans le fichier téléchargé.
+Ces identifiants sont publics ; aucun jeton secret ne doit être ajouté. L’application giscus et GitHub Discussions doivent rester autorisés sur le dépôt. Les messages sont stockés dans GitHub Discussions, pas dans les fichiers du site. Remplacer les fichiers HTML ne supprime pas les commentaires. Conserver les noms et chemins des pages pour retrouver leurs fils.
 
-Il n’y a pas de stockage central ni de tableau de résultats de classe. Le forum public ne doit pas être utilisé pour collecter les notes nominatives. Une collecte automatique serait une fonctionnalité distincte nécessitant un stockage supplémentaire.
+Les étudiants peuvent lire les messages dans le site. Pour participer, ils doivent avoir un compte GitHub et autoriser giscus. Cette connexion peut ouvrir une fenêtre GitHub, puis les échanges restent affichés dans la page. Les messages sont publics. Le mail et les séances à distance restent possibles. Ne pas utiliser le forum pour collecter des scores nominatifs.
 
-## Archives cumulatives
+## Conditions affichées dans le site
 
-Chaque livraison contient tous les fichiers du site, prêts à remplacer la version précédente. Ne pas mélanger plusieurs archives : utiliser la plus récente, décompresser puis téléverser tous ses fichiers à la racine du dépôt. L’ancien cours.js n’est plus utilisé et peut être supprimé.
+Le bouton « Conditions de consultation et de réutilisation » du pied de page ouvre une fenêtre du site avec une croix de fermeture. La touche Échap et le clic sur le fond permettent aussi de la fermer. Il n’ouvre plus LICENSE.md dans une autre interface.
 
-## Forum général
+LICENSE.md et conditions.js contiennent exactement le même texte. Après une modification des conditions, mettre aussi à jour la chaîne window.THERMO_CONDITIONS dans conditions.js. Les conditions du contenu original ne remplacent pas celles des services tiers ni celles des éléments appartenant à d’autres titulaires.
 
-forum.html affiche un fil général intégré via giscus, avec le même dépôt et la même catégorie que les discussions des modules. Le mappage pathname associe un fil à forum.html et un fil à chaque page de module. Les messages sont conservés dans GitHub Discussions ; le remplacement des fichiers HTML ne les supprime pas. Les noms des pages sont à conserver pour garder cette correspondance.
+## Guide et vérifications
 
-Le bouton Forum de la navigation ouvre la page du site. L’autorisation GitHub pour participer au forum peut nécessiter une fenêtre de connexion externe, puis l’utilisateur retrouve le fil intégré. La lecture et les échanges restent dans la page.
+La page aide.html explique les onglets, la validation des quiz, l’historique, l’export, les forums, l’impression et les fenêtres de progression et de conditions. Elle est accessible depuis la navigation et le pied de page.
+
+Les liens locaux, les identifiants HTML, la syntaxe JavaScript et l’identité du texte des conditions ont été vérifiés lors de cette livraison. Le rendu de la nouvelle fenêtre et du guide reste à contrôler dans le navigateur après publication. Le contenu pédagogique reste à relire avant diffusion aux étudiants ; les durées sont indicatives.
