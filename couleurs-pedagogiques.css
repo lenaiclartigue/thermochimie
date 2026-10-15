@@ -61,3 +61,29 @@ tr.linked-equation td{color:var(--term-color)}
 }
 @media screen and (max-width:680px){.part-card{min-height:250px;padding:23px}.part-card .card-open{width:100%;min-height:44px}.part-card .card-number{font-size:28px}.button{font-size:13px;padding:11px 15px}}
 @media(prefers-reduced-motion:reduce){.part-card:hover,.part-card:focus-visible{transform:none}}
+
+/* Contact : signature, mise en page et accès directs */
+.contact-page{max-width:1080px;margin:0 auto;padding:64px 24px 80px}
+.contact-card{display:grid;grid-template-columns:1.3fr 1fr;background:#fff;border:1px solid #e2e8f0;border-radius:24px;overflow:hidden;box-shadow:0 16px 48px #17203308}
+.contact-identity{padding:48px;border-top:5px solid #2563eb}
+.contact-identity .eyebrow{color:#2563eb;letter-spacing:.16em}
+.contact-identity h1{font-size:clamp(32px,4vw,46px);line-height:1.15;margin:24px 0 8px;color:#172033;letter-spacing:-.04em}
+.contact-identity h1 span{display:block}
+.contact-degrees{font-weight:600;color:#2563eb;margin:0 0 24px}
+.contact-role{font-size:19px;font-weight:600;line-height:1.5}
+.contact-affiliation{color:#526074;line-height:1.8;margin-bottom:28px}
+.contact-mail{display:inline-flex;align-items:center;justify-content:center;padding:13px 28px;background:#2563eb;border-radius:10px;color:#fff!important;text-decoration:none;font-weight:650;min-height:48px;transition:background .15s}
+.contact-mail:hover{background:#1d4ed8}
+.contact-email{display:block;width:fit-content;margin-top:14px;color:#334155;overflow-wrap:anywhere;text-underline-offset:4px}
+.contact-details{padding:48px;background:#f8fafc;border-left:1px solid #e2e8f0;display:flex;flex-direction:column;gap:28px}
+.contact-details h2{font-size:17px;margin:0 0 10px;color:#172033}
+.contact-details p{margin:0;line-height:1.7}
+.contact-details a{color:#172033;text-underline-offset:4px}
+.contact-details address{font-style:normal;line-height:1.8;color:#526074}
+.contact-research{margin-top:auto;padding-top:24px;border-top:1px solid #dce3ed}
+.contact-research .eyebrow{font-size:11px;color:#007c83;margin-bottom:8px}
+.contact-research h2{font-size:25px;letter-spacing:-.02em}
+.contact-research a{color:#007c83;font-weight:600}
+.contact-page a:focus-visible{outline:3px solid #2563eb;outline-offset:5px}
+.topbar nav a[aria-current="page"]{color:#2563eb;text-decoration:underline;text-underline-offset:6px}
+@media(max-width:700px){.contact-page{padding:28px 16px 48px}.contact-card{grid-template-columns:1fr;border-radius:18px}.contact-identity,.contact-details{padding:28px}.contact-details{border-left:0;border-top:1px solid #e2e8f0}.contact-identity h1{margin-top:18px}}

@@ -62,7 +62,7 @@ Dans les exercices du parcours, l’eau de combustion est liquide, H₂O(l), sau
 
 - `fiche-pratique.html` : relations du cours, unités et aide mathématique ; impression possible.
 - `integrales.html` : redirection conservée vers les intégrales dans le premier principe.
-- `forum.html` : forum intégré ; `resultats.html` : bilan local et export JSON ; `aide.html` : redirection de l’ancienne page d’aide vers l’accueil.
+- `contact.html` : signature, coordonnées et lien NanoBioMat ; `forum.html` : redirection vers Contact ; `resultats.html` : bilan local et export JSON ; `aide.html` : redirection de l’ancienne page d’aide vers l’accueil.
 - `app.js` : navigation, QCM, scores et historique ; `exercices.js` : réponses et vérification des exercices ; **`interactions.js`** : toutes les activités interactives du cours.
 - `style.css` : présentation, affichage mobile et impression.
 - `giscus-config.js` : configuration des discussions.
@@ -146,3 +146,5 @@ Retrait de la phrase « Dans chaque partie : Comprendre → QCM → Exercices �
 ## Emplacement de la courbe — 15 octobre 2026
 
 L’animation « Chauffer un corps pur : du solide à la vapeur » est placée dans « Décomposer un chauffage en plusieurs étapes », après les cinq contributions et leur somme. Son contenu, ses commandes et ses calculs sont conservés.
+
+La navigation propose Contact à la place du forum général. Les discussions intégrées à chaque module sont conservées.
