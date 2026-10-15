@@ -148,3 +148,17 @@ Retrait de la phrase « Dans chaque partie : Comprendre → QCM → Exercices �
 L’animation « Chauffer un corps pur : du solide à la vapeur » est placée dans « Décomposer un chauffage en plusieurs étapes », après les cinq contributions et leur somme. Son contenu, ses commandes et ses calculs sont conservés.
 
 La navigation propose Contact à la place du forum général. Les discussions intégrées à chaque module sont conservées.
+
+## Tableau de bord enseignant (démonstration)
+
+Le dossier `enseignant/` contient une page autonome à ouvrir localement : `enseignant/index.html`. Elle utilise uniquement des données fictives et ne collecte aucune donnée. Elle n'est pas liée à la navigation étudiante et n'est pas authentifiée. Voir `enseignant/LIRE-MOI.md` avant publication. Les fonctions actuelles du cours restent inchangées.
+
+## Consultations — Simple Analytics
+
+Le script fourni par le propriétaire est intégré une seule fois sur chaque page de contenu du site. Les pages de redirection et la démonstration enseignant sont exclues. Après publication sur GitHub Pages, les consultations pourront être consultées dans le compte Simple Analytics, par date et par chemin de page (par exemple /thermochimie/enthalpie.html). Si d’autres sites partagent le domaine lenaiclartigue.github.io, filtrer sur /thermochimie/.
+
+Aucun événement de réponse, score, nom saisi ou identifiant de navigateur n’est envoyé par notre code. Les QCM restent enregistrés localement. Le tableau de bord enseignant fourni dans enseignant/ reste une démonstration : il n’est pas connecté au compte Simple Analytics.
+
+Après publication, ouvrir une page puis utiliser l’assistant de vérification de Simple Analytics. Un bloqueur ou une préférence de confidentialité peut empêcher le comptage ; ne pas chercher à les contourner. Le comptage commence à l’installation et ne reconstitue pas les visites passées.
+
+Pour la formule gratuite, vérifier dans le compte les conditions applicables, notamment le badge requis et la limite d’historique. Le badge n’est pas inclus dans le script fourni : intégrer le code officiel du badge si cette formule est choisie. Ne pas publier de clé API privée dans les fichiers du site.
