@@ -162,3 +162,5 @@ Aucun événement de réponse, score, nom saisi ou identifiant de navigateur n�
 Après publication, ouvrir une page puis utiliser l’assistant de vérification de Simple Analytics. Un bloqueur ou une préférence de confidentialité peut empêcher le comptage ; ne pas chercher à les contourner. Le comptage commence à l’installation et ne reconstitue pas les visites passées.
 
 Pour la formule gratuite, vérifier dans le compte les conditions applicables, notamment le badge requis et la limite d’historique. Le badge n’est pas inclus dans le script fourni : intégrer le code officiel du badge si cette formule est choisie. Ne pas publier de clé API privée dans les fichiers du site.
+
+Correction du formatage des fractions : les adresses web en texte brut, les liens et les blocs de code sont préservés, y compris dans les fenêtres de conditions.
