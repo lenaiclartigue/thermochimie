@@ -1,3 +1,5 @@
+> Note de version — 15 octobre 2026 : relevé historique antérieur aux suppressions demandées. Les compléments avancement, volumes/débit et diagrammes de cycle ont été retirés. La relation H/U est désormais en calorimétrie. Les conclusions de couverture ci-dessous ne constituent pas une certification de cette nouvelle version.
+
 # Relecture complète du site de thermochimie
 
 14 octobre 2026 — version « construction de Hess et des bilans calorimétriques ».

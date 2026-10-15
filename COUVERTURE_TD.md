@@ -1,3 +1,5 @@
+> Note de version — 15 octobre 2026 : relevé historique antérieur aux suppressions demandées. Les compléments avancement, volumes/débit et diagrammes de cycle ont été retirés. La relation H/U est désormais en calorimétrie. Les conclusions de couverture ci-dessous ne constituent pas une certification de cette nouvelle version.
+
 # Couverture des TD — chapitre 2
 
 Vérification du 14 octobre 2026 : fascicule 2026–2027, pages PDF 8 à 17, soit **18 exercices**, comparés au diaporama principal, au support de bilans thermiques et au corrigé enseignant fourni. Ce relevé donne les prérequis et leur place dans le site ; ce n’est pas un corrigé des TD.

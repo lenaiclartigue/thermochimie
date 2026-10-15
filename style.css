@@ -112,3 +112,8 @@
 
 /* Schémas scientifiques progressifs, tracés vectoriels */
 .progressive-diagram{max-width:100%;overflow-x:auto;border:1px solid #c8dcda;border-radius:14px;background:#fff;margin:1rem 0;padding:.5rem;scrollbar-color:#19756d #edf5f4}.progressive-diagram svg{display:block;width:100%;min-width:780px;height:auto;font-family:inherit;font-size:17px;fill:#203e44}.diagram-node{fill:#f1f8f7;stroke:#9abfba;stroke-width:1.5}.diagram-boundary{fill:#f1f8f7;stroke:#19756d;stroke-width:2;stroke-dasharray:9 6}.diagram-arrow{fill:none;stroke:#19756d;stroke-width:2.5}.diagram-arrow.direct{stroke:#ab4f55}.diagram-title{font-size:19px;font-weight:700}.diagram-caption{font-size:15px;fill:#4a706d}.diagram-edge-label{font-size:17px;font-weight:600;fill:#19756d}.diagram-mobile-hint{display:none;color:#526a70;font-size:.85rem}.diagram-reading{padding:.8rem;border-left:3px solid #19756d;background:#f1f8f7}@media(max-width:850px){.diagram-mobile-hint{display:block}}@media print{.progressive-diagram{overflow:visible}.progressive-diagram svg{min-width:0}.diagram-mobile-hint{display:none}}
+
+/* Fractions typographiques : numérateur au-dessus du dénominateur. */
+.math-frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.25;margin:.12em .18em;white-space:nowrap;font-size:.96em}.math-frac>span:first-child{border-bottom:1px solid currentColor;padding:0 .18em .08em}.math-frac>span:last-child{padding:.08em .18em 0}.data-reference{font-size:.82rem;color:var(--muted);margin:.5rem 0 1rem}
+
+.math-frac>.fraction-slash{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}

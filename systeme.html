@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
+<!DOCTYPE html><html lang="fr"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Décrire un système · Thermochimie</title>
-<link rel="stylesheet" href="style.css?v=7780fa8976fd">
+<link rel="stylesheet" href="style.css?v=a44835cb5a40">
 </head>
 <body>
-<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a></nav></header><main data-current-module="1"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties du cours"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
+<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a></nav></header><main data-current-module="1"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
 <p>Ma progression</p>
 <progress id="progress" value="0" max="6"></progress><small id="progress-label"></small><p class="muted">Progression locale à ce navigateur.</p>
 </div></aside><article><div class="lesson-head">
@@ -24,14 +22,14 @@
 <li><a href="#definitions-systeme">Définir le système étudié</a></li>
 <li><a href="#types-systemes">Système ouvert, fermé ou isolé</a></li>
 <li><a href="#parametres-systeme">Paramètres de description</a></li>
-<li><a href="#rappels-chapitre1">Rappels et méthodes utiles aux TD</a></li>
+<li><a href="#rappels-chapitre1">Quantités de matière et unités</a></li>
 </ul></nav><section class="course-section" data-source-slides="5–6"><h2 id="definitions-systeme">Définir le système étudié</h2>
 <div class="definition">
 <h3>Système thermodynamique</h3>
 <p>Portion étudiée délimitée par une frontière (réelle ou imaginaire) appelée paroi, qui la sépare de son environnement (milieu extérieur).</p>
 </div>
 <p><b>Univers thermodynamique :</b> environnement + système en interaction.</p>
-<figure class="course-figure " id="figure-systeme-univers"><img src="assets/images/systeme-univers.png" width="2047" height="660" loading="lazy" decoding="async" alt="Schéma du cours : univers, environnement, système et paroi ; flèches pour les échanges de matière et d’énergie."><figcaption id="figure-systeme-univers-caption">Le système et son environnement constituent l’univers thermodynamique. La paroi délimite le système.</figcaption></figure><div class="definition">
+<figure class="course-figure " id="figure-systeme-univers"><img src="assets/images/systeme-univers.png" width="2047" height="660" loading="lazy" decoding="async" alt="Schéma : univers, environnement, système et paroi ; flèches pour les échanges de matière et d’énergie."><figcaption id="figure-systeme-univers-caption">Le système et son environnement constituent l’univers thermodynamique. La paroi délimite le système.</figcaption></figure><div class="definition">
 <h3>Système physico-chimique</h3>
 <p>Ensemble de constituants physico-chimiques susceptibles d’évoluer par transformation physique (changement d’état) ou transformation chimique (réaction chimique).</p>
 </div>
@@ -55,12 +53,12 @@
 <div class="choice-buttons system-object-choices" role="group" aria-label="Choisir un type de système">
 <button type="button" class="system-object" data-system-kind="ouvert" aria-pressed="true"><img src="assets/images/systeme-ouvert-verre.png" width="1254" height="1254" loading="lazy" decoding="async" alt="Un verre sans couvercle contenant de l’eau."><span class="system-object-label">Ouvert</span><span class="system-object-name">Verre ouvert</span></button><button type="button" class="system-object" data-system-kind="ferme" aria-pressed="false"><img src="assets/images/systeme-ferme-bouteille.png" width="1254" height="1254" loading="lazy" decoding="async" alt="Une bouteille d’eau fermée par un bouchon vissé."><span class="system-object-label">Fermé</span><span class="system-object-name">Bouteille fermée</span></button><button type="button" class="system-object" data-system-kind="isole" aria-pressed="false"><img src="assets/images/systeme-isole-thermos.png" width="1254" height="1254" loading="lazy" decoding="async" alt="Un thermos fermé, illustrant le modèle d’un système isolé."><span class="system-object-label">Isolé</span><span class="system-object-name">Thermos idéal</span></button>
 </div>
-<svg viewbox="0 0 600 220" role="img" aria-labelledby="system-diagram-title system-diagram-desc"><title id="system-diagram-title">Échanges entre le système et son environnement</title>
+<svg viewBox="0 0 600 220" role="img" aria-labelledby="system-diagram-title system-diagram-desc"><title id="system-diagram-title">Échanges entre le système et son environnement</title>
 <desc id="system-diagram-desc">Système ouvert : échanges possibles de matière et d’énergie.</desc><rect x="10" y="10" width="580" height="200" rx="12" fill="#eaf0f3"></rect><text x="32" y="42">Environnement</text><rect x="60" y="70" width="210" height="110" rx="10" fill="#fff" stroke="#172e42" stroke-width="2"></rect><text x="165" y="130" text-anchor="middle">Système</text><text x="150" y="200" text-anchor="middle" font-size="14">Paroi</text><g id="matter-arrow"><path d="M250 100H440m-13-8 13 8-13 8M263 92l-13 8 13 8" fill="none" stroke="#ba572d" stroke-width="3"></path><text x="465" y="107">Matière</text></g><g id="energy-arrow"><path d="M250 155H440m-13-8 13 8-13 8M263 147l-13 8 13 8" fill="none" stroke="#226956" stroke-width="3"></path><text x="465" y="162">Énergie</text></g></svg><p id="system-exchanges-result" role="status">Ouvert : échanges possibles de matière et d’énergie.</p>
 <p class="muted">Le thermos représente un système isolé idéal. Les flèches indiquent les échanges possibles, dans les deux sens.</p>
 </div>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
-<p>Retrouvez une autre présentation des systèmes ouverts, fermés et isolés dans le cours de <a href="https://uel.unisciel.fr/chimie/chimther/chimther_ch02/co/apprendre_ch2_02.html" target="_blank" rel="noopener noreferrer">Unisciel</a>.</p>
+<p>Retrouvez une autre présentation des systèmes ouverts, fermés et isolés sur le site de <a href="https://uel.unisciel.fr/chimie/chimther/chimther_ch02/co/apprendre_ch2_02.html" target="_blank" rel="noopener noreferrer">Unisciel</a>.</p>
 <p class="resource-meta">Lecture facultative · français · nouvel onglet</p></aside></section><section class="course-section" data-source-slides="8"><h2 id="parametres-systeme">Paramètres de description</h2>
 <div class="definition">
 <h3>Paramètres extensifs</h3>
@@ -71,7 +69,7 @@
 <p>Indépendants de la quantité de matière du système. Ils ne sont pas additifs lors de la réunion de deux systèmes : température T, pression p, concentration C, fraction molaire x.</p>
 </div>
 <div class="table-scroll"><table>
-<tr>
+<tbody><tr>
 <th>Grandeur</th>
 <th>Unité</th>
 </tr>
@@ -103,9 +101,9 @@
 <td>Masse m</td>
 <td>kg</td>
 </tr>
-</table></div>
-</section><section class="course-section" data-source-td="chapitre-2"><h2 id="rappels-chapitre1">Rappels et méthodes utiles aux TD</h2>
-<p>Ces rappels du chapitre 1 et ces méthodes de calcul servent à préparer les bilans de thermochimie. Ils explicitent les étapes utilisées dans le fascicule de TD ; ce sont des compléments au diaporama. Avant le bilan énergétique, déterminez les quantités de matière et écrivez l’équation équilibrée.</p>
+</tbody></table></div>
+</section><section class="course-section" data-source-td="chapitre-2"><h2 id="rappels-chapitre1">Quantités de matière et unités</h2>
+<p>Avant le bilan énergétique, déterminez les quantités de matière et écrivez l’équation équilibrée.</p>
 <div class="table-wrap"><table>
 <thead><tr>
 <th>À déterminer</th>
@@ -134,58 +132,53 @@
 </tr>
 </tbody>
 </table></div>
-<details class="method-detail"><summary>Retrouver l’avancement et le réactif limitant</summary><p class="muted"><strong>Rappel utile aux TD :</strong> le tableau d’avancement sert notamment à déterminer la composition du mélange de Sabatier (2.1, exercice 1) ; le réactif limitant intervient dans la neutralisation (2.4, exercice 2).</p><p>Dans nᵢ = nᵢ,₀ + νᵢξ, νᵢ est négatif pour un réactif et positif pour un produit. Si la réaction est totale, comparez nᵢ,₀/|νᵢ| pour les réactifs : le plus petit rapport donne ξ<sub>max</sub>. Pour une réaction limitée par un équilibre, déterminez ξ à partir de l’information donnée sur l’état final.</p>
-<p>La somme des lignes du tableau donne n<sub>tot</sub>(ξ). Ne confondez pas une mole de réactif et une mole d’avancement : leur rapport dépend du coefficient stœchiométrique.</p>
-<p>À l’équilibre d’une réaction entre gaz parfaits, K° = ∏ᵢ(pᵢ/p°)<sup>νᵢ</sup> : produits au numérateur, réactifs au dénominateur, avec leurs coefficients comme exposants. Les rapports pᵢ/p° sont sans unité.</p></details>
-<details class="method-detail"><summary>Volumes disponibles, gaz dissous et débit</summary><p class="muted"><strong>Méthodes utiles aux TD :</strong> volume libre et gaz dissous pour la fermentation (2.3, exercice 5), débit pour la lampe à carbure (2.3, exercice 8). Ces relations permettent de traduire les données de l’énoncé en quantités de matière ou en durée.</p><p>Dans un récipient contenant un liquide et un gaz, V<sub>gaz</sub> = V<sub>récipient</sub> − V<sub>liquide</sub>. C’est ce volume libre qui intervient dans pV = nRT.</p>
-<p>Si l’énoncé donne la concentration maximale de gaz dissous, n<sub>dissous,max</sub> = c<sub>max</sub>V<sub>liquide</sub>. Après saturation, la quantité restant dans la phase gazeuse est la quantité totale disponible moins la quantité dissoute.</p>
-<p>Pour un débit volumique constant D : durée = volume de gaz disponible / D. Le volume et le débit doivent se rapporter aux mêmes conditions de température et de pression.</p>
-<p>Pour un sel hydraté, la masse molaire inclut l’eau de cristallisation : M(sel·xH₂O) = M(sel) + xM(H₂O).</p></details></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Décrire un système · CC BY-NC-ND 4.0</p>
+
+</section><button id="print" class="text-link">Imprimer</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Décrire un système · CC BY-NC-ND 4.0</p>
 <p class="step-next"><a class="button" href="#pane-quiz">Vérifier ma compréhension avec le QCM</a></p>
 </div>
-<div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden>
+<div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden="">
 <h2>6 questions de compréhension</h2>
-<p>Ces questions reprennent les définitions et les relations du cours. Vous pouvez recommencer.</p>
+<p>Ces questions reprennent les définitions et les relations. Vous pouvez recommencer.</p>
 <form id="quiz-form">
 <div class="quiz-item" data-source-slides="5" data-correct="0" data-explanation="La frontière délimite la portion étudiée.">
 <fieldset>
 <legend>1. Le système étudié est séparé du milieu extérieur par…</legend>
-<label class="quiz-option"><input type="radio" name="q0" value="0" required><span>une frontière réelle ou imaginaire</span></label><label class="quiz-option"><input type="radio" name="q0" value="1" required><span>uniquement une paroi solide</span></label><label class="quiz-option"><input type="radio" name="q0" value="2" required><span>une température constante</span></label>
+<label class="quiz-option"><input type="radio" name="q0" value="0" required=""><span>une frontière réelle ou imaginaire</span></label><label class="quiz-option"><input type="radio" name="q0" value="1" required=""><span>uniquement une paroi solide</span></label><label class="quiz-option"><input type="radio" name="q0" value="2" required=""><span>une température constante</span></label>
 </fieldset>
 <p class="feedback" role="status"></p>
 </div>
 <div class="quiz-item" data-source-slides="7" data-correct="1" data-explanation="Un système fermé ne permet pas l’échange de matière.">
 <fieldset>
 <legend>2. Un système fermé peut échanger…</legend>
-<label class="quiz-option"><input type="radio" name="q1" value="0" required><span>de la matière et de l’énergie</span></label><label class="quiz-option"><input type="radio" name="q1" value="1" required><span>de l’énergie, mais pas de matière</span></label><label class="quiz-option"><input type="radio" name="q1" value="2" required><span>ni matière ni énergie</span></label>
+<label class="quiz-option"><input type="radio" name="q1" value="0" required=""><span>de la matière et de l’énergie</span></label><label class="quiz-option"><input type="radio" name="q1" value="1" required=""><span>de l’énergie, mais pas de matière</span></label><label class="quiz-option"><input type="radio" name="q1" value="2" required=""><span>ni matière ni énergie</span></label>
 </fieldset>
 <p class="feedback" role="status"></p>
 </div>
 <div class="quiz-item" data-source-slides="7" data-correct="2" data-explanation="Il n’échange ni matière, ni chaleur, ni travail.">
 <fieldset>
 <legend>3. Un système isolé échange avec l’extérieur…</legend>
-<label class="quiz-option"><input type="radio" name="q2" value="0" required><span>seulement de la chaleur</span></label><label class="quiz-option"><input type="radio" name="q2" value="1" required><span>seulement du travail</span></label><label class="quiz-option"><input type="radio" name="q2" value="2" required><span>ni matière ni énergie</span></label>
+<label class="quiz-option"><input type="radio" name="q2" value="0" required=""><span>seulement de la chaleur</span></label><label class="quiz-option"><input type="radio" name="q2" value="1" required=""><span>seulement du travail</span></label><label class="quiz-option"><input type="radio" name="q2" value="2" required=""><span>ni matière ni énergie</span></label>
 </fieldset>
 <p class="feedback" role="status"></p>
 </div>
 <div class="quiz-item" data-source-slides="8" data-correct="1" data-explanation="Elle est proportionnelle à la quantité de matière.">
 <fieldset>
 <legend>4. La masse est un paramètre…</legend>
-<label class="quiz-option"><input type="radio" name="q3" value="0" required><span>intensif</span></label><label class="quiz-option"><input type="radio" name="q3" value="1" required><span>extensif</span></label><label class="quiz-option"><input type="radio" name="q3" value="2" required><span>sans unité</span></label>
+<label class="quiz-option"><input type="radio" name="q3" value="0" required=""><span>intensif</span></label><label class="quiz-option"><input type="radio" name="q3" value="1" required=""><span>extensif</span></label><label class="quiz-option"><input type="radio" name="q3" value="2" required=""><span>sans unité</span></label>
 </fieldset>
 <p class="feedback" role="status"></p>
 </div>
 <div class="quiz-item" data-source-slides="8" data-correct="0" data-explanation="Elle est indépendante de la quantité de matière.">
 <fieldset>
 <legend>5. La température est un paramètre…</legend>
-<label class="quiz-option"><input type="radio" name="q4" value="0" required><span>intensif</span></label><label class="quiz-option"><input type="radio" name="q4" value="1" required><span>extensif</span></label><label class="quiz-option"><input type="radio" name="q4" value="2" required><span>additif</span></label>
+<label class="quiz-option"><input type="radio" name="q4" value="0" required=""><span>intensif</span></label><label class="quiz-option"><input type="radio" name="q4" value="1" required=""><span>extensif</span></label><label class="quiz-option"><input type="radio" name="q4" value="2" required=""><span>additif</span></label>
 </fieldset>
 <p class="feedback" role="status"></p>
 </div>
 <div class="quiz-item" data-source-slides="6" data-correct="1" data-explanation="La même espèce chimique se trouve dans deux états différents.">
 <fieldset>
 <legend>6. H₂O(l) et H₂O(g) sont…</legend>
-<label class="quiz-option"><input type="radio" name="q5" value="0" required><span>le même constituant physico-chimique</span></label><label class="quiz-option"><input type="radio" name="q5" value="1" required><span>deux constituants physico-chimiques</span></label><label class="quiz-option"><input type="radio" name="q5" value="2" required><span>deux éléments chimiques</span></label>
+<label class="quiz-option"><input type="radio" name="q5" value="0" required=""><span>le même constituant physico-chimique</span></label><label class="quiz-option"><input type="radio" name="q5" value="1" required=""><span>deux constituants physico-chimiques</span></label><label class="quiz-option"><input type="radio" name="q5" value="2" required=""><span>deux éléments chimiques</span></label>
 </fieldset>
 <p class="feedback" role="status"></p>
 </div>
@@ -194,19 +187,19 @@
 <div id="quiz-result" aria-live="polite"></div>
 <p class="step-next"><a class="button" href="#pane-exercises">Passer aux exercices</a></p>
 </div>
-<div id="pane-exercises" role="tabpanel" aria-labelledby="tab-exercises" hidden>
+<div id="pane-exercises" role="tabpanel" aria-labelledby="tab-exercises" hidden="">
 <h2>Exercices</h2>
 <p>Après le QCM, construisez votre raisonnement sur votre brouillon, puis saisissez les résultats demandés. Les étapes du calcul figurent dans la correction détaillée, consultable après une tentative.</p>
 <p class="muted">Vos réponses sont conservées dans ce navigateur. Ce suivi est un repère de travail, pas une note.</p>
 <nav class="exercise-index" aria-label="Choisir un exercice"><ul>
-<li><a href="#exercice-definitions-cours">Compléter les définitions du cours</a></li>
+<li><a href="#exercice-definitions-cours">Compléter les définitions</a></li>
 <li><a href="#exercice-parametres-simples">Reconnaître les paramètres</a></li>
 <li><a href="#exercice-conversions-simples">Préparer les unités d’un bilan</a></li>
 </ul></nav><section class="exercise-card" id="exercice-definitions-cours"><p class="eyebrow">EXERCICE 1</p>
-<h3>Compléter les définitions du cours</h3>
-<p class="exercise-origin">Activité sur les diapositives 7–8</p>
+<h3>Compléter les définitions</h3>
+
 <p>Associez chaque définition à son terme.</p>
-<form class="exercise-form" data-exercise="definitions-cours" novalidate>
+<form class="exercise-form" data-exercise="definitions-cours" novalidate="">
 <div class="exercise-fields">
 <div class="exercise-field">
 <label for="definitions-cours-reponse-1">Échange possible de matière et d’énergie avec l’extérieur</label><select id="definitions-cours-reponse-1" name="reponse-1" data-expected="ouvert" data-hint="Reprenez les échanges permis par chaque type de système." aria-describedby="definitions-cours-reponse-1-feedback"><option value="">Choisir une réponse</option>
@@ -244,9 +237,9 @@
 </form>
 <details class="exercise-hint"><summary>Indice 1</summary><p>Relisez les trois définitions de système, puis celles des paramètres extensifs et intensifs.</p></details><details class="exercise-solution"><summary>Correction</summary><p>1. Ouvert. 2. Fermé. 3. Isolé. 4. Extensif. 5. Intensif.</p></details></section><section class="exercise-card" id="exercice-parametres-simples"><p class="eyebrow">EXERCICE 2</p>
 <h3>Reconnaître les paramètres</h3>
-<p class="exercise-origin">Entraînement sur les paramètres du cours</p>
+
 <p>Pour chaque grandeur, indiquez si elle est extensive ou intensive.</p>
-<form class="exercise-form" data-exercise="parametres-simples" novalidate>
+<form class="exercise-form" data-exercise="parametres-simples" novalidate="">
 <div class="exercise-fields">
 <div class="exercise-field">
 <label for="parametres-simples-reponse-1">Volume V</label><select id="parametres-simples-reponse-1" name="reponse-1" data-expected="extensif" data-hint="Une grandeur extensive est proportionnelle à la quantité de matière." aria-describedby="parametres-simples-reponse-1-feedback"><option value="">Choisir une réponse</option>
@@ -271,9 +264,9 @@
 </form>
 <details class="exercise-hint"><summary>Indice 1</summary><p>Pensez à la réunion de deux portions identiques.</p></details><details class="exercise-solution"><summary>Correction</summary><p>V est extensif ; T et p sont intensifs.</p></details></section><section class="exercise-card" id="exercice-conversions-simples"><p class="eyebrow">EXERCICE 3</p>
 <h3>Préparer les unités d’un bilan</h3>
-<p class="exercise-origin">Entraînement sur les rappels du chapitre 1</p>
+
 <p>On dispose de 180 g d’eau, de masse molaire 18 g·mol⁻¹. La température est de 25 °C et la pression de 1 bar.</p>
-<form class="exercise-form" data-exercise="conversions-simples" novalidate>
+<form class="exercise-form" data-exercise="conversions-simples" novalidate="">
 <div class="exercise-fields">
 <div class="exercise-field">
 <label for="conversions-simples-reponse-1">Quantité de matière <span class="muted">(mol)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="conversions-simples-reponse-1" name="reponse-1" data-expected="10" data-hint="n = m/M." aria-describedby="conversions-simples-reponse-1-feedback" data-tolerance="0.001" placeholder="Votre réponse"><p id="conversions-simples-reponse-1-feedback" class="field-feedback"></p>
@@ -292,7 +285,7 @@
 </form>
 <details class="exercise-hint"><summary>Indice 1</summary><p>Vérifiez les unités avant le bilan.</p></details><details class="exercise-solution"><summary>Correction</summary><p>n = 180/18 = 10 mol ; T = 25 + 273,15 = 298,15 K ; p = 100 000 Pa.</p></details></section><a class="button secondary" href="#pane-discussion">Poser une question sur ces exercices</a>
 </div>
-<div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden>
+<div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden="">
 <h3>Discussion · Décrire un système</h3>
 <p>Posez votre question et décrivez le raisonnement qui vous pose problème. Les échanges sont publics.</p>
 <button id="load-discussion" class="button">Afficher les échanges</button><p id="discussion-status" role="status"></p>
@@ -308,11 +301,12 @@
 <a href="ressources.html" class="text-link">Ressources en ligne</a><br><a href="fiche-pratique.html" class="text-link">Fiche pratique : formules et méthodes</a><br><button id="privacy" class="text-link">Ma progression</button><p><button id="show-license" type="button" class="text-link">CC BY-NC-ND 4.0 · Conditions et citation</button></p>
 </div></footer><dialog id="license-dialog" class="license-dialog" aria-labelledby="license-title"><button class="close" type="button" aria-label="Fermer les conditions">×</button><h2 id="license-title">Conditions d’utilisation et citation</h2>
 <div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2>
-<p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
-<button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
-<script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=f9535b63255c" defer></script>
-<script src="exercices.js?v=2ff17aadcc01" defer></script>
-<script src="interactions.js?v=2ace4afcb618" defer></script>
-<script src="parcours-guides.js?v=d8d66a2243aa" defer></script>
-</body>
-</html>
+<p>Le site est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
+<button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden=""></div>
+<script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=f9535b63255c" defer=""></script>
+<script src="exercices.js?v=2ff17aadcc01" defer=""></script>
+<script src="interactions.js?v=315866943bb3" defer=""></script>
+<script src="parcours-guides.js?v=9b5604747661" defer=""></script>
+
+<script src="formules.js?v=aa59a0cb9e6f" defer=""></script>
+</body></html>

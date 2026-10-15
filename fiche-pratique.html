@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
+<!DOCTYPE html><html lang="fr"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Fiche pratique · Thermochimie</title>
-<link rel="stylesheet" href="style.css?v=7780fa8976fd">
+<link rel="stylesheet" href="style.css?v=a44835cb5a40">
 </head>
 <body>
-<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a></nav></header><main class="practical-guide"><p class="eyebrow">FORMULES ET MÉTHODES</p>
+<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a></nav></header><main class="practical-guide"><p class="eyebrow">FORMULES ET MÉTHODES</p>
 <h1>Fiche pratique de thermochimie</h1>
-<p>Retrouver les définitions et les relations du cours, avec leurs unités. L’aide sur les intégrales accompagne le calcul du travail.</p>
+<p>Retrouver les définitions et les relations, avec leurs unités. L’aide sur les intégrales accompagne le calcul du travail.</p>
 <button class="button secondary" id="print-practical">Imprimer la fiche pratique</button><nav class="lesson-outline" aria-label="Dans la fiche"><ul>
 <li><a href="#unites">Notations et unités</a></li>
 <li><a href="#systeme">Décrire un système</a></li>
@@ -22,7 +20,7 @@
 </ul></nav><section id="unites"><h2>Notations et unités</h2>
 <p>Une variation s’écrit ΔX = X<sub>f</sub> − X<sub>i</sub>. U, H, Q et W s’expriment en joules. Une enthalpie molaire s’exprime en J·mol⁻¹ ou kJ·mol⁻¹. Le symbole ° indique les états standard ; la température reste à préciser.</p>
 <div class="table-scroll"><table>
-<tr>
+<tbody><tr>
 <th>Relation</th>
 <th>Utilisation</th>
 </tr>
@@ -44,9 +42,9 @@
 </tr>
 <tr>
 <td>p° = 1 bar ; c° = 1 mol·L⁻¹</td>
-<td>Conventions standard du cours.</td>
+<td>Conventions standard.</td>
 </tr>
-</table></div></section><section id="systeme"><h2>Décrire un système</h2>
+</tbody></table></div></section><section id="systeme"><h2>Décrire un système</h2>
 <div class="formula-entry">
 <h3>Échanges avec l’extérieur</h3>
 <div class="formula">Ouvert : matière et énergie<br>Fermé : énergie, pas de matière<br>Isolé : ni matière ni énergie</div>
@@ -61,7 +59,7 @@
 <div class="formula-entry">
 <h3>Bilan d’énergie</h3>
 <div class="formula">ΔU = U<sub>f</sub> − U<sub>i</sub> = Q + W<br>dU = δQ + δW</div>
-<p>Bilans du cours : système fermé, variations d’énergie cinétique et potentielle macroscopiques négligées. Une énergie reçue est positive ; une énergie cédée est négative.</p>
+<p>Bilans : système fermé, variations d’énergie cinétique et potentielle macroscopiques négligées. Une énergie reçue est positive ; une énergie cédée est négative.</p>
 </div>
 <div class="formula-entry">
 <h3>Intégrer une différentielle exacte</h3>
@@ -70,7 +68,7 @@
 <p>U et H sont des fonctions d’état : leur variation ne dépend pas du chemin. Sur un cycle, leurs variations sont nulles. Q et W dépendent du chemin : ∫δQ = Q et ∫δW = W.</p>
 </div>
 <div class="formula-entry">
-<h3>Transformations du cours</h3>
+<h3>Transformations</h3>
 <div class="formula">Isochore : W = 0 et ΔU = Q<sub>V</sub><br>Adiabatique : Q = 0 et ΔU = W<br>Isolé : Q = W = ΔU = 0<br>Isotherme, gaz parfait : ΔU = 0 et W = −Q</div>
 <p>Ces relations utilisent le travail des forces de pression. Pour l’isotherme du gaz parfait, la composition est fixe. Adiabatique ne signifie pas température constante.</p>
 </div>
@@ -98,7 +96,7 @@
 <div class="formula-entry">
 <h3>Chaleur à pression constante</h3>
 <div class="formula">Q<sub>p</sub> = ΔH</div>
-<p>Pour les bilans du cours : seul travail de pression, pression extérieure constante, états initial et final à cette pression, variations d’énergies macroscopiques négligées.</p>
+<p>Pour ces bilans : seul travail de pression, pression extérieure constante, états initial et final à cette pression, variations d’énergies macroscopiques négligées.</p>
 </div>
 <div class="formula-entry">
 <h3>Capacités calorifiques</h3>
@@ -114,7 +112,7 @@
 <div class="formula-entry">
 <h3>Si la capacité dépend de la température</h3>
 <div class="formula">C<sub>p,m</sub>(T) = a + bT + cT²<br>ΔH = n∫<sub>Tᵢ</sub><sup>Tf</sup> C<sub>p,m</sub>(T) dT</div>
-<p>Le cours indique cette forme polynomiale et retient souvent une capacité constante sur l’intervalle. Le tableau des primitives ci-dessous permet d’intégrer le polynôme.</p>
+<p>On peut utiliser cette forme polynomiale ou retenir une capacité constante sur l’intervalle. Le tableau des primitives ci-dessous permet d’intégrer le polynôme.</p>
 </div>
 <div class="formula-entry">
 <h3>Changement d’état</h3>
@@ -129,18 +127,14 @@
 <div class="formula-entry">
 <h3>Définition et avancement</h3>
 <div class="formula">Δ<sub>r</sub>H = (∂H/∂ξ)<sub>T,p</sub><br>ΔH ≈ ξ Δ<sub>r</sub>H°</div>
-<p>Pour la contribution de réaction à température et pression constantes. Écriture utilisée dans le cours, avec l’avancement initial nul et l’enthalpie de réaction assimilée à la valeur standard constante. Dans l’approximation d’Ellingham, ΔrH° est considérée constante sur l’intervalle de température.</p>
+<p>Pour la contribution de réaction à température et pression constantes. Écriture, avec l’avancement initial nul et l’enthalpie de réaction assimilée à la valeur standard constante. Dans l’approximation d’Ellingham, ΔrH° est considérée constante sur l’intervalle de température.</p>
 </div>
 <div class="formula-entry">
 <h3>À partir des enthalpies de formation</h3>
 <div class="formula">Δ<sub>r</sub>H° = ∑ νᵢ Δ<sub>f</sub>H°(produits) − ∑ νᵢ Δ<sub>f</sub>H°(réactifs)</div>
 <p>Les coefficients de ces deux sommes sont ceux de l’équation équilibrée, pris positifs. Les phases et la température des données doivent correspondre à la réaction. ΔfH° est nulle pour un élément dans son état standard de référence.</p>
 </div>
-<div class="formula-entry">
-<h3 id="relation-h-u">Relation entre ΔrH° et ΔrU°</h3>
-<div class="formula">Δ<sub>r</sub>H° = Δ<sub>r</sub>U° + Δν<sub>g</sub>RT<br>Δ<sub>r</sub>U° = Δ<sub>r</sub>H° − Δν<sub>g</sub>RT</div>
-<p>Δν<sub>g</sub> = somme des coefficients des produits gazeux − somme des coefficients des réactifs gazeux. Compter seulement les gaz de l’équation équilibrée. Conditions : même température, gaz parfaits et contribution pV des phases condensées négligeable. Avec T en K et R = 8,314 J·mol⁻¹·K⁻¹, le terme correctif est en J·mol⁻¹ ; le convertir si les données sont en kJ·mol⁻¹.</p>
-</div>
+<p id="relation-h-u"><a href="calorimetrie.html#energie-enthalpie">Relation entre ΔrH° et ΔrU° pour la bombe calorimétrique</a></p>
 <div class="formula-entry">
 <h3>Combiner des réactions</h3>
 <div class="formula">Δ<sub>r</sub>H°<sub>cible</sub> = ∑ⱼ kⱼ Δ<sub>r</sub>H°ⱼ</div>
@@ -158,7 +152,7 @@
 <div class="formula-entry">
 <h3>Somme des contributions</h3>
 <div class="formula">∑ Q<sub>p,i</sub> = 0<br>Q<sub>calo</sub> + Q<sub>chauffage</sub> + Q<sub>changement d’état</sub> + Q<sub>réaction</sub> = 0</div>
-<p>Ensemble calorimétrique adiabatique à pression constante, dans le modèle du cours. Ne retenir que les transformations effectivement présentes. Les constituants peuvent échanger de la chaleur entre eux.</p>
+<p>Ensemble calorimétrique adiabatique à pression constante, dans ce modèle. Ne retenir que les transformations effectivement présentes. Les constituants peuvent échanger de la chaleur entre eux.</p>
 </div>
 <div class="formula-entry">
 <h3>Étalonnage avec deux eaux</h3>
@@ -179,7 +173,7 @@
 <p>L’intégrale additionne les contributions sur un intervalle. Les rectangles en donnent une approximation. Si F′ = f, une primitive permet le calcul exact :</p>
 <div class="formula">∫<sub>a</sub><sup>b</sup> f(x) dx = F(b) − F(a)</div>
 <div class="table-scroll"><table>
-<tr>
+<tbody><tr>
 <th>Fonction</th>
 <th>Primitive, à une constante près</th>
 </tr>
@@ -199,7 +193,7 @@
 <td>a + bx + cx²</td>
 <td>ax + bx²/2 + cx³/3</td>
 </tr>
-</table></div>
+</tbody></table></div>
 <p>Inverser les bornes change le signe de l’intégrale. Trouver une primitive de pext(V) pour un chemin donné ne fait pas de W une fonction d’état : la courbe pext(V) peut changer avec le chemin.</p>
 <aside class="further-reading"><h3>Pour aller plus loin</h3>
 <p><strong>Calculer :</strong> <a href="https://youtu.be/8ci1RrNH1L0" target="_blank" rel="noopener noreferrer">Calculer une intégrale à l’aide d’une primitive — Yvan Monka</a>. Pour appliquer F(b) − F(a) pas à pas.</p>
@@ -211,10 +205,11 @@
 <a href="ressources.html" class="text-link">Ressources en ligne</a><br><a href="fiche-pratique.html" class="text-link">Fiche pratique : formules et méthodes</a><br><button id="privacy" class="text-link">Ma progression</button><p><button id="show-license" type="button" class="text-link">CC BY-NC-ND 4.0 · Conditions et citation</button></p>
 </div></footer><dialog id="license-dialog" class="license-dialog" aria-labelledby="license-title"><button class="close" type="button" aria-label="Fermer les conditions">×</button><h2 id="license-title">Conditions d’utilisation et citation</h2>
 <div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2>
-<p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
-<button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden></div>
-<script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=f9535b63255c" defer></script>
-<script src="exercices.js?v=2ff17aadcc01" defer></script>
-<script src="parcours-guides.js?v=d8d66a2243aa" defer></script>
-</body>
-</html>
+<p>Le site est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
+<button id="reset-progress" class="button secondary">Effacer ma progression locale</button></dialog><div id="status" class="toast" role="status" hidden=""></div>
+<script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=f9535b63255c" defer=""></script>
+<script src="exercices.js?v=2ff17aadcc01" defer=""></script>
+<script src="parcours-guides.js?v=9b5604747661" defer=""></script>
+
+<script src="formules.js?v=aa59a0cb9e6f" defer=""></script>
+</body></html>

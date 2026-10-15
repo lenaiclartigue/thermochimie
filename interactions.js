@@ -174,8 +174,8 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
       const label=state==='sl'?`${symbol}(s) + ${symbol}(l)`:state==='lg'?`${symbol}(l) + ${symbol}(g)`:`${symbol}(${state})`;
       host.style.setProperty('--element-color',e.color);host.style.setProperty('--element-soft',e.soft);host.dataset.element=symbol;host.dataset.state=state;
       $('standard-species').textContent=label;$('standard-kelvin').textContent=`${num(t+273.15)} K · p° = 1 bar`;
-      $('standard-thresholds').textContent=`Repères du cours : fusion ${num(e.fusion)} °C ; ébullition ${num(e.boil)} °C.`;
-      $('standard-result').textContent=(state.length>1?`Au seuil de ${num(t)} °C du cours : coexistence ${names[state]}. Les deux phases sont mises en évidence.`:`À ${num(t)} °C, l’état de référence du ${e.name} est ${names[state]} : ${label}.`)+' La pression standard reste 1 bar.';
+      $('standard-thresholds').textContent=`Repères : fusion ${num(e.fusion)} °C ; ébullition ${num(e.boil)} °C.`;
+      $('standard-result').textContent=(state.length>1?`Au seuil de ${num(t)} °C : coexistence ${names[state]}. Les deux phases sont mises en évidence.`:`À ${num(t)} °C, l’état de référence du ${e.name} est ${names[state]} : ${label}.`)+' La pression standard reste 1 bar.';
       for(const phase of ['s','l','g']){
         const active=state.includes(phase),card=host.querySelector(`[data-state-card="${phase}"]`);card.dataset.active=String(active);
         $('state-badge-'+phase).textContent=active?(state.length>1?'✓ Phase en coexistence':'✓ État à cette température'):'Repère à une autre température';
@@ -201,7 +201,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   }
   function combustion() {
     if(!$('combustion-interactive'))return;let water='l';
-    function draw(){const propane=$('combustion-choice').value==='C3H8';$('combustion-equation').textContent=propane?`C₃H₈(g) + 5 O₂(g) → 3 CO₂(g) + 4 H₂O(${water})`:`CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(${water})`;$('combustion-note').textContent=water==='l'?'L’eau est liquide : convention retenue dans ce cours, sauf indication contraire. Les exercices du méthane et du propane utilisent H₂O(l).':'L’eau est gazeuse : ce choix doit être indiqué dans l’énoncé et les données doivent correspondre à H₂O(g).';select('[data-combustion-water]',water,'combustionWater');}
+    function draw(){const propane=$('combustion-choice').value==='C3H8';$('combustion-equation').textContent=propane?`C₃H₈(g) + 5 O₂(g) → 3 CO₂(g) + 4 H₂O(${water})`:`CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(${water})`;$('combustion-note').textContent=water==='l'?'L’eau est liquide : convention retenue ici, sauf indication contraire. Les exercices du méthane et du propane utilisent H₂O(l).':'L’eau est gazeuse : ce choix doit être indiqué dans l’énoncé et les données doivent correspondre à H₂O(g).';select('[data-combustion-water]',water,'combustionWater');}
     $('combustion-choice').addEventListener('change',draw);document.querySelectorAll('[data-combustion-water]').forEach(b=>b.addEventListener('click',()=>{water=b.dataset.combustionWater;draw();}));draw();markReady('combustion-interactive');
   }
   function bond() {
@@ -294,7 +294,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
 
-// Chauffage de l'exercice du diaporama et découverte du calorimètre.
+// Chauffage de l'exercice et découverte du calorimètre.
 (() => {
   'use strict';
   const $ = id => document.getElementById(id);
@@ -364,7 +364,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   if (calo) {
     const info = {
       wall: ['Double paroi argentée', 'L’argenture limite les échanges thermiques par rayonnement. Les deux parois délimitent l’espace dans lequel le vide est réalisé.'],
-      vacuum: ['Vide entre les parois', 'Le vide limite les échanges thermiques par conduction entre les parois. L’isolation réelle n’est pas parfaite ; les pertes sont négligées dans le modèle du cours.'],
+      vacuum: ['Vide entre les parois', 'Le vide limite les échanges thermiques par conduction entre les parois. L’isolation réelle n’est pas parfaite ; les pertes sont négligées dans ce modèle.'],
       thermometer: ['Thermomètre', 'Il mesure la température du contenu. On relève les températures initiale et finale pour déterminer la variation ΔT utilisée dans le bilan thermique.'],
       stirrer: ['Agitateur', 'Il homogénéise la température de la solution : on cherche une température uniforme dans le liquide. Le mouvement représenté est schématique.']
     };
@@ -393,7 +393,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   }
 })();
 
-// Courbe qualitative T(temps) du diaporama : les cinq étapes et les deux paliers.
+// Courbe qualitative T(temps) : les cinq étapes et les deux paliers.
 (() => {
   const host = document.getElementById('figure-changements-etat');
   if (!host || !document.getElementById('full-phase-progress')) return;

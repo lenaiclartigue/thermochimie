@@ -1,3 +1,5 @@
+> Note de version — 15 octobre 2026 : relevé historique antérieur aux suppressions demandées. Les compléments avancement, volumes/débit et diagrammes de cycle ont été retirés. La relation H/U est désormais en calorimétrie. Les conclusions de couverture ci-dessous ne constituent pas une certification de cette nouvelle version.
+
 # Correspondance avec le diaporama
 
 Version interactive du 14 octobre 2026, recentrée sur le chapitre 2. Objectif : rendre le PowerPoint interactif sans étendre le programme commun.

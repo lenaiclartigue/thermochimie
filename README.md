@@ -1,8 +1,18 @@
 # Thermochimie · Licence
 
-Version « audit, animations et parcours progressifs de bilans et Hess » du 14 octobre 2026 : mise en interaction du diaporama du chapitre 2. Conception du parcours : Lénaïc Lartigue.
+Version du 15 octobre 2026 — simplification des contenus et présentation des fractions.
 
-Site statique pour GitHub Pages. Les six parties suivent le cours commun : **Comprendre → QCM → Exercices → Discussion**. Le chapitre 3 n’est pas développé ici ; les prérequis du chapitre 1 sont rappelés dans la première partie.
+Site statique pour GitHub Pages, conçu par Lénaïc Lartigue. Archive cumulative : copier son contenu à la racine du dépôt. Aucun déploiement automatique.
+
+## Modifications du 15 octobre
+
+- Suppression des trois compléments demandés, du bilan de vaporisation et de l’exemple d’hydrogénation H/U.
+- Relation ΔrH/ΔrU expliquée uniquement dans Calorimétrie, avec renvoi depuis la fiche pratique.
+- Suppression des annotations et des trois images statiques indiquées. Animations conservées.
+- Suppression des renvois pédagogiques au diaporama et au fascicule dans l’interface ; les attributs techniques de traçabilité restent dans le HTML.
+- Fractions affichées localement par `formules.js`, sans service externe. Les unités et contrôles de sélection restent en texte.
+- Références des données dans `ressources.html#donnees`, avec liens près des valeurs. Les références de comparaison sont explicitement distinguées des sources exactes : plusieurs valeurs héritées restent à documenter.
+- 40 QCM et 18 exercices conservés ; vérification des validations, bilans guidés, ordre libre de Hess, export et affichage mobile.
 
 ## Contenu de cette version
 
@@ -15,11 +25,7 @@ Site statique pour GitHub Pages. Les six parties suivent le cours commun : **Com
 | `hess.html` | Cycles de Hess | 6 | 3 |
 | `calorimetrie.html` | Calorimétrie | 6 | 3 |
 
-**40 questions de compréhension et 18 exercices**, soit trois par partie. Les sept exercices du diaporama conservent leur énoncé et leurs données. Les deux activités de restitution sont conservées et neuf entraînements courts sont ajoutés, avec une origine clairement indiquée.
-
-Le cours reprend les définitions et les notations du diaporama, avec les activités interactives demandées. Les compléments « avancement », « volumes/gaz dissous/débit » et « lecture p(T)/p(V) » sont identifiés comme rappels ou méthodes utiles aux TD, avec les exercices concernés. La chaleur latente, nommée dans la diapositive 21, est expliquée dans la partie Enthalpie et la fiche pratique : palier, grandeurs molaires et massiques, unités et signes.
-
-La relation ΔrH° = ΔrU° + ΔνgRT (diapos 42–43) est rétablie dans la partie Enthalpie de réaction, avec ses conditions et un exemple de calcul, puis rappelée en calorimétrie et dans la fiche pratique. `COUVERTURE_TD.md` indique les prérequis disponibles pour les TD et les points des énoncés restant à harmoniser. Les 40 QCM et les 18 exercices sont conservés, avec leurs données numériques. Les choix de la question d’exercice sur le système isolé ont été clarifiés ; les clés de sauvegarde et les réponses correctes sont conservées. Le relevé complet de cette relecture et les améliorations proposées figurent dans `AUDIT_PEDAGOGIQUE.md`.
+**40 questions de compréhension et 18 exercices**, soit trois par partie. Les sept exercices du diaporama conservent leur énoncé et leurs données. Les deux activités de restitution sont conservées et neuf entraînements courts sont ajoutés, sans indication d’origine dans l’interface.
 
 L’accueil présente six encarts. Les deux façons de déterminer une enthalpie de réaction ouvrent vers Hess et la calorimétrie à la fin de `enthalpie-reaction.html`.
 
