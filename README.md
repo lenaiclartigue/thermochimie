@@ -48,7 +48,7 @@ Dans les exercices du parcours, l’eau de combustion est liquide, H₂O(l), sau
 
 - `fiche-pratique.html` : relations du cours, unités et aide mathématique ; impression possible.
 - `integrales.html` : redirection conservée vers les intégrales dans le premier principe.
-- `forum.html` : forum intégré ; `resultats.html` : bilan local et export JSON ; `aide.html` : mode d’emploi.
+- `forum.html` : forum intégré ; `resultats.html` : bilan local et export JSON ; `aide.html` : redirection de l’ancienne page d’aide vers l’accueil.
 - `app.js` : navigation, QCM, scores et historique ; `exercices.js` : réponses et vérification des exercices ; **`interactions.js`** : toutes les activités interactives du cours.
 - `style.css` : présentation, affichage mobile et impression.
 - `giscus-config.js` : configuration des discussions.
@@ -114,10 +114,21 @@ Les résultats thermochimiques non nuls ont une tolérance relative de ±2 %. Le
 
 Archive cumulative : téléverser tous les fichiers, dont `parcours-guides.js`, à la racine du dépôt GitHub Pages. Aucune publication automatique.
 
-## Construction graphique progressive
 
-Les bilans du cours montrent maintenant les états initiaux et finaux, puis les flèches et les expressions thermiques. L’exemple Zn/Cu²⁺ compare le chemin réel adiabatique au chemin fictif de chauffage des réactifs puis de réaction à la température finale.
+## Construction libre et validation — 15 octobre 2026
 
-Le cycle de l’hydrazine reprend la disposition du corrigé de TD (page 10 du PDF fourni) : réaction recherchée en haut, descente à gauche, chemin inférieur puis remontée à droite. Les trois H₂ auxiliaires figurent aux deux extrémités. Le bord inférieur du corrigé, qui regroupe (5) et l’inverse de (4), est décomposé en deux étapes visibles. Même combinaison et même résultat : −543,74 kJ·mol⁻¹. L’assembleur du propane construit aussi son cycle graphique.
+Les bilans thermiques commencent sans schéma renseigné. La validation ajoute seulement les éléments de l’étape traitée. Modifier une réponse retire cette validation et masque les éléments correspondants et suivants. Les étapes finales ne sont pas révélées à l’avance.
 
-Ces graphiques sont des SVG intégrés, accessibles dans Comprendre. Sur écran étroit, le schéma défile horizontalement sans faire déborder la page. Les exercices et leurs contrôles de réponses finales ne sont pas modifiés dans cette révision.
+Les deux cycles de Hess (propane et hydrazine) utilisent un assembleur libre. Choisir une équation, son sens et un multiplicateur positif, puis « Ajouter au cycle ». Chaque ajout est dessiné immédiatement, même si la combinaison n’est pas encore correcte. On peut commencer par n’importe quelle équation, modifier son coefficient ou son sens, la retirer et modifier l’ordre des ajouts. La vérification compare la somme stœchiométrique à la réaction cible ; elle n’impose pas un ordre de résolution.
+
+Les états du chemin graphique sont calculés à partir des équations choisies. Si l’ordre choisi requiert des espèces auxiliaires, la même quantité est ajoutée aux deux extrémités ; elle est explicitement indiquée et s’annule dans le bilan. Ces états peuvent donc se réorganiser après une modification. Aucun chemin fictif n’est présenté comme un mécanisme réel. La somme des enthalpies n’est proposée qu’après obtention de la réaction cible. Réponses finales attendues : propane −106 et hydrazine −543,74 kJ·mol⁻¹.
+
+Les exercices et les 40 QCM sont conservés. Le suivi des anciens parcours imposés est réinitialisé pour cette nouvelle interaction, sans effacer les résultats des exercices ou des QCM. Les nouveaux assemblages sont sauvegardés, exportables et effaçables.
+
+## Navigation simplifiée — 15 octobre 2026
+
+Retrait de la phrase « Dans chaque partie : Comprendre → QCM → Exercices → Discussion » sur l’accueil, des liens « Utiliser le site » dans la navigation et les pieds de page, et de la mention « Accès libre ». L’ancienne page d’aide redirige vers l’accueil : son contenu a été retiré. Le fichier reste dans l’archive pour remplacer la page déjà publiée lors du téléversement cumulatif. Aucun contenu pédagogique ni interaction n’est modifié.
+
+## Emplacement de la courbe — 15 octobre 2026
+
+L’animation « Chauffer un corps pur : du solide à la vapeur » est placée dans « Décomposer un chauffage en plusieurs étapes », après les cinq contributions et leur somme. Son contenu, ses commandes et ses calculs sont conservés.

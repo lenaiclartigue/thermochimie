@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style.css?v=7780fa8976fd">
 </head>
 <body>
-<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a><a href="aide.html">Utiliser le site</a><span class="muted">Accès libre</span></nav></header><main data-current-module="3"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties du cours"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
+<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LE COURS DE LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="forum.html">Forum</a><a href="resultats.html">Mes résultats</a></nav></header><main data-current-module="3"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties du cours"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
 <p>Ma progression</p>
 <progress id="progress" value="0" max="6"></progress><small id="progress-label"></small><p class="muted">Progression locale à ce navigateur.</p>
 </div></aside><article><div class="lesson-head">
@@ -100,34 +100,6 @@
 <p><strong>Exemple du cours :</strong> vaporiser les 3 mol d’eau déjà portées à 100 °C demande 3 × 40,7 = 122,1 kJ. Le chauffage préalable de 20 à 100 °C se calcule séparément. On utilise m c ΔT pour le chauffage dans une même phase et m L pour le changement d’état : ΔT = 0 pendant le palier ne signifie donc pas Q = 0.</p>
 
 
-<section class="thermal-widget" id="figure-changements-etat" aria-labelledby="full-curve-title" data-source-slides="21">
-<p class="eyebrow">COURBE DU DIAPORAMA · EXEMPLE NUMÉRIQUE ADAPTÉ</p>
-<h3 id="full-curve-title">Chauffer un corps pur : du solide à la vapeur</h3>
-<p>On chauffe <strong>3 mol d’eau, de la glace à −10 °C jusqu’à la vapeur à 120 °C</strong>, à pression constante, avec fusion à 0 °C et vaporisation à 100 °C. Suivez la température <strong>en kelvins au cours du temps</strong> : elle augmente dans une seule phase et reste constante pendant chacun des deux changements d’état.</p>
-<svg class="full-phase-plot" viewbox="0 0 700 440" role="img" aria-labelledby="full-plot-title full-plot-desc">
-<title id="full-plot-title">Chauffage du solide, fusion, chauffage du liquide, vaporisation et chauffage de la vapeur</title>
-<desc id="full-plot-desc">Cinq segments successifs : montée, palier solide et liquide, montée, palier liquide et vapeur, montée. Les axes sont qualitatifs, sans valeurs numériques.</desc>
-<path d="M75 35V380H665" fill="none" stroke="#344e59" stroke-width="2"></path><path d="M70 43L75 33L80 43M655 375L665 380L655 385" fill="none" stroke="#344e59" stroke-width="2"></path>
-<g fill="#344e59" font-size="20"><text x="18" y="28">T (K)</text><text x="610" y="418">Temps</text></g>
-<g stroke="#9bb9c7" stroke-dasharray="5 5"><path d="M75 295H295M75 165H545"></path></g>
-<g fill="#476372" font-size="17"><text x="17" y="300">T<tspan baseline-shift="sub" font-size="12">fus</tspan></text><text x="17" y="170">T<tspan baseline-shift="sub" font-size="12">vap</tspan></text></g>
-<g fill="none" stroke="#d4dfe3" stroke-width="5"><path data-full-segment="0" d="M100 350L175 295"></path><path data-full-segment="1" d="M175 295H295"></path><path data-full-segment="2" d="M295 295L370 165"></path><path data-full-segment="3" d="M370 165H545"></path><path data-full-segment="4" d="M545 165L620 65"></path></g>
-<path id="full-phase-trace" d="M100 350" fill="none" stroke="#c44d2a" stroke-width="5"></path>
-<g font-size="23" font-weight="700" fill="#526973"><text data-full-label="0" x="115" y="300">S</text><text data-full-label="1" x="205" y="277">S + L</text><text data-full-label="2" x="303" y="208">L</text><text data-full-label="3" x="421" y="147">L + V</text><text data-full-label="4" x="591" y="100">V</text></g>
-<path id="full-phase-guide" d="M100 350V380" stroke="#c44d2a" stroke-dasharray="4 4"></path>
-<circle id="full-phase-point" cx="100" cy="350" r="8" fill="#c44d2a" stroke="white" stroke-width="2"></circle>
-</svg>
-<p id="figure-changements-etat-caption">S : solide ; L : liquide ; V : vapeur. Les paliers correspondent à la coexistence S + L puis L + V.</p>
-<label for="full-phase-progress"><strong>Se déplacer sur la courbe</strong></label><input id="full-phase-progress" type="range" min="0" max="1000" step="1" value="0">
-<div class="thermal-controls"><button class="button" id="full-phase-play" type="button" aria-pressed="false">Animer la courbe</button><button class="button secondary" id="full-phase-reset" type="button">Recommencer</button></div>
-<div class="thermal-controls full-phase-steps" role="group" aria-label="Choisir une étape"><button type="button" class="button secondary" data-full-step="0">1 · Solide</button><button type="button" class="button secondary" data-full-step="1">2 · Fusion</button><button type="button" class="button secondary" data-full-step="2">3 · Liquide</button><button type="button" class="button secondary" data-full-step="3">4 · Vaporisation</button><button type="button" class="button secondary" data-full-step="4">5 · Vapeur</button></div>
-<div class="calo-part-info" id="full-phase-info" aria-live="polite"></div>
-<div class="thermal-readouts"><p>Température<br><strong id="full-numeric-t"></strong></p><p>Chaleur totale reçue<br><strong id="full-numeric-q"></strong></p><p>Quantité totale<br><strong>3 mol d’eau</strong></p></div>
-<details class="heating-calculations" open><summary>Calcul numérique au fil de la courbe</summary><div id="full-numeric-calculation"></div></details>
-<details><summary>Données utilisées pour cet exemple complet</summary><p>Complément illustratif adapté du TD : mêmes températures initiale et finale (−10 et 120 °C), avec une quantité de 3 mol pour rester cohérent avec l’exemple du cours. Cₚ,ₘ(glace) = 37,62 et Cₚ,ₘ(vapeur) = 33,58 J·mol⁻¹·K⁻¹ ; ΔfusH = 6,00 kJ·mol⁻¹ (données du TD). On conserve Cₚ,ₘ(liquide) = 75,3 J·mol⁻¹·K⁻¹ et ΔvapH = 40,7 kJ·mol⁻¹ du diaporama, comme dans l’animation suivante. Les capacités sont supposées constantes, les pertes négligées. Cet exemple ne modifie pas les données de l’exercice du fascicule.</p></details>
-<p class="muted">Courbe schématique du cours : les axes ne sont pas à l’échelle. Les durées et les pentes ne sont pas calculées (la puissance de chauffage n’est pas fixée) ; la vitesse de lecture sert seulement à suivre les étapes. T<sub>fus</sub> et T<sub>vap</sub> désignent les températures de fusion et de vaporisation à la pression considérée.</p>
-</section>
-
 <section class="thermal-widget" id="chauffage-interactif" aria-labelledby="heating-title" data-source-slides="21–22">
 <p class="eyebrow">EXPLORER L’EXEMPLE DU COURS</p><h3 id="heating-title">De l’eau à la vapeur : où va la chaleur reçue ?</h3>
 <p>On apporte de la chaleur à <strong>3 mol d’eau liquide à 20 °C</strong>, à pression constante (ébullition à 100 °C dans le modèle du cours), jusqu’à obtenir de la vapeur à 100 °C. On reprend les données du diaporama : C<sub>p,m</sub> = 75,3 J·mol⁻¹·K⁻¹, supposée constante, et Δ<sub>vap</sub>H° = 40,7 kJ·mol⁻¹. Les pertes vers l’extérieur sont négligées.</p>
@@ -165,7 +137,35 @@
 <li>Chauffer la vapeur : Q₅ = m c<sub>vapeur</sub>(T<sub>f</sub> − 100).</li>
 </ol>
 <div class="formula">Q<sub>total</sub> = Q₁ + Q₂ + Q₃ + Q₄ + Q₅</div>
-<p>Utilisez la capacité de la phase présente et l’enthalpie de changement d’état à la température de l’étape. Lors d’un changement d’état inverse, le signe de l’enthalpie change : la condensation de la vapeur en liquide libère la chaleur que la vaporisation absorbe, à la même température.</p></section><section class="course-section" data-source-td="chapitre-2"><h2 id="bilan-vaporisation">Relier chaleur, travail et énergie interne lors d’une vaporisation</h2>
+<p>Utilisez la capacité de la phase présente et l’enthalpie de changement d’état à la température de l’étape. Lors d’un changement d’état inverse, le signe de l’enthalpie change : la condensation de la vapeur en liquide libère la chaleur que la vaporisation absorbe, à la même température.</p><section class="thermal-widget" id="figure-changements-etat" aria-labelledby="full-curve-title" data-source-slides="21">
+<p class="eyebrow">COURBE DU DIAPORAMA · EXEMPLE NUMÉRIQUE ADAPTÉ</p>
+<h3 id="full-curve-title">Chauffer un corps pur : du solide à la vapeur</h3>
+<p>On chauffe <strong>3 mol d’eau, de la glace à −10 °C jusqu’à la vapeur à 120 °C</strong>, à pression constante, avec fusion à 0 °C et vaporisation à 100 °C. Suivez la température <strong>en kelvins au cours du temps</strong> : elle augmente dans une seule phase et reste constante pendant chacun des deux changements d’état.</p>
+<svg class="full-phase-plot" viewbox="0 0 700 440" role="img" aria-labelledby="full-plot-title full-plot-desc">
+<title id="full-plot-title">Chauffage du solide, fusion, chauffage du liquide, vaporisation et chauffage de la vapeur</title>
+<desc id="full-plot-desc">Cinq segments successifs : montée, palier solide et liquide, montée, palier liquide et vapeur, montée. Les axes sont qualitatifs, sans valeurs numériques.</desc>
+<path d="M75 35V380H665" fill="none" stroke="#344e59" stroke-width="2"></path><path d="M70 43L75 33L80 43M655 375L665 380L655 385" fill="none" stroke="#344e59" stroke-width="2"></path>
+<g fill="#344e59" font-size="20"><text x="18" y="28">T (K)</text><text x="610" y="418">Temps</text></g>
+<g stroke="#9bb9c7" stroke-dasharray="5 5"><path d="M75 295H295M75 165H545"></path></g>
+<g fill="#476372" font-size="17"><text x="17" y="300">T<tspan baseline-shift="sub" font-size="12">fus</tspan></text><text x="17" y="170">T<tspan baseline-shift="sub" font-size="12">vap</tspan></text></g>
+<g fill="none" stroke="#d4dfe3" stroke-width="5"><path data-full-segment="0" d="M100 350L175 295"></path><path data-full-segment="1" d="M175 295H295"></path><path data-full-segment="2" d="M295 295L370 165"></path><path data-full-segment="3" d="M370 165H545"></path><path data-full-segment="4" d="M545 165L620 65"></path></g>
+<path id="full-phase-trace" d="M100 350" fill="none" stroke="#c44d2a" stroke-width="5"></path>
+<g font-size="23" font-weight="700" fill="#526973"><text data-full-label="0" x="115" y="300">S</text><text data-full-label="1" x="205" y="277">S + L</text><text data-full-label="2" x="303" y="208">L</text><text data-full-label="3" x="421" y="147">L + V</text><text data-full-label="4" x="591" y="100">V</text></g>
+<path id="full-phase-guide" d="M100 350V380" stroke="#c44d2a" stroke-dasharray="4 4"></path>
+<circle id="full-phase-point" cx="100" cy="350" r="8" fill="#c44d2a" stroke="white" stroke-width="2"></circle>
+</svg>
+<p id="figure-changements-etat-caption">S : solide ; L : liquide ; V : vapeur. Les paliers correspondent à la coexistence S + L puis L + V.</p>
+<label for="full-phase-progress"><strong>Se déplacer sur la courbe</strong></label><input id="full-phase-progress" type="range" min="0" max="1000" step="1" value="0">
+<div class="thermal-controls"><button class="button" id="full-phase-play" type="button" aria-pressed="false">Animer la courbe</button><button class="button secondary" id="full-phase-reset" type="button">Recommencer</button></div>
+<div class="thermal-controls full-phase-steps" role="group" aria-label="Choisir une étape"><button type="button" class="button secondary" data-full-step="0">1 · Solide</button><button type="button" class="button secondary" data-full-step="1">2 · Fusion</button><button type="button" class="button secondary" data-full-step="2">3 · Liquide</button><button type="button" class="button secondary" data-full-step="3">4 · Vaporisation</button><button type="button" class="button secondary" data-full-step="4">5 · Vapeur</button></div>
+<div class="calo-part-info" id="full-phase-info" aria-live="polite"></div>
+<div class="thermal-readouts"><p>Température<br><strong id="full-numeric-t"></strong></p><p>Chaleur totale reçue<br><strong id="full-numeric-q"></strong></p><p>Quantité totale<br><strong>3 mol d’eau</strong></p></div>
+<details class="heating-calculations" open><summary>Calcul numérique au fil de la courbe</summary><div id="full-numeric-calculation"></div></details>
+<details><summary>Données utilisées pour cet exemple complet</summary><p>Complément illustratif adapté du TD : mêmes températures initiale et finale (−10 et 120 °C), avec une quantité de 3 mol pour rester cohérent avec l’exemple du cours. Cₚ,ₘ(glace) = 37,62 et Cₚ,ₘ(vapeur) = 33,58 J·mol⁻¹·K⁻¹ ; ΔfusH = 6,00 kJ·mol⁻¹ (données du TD). On conserve Cₚ,ₘ(liquide) = 75,3 J·mol⁻¹·K⁻¹ et ΔvapH = 40,7 kJ·mol⁻¹ du diaporama, comme dans l’animation suivante. Les capacités sont supposées constantes, les pertes négligées. Cet exemple ne modifie pas les données de l’exercice du fascicule.</p></details>
+<p class="muted">Courbe schématique du cours : les axes ne sont pas à l’échelle. Les durées et les pentes ne sont pas calculées (la puissance de chauffage n’est pas fixée) ; la vitesse de lecture sert seulement à suivre les étapes. T<sub>fus</sub> et T<sub>vap</sub> désignent les températures de fusion et de vaporisation à la pression considérée.</p>
+</section>
+
+</section><section class="course-section" data-source-td="chapitre-2"><h2 id="bilan-vaporisation">Relier chaleur, travail et énergie interne lors d’une vaporisation</h2>
 <p>Pour vaporiser n moles de liquide déjà à sa température d’ébullition, sous pression extérieure constante :</p>
 <div class="formula">Q<sub>p</sub> = ΔH = n Δ<sub>vap</sub>H<br>W = −p<sub>ext</sub>(V<sub>gaz</sub> − V<sub>liquide</sub>)<br>ΔU = Q<sub>p</sub> + W</div>
 <p>Si la vapeur est assimilée à un gaz parfait et si le volume liquide est négligé devant celui de la vapeur, pV<sub>gaz</sub> = nRT donne W ≈ −nRT, puis ΔU ≈ nΔ<sub>vap</sub>H − nRT. Cette approximation doit être annoncée. Une partie de la chaleur reçue sert à fournir du travail au milieu extérieur ; toute la chaleur reçue ne devient donc pas une augmentation de U.</p></section><button id="print" class="text-link">Imprimer le cours</button><p class="print-stamp">Thermochimie · Lénaïc Lartigue · Enthalpie · CC BY-NC-ND 4.0</p>
@@ -291,7 +291,7 @@
 <strong>Thermochimie · Licence</strong><p>Conception du parcours : Lénaïc Lartigue.</p>
 </div>
 <div>
-<a href="ressources.html" class="text-link">Ressources en ligne</a><br><a href="fiche-pratique.html" class="text-link">Fiche pratique : formules et méthodes</a><br><a href="aide.html" class="text-link">Utiliser le site</a><br><button id="privacy" class="text-link">Ma progression</button><p><button id="show-license" type="button" class="text-link">CC BY-NC-ND 4.0 · Conditions et citation</button></p>
+<a href="ressources.html" class="text-link">Ressources en ligne</a><br><a href="fiche-pratique.html" class="text-link">Fiche pratique : formules et méthodes</a><br><button id="privacy" class="text-link">Ma progression</button><p><button id="show-license" type="button" class="text-link">CC BY-NC-ND 4.0 · Conditions et citation</button></p>
 </div></footer><dialog id="license-dialog" class="license-dialog" aria-labelledby="license-title"><button class="close" type="button" aria-label="Fermer les conditions">×</button><h2 id="license-title">Conditions d’utilisation et citation</h2>
 <div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Fermer">×</button><h2>Votre progression</h2>
 <p>Le cours est accessible librement. Les résultats sont conservés uniquement dans votre navigateur et ne sont pas transmis à l’enseignant. Aucun suivi d’audience n’a été ajouté. Les réponses aux exercices et l’historique des QCM restent dans ce navigateur. Le forum intégré utilise GitHub et giscus ; les messages que vous y publiez sont publics.</p>
@@ -299,6 +299,6 @@
 <script src="conditions.js?v=20d98f533cce"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=f9535b63255c" defer></script>
 <script src="exercices.js?v=2ff17aadcc01" defer></script>
 <script src="interactions.js?v=2ace4afcb618" defer></script>
-<script src="parcours-guides.js?v=75f9501f0be6" defer></script>
+<script src="parcours-guides.js?v=d8d66a2243aa" defer></script>
 </body>
 </html>
