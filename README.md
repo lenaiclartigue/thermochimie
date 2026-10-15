@@ -4,6 +4,10 @@ Version du 15 octobre 2026 — présentation modernisée, contenus simplifiés e
 
 Site statique pour GitHub Pages, conçu par Lénaïc Lartigue. Archive cumulative : copier son contenu à la racine du dépôt. Aucun déploiement automatique.
 
+## Couleurs pédagogiques
+
+La version actuelle utilise six accents pour les six parties, une couleur commune pour les boutons d’action et des correspondances texte–équation–schéma dans les bilans thermiques et Hess. Les numéros, noms et signes complètent toujours la couleur. Voir `POLITIQUE_COULEURS.md` pour la justification, les références, les contrastes et les règles de maintenance. `couleurs-pedagogiques.css` complète `theme.css`.
+
 ## Apparence du site
 
 `theme.css` regroupe la nouvelle présentation et est chargé après `style.css` : couleurs, typographie, boutons, cartes, onglets, formulaires, navigation et adaptations mobiles. Les pictogrammes de l’accueil sont des SVG intégrés. Aucune police ni bibliothèque externe supplémentaire n’est nécessaire. Les notations et les valeurs physiques n’ont pas été modifiées par cette refonte visuelle.

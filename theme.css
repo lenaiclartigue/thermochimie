@@ -51,3 +51,34 @@ dialog,.license-dialog{background:#fff;border:1px solid #d8e4ea;border-radius:20
 @media(max-width:680px){body{font-size:15px}.topbar{padding:16px 20px;gap:14px}.topbar nav{gap:3px;width:100%;justify-content:space-between}.topbar nav a{padding:7px 8px;font-size:11px}.brand{font-size:18px}.brand-symbol{width:39px;height:39px;border-radius:11px}main{padding:0 16px}.cover{padding:36px 4px 16px}.cover h1{font-size:clamp(35px,9.7vw,54px);letter-spacing:-.05em}.cover-intro{font-size:17px}.part-grid{gap:13px;margin-bottom:36px}.part-card{min-height:220px;padding:22px}.part-card h2{font-size:23px;max-width:100%}.part-card p{font-size:14px}.workspace{grid-template-columns:minmax(0,1fr);gap:20px;padding-top:20px}.workspace>aside{padding:0}#module-nav{display:flex;overflow-x:auto;gap:7px;margin-top:15px;padding-bottom:6px}#module-nav a{background:#fff;border:1px solid var(--line);flex:0 0 165px;padding:10px}.workspace article{padding:22px 17px;border-radius:16px}.lesson-head .module-heading{font-size:30px}.tabs{gap:2px;padding:4px;margin:22px 0}.tabs button{padding:9px 7px;font-size:11px;min-height:40px}.course-section>h2{font-size:24px}.formula{font-size:19px;padding:16px}.lesson-outline{padding:15px}.course-interactive,.thermal-widget{padding:15px}.button{font-size:13px;padding:10px 14px}.practical-guide{padding-top:28px}.practical-guide>h1{font-size:32px}footer{padding:30px 20px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}.part-card:hover{transform:none}}
 @media print{body{font:12pt/1.5 system-ui;color:#111;background:#fff}.workspace article{border:0;border-radius:0;padding:0;box-shadow:none}.part-card,.formula,.course-interactive,.thermal-widget{box-shadow:none}.formula{border:1px solid #bbb}.course-section>h2{font-size:20pt}h1,h2{color:#111}.card-icon{display:none}.practical-guide{padding:0}}
+
+/* Palette commune : bleu nuit, pétrole et blancs légèrement teintés.
+   Les couleurs des éléments chimiques, phases et signes restent inchangées. */
+@media screen{
+:root{--paper:#f5f8f8;--ink:#173d4a;--muted:#526a73;--accent:#146c70;--soft:#eaf3f2;--blue:#edf3f5;--line:#d6e3e4;--white:#fff}
+body{background:var(--paper);color:var(--ink)}
+.brand-symbol{background:var(--ink)}.cover h1,h1,h2,h3,.module-heading{color:var(--ink)}
+.cover-intro,.byline,.topbar nav a,.lesson-head>p:last-child,.part-card p,.progress-block p,footer p{color:var(--muted)}
+.cover .eyebrow,.part-card .card-number,.part-card:nth-child(3n+2) .card-number,.part-card:nth-child(3n+3) .card-number{color:var(--accent);background:var(--soft);border-color:var(--line)}
+.part-card .card-icon,.card-open,.eyebrow{color:var(--accent)}
+.part-card,.workspace article,.progress-block,.topbar,footer{border-color:var(--line)}.part-card:hover{border-color:#86b3b5}
+.topbar nav a:hover,#module-nav a:hover{background:var(--soft);color:var(--accent)}
+#module-nav a{color:var(--muted)}#module-nav a[aria-current=page]{background:var(--soft);color:var(--accent);border-color:#b5d1d2}
+.tabs{background:var(--blue);border-color:var(--line)}.tabs button{color:var(--muted)}.tabs button:hover{background:#e0ebed}.tabs button[aria-selected=true]{color:var(--accent);background:#fff}
+.button{background:var(--accent);border-color:var(--accent);color:#fff}.button:hover{background:#10565a;border-color:#10565a;color:#fff;box-shadow:0 4px 10px #146c7022}
+.button.secondary,.choice-buttons button,.coefficient-controls button{background:#fff;color:var(--ink);border-color:#b5cdd0}
+.button.secondary:hover,.choice-buttons button:hover,.coefficient-controls button:hover{background:var(--soft);border-color:#86b3b5;color:var(--accent)}
+.choice-buttons .system-choice[aria-pressed=true],.choice-buttons button[aria-pressed=true],.coefficient-controls button[aria-pressed=true],.thermal-controls [aria-pressed=true]{background:var(--soft);color:var(--accent);border-color:#6a9fa1;box-shadow:inset 0 0 0 1px #6a9fa1}
+.notation-buttons button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.text-link,.lesson-outline a{color:var(--muted)}.text-link:hover{color:var(--accent)}
+.lesson-outline{background:#f6f9fa;border-color:var(--line)}.formula{background:var(--blue);border-color:var(--line);color:var(--ink)}
+.definition{background:var(--blue);border-color:var(--accent)}
+.course-interactive,.thermal-widget,.reasoning-builder,.practice,.lab{background:#f7fbfa;border-color:var(--line)}
+.further-reading,.activity-resource{background:var(--soft);border-color:var(--line);border-left-color:#6a9fa1}.further-reading h3,.activity-resource h3,.activity-resource h2{color:var(--accent)}
+.heating-prediction,.notice{background:var(--soft);border-color:var(--accent)}
+th{background:var(--blue)}td,th,.table-scroll,.table-wrap{border-color:var(--line)}
+input[type=range],.thermal-widget input[type=range],.quiz-option input{accent-color:var(--accent)}
+.quiz-option:has(input:checked){background:var(--soft);border-color:#86b3b5}
+progress::-webkit-progress-value{background:var(--accent)}progress::-moz-progress-bar{background:var(--accent)}
+:focus-visible{outline-color:var(--accent)}
+}
