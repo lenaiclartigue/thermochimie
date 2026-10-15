@@ -23,7 +23,7 @@ La couleur des constituants ne code pas le signe de Q : les signes et températu
 | 5 — Hess | Violet `#7C3AED` | Blanc |
 | 6 — Calorimétrie | Corail `#D44332` | Blanc |
 
-Les couleurs portent les numéros, pictogrammes et repères de navigation ; les grandes surfaces sont neutres et les titres anthracite. Les six accents ont un contraste supérieur à 4,5:1 sur blanc. Les correspondances scientifiques dans les diagrammes gardent leur palette propre et leurs libellés.
+Les couleurs portent les numéros, boutons d’accès des cartes et repères de navigation ; les grandes surfaces sont neutres et les titres anthracite. Les six accents ont un contraste supérieur à 4,5:1 sur blanc. Les correspondances scientifiques dans les diagrammes gardent leur palette propre et leurs libellés.
 
 Les accents ne représentent aucune grandeur physique ou échelle de difficulté. Les numéros et intitulés assurent le repérage sans distinguer toutes les couleurs. Cette vérification ne constitue pas un audit complet de conformité WCAG.
 

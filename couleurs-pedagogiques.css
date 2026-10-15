@@ -38,3 +38,26 @@ tr.linked-equation td{color:var(--term-color)}
 @media print{.linked-term,.linked-equation,.colored-edge,.thermal-row{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 
 @media screen and (max-width:680px){.part-card{min-height:215px}.part-card .card-icon{width:36px;height:36px}.part-card h2{padding-right:22px}}
+
+/* Cartes et actions : présentation sans pictogrammes. */
+@media screen{
+.part-grid{gap:18px}
+.part-card{padding:26px;min-height:288px;border-radius:16px;border:1px solid #e4e4e7;box-shadow:0 2px 8px #18181b03;transition:border-color .18s,box-shadow .18s,transform .18s}
+.part-card:hover,.part-card:focus-visible{border-color:var(--part-accent);box-shadow:0 10px 28px #18181b0c;transform:translateY(-3px)}
+.part-card .card-number,.part-card:nth-child(3n+2) .card-number,.part-card:nth-child(3n+3) .card-number{font:650 30px/1 system-ui;letter-spacing:-.045em;padding:0;color:var(--part-accent)}
+.part-card h2{font-size:23px;line-height:1.25;letter-spacing:-.035em;margin:22px 0 12px;padding-right:0}
+.part-card p{font-size:14px;line-height:1.65;margin-bottom:24px}
+.part-card .card-open{display:inline-flex;align-self:flex-start;align-items:center;justify-content:center;gap:10px;min-height:42px;padding:10px 15px;margin-top:auto;background:var(--part-accent);color:white;border:1px solid transparent;border-radius:9px;font-size:12px;font-weight:650;line-height:1.5;transition:filter .15s,box-shadow .15s}
+.part-card:hover .card-open{color:white;filter:brightness(.92);box-shadow:0 3px 8px #18181b15}
+.button{min-height:46px;border-radius:10px;padding:12px 19px;background:#24262b;border:1px solid #24262b;color:white;box-shadow:0 1px 2px #18181b15;font-size:14px;font-weight:650;line-height:1.4;transition:background .15s,border-color .15s,box-shadow .15s}
+.button:hover{background:#3b3e46;border-color:#3b3e46;color:white;box-shadow:0 3px 9px #18181b1c}
+.button:active{background:#18191d;box-shadow:none}
+.button.secondary{background:white;color:#34373f;border-color:#d5d7dc;box-shadow:0 1px 2px #18181b05}
+.button.secondary:hover{background:#f4f5f7;color:#202127;border-color:#a8adb7}
+.button:disabled{box-shadow:none;opacity:.45}
+.choice-buttons button,.coefficient-controls button{min-height:44px;border-radius:10px;box-shadow:none}
+.thermal-controls .button{padding:10px 15px}.thermal-controls [aria-pressed=true]{background:#146c70;color:#fff;border-color:#146c70;box-shadow:none}
+.tabs button{min-height:44px}
+}
+@media screen and (max-width:680px){.part-card{min-height:250px;padding:23px}.part-card .card-open{width:100%;min-height:44px}.part-card .card-number{font-size:28px}.button{font-size:13px;padding:11px 15px}}
+@media(prefers-reduced-motion:reduce){.part-card:hover,.part-card:focus-visible{transform:none}}

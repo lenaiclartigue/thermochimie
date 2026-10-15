@@ -6,11 +6,11 @@ Site statique pour GitHub Pages, conçu par Lénaïc Lartigue. Archive cumulativ
 
 ## Couleurs pédagogiques
 
-La version actuelle utilise six accents francs sur des cartes blanches (numéros et pictogrammes colorés, titres anthracite, sans grand fond pastel) pour les six parties, une couleur commune pour les boutons d’action et des correspondances texte–équation–schéma dans les bilans thermiques et Hess. Les numéros, noms et signes complètent toujours la couleur. Voir `POLITIQUE_COULEURS.md` pour la justification, les références, les contrastes et les règles de maintenance. `couleurs-pedagogiques.css` complète `theme.css`.
+La version actuelle utilise six accents francs sur des cartes blanches (numéros et boutons d’accès colorés, titres anthracite, sans grand fond pastel) pour les six parties, une couleur commune pour les boutons d’action et des correspondances texte–équation–schéma dans les bilans thermiques et Hess. Les numéros, noms et signes complètent toujours la couleur. Voir `POLITIQUE_COULEURS.md` pour la justification, les références, les contrastes et les règles de maintenance. `couleurs-pedagogiques.css` complète `theme.css`.
 
 ## Apparence du site
 
-`theme.css` regroupe la nouvelle présentation et est chargé après `style.css` : couleurs, typographie, boutons, cartes, onglets, formulaires, navigation et adaptations mobiles. Les pictogrammes de l’accueil sont des SVG intégrés. Aucune police ni bibliothèque externe supplémentaire n’est nécessaire. Les notations et les valeurs physiques n’ont pas été modifiées par cette refonte visuelle.
+`theme.css` regroupe la nouvelle présentation et est chargé après `style.css` : couleurs, typographie, boutons, cartes, onglets, formulaires, navigation et adaptations mobiles. Les six pictogrammes de l’accueil ont été supprimés. Les cartes possèdent un bouton d’accès visuel coloré ; toute la carte reste un lien unique accessible au clavier. Aucune police ni bibliothèque externe supplémentaire n’est nécessaire. Les notations et les valeurs physiques n’ont pas été modifiées par cette refonte visuelle.
 
 ## Modifications du 15 octobre
 
