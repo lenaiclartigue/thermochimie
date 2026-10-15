@@ -125,3 +125,11 @@ Dans **Exercices**, les calculs ne demandent plus les contributions intermédiai
 Les résultats thermochimiques non nuls ont une tolérance relative de ±2 %. Les coefficients, conversions et valeurs nulles conservent leurs contrôles spécifiques. Les anciennes réponses intermédiaires sont retirées du suivi ; les réponses finales existantes sont conservées. Les parcours du cours restent non notés. Tout le suivi reste local, exportable et effaçable.
 
 Archive cumulative : téléverser tous les fichiers, dont `parcours-guides.js`, à la racine du dépôt GitHub Pages. Aucune publication automatique.
+
+## Construction graphique progressive
+
+Les bilans du cours montrent maintenant les états initiaux et finaux, puis les flèches et les expressions thermiques. L’exemple Zn/Cu²⁺ compare le chemin réel adiabatique au chemin fictif de chauffage des réactifs puis de réaction à la température finale.
+
+Le cycle de l’hydrazine reprend la disposition du corrigé de TD (page 10 du PDF fourni) : réaction recherchée en haut, descente à gauche, chemin inférieur puis remontée à droite. Les trois H₂ auxiliaires figurent aux deux extrémités. Le bord inférieur du corrigé, qui regroupe (5) et l’inverse de (4), est décomposé en deux étapes visibles. Même combinaison et même résultat : −543,74 kJ·mol⁻¹. L’assembleur du propane construit aussi son cycle graphique.
+
+Ces graphiques sont des SVG intégrés, accessibles dans Comprendre. Sur écran étroit, le schéma défile horizontalement sans faire déborder la page. Les exercices et leurs contrôles de réponses finales ne sont pas modifiés dans cette révision.
