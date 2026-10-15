@@ -1,20 +1,23 @@
 /* Repérage des chapitres : six accents catégoriels, sans signification physique.
    Les boutons d’action gardent le pétrole commun défini dans theme.css. */
-[data-module="1"],body[data-part="1"]{--part-accent:#285f86;--part-soft:#edf4f9;--part-border:#c2d6e5}
-[data-module="2"],body[data-part="2"]{--part-accent:#146c70;--part-soft:#eaf5f4;--part-border:#b8dcda}
-[data-module="3"],body[data-part="3"]{--part-accent:#526b35;--part-soft:#f0f5e9;--part-border:#d2dfbc}
-[data-module="4"],body[data-part="4"]{--part-accent:#8a5c12;--part-soft:#fcf5e7;--part-border:#ead7b0}
-[data-module="5"],body[data-part="5"]{--part-accent:#70518c;--part-soft:#f4eff8;--part-border:#d9cbe8}
-[data-module="6"],body[data-part="6"]{--part-accent:#9b4b3d;--part-soft:#fcf0ec;--part-border:#e9c7bf}
+[data-module="1"],body[data-part="1"]{--part-accent:#2563eb;--part-soft:#edf4f9;--part-border:#c2d6e5}
+[data-module="2"],body[data-part="2"]{--part-accent:#007c83;--part-soft:#eaf5f4;--part-border:#b8dcda}
+[data-module="3"],body[data-part="3"]{--part-accent:#008257;--part-soft:#f0f5e9;--part-border:#d2dfbc}
+[data-module="4"],body[data-part="4"]{--part-accent:#b45309;--part-soft:#fcf5e7;--part-border:#ead7b0}
+[data-module="5"],body[data-part="5"]{--part-accent:#7c3aed;--part-soft:#f4eff8;--part-border:#d9cbe8}
+[data-module="6"],body[data-part="6"]{--part-accent:#d44332;--part-soft:#fcf0ec;--part-border:#e9c7bf}
 @media screen{
-.part-card{background:var(--part-soft);border-color:var(--part-border);border-top:4px solid var(--part-accent)}
-.part-card:hover{border-color:var(--part-accent)}
-.part-card .card-number,.part-card:nth-child(3n+2) .card-number,.part-card:nth-child(3n+3) .card-number{color:var(--part-accent);background:#fff;border-color:var(--part-border)}
-.part-card .card-icon,.part-card .card-open{color:var(--part-accent)}
+body{background:#f7f7f8}.cover h1,.module-heading{color:#202127}.cover-intro{color:#5a606b}.cover .eyebrow{background:transparent;border:0;padding:0;color:#666b75}.brand-symbol{background:#202127}.brand{color:#202127}
+
+.part-card{background:#fff;border:1px solid #e5e7eb;box-shadow:0 3px 14px #18181b04;min-height:270px}
+.part-card:hover{background:#fff;border-color:#c8cbd2;box-shadow:0 12px 30px #18181b0c}
+.part-card .card-number,.part-card:nth-child(3n+2) .card-number,.part-card:nth-child(3n+3) .card-number{color:var(--part-accent);background:transparent;border:0;padding:0;font:650 13px/1.4 system-ui;letter-spacing:.04em}
+.part-card .card-icon{color:var(--part-accent);width:40px;height:40px;opacity:1;stroke-width:1.8}.part-card .card-open{color:#42454e}.part-card:hover .card-open{color:var(--part-accent)}
+.part-card h2{color:#202127;margin-top:28px}.part-card p{color:#5a606b}
 body[data-part] .lesson-head>.eyebrow{color:var(--part-accent)}
 body[data-part] .lesson-head .module-heading{border-left:4px solid var(--part-accent);padding-left:16px}
 #module-nav a>span:first-child{color:var(--part-accent);opacity:1;font-weight:700}
-#module-nav a[aria-current=page]{background:var(--part-soft);border-color:var(--part-border);color:var(--part-accent);box-shadow:inset 3px 0 var(--part-accent)}
+#module-nav a[aria-current=page]{background:#fff;border-color:#e5e7eb;color:var(--part-accent);box-shadow:inset 3px 0 var(--part-accent)}
 }
 /* Liens texte–équation–schéma. Les libellés et numéros restent toujours présents. */
 .color-reading{font-size:13px!important;line-height:1.65;color:#526a73;margin:12px 0}
@@ -33,3 +36,5 @@ tr.linked-equation td{color:var(--term-color)}
 .progressive-diagram .thermal-row .diagram-node{stroke:var(--term-color);fill:#fff}
 .progressive-diagram .thermal-row text{fill:var(--term-color)}
 @media print{.linked-term,.linked-equation,.colored-edge,.thermal-row{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+@media screen and (max-width:680px){.part-card{min-height:215px}.part-card .card-icon{width:36px;height:36px}.part-card h2{padding-right:22px}}

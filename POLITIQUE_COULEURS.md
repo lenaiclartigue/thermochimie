@@ -12,18 +12,27 @@ La couleur sert au repérage des parties et à la mise en correspondance du text
 
 La couleur des constituants ne code pas le signe de Q : les signes et températures doivent être lus et déterminés par l’étudiant. Aucun élément du schéma ne doit apparaître avant la validation prévue dans la construction progressive.
 
-## Palette des parties
+## Palette des parties — accents francs sur cartes blanches
 
-| Partie | Accent | Fond | Contraste accent/fond |
-|---|---|---|---:|
-| 1 — Système | `#285F86` | `#EDF4F9` | 6,16:1 |
-| 2 — Premier principe | `#146C70` | `#EAF5F4` | 5,53:1 |
-| 3 — Enthalpie | `#526B35` | `#F0F5E9` | 5,39:1 |
-| 4 — Enthalpie de réaction | `#8A5C12` | `#FCF5E7` | 5,35:1 |
-| 5 — Hess | `#70518C` | `#F4EFF8` | 5,72:1 |
-| 6 — Calorimétrie | `#9B4B3D` | `#FCF0EC` | 5,43:1 |
+| Partie | Accent | Fond |
+|---|---|---|
+| 1 — Système | Cobalt `#2563EB` | Blanc |
+| 2 — Premier principe | Turquoise `#007C83` | Blanc |
+| 3 — Enthalpie | Émeraude `#008257` | Blanc |
+| 4 — Enthalpie de réaction | Ambre `#B45309` | Blanc |
+| 5 — Hess | Violet `#7C3AED` | Blanc |
+| 6 — Calorimétrie | Corail `#D44332` | Blanc |
 
-Ces teintes sont catégorielles : elles ne portent aucune signification thermodynamique et ne représentent pas une échelle de difficulté. Les numéros et libellés permettent de se repérer sans distinguer toutes les teintes. Ces vérifications ne constituent pas un audit complet de conformité WCAG.
+Les couleurs portent les numéros, pictogrammes et repères de navigation ; les grandes surfaces sont neutres et les titres anthracite. Les six accents ont un contraste supérieur à 4,5:1 sur blanc. Les correspondances scientifiques dans les diagrammes gardent leur palette propre et leurs libellés.
+
+Les accents ne représentent aucune grandeur physique ou échelle de difficulté. Les numéros et intitulés assurent le repérage sans distinguer toutes les couleurs. Cette vérification ne constitue pas un audit complet de conformité WCAG.
+
+Références graphiques complémentaires :
+- Atlassian : https://atlassian.design/foundations/color/ et https://atlassian.design/foundations/color/accents — surfaces neutres, couleurs saturées et distinction entre accents et significations fonctionnelles.
+- Vercel / Geist : https://vercel.com/geist/colors — rôles distincts pour fonds, bordures, textes et icônes.
+- Linear, refonte du 12 mars 2026 : https://linear.app/now/behind-the-latest-design-refresh — hiérarchie visuelle, réduction des traitements décoratifs et priorité au contenu.
+
+Ces références motivent les principes de composition ; les six codes hexadécimaux restent un choix propre au site.
 
 ## Sources des principes
 
