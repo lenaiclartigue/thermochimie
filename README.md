@@ -1,8 +1,12 @@
 # Thermochimie · Licence
 
-Version du 15 octobre 2026 — simplification des contenus et présentation des fractions.
+Version du 15 octobre 2026 — présentation modernisée, contenus simplifiés et fractions.
 
 Site statique pour GitHub Pages, conçu par Lénaïc Lartigue. Archive cumulative : copier son contenu à la racine du dépôt. Aucun déploiement automatique.
+
+## Apparence du site
+
+`theme.css` regroupe la nouvelle présentation et est chargé après `style.css` : couleurs, typographie, boutons, cartes, onglets, formulaires, navigation et adaptations mobiles. Les pictogrammes de l’accueil sont des SVG intégrés. Aucune police ni bibliothèque externe supplémentaire n’est nécessaire. Les notations et les valeurs physiques n’ont pas été modifiées par cette refonte visuelle.
 
 ## Modifications du 15 octobre
 
