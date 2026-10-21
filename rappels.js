@@ -1,0 +1,16 @@
+/* Rappels limités aux grandeurs principales de Comprendre. Aucun stockage. */
+(()=>{'use strict';
+const state='Fonction d’état : sa variation dépend uniquement des états initial et final, pas du chemin suivi.';
+const potential='Potentiel thermodynamique : fonction d’état énergétique utilisée pour établir des bilans et caractériser l’équilibre sous des contraintes appropriées.';
+const defs={U:['U — Énergie interne','Énergie microscopique du système.',state,potential],H:['H — Enthalpie','H = U + pV.',state,potential],S:['S — Entropie','Grandeur exprimée en J·K⁻¹.',state,'L’entropie n’est pas un potentiel thermodynamique.'],F:['F — Énergie de Helmholtz','F = U − TS (également notée A).',state,potential],G:['G — Énergie de Gibbs','G = H − TS.',state,potential]};
+const host=document.querySelector('#pane-course')||document.querySelector('.optional-reading');if(!host)return;
+const pop=document.createElement('aside');pop.id='grandeur-rappel';pop.className='grandeur-rappel';pop.hidden=true;pop.setAttribute('aria-label','Rappel sur la grandeur');document.body.append(pop);
+let active=null,timer,pinned=false;
+function close(){clearTimeout(timer);pop.hidden=true;if(active)active.setAttribute('aria-expanded','false');active=null;pinned=false;}
+function place(){if(!active)return;const b=active.getBoundingClientRect();pop.style.left=Math.max(12,Math.min(b.left,innerWidth-pop.offsetWidth-12))+'px';pop.style.top=Math.max(12,Math.min(b.bottom+8,innerHeight-pop.offsetHeight-12))+'px';}
+function show(btn){clearTimeout(timer);if(active!==btn){close();active=btn;const d=defs[btn.dataset.grandeur];pop.replaceChildren();const title=document.createElement('strong');title.textContent=d[0];pop.append(title);for(const text of d.slice(1)){const p=document.createElement('p');p.textContent=text;pop.append(p);}const exit=document.createElement('button');exit.type='button';exit.textContent='Fermer';exit.onclick=()=>{const previous=active;previous?.focus();close();};pop.append(exit);}pop.hidden=false;btn.setAttribute('aria-expanded','true');place();}
+function later(){clearTimeout(timer);timer=setTimeout(()=>{if(!pinned&&!pop.matches(':hover')&&!pop.contains(document.activeElement)&&document.activeElement!==active)close();},180);}
+pop.addEventListener('pointerenter',()=>clearTimeout(timer));pop.addEventListener('pointerleave',later);pop.addEventListener('focusout',later);
+for(const btn of host.querySelectorAll('[data-grandeur]')){btn.setAttribute('aria-controls',pop.id);btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label',defs[btn.dataset.grandeur][0]+' : afficher le rappel');btn.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')show(btn)});btn.addEventListener('pointerleave',later);btn.addEventListener('focus',()=>show(btn));btn.addEventListener('blur',later);btn.addEventListener('click',()=>{if(active===btn&&pinned){close();return;}show(btn);pinned=true;});}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){const previous=active;if(pop.contains(document.activeElement))previous?.focus();close();}});document.addEventListener('click',e=>{if(!pop.contains(e.target)&&!e.target.closest('[data-grandeur]'))close();});window.addEventListener('resize',place);window.addEventListener('scroll',place,{passive:true});
+})();

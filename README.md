@@ -181,3 +181,9 @@ Archive cumulative : tous les fichiers du site sont inclus. Remplacer les fichie
 - QCM, exercices, animations et mécanismes de sauvegarde inchangés. Le script Simple Analytics est présent sur la nouvelle page comme sur les autres pages du parcours ; aucune réponse ou note supplémentaire n’est collectée.
 
 Module 1 renommé « Introduction à la thermochimie », sous-titre « Décrire un système et ses échanges ». Le fichier systeme.html, les identifiants et la progression sont conservés. Seuls les intitulés associés ont changé ; les activités restent identiques.
+
+Repères visuels : carte facultative harmonisée avec les cartes du parcours. Rappels U, H, S, F, G au survol, au focus et au clic, fermeture par Échap ou bouton ; aucun stockage. Référence : W3C WCAG 1.4.13, contenu au survol/focus. Cette modification ne constitue pas un audit complet de conformité WCAG.
+
+Ordre du module 1 : système et frontières, échanges, état et paramètres intensifs/extensifs, quantités et unités, fonctions d’état puis potentiels. Suppression du lien isolé vers les potentiels sur l’accueil.
+
+Introduction générale : échanges d’énergie sans anticipation de U, H, Q ou W. Chaleur et travail sont introduits comme modes de transfert dans le premier principe. Étiquette unique « Potentiel thermodynamique » près des définitions de U, H et de F/G dans l’ouverture facultative.

@@ -87,3 +87,21 @@ tr.linked-equation td{color:var(--term-color)}
 .contact-page a:focus-visible{outline:3px solid #2563eb;outline-offset:5px}
 .topbar nav a[aria-current="page"]{color:#2563eb;text-decoration:underline;text-underline-offset:6px}
 @media(max-width:700px){.contact-page{padding:28px 16px 48px}.contact-card{grid-template-columns:1fr;border-radius:18px}.contact-identity,.contact-details{padding:28px}.contact-details{border-left:0;border-top:1px solid #e2e8f0}.contact-identity h1{margin-top:18px}}
+
+/* Rappels contextuels et carte complémentaire : même langage graphique. */
+.optional-opening{margin:24px 0 48px;padding:0;border:0;background:transparent;border-radius:0}
+.optional-opening .optional-card{display:block;min-height:0;--part-accent:#475569;padding:28px 32px}
+.optional-card h2{margin-top:16px}.optional-card .card-open{display:block;margin-top:22px}
+.grandeur-term{font:inherit;color:inherit;background:transparent;border:0;border-bottom:2px dotted #475569;border-radius:0;padding:2px 5px;min-width:28px;min-height:28px;cursor:pointer;text-underline-offset:4px}
+.grandeur-term:hover,.grandeur-term[aria-expanded=true]{background:#e2e8f0;color:#0f172a}
+.grandeur-term:focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+.rappel-hint{font-size:13px;color:#525866}
+.grandeur-rappel{position:fixed;z-index:1000;box-sizing:border-box;width:360px;max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);overflow:auto;padding:20px;background:#fff;color:#202127;border:1px solid #b6bdc8;border-radius:12px;box-shadow:0 8px 32px #18181b26;font:14px/1.55 system-ui}
+.grandeur-rappel[hidden]{display:none}.grandeur-rappel strong{font-size:16px}.grandeur-rappel p{margin:10px 0}.grandeur-rappel button{background:#202127;color:#fff;border:0;border-radius:8px;min-height:36px;padding:7px 16px;cursor:pointer}
+@media(max-width:680px){.optional-opening .optional-card{padding:22px}.grandeur-term{min-height:32px}}
+@media(prefers-reduced-motion:reduce){.optional-card{transition:none;transform:none!important}html{scroll-behavior:auto}}
+@media print{.grandeur-rappel,.rappel-hint{display:none}.grandeur-term{border:0;padding:0}}
+
+.optional-opening .optional-card .card-number{font:650 12px/1.5 system-ui;letter-spacing:.06em}.optional-opening .optional-card .card-open{display:inline-flex;width:auto}
+
+.potential-label{display:inline-block;margin:0 0 12px!important;padding:3px 9px;border:1px solid #aab4c2;border-radius:6px;background:#fff;color:#334155;font:600 12px/1.5 system-ui;letter-spacing:.015em}
