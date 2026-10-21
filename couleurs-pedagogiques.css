@@ -109,3 +109,14 @@ tr.linked-equation td{color:var(--term-color)}
 .formula.math-typeset{overflow-x:auto}.math-typeset math{font-family:"STIX Two Math","Cambria Math",math;font-size:1.12em;margin:0;text-align:left}.math-typeset math[display=block]{display:block}
 
 .math-typeset math{font-family:"STIX Two Math","Cambria Math",math}.math-typeset mtable{width:auto}.notation-equation{padding:24px 16px;margin:16px 0;background:#fff;border:1px solid #d8dee7;border-radius:10px;overflow-x:auto}.notation-equation math{font-size:2rem;text-align:center!important}.notation-buttons{display:flex;flex-wrap:wrap;gap:10px}.notation-buttons button{min-width:44px;min-height:44px;font-size:18px}#notation-result{min-height:4em;line-height:1.65}
+
+/* Semantic reading cues: definitions, laws, external resources. */
+.definition{background:#fff;border:1px solid #cbd5e1;border-left:4px solid #2563eb;border-radius:10px}
+.thermo-principle{margin:24px 0;padding:22px;border:2px solid #6d28d9;border-radius:12px;background:#fff;color:#172e42;break-inside:avoid}
+.thermo-principle .principle-label{display:inline-block;margin:0 0 14px;padding:6px 12px;border-radius:6px;background:#6d28d9;color:#fff;font:650 14px/1.5 system-ui,sans-serif}
+.thermo-principle p{margin:0;line-height:1.65}
+.further-reading,.activity-resource{background:#f4f4f5;border:1px dashed #71717a;border-left:1px dashed #71717a;border-radius:10px;color:#27272a}
+.further-reading h3,.activity-resource h3{color:#52525b}
+.license-badge{display:inline-block;margin-top:4px;border-radius:3px}
+.license-badge img{display:block;width:88px;height:31px;max-width:none}
+.license-badge:focus-visible{outline:3px solid #168a96;outline-offset:4px}
