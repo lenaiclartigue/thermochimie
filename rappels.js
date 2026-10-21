@@ -11,12 +11,24 @@ monobare:['Transformation monobare','La pression extérieure reste constante.'],
 adiabatique:['Paroi adiabatique / transformation adiabatique','Une paroi adiabatique empêche les transferts thermiques. Une transformation est adiabatique lorsque Q = 0 ; un échange de travail reste possible. Adiabatique ne signifie pas température constante.'],
 isole:['Système isolé','Le système n’échange ni matière ni énergie avec son environnement : Q = W = 0, donc ΔU = 0.']
 });
+const practical=!!document.getElementById('print-practical');
+if(practical)Object.assign(defs,{
+isochore:['Transformation isochore','Le volume du système reste constant.'],
+isotherme:['Transformation isotherme','La température du système reste constante.'],
+adiabatique:['Parois adiabatiques','Des parois adiabatiques empêchent les transferts thermiques avec l’extérieur.'],
+isole:['Système isolé','Le système n’échange ni matière ni énergie avec son environnement.'],
+extensif:['Paramètre extensif','Grandeur proportionnelle à la quantité de matière du système et additive lors de la réunion de systèmes.'],
+intensif:['Paramètre intensif','Grandeur indépendante de la quantité de matière pour un système homogène, non additive lors de la réunion de systèmes.'],
+U:['U — Énergie interne','Fonction d’état qui représente l’énergie microscopique du système, liée aux mouvements et aux interactions de ses constituants.'],
+H:['H — Enthalpie','Fonction d’état définie par H = U + pV.'],
+capacite:['Capacité calorifique','Quantité d’énergie à transférer par chaleur pour augmenter la température du système d’un kelvin, dans des conditions précisées et sans changement d’état ni réaction.']
+});
 const host=document.querySelector('#pane-course')||document.querySelector('.optional-reading')||document.querySelector('main');if(!host)return;
 const pop=document.createElement('aside');pop.id='grandeur-rappel';pop.className='grandeur-rappel';pop.hidden=true;pop.setAttribute('aria-label','Définition');document.body.append(pop);
 let active=null,timer,pinned=false;
 function close(){clearTimeout(timer);pop.hidden=true;if(active)active.setAttribute('aria-expanded','false');active=null;pinned=false;}
 function place(){if(!active)return;const b=active.getBoundingClientRect();pop.style.left=Math.max(12,Math.min(b.left,innerWidth-pop.offsetWidth-12))+'px';pop.style.top=Math.max(12,Math.min(b.bottom+8,innerHeight-pop.offsetHeight-12))+'px';}
-function show(btn){clearTimeout(timer);if(active!==btn){close();active=btn;const d=defs[btn.dataset.grandeur];pop.replaceChildren();const title=document.createElement('strong');title.textContent=d[0];pop.append(title);for(const text of d.slice(1)){const p=document.createElement('p');p.textContent=text;pop.append(p);}const exit=document.createElement('button');exit.type='button';exit.textContent='Fermer';exit.onclick=()=>{const previous=active;previous?.focus();close();};pop.append(exit);}pop.hidden=false;btn.setAttribute('aria-expanded','true');place();}
+function show(btn){clearTimeout(timer);if(active!==btn){close();active=btn;const d=defs[btn.dataset.grandeur];pop.replaceChildren();const title=document.createElement('strong');title.textContent=d[0];pop.append(title);if(practical&&['U','H'].includes(btn.dataset.grandeur)){const badge=document.createElement('span');badge.className='potential-label';badge.textContent='Potentiel thermodynamique';pop.append(badge);}for(const text of d.slice(1)){const p=document.createElement('p');p.textContent=text;pop.append(p);}const exit=document.createElement('button');exit.type='button';exit.textContent='Fermer';exit.onclick=()=>{const previous=active;previous?.focus();close();};pop.append(exit);}pop.hidden=false;btn.setAttribute('aria-expanded','true');place();}
 function later(){clearTimeout(timer);timer=setTimeout(()=>{if(!pinned&&!pop.matches(':hover')&&!pop.contains(document.activeElement)&&document.activeElement!==active)close();},180);}
 pop.addEventListener('pointerenter',()=>clearTimeout(timer));pop.addEventListener('pointerleave',later);pop.addEventListener('focusout',later);
 for(const btn of host.querySelectorAll('[data-grandeur]')){btn.setAttribute('aria-controls',pop.id);btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label',defs[btn.dataset.grandeur][0]+' : afficher le rappel');btn.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')show(btn)});btn.addEventListener('pointerleave',later);btn.addEventListener('focus',()=>show(btn));btn.addEventListener('blur',later);btn.addEventListener('click',()=>{if(active===btn&&pinned){close();return;}show(btn);pinned=true;});}
