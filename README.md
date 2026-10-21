@@ -189,3 +189,5 @@ Ordre du module 1 : système et frontières, échanges, état et paramètres int
 Introduction générale : échanges d’énergie sans anticipation de U, H, Q ou W. Chaleur et travail sont introduits comme modes de transfert dans le premier principe. Étiquette unique « Potentiel thermodynamique » près des définitions de U, H et de F/G dans l’ouverture facultative.
 
 Clarification énergie interne / transferts et chaleur pendant un changement d’état. Introduction et démonstration de ΔH = Qp réécrites à partir de la pression atmosphérique et des hypothèses du système fermé. Composition MathML native des principales relations de U, du bilan de H, des intégrales de transfert et de la dérivée définissant ΔrH ; autres formules conservées. Pas de dépendance à un service externe de rendu.
+
+Intégrales avec bornes et primitive évaluée composées en MathML dans Comprendre et la fiche pratique. Présentation complète de ΔrH°T au-dessus des commandes de notation conservées. Aucun changement des évaluations ni du stockage.

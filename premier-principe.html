@@ -4,7 +4,7 @@
 <title>Premier principe, travail et chaleur · Thermochimie</title>
 <link rel="stylesheet" href="style.css?v=a44835cb5a40">
 <link rel="stylesheet" href="theme.css?v=8a23d5ff162b">
-<link rel="stylesheet" href="couleurs-pedagogiques.css?v=fa7f15d8db57">
+<link rel="stylesheet" href="couleurs-pedagogiques.css?v=22ca34bd481e">
 </head>
 <body data-part="2">
 <header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="contact.html">Contact</a><a href="resultats.html">Mes résultats</a></nav></header><main data-current-module="2"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties"><a href="systeme.html" data-module="1"><span>01</span> Introduction à la thermochimie <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
@@ -132,14 +132,14 @@
 </section><section class="course-section" data-source-slides="12 ; aide mathématique demandée"><h2 id="integrale-travail">Comprendre l’intégrale du travail</h2>
 <div class="definition" id="definition-integrale">
 <h3>Qu’est-ce qu’une intégrale ?</h3>
-<p>Pour une fonction continue f entre a et b, l’intégrale ∫<sub>a</sub><sup>b</sup> f(x) dx est un <strong>nombre</strong> qui cumule les contributions de f sur cet intervalle. a et b sont les bornes ; x est la variable d’intégration.</p>
+<p>Pour une fonction continue f entre a et b, l’intégrale <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msubsup><mo largeop="true">∫</mo><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></msubsup><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>x</mi></mrow></math> est un <strong>nombre</strong> qui cumule les contributions de f sur cet intervalle. a et b sont les bornes ; x est la variable d’intégration.</p>
 <p>Une <strong>primitive</strong> de f est une fonction F dont la dérivée est f : F′ = f. Elle permet de calculer l’intégrale :</p>
-<div class="formula">∫<sub>a</sub><sup>b</sup> f(x) dx = [F(x)]<sub>a</sub><sup>b</sup> = F(b) − F(a)</div>
-<p>Il faut donc trouver une primitive, l’évaluer à la borne finale puis à la borne initiale, et soustraire. Par exemple, une primitive de 2x est x², donc ∫<sub>1</sub><sup>3</sup> 2x dx = 3² − 1² = 8.</p>
+<div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mtable columnalign="left"><mtr><mtd><msubsup><mo largeop="true">∫</mo><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></msubsup><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>x</mi><mo>=</mo><msubsup><mrow><mo>[</mo><mi>F</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>]</mo></mrow><mi>a</mi><mi>b</mi></msubsup><mo>=</mo><mi>F</mi><mo>(</mo><mi>b</mi><mo>)</mo><mo>−</mo><mi>F</mi><mo>(</mo><mi>a</mi><mo>)</mo></mtd></mtr></mtable></mrow></math></div>
+<p>Il faut donc trouver une primitive, l’évaluer à la borne finale puis à la borne initiale, et soustraire. Par exemple, une primitive de 2x est x², donc <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><msubsup><mo largeop="true">∫</mo><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></msubsup><mn>2</mn><mi>x</mi><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>x</mi><mo>=</mo><msup><mn>3</mn><mn>2</mn></msup><mo>−</mo><msup><mn>1</mn><mn>2</mn></msup><mo>=</mo><mn>8</mn></mrow></math>.</p>
 <p>Quand f est positive et a &lt; b, ce nombre représente l’aire sous la courbe. Les rectangles ci-dessous illustrent cette accumulation ; le calcul par primitive donne la valeur exacte.</p>
 </div>
 <p>Si la pression varie, on additionne les petits travaux le long de la transformation :</p>
-<div class="formula">W = −∫<sub>Vᵢ</sub><sup>V<sub>f</sub></sup> p<sub>ext</sub>(V) dV</div>
+<div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mtable columnalign="left"><mtr><mtd><mi>W</mi><mo>=</mo><mo>−</mo><msubsup><mo largeop="true">∫</mo><mrow><msub><mi>V</mi><mrow><mtext>i</mtext></mrow></msub></mrow><mrow><msub><mi>V</mi><mrow><mtext>f</mtext></mrow></msub></mrow></msubsup><msub><mi>p</mi><mrow><mtext>ext</mtext></mrow></msub><mo>(</mo><mi>V</mi><mo>)</mo><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>V</mi></mtd></mtr></mtable></mrow></math></div>
 <p>Sur le graphique, un rectangle représente une petite variation de volume multipliée par une pression : son aire vaut p<sub>ext</sub> × ΔV. La somme des aires approche l’intégrale. <b>La courbe reste la même quand on augmente le nombre de rectangles :</b> les rectangles deviennent plus étroits et suivent mieux cette courbe.</p>
 <div class="course-interactive" id="integral-demo">
 <h3>Comparer les rectangles et l’aire sous la courbe</h3>
@@ -160,7 +160,7 @@
 <p><strong>Calculer :</strong> <a href="https://youtu.be/8ci1RrNH1L0" target="_blank" rel="noopener noreferrer">Calculer une intégrale à l’aide d’une primitive — Yvan Monka</a>. Pour appliquer F(b) − F(a) pas à pas.</p>
 <p>Pour visualiser le lien avec l’aire sous la courbe : <a href="https://youtu.be/jkxNKkmEXZA" target="_blank" rel="noopener noreferrer">Déterminer une intégrale par calculs d’aire — Yvan Monka</a>.</p>
 <p class="muted">Facultatif · niveau terminale · vidéo en français · nouvel onglet</p></aside></section><section class="course-section" data-source-td="chapitre-2"><h2 id="travail-et-diagrammes">Choisir le calcul du travail et lire un diagramme</h2>
-<p>La formule de départ est toujours W = −∫ p<sub>ext</sub> dV. Le nom de la transformation ne suffit pas : il faut connaître la pression extérieure le long du chemin.</p>
+<p>La formule de départ est toujours <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><mrow><mi>W</mi><mo>=</mo><mo>−</mo><mo>∫</mo><msub><mi>p</mi><mrow><mtext>ext</mtext></mrow></msub><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>V</mi></mrow></math>. Le nom de la transformation ne suffit pas : il faut connaître la pression extérieure le long du chemin.</p>
 <div class="table-wrap"><table>
 <thead><tr>
 <th>Situation</th>
