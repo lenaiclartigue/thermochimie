@@ -1,0 +1,404 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reaction enthalpy · Thermochemistry</title>
+<link rel="stylesheet" href="style.css?v=a44835cb5a40">
+<link rel="stylesheet" href="theme.css?v=8a23d5ff162b">
+<link rel="stylesheet" href="couleurs-pedagogiques.css?v=22ca34bd481e">
+<link rel="stylesheet" href="language.css?v=eeb54be69351"><script src="language.js?v=cd35a2acccd6" defer></script>
+<script src="../english-dictionary.js?v=204aff401091"></script><script src="../english.js?v=388f498073cb" defer></script>
+</head>
+<body data-part="4">
+<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochemistry<small>UNDERGRADUATE</small></span></a><nav aria-label="Main navigation"><a href="index.html#parcours">Learning pathway</a><a href="fiche-pratique.html">Practical reference</a><a href="contact.html">Contact</a><a href="resultats.html">My results</a></nav><nav class="language-switch" aria-label="Language / Langue"><a href="../enthalpie-reaction.html" data-language="fr" lang="fr" aria-current="false">Français</a><a href="enthalpie-reaction.html" data-language="en" lang="en" aria-current="true">English</a></nav></header><main data-current-module="4"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← All modules</a><nav id="module-nav" aria-label="Modules"><a href="systeme.html" data-module="1"><span>01</span> Introduction to thermochemistry <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> First law, work and heat <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpy <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Reaction enthalpy <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Hess cycles <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimetry <span class="completion"></span></a></nav><div class="progress-block">
+<p>My progress</p>
+<progress id="progress" value="0" max="6"></progress><small id="progress-label"></small><p class="muted">Progress is local to this browser.</p>
+</div></aside><article><div class="lesson-head">
+<p class="eyebrow">MODULE 4 / 6</p>
+<h1 class="module-heading">Reaction enthalpy</h1>
+<p>Define a reaction enthalpy and distinguish the two ways of determining it.</p>
+</div>
+<div class="tabs" role="tablist" aria-label="Module steps">
+<button id="tab-course" role="tab" aria-controls="pane-course" aria-selected="true" tabindex="0">Understand</button><button id="tab-quiz" role="tab" aria-controls="pane-quiz" aria-selected="false" tabindex="-1">Quiz</button><button id="tab-exercises" role="tab" aria-controls="pane-exercises" aria-selected="false" tabindex="-1">Exercises</button><button id="tab-discussion" role="tab" aria-controls="pane-discussion" aria-selected="false" tabindex="-1">Discussion</button>
+</div>
+<div id="pane-course" role="tabpanel" aria-labelledby="tab-course">
+<nav class="lesson-outline" aria-label="In this module"><p><b>In this module</b></p>
+<ul>
+<li><a href="#definition-reaction">Defining reaction enthalpy</a></li>
+<li><a href="#etats-standard">Standard states of a constituent</a></li>
+<li><a href="#enthalpies-particulieres">Specific reaction enthalpies</a></li>
+<li><a href="#tables-formation">Using formation enthalpies</a></li>
+
+<li><a href="#deux-methodes">Two ways to determine a reaction enthalpy</a></li>
+</ul></nav><section class="course-section" data-source-slides="19–20"><h2 id="definition-reaction">Defining reaction enthalpy</h2><p><strong>ΔH describes the enthalpy change of the entire system; Δ<sub>r</sub>H describes the change per unit extent of the reaction as written.</strong> At constant temperature and pressure, for a single reaction, dH = Δ<sub>r</sub>H dξ. If Δ<sub>r</sub>H is constant, ΔH = (ξ<sub>f</sub> − ξ<sub>i</sub>) Δ<sub>r</sub>H. Changing the amount transformed changes ΔH; multiplying the chemical equation changes the value of Δ<sub>r</sub>H associated with that equation.</p><div class="definition"><h3>Exothermic does not necessarily mean spontaneous</h3><p>The sign of the reaction enthalpy describes the heat balance, but is insufficient to determine the direction of change. This question is explored in the<a href="energie-equilibre.html#sens-evolution">optional extension, beyond the syllabus</a>.</p></div>
+<div class="definition">
+<h3>Reaction enthalpy</h3>
+<p>Reaction enthalpy change defined per unit extent.</p>
+</div>
+<div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>Δ</mi><mi>r</mi></msub><mi>H</mi><mo>=</mo><msub><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mi>ξ</mi></mrow></mfrac><mo>)</mo></mrow><mrow><mi>T</mi><mo>,</mo><mi>p</mi></mrow></msub></mrow></math></div>
+<div class="definition">
+<h3>Standard reaction enthalpy</h3>
+<p>The standard reaction enthalpy ΔrH° refers to a reaction in which reactants in their standard states become products in their standard states.</p>
+</div>
+<div class="formula">ΔH = Q<sub>p</sub> ≈ ξ Δ<sub>r</sub>H°</div>
+<p>This expression applies to the reaction contribution at constant temperature and pressure, with pressure–volume work only, zero initial extent, and Δ<sub>r</sub>H approximated by a constant standard value. ξ is the extent of the process. ΔH is in J; Δ<sub>r</sub>H° is in J·mol⁻¹. If Δ<sub>r</sub>H° &lt; 0, the reaction is exothermic; if Δ<sub>r</sub>H° &gt; 0, it is endothermic.</p>
+<p><b>Ellingham approximation:</b> Δ<sub>r</sub>H° is treated as constant over the temperature interval studied.</p>
+<p>For a process with zero initial extent, Q<sub>reaction</sub> ≈ ξΔ<sub>r</sub>H°: the total heat depends on the amount transformed. To recover the molar quantity, divide by ξ, determined from the reaction-extent table. For a complete reaction, use the limiting reactant.</p>
+<div class="course-interactive notation-widget" id="notation-enthalpie">
+<h3>Reading the standard reaction enthalpy notation</h3><div class="notation-equation math-typeset" aria-label="Delta r H standard at temperature T"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><msub><mi>Δ</mi><mrow><mtext>r</mtext></mrow></msub><msubsup><mi>H</mi><mi>T</mi><mo>∘</mo></msubsup></mrow></math></div>
+<p>Select a symbol to see its meaning. Subscript r identifies the reaction, ° the standard states, and T the temperature.</p>
+<div class="notation-buttons" role="group" aria-label="Enthalpy symbols">
+<button type="button" data-notation="delta" aria-pressed="true" aria-label="Delta">Δ</button><button type="button" data-notation="type" aria-pressed="false" aria-label="Subscript r">r</button><button type="button" data-notation="h" aria-pressed="false" aria-label="H">H</button><button type="button" data-notation="standard" aria-pressed="false" aria-label="Standard-state symbol">°</button><button type="button" data-notation="temperature" aria-pressed="false" aria-label="Temperature T">T</button>
+</div>
+<p id="notation-result" role="status"><strong>Δ: change.</strong> ΔH = H<sub>final</sub> − H<sub>initial</sub>.</p>
+<div class="table-wrap"><table><tbody>
+<tr>
+<th>Δ</th>
+<td>Indicates a change.</td>
+</tr>
+<tr>
+<th>r, f, comb, fus, vap…</th>
+<td>Type of process: reaction, formation, combustion, melting, vaporisation…</td>
+</tr>
+<tr>
+<th>H</th>
+<td>State function considered: enthalpy.</td>
+</tr>
+<tr>
+<th>° (sometimes written 0)</th>
+<td>Constituents in their standard states. This symbol does not set the temperature.</td>
+</tr>
+<tr>
+<th>T</th>
+<td>Temperature of the process, in kelvins.</td>
+</tr>
+</tbody></table></div>
+<p><strong>Units:</strong> ΔH is an enthalpy change, in J. Δ<sub>r</sub>H is a reaction enthalpy per unit extent, in J·mol⁻¹. The r alone therefore does not mean “final minus initial”: it identifies the process considered.</p>
+</div></section><section class="course-section" data-source-slides="18"><h2 id="etats-standard">Standard states of a constituent</h2><aside class="further-reading"><h3>Further reading</h3><p><a href="https://goldbook.iupac.org/terms/view/S05925" target="_blank" rel="noopener noreferrer">IUPAC · standard state</a> : a conventional reference at a specified temperature. The symbol ° alone does not set the temperature to 298.15 K.</p><p class="resource-meta">Optional reading · references in English · new tab. The explanations above are educational paraphrases.</p></aside>
+<p>Standard pressure is p° = 1 bar; standard concentration is C° = 1 mol·L⁻¹. A standard state exists for each temperature considered.</p>
+<div class="definition">
+<h3>Gaseous constituent</h3>
+<p>The pure constituent treated as an ideal gas at pressure p° and the temperature T considered.</p>
+</div>
+<div class="definition">
+<h3>Condensed-phase constituent</h3>
+<p>The pure constituent in the same physical state at pressure p° and the temperature T considered.</p>
+</div>
+<div class="definition">
+<h3>Solute</h3>
+<p>Reference state at concentration C°, defined from behaviour at infinite dilution, at pressure p° and the temperature T considered.</p>
+</div>
+<p>The symbol ° indicates a standard state. The temperature must always be specified.</p>
+<div class="course-interactive" id="standard-temperature">
+<h3>Varying temperature: which reference state?</h3>
+<p>Choose an element, then vary the temperature at p° = 1 bar. Here we seek its <strong>standard reference state</strong>, meaning the elemental substance in its most stable state.</p>
+<label for="standard-element">Element</label><select id="standard-element"><option value="Cu">Copper — Cu</option>
+<option value="Pb">Lead — Pb</option>
+<option value="Hg">Mercury — Hg</option></select><div class="temperature-inputs">
+<label for="standard-temperature-range">Temperature (°C)<input id="standard-temperature-range" type="range" min="-100" max="2800" step="0.01" value="25"></label><label for="standard-temperature-number">Exact value (°C)<input id="standard-temperature-number" type="number" min="-100" max="2800" step="0.01" value="25"></label>
+</div>
+<div class="choice-buttons" role="group" aria-label="Reference temperatures">
+<button type="button" data-standard-point="ambient">25 °C</button><button type="button" data-standard-point="fusion">At melting</button><button type="button" data-standard-point="ebullition">At boiling</button>
+</div>
+<p id="standard-thresholds"></p>
+<div class="standard-current"><strong id="standard-species">Cu(s)</strong><span id="standard-kelvin">298.15 K · p° = 1 bar</span></div>
+<p id="standard-result" role="status"></p>
+<p class="state-comparison-intro">The three drawings help <strong>compare possible arrangements</strong>. Only the highlighted state corresponds to the selected temperature; at a transition temperature, two phases may coexist.</p>
+<div class="state-comparison"><section class="state-card" data-state-card="s" aria-labelledby="state-title-s">
+<h4 id="state-title-s">Solid</h4><p class="state-badge" id="state-badge-s"></p>
+<svg viewBox="0 0 320 260" role="img" aria-labelledby="state-svg-title-s state-svg-desc-s"><title id="state-svg-title-s">Solid: atomic arrangement</title><desc id="state-svg-desc-s">Atoms are close together and ordered. They vibrate around fixed positions; cohesion maintains the arrangement.</desc><rect x="12" y="12" width="296" height="236" rx="12" fill="#fff" stroke="#c4d0d5"></rect><g id="standard-links-s" class="cohesion-links"></g><g id="standard-atoms-s"></g></svg>
+<p>Atoms are close together and ordered. They vibrate around fixed positions; cohesion maintains the arrangement.</p></section><section class="state-card" data-state-card="l" aria-labelledby="state-title-l">
+<h4 id="state-title-l">Liquid</h4><p class="state-badge" id="state-badge-l"></p>
+<svg viewBox="0 0 320 260" role="img" aria-labelledby="state-svg-title-l state-svg-desc-l"><title id="state-svg-title-l">Liquid: atomic arrangement</title><desc id="state-svg-desc-l">Atoms are close together and disordered. They move relative to one another; cohesion persists.</desc><rect x="12" y="12" width="296" height="236" rx="12" fill="#fff" stroke="#c4d0d5"></rect><g id="standard-links-l" class="cohesion-links"></g><g id="standard-atoms-l"></g></svg>
+<p>Atoms are close together and disordered. They move relative to one another; cohesion persists.</p></section><section class="state-card" data-state-card="g" aria-labelledby="state-title-g">
+<h4 id="state-title-g">Gas</h4><p class="state-badge" id="state-badge-g"></p>
+<svg viewBox="0 0 320 260" role="img" aria-labelledby="state-svg-title-g state-svg-desc-g"><title id="state-svg-title-g">Gas: atomic arrangement</title><desc id="state-svg-desc-g">Atoms are widely separated and mobile. Interatomic interactions are neglected in the ideal-gas model.</desc><rect x="12" y="12" width="296" height="236" rx="12" fill="#fff" stroke="#c4d0d5"></rect><g id="standard-links-g" class="cohesion-links"></g><g id="standard-atoms-g"></g></svg>
+<p>Atoms are widely separated and mobile. Interatomic interactions are neglected in the ideal-gas model.</p></section></div>
+<div class="state-controls"><button type="button" class="button secondary" id="standard-motion" aria-pressed="false">Animate particles</button><span class="muted" id="standard-motion-note">Diagrams paused.</span></div>
+
+
+<p><strong>In a molecular substance</strong>, the <em>intermolecular interactions</em> act between molecules. The <em>intramolecular bonds</em>within each molecule remain during a phase transition: vaporising H₂O does not break its O–H bonds.</p>
+
+<p><strong>Distinguish:</strong> a standard state is defined for a given constituent and phase at the chosen temperature. The <em>standard reference state of an element</em> selects its most stable form. The symbol ° does not mean “at 25 °C”.</p>
+</div><p class="data-reference">Data: <a href="ressources.html#donnees-metaux">references and notes (metals)</a></p></section><section class="course-section" data-source-slides="21, 23–24, 28, 30"><h2 id="enthalpies-particulieres">Specific reaction enthalpies</h2>
+<div class="definition">
+<h3>Phase-transition enthalpy</h3>
+<p>Enthalpy change associated with a change in physical state: melting, vaporisation or sublimation.</p>
+</div>
+<div class="course-interactive" id="phase-interactive">
+<h3>Choose the phase transition</h3>
+<label for="phase-choice">Process</label><select id="phase-choice"><option value="fusion">Melting</option>
+<option value="solidification">Freezing</option>
+<option value="vaporisation">Vaporisation</option>
+<option value="condensation">Condensation to liquid</option>
+<option value="sublimation">Sublimation</option>
+<option value="depot">Deposition</option></select><div class="reaction-route phase-route">
+<div id="phase-start" class="species-card"></div>
+<span aria-hidden="true">→</span><div id="phase-end" class="species-card"></div>
+</div>
+<div id="phase-equation" class="formula"></div>
+<p id="phase-result" role="status"></p>
+<p>At fixed pressure, the temperature of a pure substance stays constant during an equilibrium phase transition. Reversing the phase transition at the same temperature reverses the sign of its enthalpy.</p>
+</div>
+<div class="formula">H₂O(s) → H₂O(l) : Δ<sub>fus</sub>H°<br>H₂O(l) → H₂O(g) : Δ<sub>vap</sub>H°</div>
+<div class="definition" id="corps-simple">
+<h3>Elemental substance</h3>
+<p>An elemental substance contains only one chemical element. It may contain individual atoms or molecules: H₂, O₂ and N₂ are elemental substances even though their molecules contain two atoms. Graphite is also an elemental substance.</p>
+<p>A compound contains several chemical elements: H₂O and CH₄ are compounds.</p>
+</div>
+<div class="definition">
+<h3>Standard enthalpy of formation</h3>
+<p>Enthalpy change for the synthesis of 1 mole of a compound in its standard state from the appropriate elemental substances in their standard reference states.</p>
+</div>
+<div class="course-interactive" id="formation-interactive">
+<h3>Forming one mole of a compound from elemental substances</h3>
+<label for="formation-choice">Compound formed at 298 K</label><select id="formation-choice"><option value="CH4">Methane CH₄(g)</option>
+<option value="H2O">Water H₂O(l)</option>
+<option value="CO2">Carbon dioxide CO₂(g)</option>
+<option value="NH3">Ammonia NH₃(g)</option></select><div class="reaction-route">
+<div>
+<span class="eyebrow">REFERENCE ELEMENTAL SUBSTANCES</span><div id="formation-reactants" class="species-cards"></div>
+</div>
+<span class="route-arrow" aria-hidden="true">→</span><div>
+<span class="eyebrow">ONE MOLE OF COMPOUND</span><div id="formation-product" class="species-cards"></div>
+</div>
+</div>
+<div id="formation-equation" class="formula" role="status"></div>
+<p id="formation-note"></p>
+<p>The coefficient of the compound formed is <strong>1</strong>. Fractional coefficients are possible for the elemental substances. Their standard formation enthalpy is zero when they are in their standard reference states.</p>
+</div>
+<div class="definition">
+<h3>Standard reference state of an element</h3>
+<p>The elemental substance in its most stable state at pressure p° and the temperature T considered.</p>
+</div>
+<p>The standard formation enthalpy of an element in its reference state is zero by convention.</p>
+<p>Examples of reference states: H₂(g), Cl₂(g), O₂(g), N₂(g) and graphite. An element's reference state may depend on temperature.</p>
+<div class="definition">
+<h3>Standard enthalpy of combustion</h3>
+<p>Enthalpy change associated with complete combustion of one mole of a substance in oxygen, at constant pressure, in the specified standard states. Complete combustion is exothermic and goes to completion.</p>
+<p><strong>water produced by combustion is taken as liquid, H₂O(l), unless otherwise stated</strong>. Always specify its phase and use matching data. This convention for combustion equations does not mean that water is liquid at every temperature.</p>
+</div>
+<div class="course-interactive" id="combustion-interactive">
+<h3>Writing a complete combustion equation</h3>
+<label for="combustion-choice">Fuel</label><select id="combustion-choice"><option value="CH4">Methane CH₄(g)</option>
+<option value="C3H8">Propane C₃H₈(g)</option></select><div class="choice-buttons" role="group" aria-label="State of the water produced">
+<button type="button" data-combustion-water="l" aria-pressed="true">H₂O(l) · default</button><button type="button" data-combustion-water="g" aria-pressed="false">H₂O(g) · when specified</button>
+</div>
+<div id="combustion-equation" class="formula" role="status"></div>
+<p id="combustion-note"></p>
+<div class="energy-flow">
+<span>Reacting system</span><span aria-hidden="true">→</span><span>Heat to the surroundings</span>
+</div>
+<p>In the cases studied, complete combustion goes to completion and is exothermic: Δ<sub>comb</sub>H° &lt; 0. Changing the water phase changes the combustion enthalpy.</p>
+</div>
+<div class="definition">
+<h3>Bond dissociation enthalpy</h3>
+<p>Enthalpy change for A–B(g) → A(g) + B(g). Dissociating the bond requires energy: ΔdissH° &gt; 0.</p>
+<p>The species are considered <strong>in the gas phase</strong>, with intermolecular interactions neglected: this isolates the energy associated with the broken bond without adding the effects of condensed-phase intermolecular interactions.</p>
+</div>
+<div class="course-interactive" id="liaison-interactive">
+<h3>Breaking or forming a bond</h3>
+<label for="liaison-choice">Gas-phase bond</label><select id="liaison-choice"><option value="HCl">H–Cl : 432 kJ·mol⁻¹</option>
+<option value="H2">H–H : 436 kJ·mol⁻¹</option>
+<option value="Cl2">Cl–Cl : 243 kJ·mol⁻¹</option></select><div class="choice-buttons" role="group" aria-label="Direction of the process">
+<button type="button" data-bond-state="broken" aria-pressed="false">Break the bond</button><button type="button" data-bond-state="formed" aria-pressed="true">Form the bond</button>
+</div>
+<svg viewBox="0 0 580 150" role="img" aria-labelledby="bond-title bond-desc"><title id="bond-title">Two atoms and their bond</title>
+<desc id="bond-desc">Two bonded atoms.</desc><line id="bond-line" x1="235" y1="75" x2="345" y2="75" stroke="#172e42" stroke-width="7"></line><g id="bond-left"><circle cx="235" cy="75" r="30" fill="#d8e9ef" stroke="#172e42"></circle><text id="bond-left-label" x="235" y="82" text-anchor="middle">H</text></g><g id="bond-right"><circle cx="345" cy="75" r="30" fill="#d4e7d5" stroke="#172e42"></circle><text id="bond-right-label" x="345" y="82" text-anchor="middle">Cl</text></g></svg><div id="bond-equation" class="formula"></div>
+<p id="bond-result" role="status"></p>
+</div>
+<p>Bonds are broken in gaseous species. The reverse operation, forming the bond, changes the sign of the enthalpy.</p>
+<aside class="further-reading"><h3>Further reading</h3>
+<p>Definitions and thermochemical equations are also presented in the “Enthalpy” section of <a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax, Chemistry 2e</a>.</p>
+<p class="resource-meta">Optional reading · English · new tab</p></aside><div class="definition" id="enthalpie-dissolution">
+<h3>Enthalpy of dissolution</h3>
+<p>It describes a substance becoming dissolved, for example A(s) → A(aq). It refers to one mole of dissolved substance under the specified conditions.</p>
+<p>Do not confuse <strong>dissolution</strong> in a solvent with <strong>bond dissociation</strong> in the gas phase. In a cycle, the states (s), (l), (g) and (aq) are part of the equation.</p>
+<div>
+<p>For an <strong>ionic solid</strong>, distinguish lattice dissociation, which separates the ions, from solvation, which surrounds them with solvent molecules. In water, this is called hydration. Separation requires energy; solvation releases it. The balance determines the sign of the dissolution enthalpy.</p>
+<p>Molecular dissolution, for example glucose dissolving, does not necessarily produce ions: the molecules separate and are then solvated.</p>
+</div>
+</div>
+<div class="course-interactive" id="dissolution-interactive">
+<h3>Dissociation and solvation of an ionic solid</h3>
+<p>Example: dissolving NaCl in water. Explore the steps to visualise the two contributions.</p>
+<div class="choice-buttons" role="group" aria-label="Dissolution step">
+<button type="button" data-solution-step="solid" aria-pressed="true">1 · Ionic solid</button><button type="button" data-solution-step="separate" aria-pressed="false">2 · Separate ions</button><button type="button" data-solution-step="solvate" aria-pressed="false">3 · Solvate ions</button>
+</div>
+<svg viewBox="0 0 600 310" role="img" aria-labelledby="solution-title solution-desc"><title id="solution-title">Dissolving an ionic solid in water</title>
+<desc id="solution-desc">Sodium and chloride ions in a lattice.</desc><g id="solution-drawing"></g></svg><p id="solution-result" role="status"></p>
+<div class="formula">NaCl(s) → Na⁺(aq) + Cl⁻(aq)</div>
+<p class="muted">Splitting the process into separation then solvation helps understanding. During actual dissolution, the phenomena are coupled. The final drawing zooms in on one ion of each type; the ions remain ions.</p>
+</div></section><section class="course-section" data-source-slides="25"><h2 id="tables-formation">Using formation enthalpies</h2><aside class="further-reading"><h3>Further reading</h3><p>To look up formation enthalpies, consult the <a href="https://webbook.nist.gov/chemistry/" target="_blank" rel="noopener noreferrer">NIST Chemistry WebBook</a> and its <a href="https://webbook.nist.gov/chemistry/guide/" target="_blank" rel="noopener noreferrer">reader's guide</a>, or the <a href="https://hbcp.chemnetbase.com/" target="_blank" rel="noopener noreferrer">CRC Handbook (subscription may be required)</a>. Check the substance, phase, temperature, units and bibliographic reference attached to each value. A gas-phase value cannot replace a liquid-phase value.</p><p class="resource-meta">Optional reading · references in English · new tab. The explanations above are educational paraphrases.</p></aside>
+<div class="formula">Δ<sub>r</sub>H° = ∑ νᵢ Δ<sub>f</sub>H°(products) − ∑ νᵢ Δ<sub>f</sub>H°(reactants)</div>
+<p>In these two sums, use positive coefficients from the balanced equation. Multiply each value by the species coefficient, then subtract the reactant sum from the product sum. This notation already includes the minus sign for reactants.</p>
+</section><section class="course-section" data-source-slides="25–41 ; transition demandée"><h2 id="deux-methodes">Two ways to determine a reaction enthalpy</h2>
+<div class="method-grid">
+<div>
+<h3>Using tabulated data</h3>
+<p>Combine known processes to obtain the reaction studied.</p>
+<a href="hess.html">Continue to Hess cycles →</a>
+</div>
+<div>
+<h3>Using an experimental measurement</h3>
+<p>Measure the temperature change and establish the heat balance.</p>
+<a href="calorimetrie.html">Continue to calorimetry →</a>
+</div>
+</div></section><button id="print" class="text-link">Print</button><p class="print-stamp">Thermochemistry · Lénaïc Lartigue · Reaction enthalpy · CC BY-NC-ND 4.0</p>
+<p class="step-next"><a class="button" href="#pane-quiz">Check my understanding with the quiz</a></p>
+</div>
+<div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden="">
+<h2>8 concept questions</h2>
+<p>These questions cover definitions and relationships. You may try again.</p>
+<form id="quiz-form">
+<div class="quiz-item" data-source-slides="19" data-correct="1" data-explanation="The derivative is taken at constant temperature and pressure.">
+<fieldset>
+<legend>1. ΔrH describes enthalpy variation with respect to…</legend>
+<label class="quiz-option"><input type="radio" name="q0" value="0" required=""><span>temperature</span></label><label class="quiz-option"><input type="radio" name="q0" value="1" required=""><span>extent of reaction ξ</span></label><label class="quiz-option"><input type="radio" name="q0" value="2" required=""><span>volume</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<div class="quiz-item" data-source-slides="20" data-correct="0" data-explanation="It can also be expressed in kJ·mol⁻¹.">
+<fieldset>
+<legend>2. The unit of ΔrH is…</legend>
+<label class="quiz-option"><input type="radio" name="q1" value="0" required=""><span>J·mol⁻¹</span></label><label class="quiz-option"><input type="radio" name="q1" value="1" required=""><span>J·K⁻¹</span></label><label class="quiz-option"><input type="radio" name="q1" value="2" required=""><span>mol·J⁻¹</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<div class="quiz-item" data-source-slides="18" data-correct="1" data-explanation="p° = 1 bar.">
+<fieldset>
+<legend>3. Standard pressure is…</legend>
+<label class="quiz-option"><input type="radio" name="q2" value="0" required=""><span>1 Pa</span></label><label class="quiz-option"><input type="radio" name="q2" value="1" required=""><span>1 bar</span></label><label class="quiz-option"><input type="radio" name="q2" value="2" required=""><span>10 bar</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<div class="quiz-item" data-source-slides="18" data-correct="1" data-explanation="A standard state can be defined at different temperatures.">
+<fieldset>
+<legend>4. Does the symbol ° impose a temperature of 298 K?</legend>
+<label class="quiz-option"><input type="radio" name="q3" value="0" required=""><span>Yes, always</span></label><label class="quiz-option"><input type="radio" name="q3" value="1" required=""><span>No, the temperature must be specified</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<div class="quiz-item" data-source-slides="23" data-correct="0" data-explanation="The compound formed is in its standard state.">
+<fieldset>
+<legend>5. A formation reaction produces…</legend>
+<label class="quiz-option"><input type="radio" name="q4" value="0" required=""><span>one mole of compound from reference elemental substances</span></label><label class="quiz-option"><input type="radio" name="q4" value="1" required=""><span>always two moles of gas</span></label><label class="quiz-option"><input type="radio" name="q4" value="2" required=""><span>only an elemental substance</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<div class="quiz-item" data-source-slides="23–24" data-correct="1" data-explanation="This convention concerns the element&#x27;s reference state.">
+<fieldset>
+<legend>6. The standard formation enthalpy of an element in its reference state is…</legend>
+<label class="quiz-option"><input type="radio" name="q5" value="0" required=""><span>1 kJ·mol⁻¹</span></label><label class="quiz-option"><input type="radio" name="q5" value="1" required=""><span>0 by convention</span></label><label class="quiz-option"><input type="radio" name="q5" value="2" required=""><span>always positive</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<div class="quiz-item" data-source-slides="28" data-correct="0" data-explanation="The definition uses gaseous species.">
+<fieldset>
+<legend>7. Dissociation of the A–B(g) bond gives…</legend>
+<label class="quiz-option"><input type="radio" name="q6" value="0" required=""><span>A(g) and B(g)</span></label><label class="quiz-option"><input type="radio" name="q6" value="1" required=""><span>A(l) and B(l)</span></label><label class="quiz-option"><input type="radio" name="q6" value="2" required=""><span>AB(s)</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<div class="quiz-item" data-source-slides="19" data-correct="0" data-explanation="Temperature dependence is neglected over this interval.">
+<fieldset>
+<legend>8. In the Ellingham approximation…</legend>
+<label class="quiz-option"><input type="radio" name="q7" value="0" required=""><span>ΔrH° is treated as constant over the temperature interval</span></label><label class="quiz-option"><input type="radio" name="q7" value="1" required=""><span>ΔrH° is always zero</span></label><label class="quiz-option"><input type="radio" name="q7" value="2" required=""><span>the temperature cannot change</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<button type="submit" class="button">Check my answers</button> <button type="reset" class="button secondary">Start again</button>
+</form>
+<div id="quiz-result" aria-live="polite"></div>
+<p class="step-next"><a class="button" href="#pane-exercises">Go to exercises</a></p>
+</div>
+<div id="pane-exercises" role="tabpanel" aria-labelledby="tab-exercises" hidden="">
+<h2>Exercises</h2>
+<p>After the quiz, develop your reasoning on paper, then enter the requested results. The calculation steps are provided in the detailed solution, available after an attempt.</p>
+<p class="muted">Your answers are stored in this browser. This record supports your practice; it is not a grade.</p>
+<nav class="exercise-index" aria-label="Choose an exercise"><ul>
+<li><a href="#exercice-benzene">Forming benzene from acetylene</a></li>
+<li><a href="#exercice-combustion-methane">Balancing methane combustion</a></li>
+<li><a href="#exercice-hydrogenation-formation">Calculating a hydrogenation enthalpy</a></li>
+</ul></nav><section class="exercise-card" id="exercice-benzene"><p class="eyebrow">EXERCISE 1</p>
+<h3>Forming benzene from acetylene</h3>
+
+<p>Calculate the standard enthalpy of the reaction: <b>3 C₂H₂(g) → C₆H₆(g)</b>.</p>
+<p>Data: Δ<sub>f</sub>H°(C₂H₂,g) = 226.7 kJ·mol⁻¹ ; Δ<sub>f</sub>H°(C₆H₆,g) = 82.9 kJ·mol⁻¹.</p><p class="data-reference">Data: <a href="ressources.html#donnees-formation">references and notes (formation)</a></p>
+<form class="exercise-form" data-exercise="benzene" novalidate="">
+<p class="muted">Numerical result: a difference of ±2% is accepted for rounding. Follow the stated sign convention and unit.</p><div class="exercise-fields">
+<div class="exercise-field">
+<label for="benzene-reponse-2">Standard enthalpy ΔrH° <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="benzene-reponse-2" name="reponse-2" data-expected="-597.2" data-hint="Products minus reactants." aria-describedby="benzene-reponse-2-feedback" data-tolerance="0" placeholder="Your answer" data-mistakes="[{&quot;value&quot;: -143.8, &quot;message&quot;: &quot;Vérifiez le coefficient 3 devant C₂H₂ dans la somme des réactifs.&quot;}]" data-relative-tolerance="0.02"><p id="benzene-reponse-2-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Check my answer</button><button class="button secondary" type="reset">Restart this exercise</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Hint 1</summary><p>Write ΔrH° = Σproducts ν ΔfH° − Σreactants ν ΔfH°.</p></details><details class="exercise-solution"><summary>Detailed solution</summary><p>For 3 C₂H₂(g) → C₆H₆(g), apply ΔrH° = sum of product formation enthalpies − sum of reactant formation enthalpies, weighted by coefficients.</p><p>The reactants contribute 3 × 226.7 = 680.1 kJ·mol⁻¹; the product contributes 82.9 kJ·mol⁻¹. Hence ΔrH° = 82.9−680.1 = <b>−597.2 kJ·mol⁻¹</b>. The factor 3 applies to acetylene; benzene is gaseous in this exercise.</p></details></section><section class="exercise-card" id="exercice-combustion-methane"><p class="eyebrow">EXERCISE 2</p>
+<h3>Balancing methane combustion</h3>
+
+<p>Write the complete combustion of one mole of gaseous methane in oxygen. The chosen products are CO₂(g) and H₂O(l).</p>
+<div class="formula">CH₄(g) + a O₂(g) → b CO₂(g) + c H₂O(l)</div>
+<form class="exercise-form" data-exercise="combustion-methane" novalidate="">
+<div class="exercise-fields">
+<div class="exercise-field">
+<label for="combustion-methane-reponse-1">Oxygen coefficient a</label><input type="text" inputmode="decimal" autocomplete="off" id="combustion-methane-reponse-1" name="reponse-1" data-expected="2" data-hint="Count oxygen atoms after balancing carbon and hydrogen." aria-describedby="combustion-methane-reponse-1-feedback" data-tolerance="0.001" placeholder="Your answer"><p id="combustion-methane-reponse-1-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="combustion-methane-reponse-2">Carbon dioxide coefficient b</label><input type="text" inputmode="decimal" autocomplete="off" id="combustion-methane-reponse-2" name="reponse-2" data-expected="1" data-hint="CH₄ contains one carbon atom." aria-describedby="combustion-methane-reponse-2-feedback" data-tolerance="0.001" placeholder="Your answer"><p id="combustion-methane-reponse-2-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="combustion-methane-reponse-3">Water coefficient c</label><input type="text" inputmode="decimal" autocomplete="off" id="combustion-methane-reponse-3" name="reponse-3" data-expected="2" data-hint="Four hydrogen atoms give two H₂O molecules." aria-describedby="combustion-methane-reponse-3-feedback" data-tolerance="0.001" placeholder="Your answer"><p id="combustion-methane-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Check my answers</button><button class="button secondary" type="reset">Restart this exercise</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Hint 1</summary><p>Balance C, then H, then O.</p></details><details class="exercise-solution"><summary>Solution</summary><p><b>CH₄(g) + 2 O₂(g) → CO₂(g) + 2 H₂O(l)</b>.</p></details></section><section class="exercise-card" id="exercice-hydrogenation-formation"><p class="eyebrow">EXERCISE 3</p>
+<h3>Calculating a hydrogenation enthalpy</h3>
+
+<p>C₂H₄(g) + H₂(g) → C₂H₆(g), at 298 K.</p>
+<p>En kJ·mol⁻¹ : ΔfH°(C₂H₄,g) = 52.28 ; ΔfH°(C₂H₆,g) = −84.67 ; ΔfH°(H₂,g) = 0.</p><p class="data-reference">Data: <a href="ressources.html#donnees-formation">references and notes (formation)</a></p>
+<form class="exercise-form" data-exercise="hydrogenation-formation" novalidate="">
+<p class="muted">Numerical result: a difference of ±2% is accepted for rounding. Follow the stated sign convention and unit.</p><div class="exercise-fields">
+<div class="exercise-field">
+<label for="hydrogenation-formation-reponse-3">Reaction enthalpy ΔrH° <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hydrogenation-formation-reponse-3" name="reponse-3" data-expected="-136.95" data-hint="Products minus reactants." aria-describedby="hydrogenation-formation-reponse-3-feedback" data-tolerance="0" placeholder="Your answer" data-relative-tolerance="0.02"><p id="hydrogenation-formation-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Check my answer</button><button class="button secondary" type="reset">Restart this exercise</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Hint 1</summary><p>Write the product sum, then subtract the reactant sum.</p></details><details class="exercise-solution"><summary>Detailed solution</summary><p>For C₂H₄(g) + H₂(g) → C₂H₆(g), subtract the reactant standard formation enthalpies from those of the products.</p><p>H₂(g) is the elemental substance in its standard reference state: ΔfH° = 0. The reactant sum is therefore 52.28 + 0 = 52.28 kJ·mol⁻¹; the product value is −84.67 kJ·mol⁻¹.</p><p>ΔrH° = −84.67 − 52.28 = <b>−136.95 kJ·mol⁻¹</b> : the reaction is exothermic.</p></details></section><a class="button secondary" href="#pane-discussion">Ask a question about these exercises</a>
+</div>
+<div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden="">
+<h3>Discussion · Reaction enthalpy</h3>
+<p>Ask your question and describe the reasoning you find difficult. Discussions are public.</p>
+<button id="load-discussion" class="button">Show discussion</button><p id="discussion-status" role="status"></p>
+<div class="giscus"></div>
+<p class="muted">You may also ask questions by email or during an online class.</p>
+</div>
+<div class="lesson-bottom">
+<a class="button secondary" href="enthalpie.html">Previous module</a><a class="button" href="hess.html">Next module</a>
+</div></article></section></main><footer><div>
+<strong>Thermochemistry · Undergraduate</strong><p>Learning pathway designed by Lénaïc Lartigue.</p>
+</div>
+<div>
+<a href="ressources.html" class="text-link">Online resources</a><br><a href="fiche-pratique.html" class="text-link">Practical reference: formulas and methods</a><br><button id="privacy" class="text-link">My progress</button><p><button id="show-license" type="button" class="text-link">CC BY-NC-ND 4.0 · Terms and citation</button></p>
+</div></footer><dialog id="license-dialog" class="license-dialog" aria-labelledby="license-title"><button class="close" type="button" aria-label="Close terms">×</button><h2 id="license-title">Terms of use and citation</h2>
+<div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Close">×</button><h2>Your progress</h2>
+<p>This site is freely accessible. Results are stored only in your browser and are not sent to your lecturer. Page views are measured with Simple Analytics, without student accounts or transmission of answers or scores. According to the provider, this measurement does not use cookies or retain IP addresses. Exercise answers and quiz history remain in this browser. Embedded discussions use GitHub and giscus; messages you post are public.</p>
+<button id="reset-progress" class="button secondary">Clear my local progress</button></dialog><div id="status" class="toast" role="status" hidden=""></div>
+<script src="conditions.js?v=b83fd2bb5946"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=1550ed768dd7" defer=""></script>
+<script src="exercices.js?v=7b042918f84e" defer=""></script>
+<script src="interactions.js?v=d05558286f06" defer=""></script>
+<script src="parcours-guides.js?v=c5bc9044cb9f" defer=""></script>
+
+<script src="formules.js?v=13b9504f27dc" defer=""></script>
+<!-- Mesure des consultations : Simple Analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script src="print-course.js?v=f136b64f9bb5" defer></script></body></html>

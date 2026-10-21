@@ -193,3 +193,24 @@ Clarification énergie interne / transferts et chaleur pendant un changement d�
 Intégrales avec bornes et primitive évaluée composées en MathML dans Comprendre et la fiche pratique. Présentation complète de ΔrH°T au-dessus des commandes de notation conservées. Aucun changement des évaluations ni du stockage.
 
 Version PDF / impression : print-course.js crée une vue de lecture autonome de Comprendre, avec style A4 print-course.css, commandes retirées, compléments dépliés et instantanés des illustrations. Le bouton ouvre un aperçu HTML ; le lecteur choisit ensuite Enregistrer au format PDF dans son navigateur. Pagination gérée par le navigateur (pas de service tiers).
+
+## Français et anglais
+Le sélecteur « Français | English » est présent en haut des pages. Le français
+est proposé lors de la première visite ; le choix est mémorisé localement.
+Le changement conserve la page et son ancre. Les versions partagent les mêmes
+identifiants, réponses, scores et clés de sauvegarde. Un QCM en cours est conservé
+au changement de langue, sans être noté automatiquement.
+
+Les pages anglaises se trouvent dans `en/`. Les cours, QCM, exercices, corrections,
+rappels, animations et versions imprimables sont traduits. Les références externes
+restent dans leur langue originale, annoncée auprès du lien. Les discussions
+giscus sont communes : l'anglais utilise le chemin français comme terme de
+correspondance. Les messages des participants ne sont pas traduits.
+
+Pour la maintenance, modifier le français et/ou `translations-en.json`, puis
+exécuter `python3 build-english.py` pour régénérer les pages anglaises. Cela
+ne nécessite aucun service externe. Le fichier `english.js` applique aussi
+le dictionnaire local aux textes générés par les animations, sans modifier
+les valeurs des formulaires ni les règles de correction. Les trois schémas
+avec texte ont des variantes vectorielles anglaises dans `assets/en/`.
+Le dossier enseignant, distinct du parcours étudiant, conserve sa version française.

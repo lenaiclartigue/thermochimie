@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thermochemistry · Practical reference</title>
+<link rel="stylesheet" href="style.css?v=a44835cb5a40">
+<link rel="stylesheet" href="theme.css?v=8a23d5ff162b">
+<link rel="stylesheet" href="couleurs-pedagogiques.css?v=22ca34bd481e">
+<link rel="stylesheet" href="language.css?v=eeb54be69351"><script src="language.js?v=cd35a2acccd6" defer></script>
+<script src="../english-dictionary.js?v=204aff401091"></script><script src="../english.js?v=388f498073cb" defer></script>
+</head>
+<body>
+<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochemistry<small>UNDERGRADUATE</small></span></a><nav aria-label="Main navigation"><a href="index.html#parcours">Learning pathway</a><a href="fiche-pratique.html">Practical reference</a><a href="contact.html">Contact</a><a href="resultats.html">My results</a></nav><nav class="language-switch" aria-label="Language / Langue"><a href="../fiche-pratique.html" data-language="fr" lang="fr" aria-current="false">Français</a><a href="fiche-pratique.html" data-language="en" lang="en" aria-current="true">English</a></nav></header><main class="practical-guide"><p class="eyebrow">FORMULAS AND METHODS</p>
+<h1>Thermochemistry reference sheet</h1>
+<p>Definitions, equations and units. The integration guide supports work calculations.</p>
+<button class="button secondary" id="print-practical">Print the reference sheet</button><nav class="lesson-outline" aria-label="On this sheet"><ul>
+<li><a href="#unites">Notation and units</a></li>
+<li><a href="#systeme">Describing a system</a></li>
+<li><a href="#premier-principe">First law and state functions</a></li>
+<li><a href="#travail">Calculating work</a></li>
+<li><a href="#enthalpie">Enthalpy and heat capacities</a></li>
+<li><a href="#reaction">Reaction enthalpies and Hess cycles</a></li>
+<li><a href="#calorimetrie">Calorimetric energy balances</a></li>
+<li><a href="#integrales">Mathematical guide: antiderivatives and integrals</a></li>
+</ul></nav><section id="unites"><h2>Notation and units</h2>
+<p>A change is written ΔX = X<sub>f</sub> − X<sub>i</sub>. U, H, Q and W are expressed in joules. A molar enthalpy is expressed in J·mol⁻¹ or kJ·mol⁻¹. The symbol ° denotes standard states; the temperature must still be specified.</p>
+<div class="table-scroll"><table>
+<tbody><tr>
+<th>Equation</th>
+<th>Application</th>
+</tr>
+<tr>
+<td>1 bar = 10⁵ Pa ; 1 L = 10⁻³ m³</td>
+<td>1 Pa·m³ = 1 J ; 1 bar·L = 100 J</td>
+</tr>
+<tr>
+<td>1 kJ = 1 000 J</td>
+<td>Express all contributions in the same unit before adding them.</td>
+</tr>
+<tr>
+<td>T/K = θ/°C + 273.15</td>
+<td>A temperature difference of 1 °C equals 1 K.</td>
+</tr>
+<tr>
+<td>R = 8.314 J·mol⁻¹·K⁻¹</td>
+<td>Use T in kelvins with R.</td>
+</tr>
+<tr>
+<td>p° = 1 bar ; c° = 1 mol·L⁻¹</td>
+<td>Standard conventions.</td>
+</tr>
+</tbody></table></div></section><section id="systeme"><h2>Describing a system</h2>
+<div class="formula-entry">
+<h3>Exchanges with the surroundings</h3>
+<div class="formula">Open: matter and energy<br>Closed: energy, but no matter<br>Isolated: neither matter nor energy</div>
+<p>The definitions concern the exchanges that are possible.</p>
+</div>
+<div class="formula-entry">
+<h3>Parameters</h3>
+<div class="formula"><button type="button" class="grandeur-term" data-grandeur="extensif">Extensive</button> : m, V, n<br><button type="button" class="grandeur-term" data-grandeur="intensif">Intensive</button> : T, p, concentration, mole fraction</div>
+<p>An extensive parameter is proportional to the amount of substance. An intensive parameter is independent of it.</p>
+</div>
+<a href="systeme.html#types-systemes">Review the exchange diagram</a><p><strong>Amounts of substance and gases:</strong> n = m/M ; m = ρV ; n = cV ; pV = nRT ; xᵢ = nᵢ/n<sub>tot</sub> ; pᵢ = xᵢp. Extent of reaction: nᵢ = nᵢ,₀ + νᵢξ; for a complete reaction, ξ<sub>max</sub> is the smallest nᵢ,₀/|νᵢ| among the reactants.</p></section><section id="premier-principe"><h2>First law and state functions</h2>
+<div class="formula-entry">
+<h3>Energy balance — <button type="button" class="grandeur-term" data-grandeur="U">internal energy U</button></h3>
+<span class="potential-label">Thermodynamic potential</span>
+<div class="formula">ΔU = U<sub>f</sub> − U<sub>i</sub> = Q + W<br>dU = δQ + δW</div>
+<p>Balances: closed system, with changes in macroscopic kinetic and potential energy neglected. Energy received is positive; energy released is negative.</p>
+</div>
+<div class="formula-entry">
+<h3>Integrating an exact differential</h3>
+<div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mtable columnalign="left"><mtr><mtd><msubsup><mo largeop="true">∫</mo><mrow><mi>i</mi></mrow><mrow><mi>f</mi></mrow></msubsup><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>U</mi><mo>=</mo><msub><mi>U</mi><mrow><mtext>f</mtext></mrow></msub><mo>−</mo><msub><mi>U</mi><mrow><mtext>i</mtext></mrow></msub></mtd></mtr><mtr><mtd><msubsup><mo largeop="true">∫</mo><mrow><mi>i</mi></mrow><mrow><mi>f</mi></mrow></msubsup><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>H</mi><mo>=</mo><msub><mi>H</mi><mrow><mtext>f</mtext></mrow></msub><mo>−</mo><msub><mi>H</mi><mrow><mtext>i</mtext></mrow></msub></mtd></mtr></mtable></mrow></math></div>
+<p>U and H are state functions: their changes do not depend on the path. Over a cycle, their changes are zero. Q and W depend on the path: ∫δQ = Q and ∫δW = W.</p>
+</div>
+<div class="formula-entry">
+<h3>Processes at a constant parameter</h3>
+<div class="formula"><button type="button" class="grandeur-term" data-grandeur="isochore">Isochoric</button> : W = 0 and ΔU = Q<sub>V</sub><br><button type="button" class="grandeur-term" data-grandeur="isotherme">Isothermal</button>, ideal gas of fixed composition: ΔU = 0 and W = −Q</div>
+<h3>System properties and exchanges with the surroundings</h3>
+<div class="formula"><button type="button" class="grandeur-term" data-grandeur="adiabatique">Adiabatic walls</button> : Q = 0 and ΔU = W<br><button type="button" class="grandeur-term" data-grandeur="isole">Isolated system</button> : Q = W = ΔU = 0</div>
+<p>The balance applies to a closed system with pressure–volume work only and negligible changes in macroscopic mechanical energy. A process with no heat transfer is also called <strong>adiabatic</strong>. A system with adiabatic walls can exchange work; an isolated system cannot.</p>
+</div>
+<p><strong>Cycle:</strong> a sequence of processes returning the system to its initial state. The path is closed; ΔU<sub>cycle</sub> = ΔH<sub>cycle</sub> = 0 and Q<sub>cycle</sub> + W<sub>cycle</sub> = 0.</p></section><section id="travail"><h2>Calculating work</h2>
+<div class="formula-entry">
+<h3>General expression</h3>
+<div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mtable columnalign="left"><mtr><mtd><mi>δ</mi><mi>W</mi><mo>=</mo><mo>−</mo><msub><mi>p</mi><mrow><mtext>ext</mtext></mrow></msub><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>V</mi></mtd></mtr><mtr><mtd><mi>W</mi><mo>=</mo><mo>−</mo><msubsup><mo largeop="true">∫</mo><mrow><msub><mi>V</mi><mrow><mtext>i</mtext></mrow></msub></mrow><mrow><msub><mi>V</mi><mrow><mtext>f</mtext></mrow></msub></mrow></msubsup><msub><mi>p</mi><mrow><mtext>ext</mtext></mrow></msub><mo>(</mo><mi>V</mi><mo>)</mo><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>V</mi></mtd></mtr></mtable></mrow></math></div>
+<p>Work depends on the external pressure. Expansion against a positive pressure gives W &lt; 0; compression gives W &gt; 0.</p>
+</div>
+<div class="formula-entry">
+<h3>Monobaric process</h3>
+<div class="formula">W = −p<sub>ext</sub>(V<sub>f</sub> − V<sub>i</sub>)</div>
+<p>If external pressure is constant, it can be taken outside the integral. Isobaric means constant system pressure; constant external pressure is a separate condition.</p>
+</div>
+<a href="premier-principe.html#integrale-travail">Explore rectangles and relate area to an antiderivative</a><div class="formula-card">
+<h3>Ideal gas, fixed amount, reversible isothermal process</h3>
+<div class="formula">W = −nRT ln(V<sub>f</sub>/V<sub>i</sub>) = nRT ln(p<sub>f</sub>/p<sub>i</sub>)</div>
+<p>We use p<sub>ext</sub> = p = nRT/V in the reversible limit. An isothermal process alone does not justify this substitution. At constant volume, W = 0. At constant pressure with p = p<sub>ext</sub>, W = −nR(T<sub>f</sub> − T<sub>i</sub>).</p>
+</div></section><section id="enthalpie"><h2>Enthalpy and heat capacities</h2>
+<div class="formula-entry">
+<h3><button type="button" class="grandeur-term" data-grandeur="H">Enthalpy H</button></h3>
+<span class="potential-label">Thermodynamic potential</span>
+<div class="formula">H = U + pV<br>ΔH = ΔU + Δ(pV)</div>
+<p>H is a state function. For a finite change, retain the change in the entire product pV.</p>
+</div>
+<div class="formula-entry">
+<h3>Heat at constant pressure</h3>
+<div class="formula">Q<sub>p</sub> = ΔH</div>
+<p>For these balances: pressure–volume work only, constant external pressure, initial and final states at that pressure, and negligible changes in macroscopic energies.</p>
+</div>
+<div class="formula-entry">
+<h3><button type="button" class="grandeur-term" data-grandeur="capacite">Heat capacity</button></h3>
+<div class="formula">C<sub>p</sub> = (∂H/∂T)<sub>p</sub><br>C = n C<sub>molar</sub> = m c<sub>specific</sub>
+</div>
+<p>System heat capacity: J·K⁻¹; molar: J·mol⁻¹·K⁻¹; specific: J·g⁻¹·K⁻¹ or J·kg⁻¹·K⁻¹. Choose the mass unit matching the given value.</p>
+</div>
+<div class="formula-entry">
+<h3>Temperature change without a phase transition</h3>
+<div class="formula">Q = C ΔT = n C<sub>molar</sub> ΔT = m c<sub>specific</sub> ΔT<br>At constant pressure: ΔH = ∑ᵢ nᵢ C<sub>p,m,i</sub> (T<sub>f</sub>−T<sub>i</sub>)</div>
+<p>These expressions assume fixed composition, no reaction or phase transition, and constant heat capacities over the interval. For a mixture, sum the contributions of its constituents.</p>
+</div>
+<div class="formula-entry">
+<h3>If heat capacity depends on temperature</h3>
+<div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mtable columnalign="left"><mtr><mtd><msub><mi>C</mi><mrow><mtext>p,m</mtext></mrow></msub><mo>(</mo><mi>T</mi><mo>)</mo><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>T</mi><mo>+</mo><mi>c</mi><msup><mi>T</mi><mn>2</mn></msup></mtd></mtr><mtr><mtd><mi>Δ</mi><mi>H</mi><mo>=</mo><mi>n</mi><msubsup><mo largeop="true">∫</mo><mrow><msub><mi>T</mi><mrow><mtext>i</mtext></mrow></msub></mrow><mrow><msub><mi>T</mi><mrow><mtext>f</mtext></mrow></msub></mrow></msubsup><msub><mi>C</mi><mrow><mtext>p,m</mtext></mrow></msub><mo>(</mo><mi>T</mi><mo>)</mo><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>T</mi></mtd></mtr></mtable></mrow></math></div>
+<p>This polynomial form may be used, or a constant heat capacity may be assumed over the interval. The antiderivative table below allows the polynomial to be integrated.</p>
+</div>
+<div class="formula-entry">
+<h3>Phase transition</h3>
+<div class="formula">ΔH = n Δ<sub>phase transition</sub>H°<br>Q<sub>total</sub> = ∑ Q<sub>heating</sub> + ∑ Q<sub>phase transition</sub>
+</div>
+<p>n is the amount transformed. Use the molar enthalpy of the phase transition at the temperature of this step.</p>
+<p><strong>Latent heat:</strong> heat exchanged during a phase transition at constant temperature, for a pure substance at constant pressure. For a mass-specific value, L is in J·kg⁻¹ (or J·g⁻¹):</p>
+<div class="formula">Q<sub>p</sub> = m L = n Δ<sub>phase transition</sub>H<br>L = Δ<sub>phase transition</sub>H / M</div>
+<p>m, M and L must use consistent mass units. L<sub>fus</sub> and L<sub>vap</sub> are positive; for freezing and condensation at the same temperature, Q<sub>p</sub> = −m L. During the plateau, heat received changes the phase rather than increasing temperature: m c ΔT is not used for this step.</p>
+</div>
+<p><strong>Notation:</strong> Δ indicates a change; H denotes enthalpy; subscripts r, f, comb, fus or vap identify the process; ° denotes standard states; T is temperature in kelvins. ΔH is in J; ΔrH is in J·mol⁻¹.</p></section><section id="reaction"><h2>Reaction enthalpies and Hess cycles</h2>
+<div class="formula-entry">
+<h3>Definition and extent of reaction</h3>
+<div class="formula">Δ<sub>r</sub>H = (∂H/∂ξ)<sub>T,p</sub><br>ΔH ≈ ξ Δ<sub>r</sub>H°</div>
+<p>For the reaction contribution at constant temperature and pressure. This expression assumes zero initial extent and a reaction enthalpy approximated by a constant standard value. In the Ellingham approximation, ΔrH° is treated as constant over the temperature interval.</p>
+</div>
+<div class="formula-entry">
+<h3>Using formation enthalpies</h3>
+<div class="formula">Δ<sub>r</sub>H° = ∑ νᵢ Δ<sub>f</sub>H°(products) − ∑ νᵢ Δ<sub>f</sub>H°(reactants)</div>
+<p>The coefficients in both sums are the positive coefficients of the balanced equation. The phases and temperature of the data must match the reaction. ΔfH° is zero for an element in its standard reference state.</p>
+</div>
+<p id="relation-h-u"><a href="calorimetrie.html#energie-enthalpie">Relationship between ΔrH° and ΔrU° for bomb calorimetry</a></p>
+<div class="formula-entry">
+<h3>Combining reactions</h3>
+<div class="formula">Δ<sub>r</sub>H°<sub>target</sub> = ∑ⱼ kⱼ Δ<sub>r</sub>H°ⱼ</div>
+<p>Reversing a reaction changes the sign of its enthalpy. Multiplying an equation by k multiplies its enthalpy by k. Adding the equations must give the target reaction.</p>
+</div>
+<div class="formula-entry">
+<h3>Dissociation, ionisation, electron attachment</h3>
+<div class="formula">A–B(g) → A(g) + B(g) : Δ<sub>diss</sub>H° &gt; 0<br>M(g) → M⁺(g) + e⁻ : Δ<sub>ion</sub>H° &gt; 0<br>M(g) + e⁻ → M⁻(g) : Δ<sub>AE</sub>H°</div>
+<p>For bond formation from gaseous atoms, use the negative of the bond dissociation enthalpy.</p>
+</div>
+<a href="enthalpie-reaction.html#enthalpies-particulieres">Review definitions of specific reaction enthalpies</a><p><strong>Phases:</strong> species can cancel in a sum of equations only if they have the same formula and physical state. If needed, add phase-transition or dissolution enthalpies. Dissolution A(s) → A(aq) differs from gaseous bond dissociation.</p>
+<p><strong>Elemental substance:</strong> contains only one chemical element, for example H₂, O₂ or C(graphite). A compound contains several elements. Formation produces one mole of compound from the reference elemental substances.</p>
+<p><strong>Combustion :</strong> H₂O(l) unless otherwise stated in this pathway. Molar combustion enthalpy refers to one mole of fuel; the water phase must match the data used. Bond enthalpies concern gaseous species, separating the bond contribution from intermolecular interactions.</p>
+<p><strong>Dissolution of an ionic solid:</strong> lattice dissociation and ion solvation; in water, hydration. Dissolving a molecular compound does not necessarily form ions.</p></section><section id="calorimetrie"><h2>Calorimetric energy balances</h2>
+<div class="formula-entry">
+<h3>Sum of contributions</h3>
+<div class="formula">∑ Q<sub>p,i</sub> = 0<br>Q<sub>calo</sub> + Q<sub>heating</sub> + Q<sub>phase transition</sub> + Q<sub>reaction</sub> = 0</div>
+<p>An adiabatic calorimetric assembly at constant pressure in this model. Include only the processes that actually occur. The constituents may exchange heat with one another.</p>
+</div>
+<div class="formula-entry">
+<h3>Calibration using two water samples</h3>
+<div class="formula">C<sub>calo</sub>(T<sub>f</sub>−T₁) + m₁c(T<sub>f</sub>−T₁) + m₂c(T<sub>f</sub>−T₂) = 0</div>
+<p>The calorimeter and cold water start at T₁; the hot water starts at T₂. Rearrange this equation to obtain Ccalo.</p>
+</div>
+<div class="formula-entry">
+<h3>Heat of reaction</h3>
+<div class="formula">Q<sub>reaction</sub> = −∑ Q<sub>other contributions</sub>
+</div>
+<p>Calculate each temperature change separately. In the Zn/Cu²⁺ exercise, the sum includes the calorimeter, solution and zinc.</p>
+</div>
+<div class="formula-card">
+<h3>Partial or complete melting</h3>
+<p>Ice at 0 °C, water and calorimeter initially at Tᵢ &gt; 0 °C: compare (C<sub>cal</sub> + m<sub>water</sub>c<sub>water</sub>)Tᵢ with m<sub>ice</sub>L<sub>fus</sub>. If the first value is smaller, T<sub>f</sub> = 0 °C and m<sub>melted</sub> = Q<sub>available</sub>/L<sub>fus</sub>. Otherwise all the ice melts; add the heating of the resulting water if T<sub>f</sub> &gt; 0 °C.</p>
+</div>
+<p><strong>Molar values:</strong> at constant pressure, Δ<sub>r</sub>H ≈ Q<sub>reaction</sub>/ξ; at constant volume with pressure–volume work only, Δ<sub>r</sub>U ≈ Q<sub>V, reaction</sub>/ξ. The sign is that of the heat received by the reacting system.</p></section><section id="integrales"><h2>Mathematical guide: antiderivatives and integrals</h2>
+<p>The integral adds contributions over an interval. Rectangles provide an approximation. If F′ = f, an antiderivative gives the exact calculation:</p>
+<div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mtable columnalign="left"><mtr><mtd><msubsup><mo largeop="true">∫</mo><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></msubsup><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>x</mi><mo>=</mo><mi>F</mi><mo>(</mo><mi>b</mi><mo>)</mo><mo>−</mo><mi>F</mi><mo>(</mo><mi>a</mi><mo>)</mo></mtd></mtr></mtable></mrow></math></div>
+<div class="table-scroll"><table>
+<tbody><tr>
+<th>Function</th>
+<th>Antiderivative, up to an additive constant</th>
+</tr>
+<tr>
+<td>k constant</td>
+<td>kx</td>
+</tr>
+<tr>
+<td>xᵃ, a ≠ −1</td>
+<td>xᵃ⁺¹/(a+1)</td>
+</tr>
+<tr>
+<td>1/x, for x &gt; 0</td>
+<td>ln(x)</td>
+</tr>
+<tr>
+<td>a + bx + cx²</td>
+<td>ax + bx²/2 + cx³/3</td>
+</tr>
+</tbody></table></div>
+<p>Reversing the bounds changes the sign of the integral. Finding an antiderivative of pext(V) for a given path does not make W a state function: the pext(V) curve can change with the path.</p>
+<aside class="further-reading"><h3>Further reading</h3>
+<p><strong>Calculate:</strong> <a href="https://youtu.be/8ci1RrNH1L0" target="_blank" rel="noopener noreferrer">Calculating an integral using an antiderivative — Yvan Monka</a>. Apply F(b) − F(a) step by step.</p>
+<p>To visualise the connection with the area under the curve: <a href="https://youtu.be/jkxNKkmEXZA" target="_blank" rel="noopener noreferrer">Evaluating an integral using areas — Yvan Monka</a>.</p>
+<p class="muted">Optional · upper-secondary level · video in French · new tab</p></aside><a href="premier-principe.html#integrale-travail">Return to the interactive rectangle illustration</a></section><p class="print-stamp">Thermochemistry · Lénaïc Lartigue · Practical reference · CC BY-NC-ND 4.0</p></main><footer><div>
+<strong>Thermochemistry · Undergraduate</strong><p>Learning pathway designed by Lénaïc Lartigue.</p>
+</div>
+<div>
+<a href="ressources.html" class="text-link">Online resources</a><br><a href="fiche-pratique.html" class="text-link">Practical reference: formulas and methods</a><br><button id="privacy" class="text-link">My progress</button><p><button id="show-license" type="button" class="text-link">CC BY-NC-ND 4.0 · Terms and citation</button></p>
+</div></footer><dialog id="license-dialog" class="license-dialog" aria-labelledby="license-title"><button class="close" type="button" aria-label="Close terms">×</button><h2 id="license-title">Terms of use and citation</h2>
+<div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Close">×</button><h2>Your progress</h2>
+<p>This site is freely accessible. Results are stored only in your browser and are not sent to your lecturer. Page views are measured with Simple Analytics, without student accounts or transmission of answers or scores. According to the provider, this measurement does not use cookies or retain IP addresses. Exercise answers and quiz history remain in this browser. Embedded discussions use GitHub and giscus; messages you post are public.</p>
+<button id="reset-progress" class="button secondary">Clear my local progress</button></dialog><div id="status" class="toast" role="status" hidden=""></div>
+<script src="conditions.js?v=b83fd2bb5946"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=1550ed768dd7" defer=""></script>
+<script src="exercices.js?v=7b042918f84e" defer=""></script>
+<script src="parcours-guides.js?v=c5bc9044cb9f" defer=""></script>
+
+<script src="formules.js?v=13b9504f27dc" defer=""></script>
+<!-- Mesure des consultations : Simple Analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script src="rappels.js?v=2d6228628b39" defer></script>
+<script src="print-course.js?v=f136b64f9bb5" defer></script>
+</body></html>

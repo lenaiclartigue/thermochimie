@@ -1,0 +1,7 @@
+.language-switch{display:flex;align-items:center;gap:3px;padding:3px;border:1px solid #cbd5e1;border-radius:999px;white-space:nowrap;flex-shrink:0;font:600 13px/1.2 system-ui,sans-serif}
+.language-switch a{padding:8px 11px!important;border-radius:999px;text-decoration:none;color:#334155!important}
+.language-switch a[aria-current=true]{background:#172e42;color:white!important}
+.language-switch a:focus-visible{outline:3px solid #168a96;outline-offset:2px}
+.topbar{flex-wrap:wrap;gap:12px}
+@media(max-width:650px){.language-switch{margin-left:auto}.topbar>nav:not(.language-switch){order:3;width:100%}}
+@media print{.language-switch{display:none!important}}

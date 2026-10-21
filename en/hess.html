@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hess cycles · Thermochemistry</title>
+<link rel="stylesheet" href="style.css?v=a44835cb5a40">
+<link rel="stylesheet" href="theme.css?v=8a23d5ff162b">
+<link rel="stylesheet" href="couleurs-pedagogiques.css?v=22ca34bd481e">
+<link rel="stylesheet" href="language.css?v=eeb54be69351"><script src="language.js?v=cd35a2acccd6" defer></script>
+<script src="../english-dictionary.js?v=204aff401091"></script><script src="../english.js?v=388f498073cb" defer></script>
+</head>
+<body data-part="5">
+<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochemistry<small>UNDERGRADUATE</small></span></a><nav aria-label="Main navigation"><a href="index.html#parcours">Learning pathway</a><a href="fiche-pratique.html">Practical reference</a><a href="contact.html">Contact</a><a href="resultats.html">My results</a></nav><nav class="language-switch" aria-label="Language / Langue"><a href="../hess.html" data-language="fr" lang="fr" aria-current="false">Français</a><a href="hess.html" data-language="en" lang="en" aria-current="true">English</a></nav></header><main data-current-module="5"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← All modules</a><nav id="module-nav" aria-label="Modules"><a href="systeme.html" data-module="1"><span>01</span> Introduction to thermochemistry <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> First law, work and heat <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpy <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Reaction enthalpy <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Hess cycles <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimetry <span class="completion"></span></a></nav><div class="progress-block">
+<p>My progress</p>
+<progress id="progress" value="0" max="6"></progress><small id="progress-label"></small><p class="muted">Progress is local to this browser.</p>
+</div></aside><article><div class="lesson-head">
+<p class="eyebrow">MODULE 5 / 6</p>
+<h1 class="module-heading">Hess cycles</h1>
+<p>Calculate a reaction enthalpy using tabulated data and known processes.</p>
+</div>
+<div class="tabs" role="tablist" aria-label="Module steps">
+<button id="tab-course" role="tab" aria-controls="pane-course" aria-selected="true" tabindex="0">Understand</button><button id="tab-quiz" role="tab" aria-controls="pane-quiz" aria-selected="false" tabindex="-1">Quiz</button><button id="tab-exercises" role="tab" aria-controls="pane-exercises" aria-selected="false" tabindex="-1">Exercises</button><button id="tab-discussion" role="tab" aria-controls="pane-discussion" aria-selected="false" tabindex="-1">Discussion</button>
+</div>
+<div id="pane-course" role="tabpanel" aria-labelledby="tab-course">
+<nav class="lesson-outline" aria-label="In this module"><p><b>In this module</b></p>
+<ul>
+<li><a href="#loi-hess">Hess's law and diagrams</a></li>
+<li><a href="#liaisons">Using dissociation enthalpies</a></li>
+<li><a href="#phases-et-liaisons">Keeping phases consistent in cycles</a></li>
+<li><a href="#autres-enthalpies">Other specified enthalpies</a></li>
+<li><a href="#cycle-propane">Building a cycle using combustion reactions</a></li>
+</ul></nav><section class="course-section" data-source-slides="27"><h2 id="loi-hess">Hess's law and diagrams</h2><p><strong>Hess's law follows from H being a state function.</strong> Two paths connecting exactly the same initial and final states give the same enthalpy change. The composition, amounts, phases, temperature and pressure of those states must be preserved.</p><p>The steps of the cycle may be hypothetical: they provide a calculation without necessarily describing the actual reaction mechanism. A closed cycle returns to its starting state; its total enthalpy change is zero.</p><aside class="further-reading"><h3>Further reading</h3><p><a href="https://goldbook.iupac.org/terms/view/E02141" target="_blank" rel="noopener noreferrer">IUPAC · enthalpy</a> ; <a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax · Hess's law and enthalpy</a>.</p><p class="resource-meta">Optional reading · references in English · new tab. The explanations above are educational paraphrases.</p></aside>
+<div class="definition">
+<h3>Hess's law</h3>
+<p>Consider an overall reaction leading from an initial to a final state. A sequence of reactions may connect the same states: the enthalpy change accompanying the overall reaction is the sum of the enthalpies of the successive reactions.</p>
+</div>
+<div class="definition">
+<h3>Why is it called a cycle?</h3>
+<p>A cycle returns to its starting point. In a Hess diagram, the indirect path can be followed from the initial to the final state, then the direct path in reverse. This closes the loop.</p>
+<div class="formula">∑ ΔH<sub>indirect steps</sub> − ΔH<sub>direct path</sub> = 0</div>
+<p>Since enthalpy is a state function, the two paths connecting the same states have the same enthalpy change.</p>
+</div>
+<figure class="course-figure " id="figure-cycle-hess"><img src="../assets/en/cycle-hess.svg" width="1293" height="880" loading="lazy" decoding="async" alt="Hess cycle: reactants to products directly, or through states 1, 2 and 3; four reaction enthalpies for the successive steps."><figcaption id="figure-cycle-hess-caption">The direct path and the path through intermediate states 1, 2 and 3 connect the same initial and final states.</figcaption></figure><div class="formula">Δ<sub>r</sub>H° = Δ<sub>r</sub>H°₁ + Δ<sub>r</sub>H°₂ + …</div>
+<p>Use the data in the correct direction for the chosen cycle and with the correct stoichiometry.</p>
+<ul>
+<li>Reversing a reaction changes the sign of its enthalpy.</li>
+<li>Multiplying an equation by a number multiplies its enthalpy by that number.</li>
+<li>Add the equations to recover the target reaction.</li>
+</ul>
+<aside class="further-reading"><h3>Further reading</h3>
+<p>Examples of combining equations are available in the “Hess’s Law” section of <a href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy" target="_blank" rel="noopener noreferrer">OpenStax, Chemistry 2e</a>.</p>
+<p class="resource-meta">Optional reading · English · new tab</p></aside></section><section class="course-section" data-source-slides="28–29"><h2 id="liaisons">Using dissociation enthalpies</h2>
+<p>To form HCl(g) from H₂(g) and Cl₂(g), the calculation can be split into two steps: dissociate the reactant bonds, then form the H–Cl bond.</p>
+<div class="formula">½ H₂(g) + ½ Cl₂(g) → HCl(g)</div>
+<p>Dissociation requires energy; bond formation is the reverse process.</p>
+</section><section class="course-section" data-source-td="chapitre-2"><h2 id="phases-et-liaisons">Keeping phases consistent in cycles</h2>
+<p>A species on both sides of a sum of equations can be cancelled only if its formula <strong>and physical state</strong> are identical. H₂O(l) and H₂O(g), or a pure substance and the same dissolved substance (aq), cannot cancel directly.</p>
+<p>To connect them, add the missing process and its enthalpy: vaporisation, condensation, sublimation or dissolution. All combined data must refer to the same temperature or to the explicitly chosen temperature approximation.</p>
+<p>For example, for two moles of water at the same temperature: Δ<sub>r</sub>H°<sub>combustion with H₂O(l)</sub> = Δ<sub>r</sub>H°<sub>combustion with H₂O(g)</sub> − 2Δ<sub>vap</sub>H°. Condensation gives a negative contribution.</p>
+<details class="method-detail"><summary>Using gaseous atoms as intermediates</summary><p>To use bond enthalpies, all intermediate atoms must be gaseous. Carbon initially present as graphite must therefore undergo C(graphite) → C(g): add its sublimation enthalpy.</p>
+<p>Count the bonds in each molecule: H₂C=CH₂ has four C–H bonds and one C=C bond. The balance is “energy required to break bonds” minus “energy released by forming bonds”, including any necessary phase transitions.</p>
+<p>Average bond enthalpies provide an estimate: their values depend on the chemical environment. A calculation using these averages may therefore differ from one using formation enthalpies for the specific species.</p></details></section><section class="course-section" data-source-slides="28"><h2 id="autres-enthalpies">Other specified enthalpies</h2>
+<div class="definition">
+<h3>Ionisation enthalpy</h3>
+<p>M(g) → M⁺(g) + e⁻ ; Δ<sub>ion</sub>H° &gt; 0.</p>
+</div>
+<div class="definition">
+<h3>Electron attachment enthalpy</h3>
+<p>M(g) + e⁻ → M⁻(g) ; Δ<sub>AE</sub>H°.</p>
+</div></section><section class="course-section" data-source-slides="31"><h2 id="cycle-propane">Building a cycle using combustion reactions</h2>
+<p>The propane exercise uses combustion reactions of propane, carbon and hydrogen to recover the formation reaction:</p>
+<div class="formula">3 C(gr) + 4 H₂(g) → C₃H₈(g)</div>
+<p>First determine the coefficient and direction of each reaction. Then add the corresponding enthalpies.</p>
+</section><section class="course-section" id="comprendre-propane"><h2>Assembling a cycle: propane example</h2><p>Change the direction and coefficient of each equation to see which species cancel.</p><p>Recover the reaction <b>3 C(graphite) + 4 H₂(g) → C₃H₈(g)</b> from the equations below.</p>
+<ol>
+<li>C₃H₈(g) + 5 O₂(g) → 3 CO₂(g) + 4 H₂O(l), ΔrH°₁ = −2220 kJ·mol⁻¹.</li>
+<li>C(graphite) + O₂(g) → CO₂(g), ΔrH°₂ = −394 kJ·mol⁻¹.</li>
+<li>H₂(g) + ½ O₂(g) → H₂O(l), ΔrH°₃ = −286 kJ·mol⁻¹.</li>
+</ol>
+<p>A negative multiplier reverses the equation.</p>
+<div class="thermal-widget" data-free-propane=""></div></section><section class="thermal-widget" id="cycle-hydrazine-guide" data-guided-hydrazine=""></section><p class="data-reference">Data: <a href="ressources.html#donnees-hess">references and notes (Hess)</a></p><button id="print" class="text-link">Print</button><p class="print-stamp">Thermochemistry · Lénaïc Lartigue · Hess cycles · CC BY-NC-ND 4.0</p>
+<p class="step-next"><a class="button" href="#pane-quiz">Check my understanding with the quiz</a></p>
+</div>
+<div id="pane-quiz" role="tabpanel" aria-labelledby="tab-quiz" hidden="">
+<h2>6 concept questions</h2>
+<p>These questions cover definitions and relationships. You may try again.</p>
+<form id="quiz-form">
+<div class="quiz-item" data-source-slides="27" data-correct="0" data-explanation="The enthalpy change does not depend on the path.">
+<fieldset>
+<legend>1. Hess's law relies on H being…</legend>
+<label class="quiz-option"><input type="radio" name="q0" value="0" required=""><span>a state function</span></label><label class="quiz-option"><input type="radio" name="q0" value="1" required=""><span>an energy transfer</span></label><label class="quiz-option"><input type="radio" name="q0" value="2" required=""><span>a pressure</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<div class="quiz-item" data-source-slides="27" data-correct="1" data-explanation="The direction of the process is reversed.">
+<fieldset>
+<legend>2. If a chemical equation is reversed, its enthalpy…</legend>
+<label class="quiz-option"><input type="radio" name="q1" value="0" required=""><span>remains unchanged</span></label><label class="quiz-option"><input type="radio" name="q1" value="1" required=""><span>changes sign</span></label><label class="quiz-option"><input type="radio" name="q1" value="2" required=""><span>becomes zero</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<div class="quiz-item" data-source-slides="27" data-correct="2" data-explanation="Apply the same coefficient to the equation and its enthalpy.">
+<fieldset>
+<legend>3. If an equation is multiplied by 3, its enthalpy is…</legend>
+<label class="quiz-option"><input type="radio" name="q2" value="0" required=""><span>divided by 3</span></label><label class="quiz-option"><input type="radio" name="q2" value="1" required=""><span>unchanged</span></label><label class="quiz-option"><input type="radio" name="q2" value="2" required=""><span>multiplied by 3</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<div class="quiz-item" data-source-slides="28–29" data-correct="0" data-explanation="The contribution has the opposite sign to the dissociation enthalpy.">
+<fieldset>
+<legend>4. Forming a bond from gaseous atoms is…</legend>
+<label class="quiz-option"><input type="radio" name="q3" value="0" required=""><span>the reverse of its dissociation</span></label><label class="quiz-option"><input type="radio" name="q3" value="1" required=""><span>the same process as its dissociation</span></label><label class="quiz-option"><input type="radio" name="q3" value="2" required=""><span>not accompanied by an enthalpy change</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<div class="quiz-item" data-source-slides="28" data-correct="1" data-explanation="The gaseous atom loses an electron.">
+<fieldset>
+<legend>5. M(g) → M⁺(g) + e⁻ represents…</legend>
+<label class="quiz-option"><input type="radio" name="q4" value="0" required=""><span>combustion</span></label><label class="quiz-option"><input type="radio" name="q4" value="1" required=""><span>ionisation</span></label><label class="quiz-option"><input type="radio" name="q4" value="2" required=""><span>vaporisation</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<div class="quiz-item" data-source-slides="31" data-correct="0" data-explanation="Common intermediate species cancel.">
+<fieldset>
+<legend>6. To construct the indirect path of a Hess diagram, adding the equations must give…</legend>
+<label class="quiz-option"><input type="radio" name="q5" value="0" required=""><span>the target reaction</span></label><label class="quiz-option"><input type="radio" name="q5" value="1" required=""><span>only a combustion reaction</span></label><label class="quiz-option"><input type="radio" name="q5" value="2" required=""><span>always a null reaction</span></label>
+</fieldset>
+<p class="feedback" role="status"></p>
+</div>
+<button type="submit" class="button">Check my answers</button> <button type="reset" class="button secondary">Start again</button>
+</form>
+<div id="quiz-result" aria-live="polite"></div>
+<p class="step-next"><a class="button" href="#pane-exercises">Go to exercises</a></p>
+</div>
+<div id="pane-exercises" role="tabpanel" aria-labelledby="tab-exercises" hidden="">
+<h2>Exercises</h2>
+<p>After the quiz, develop your reasoning on paper, then enter the requested results. The calculation steps are provided in the detailed solution, available after an attempt.</p>
+<p class="muted">Your answers are stored in this browser. This record supports your practice; it is not a grade.</p>
+<nav class="exercise-index" aria-label="Choose an exercise"><ul>
+<li><a href="#exercice-hcl">Forming HCl using dissociation enthalpies</a></li>
+<li><a href="#exercice-propane">Building the propane cycle</a></li>
+<li><a href="#exercice-hess-sens-coefficients">Choosing direction and coefficient</a></li>
+</ul></nav><section class="exercise-card" id="exercice-hcl"><p class="eyebrow">EXERCISE 1</p>
+<h3>Forming HCl using dissociation enthalpies</h3>
+
+<p>Calculate the standard enthalpy of formation of gaseous hydrogen chloride: <b>½ H₂(g) + ½ Cl₂(g) → HCl(g)</b>.</p>
+<p>Molar dissociation enthalpies: H₂ = 436; Cl₂ = 243; HCl = 432 kJ·mol⁻¹, at the same temperature.</p><p class="data-reference">Data: <a href="ressources.html#donnees-liaisons">references and notes (bonds)</a></p>
+<form class="exercise-form" data-exercise="hcl" novalidate="">
+<p class="muted">Numerical result: a difference of ±2% is accepted for rounding. Follow the stated sign convention and unit.</p><div class="exercise-fields">
+<div class="exercise-field">
+<label for="hcl-reponse-3">Formation enthalpy of HCl(g) <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hcl-reponse-3" name="reponse-3" data-expected="-92.5" data-hint="Add the two steps of the hypothetical path." aria-describedby="hcl-reponse-3-feedback" data-tolerance="0" placeholder="Your answer" data-mistakes="[{&quot;value&quot;: 247, &quot;message&quot;: &quot;Vérifiez les coefficients ½ des dissociations de H₂ et Cl₂.&quot;}]" data-relative-tolerance="0.02"><p id="hcl-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Check my answer</button><button class="button secondary" type="reset">Restart this exercise</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Hint 1</summary><p>Convert the reactants into the same gaseous atoms, then form HCl again.</p></details><details class="exercise-hint"><summary>Hint 2</summary><p>Breaking a bond requires energy; forming the same bond gives the opposite contribution.</p></details><details class="exercise-solution"><summary>Detailed solution</summary><p><b>1. Use gaseous atoms as intermediates.</b> Dissociate ½ mol of H₂ and ½ mol of Cl₂: Q₁ = ½ × 436 + ½ × 243 = 339.5 kJ per mole of HCl formed.</p><p><b>2. Form HCl.</b> H(g) + Cl(g) → HCl(g) is the reverse of HCl dissociation. Its contribution is therefore −432 kJ·mol⁻¹.</p><p><b>3. Add the steps.</b> The intermediate atoms cancel. ΔfH°(HCl,g) = 339.5 − 432 = <b>−92.5 kJ·mol⁻¹</b>. Formation is exothermic.</p></details></section><section class="exercise-card" id="exercice-propane"><p class="eyebrow">EXERCISE 2</p>
+<h3>Building the propane cycle</h3>
+
+<p>Recover the reaction <b>3 C(graphite) + 4 H₂(g) → C₃H₈(g)</b> from the equations below.</p>
+<ol>
+<li>C₃H₈(g) + 5 O₂(g) → 3 CO₂(g) + 4 H₂O(l), ΔrH°₁ = −2220 kJ·mol⁻¹.</li>
+<li>C(graphite) + O₂(g) → CO₂(g), ΔrH°₂ = −394 kJ·mol⁻¹.</li>
+<li>H₂(g) + ½ O₂(g) → H₂O(l), ΔrH°₃ = −286 kJ·mol⁻¹.</li>
+</ol>
+<p>A negative multiplier reverses the equation.</p>
+<p>Determine the standard enthalpy of formation of propane, in kJ·mol⁻¹.</p><form class="exercise-form" data-exercise="propane" novalidate="">
+<p class="muted">Numerical result: a difference of ±2% is accepted for rounding. Follow the stated sign convention and unit.</p><div class="exercise-fields">
+<div class="exercise-field">
+<label for="propane-reponse-4">Formation enthalpy of propane <span class="muted">(kJ·mol⁻¹)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="propane-reponse-4" name="reponse-4" data-expected="-106" data-hint="Apply the same multipliers to the enthalpies." aria-describedby="propane-reponse-4-feedback" data-tolerance="0" placeholder="Your answer" data-mistakes="[{&quot;value&quot;: -4546, &quot;message&quot;: &quot;Le propane doit être formé : la première combustion est inversée, et son enthalpie change de signe.&quot;}]" data-relative-tolerance="0.02"><p id="propane-reponse-4-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Check my answer</button><button class="button secondary" type="reset">Restart this exercise</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Hint 1</summary><p>Start with species that appear in only one equation.</p></details><details class="exercise-hint"><summary>Hint 2</summary><p>Check that O₂, CO₂ and H₂O cancel before adding the enthalpies.</p></details><details class="exercise-solution"><summary>Detailed solution</summary><p><b>1. Choose the direction of the equations.</b> Propane is a product: reverse equation 1, changing the sign of its enthalpy. Multiply equation 2 by 3 and equation 3 by 4.</p><p><b>2. Write the processes.</b><br>3 CO₂(g) + 4 H₂O(l) → C₃H₈(g) + 5 O₂(g), +2 220 kJ·mol⁻¹ ;<br>3 C(graphite) + 3 O₂(g) → 3 CO₂(g), −1 182 kJ·mol⁻¹ ;<br>4 H₂(g) + 2 O₂(g) → 4 H₂O(l), −1 144 kJ·mol⁻¹.</p><p><b>3. Cancel common species.</b> The 3 CO₂, 4 H₂O and 5 O₂ cancel. This leaves 3 C(graphite) + 4 H₂(g) → C₃H₈(g).</p><p><b>4. Calculate.</b> ΔfH° = −(−2 220) + 3(−394) + 4(−286) = <b>−106 kJ·mol⁻¹</b>, using the given data.</p></details></section><section class="exercise-card" id="exercice-hess-sens-coefficients"><p class="eyebrow">EXERCISE 3</p>
+<h3>Choosing direction and coefficient</h3>
+
+<p>Start with H₂O(l) → H₂O(g), ΔH₁ = +40.7 kJ for one mole of water at 100 °C. The following processes occur at the same temperature.</p><p class="data-reference">Data: <a href="ressources.html#donnees-eau">references and notes (water)</a></p>
+<form class="exercise-form" data-exercise="hess-sens-coefficients" novalidate="">
+<p class="muted">Numerical result: a difference of ±2% is accepted for rounding. Follow the stated sign convention and unit.</p><div class="exercise-fields">
+<div class="exercise-field">
+<label for="hess-sens-coefficients-reponse-1">ΔH for condensing one mole of vapour <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hess-sens-coefficients-reponse-1" name="reponse-1" data-expected="-40.7" data-hint="Reverse the process." aria-describedby="hess-sens-coefficients-reponse-1-feedback" data-tolerance="0" placeholder="Your answer" data-relative-tolerance="0.02"><p id="hess-sens-coefficients-reponse-1-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="hess-sens-coefficients-reponse-2">ΔH for vaporising two moles of water <span class="muted">(kJ)</span></label><input type="text" inputmode="decimal" autocomplete="off" id="hess-sens-coefficients-reponse-2" name="reponse-2" data-expected="81.4" data-hint="Multiply the process by 2." aria-describedby="hess-sens-coefficients-reponse-2-feedback" data-tolerance="0" placeholder="Your answer" data-relative-tolerance="0.02"><p id="hess-sens-coefficients-reponse-2-feedback" class="field-feedback"></p>
+</div>
+<div class="exercise-field">
+<label for="hess-sens-coefficients-reponse-3">Can H₂O(l) on one side and H₂O(g) on the other cancel?</label><select id="hess-sens-coefficients-reponse-3" name="reponse-3" data-expected="non" data-hint="Cancelled species must have the same physical state." aria-describedby="hess-sens-coefficients-reponse-3-feedback"><option value="">Choose an answer</option>
+<option value="oui">Yes</option>
+<option value="non">No, their physical states differ</option></select><p id="hess-sens-coefficients-reponse-3-feedback" class="field-feedback"></p>
+</div>
+</div>
+<div class="exercise-actions">
+<button class="button" type="submit">Check my answers</button><button class="button secondary" type="reset">Restart this exercise</button>
+</div>
+<p class="exercise-feedback" role="status" aria-live="polite"></p>
+</form>
+<details class="exercise-hint"><summary>Hint 1</summary><p>Apply the same operation to the enthalpy as to the equation.</p></details><details class="exercise-solution"><summary>Solution</summary><p>1. −40.7 kJ. 2. 2 × 40.7 = +81.4 kJ. 3. No: a phase transition must be added to connect the liquid and gas.</p></details></section><a class="button secondary" href="#pane-discussion">Ask a question about these exercises</a>
+</div>
+<div id="pane-discussion" role="tabpanel" aria-labelledby="tab-discussion" hidden="">
+<h3>Discussion · Hess cycles</h3>
+<p>Ask your question and describe the reasoning you find difficult. Discussions are public.</p>
+<button id="load-discussion" class="button">Show discussion</button><p id="discussion-status" role="status"></p>
+<div class="giscus"></div>
+<p class="muted">You may also ask questions by email or during an online class.</p>
+</div>
+<div class="lesson-bottom">
+<a class="button secondary" href="enthalpie-reaction.html">Previous module</a><a class="button" href="calorimetrie.html">Next module</a>
+</div></article></section></main><footer><div>
+<strong>Thermochemistry · Undergraduate</strong><p>Learning pathway designed by Lénaïc Lartigue.</p>
+</div>
+<div>
+<a href="ressources.html" class="text-link">Online resources</a><br><a href="fiche-pratique.html" class="text-link">Practical reference: formulas and methods</a><br><button id="privacy" class="text-link">My progress</button><p><button id="show-license" type="button" class="text-link">CC BY-NC-ND 4.0 · Terms and citation</button></p>
+</div></footer><dialog id="license-dialog" class="license-dialog" aria-labelledby="license-title"><button class="close" type="button" aria-label="Close terms">×</button><h2 id="license-title">Terms of use and citation</h2>
+<div id="license-body"></div></dialog><dialog id="info-dialog"><button class="close" aria-label="Close">×</button><h2>Your progress</h2>
+<p>This site is freely accessible. Results are stored only in your browser and are not sent to your lecturer. Page views are measured with Simple Analytics, without student accounts or transmission of answers or scores. According to the provider, this measurement does not use cookies or retain IP addresses. Exercise answers and quiz history remain in this browser. Embedded discussions use GitHub and giscus; messages you post are public.</p>
+<button id="reset-progress" class="button secondary">Clear my local progress</button></dialog><div id="status" class="toast" role="status" hidden=""></div>
+<script src="conditions.js?v=b83fd2bb5946"></script><script src="giscus-config.js?v=a13556ce6206"></script><script src="app.js?v=1550ed768dd7" defer=""></script>
+<script src="exercices.js?v=7b042918f84e" defer=""></script>
+<script src="interactions.js?v=d05558286f06" defer=""></script>
+<script src="parcours-guides.js?v=c5bc9044cb9f" defer=""></script>
+
+<script src="formules.js?v=13b9504f27dc" defer=""></script>
+<!-- Mesure des consultations : Simple Analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script src="print-course.js?v=f136b64f9bb5" defer></script></body></html>
