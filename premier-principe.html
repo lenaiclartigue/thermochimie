@@ -3,11 +3,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Premier principe, travail et chaleur · Thermochimie</title>
 <link rel="stylesheet" href="style.css?v=a44835cb5a40">
-<link rel="stylesheet" href="theme.css?v=d4b67596c28b">
+<link rel="stylesheet" href="theme.css?v=8a23d5ff162b">
 <link rel="stylesheet" href="couleurs-pedagogiques.css?v=9b395ccf41cf">
 </head>
 <body data-part="2">
-<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="contact.html">Contact</a><a href="resultats.html">Mes résultats</a></nav></header><main data-current-module="2"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties"><a href="systeme.html" data-module="1"><span>01</span> Décrire un système <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
+<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="contact.html">Contact</a><a href="resultats.html">Mes résultats</a></nav></header><main data-current-module="2"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties"><a href="systeme.html" data-module="1"><span>01</span> Introduction à la thermochimie <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
 <p>Ma progression</p>
 <progress id="progress" value="0" max="6"></progress><small id="progress-label"></small><p class="muted">Progression locale à ce navigateur.</p>
 </div></aside><article><div class="lesson-head">
@@ -27,10 +27,11 @@
 <li><a href="#transformations">Transformations à paramètre constant</a></li>
 <li><a href="#integrale-travail">Comprendre l’intégrale du travail</a></li>
 <li><a href="#travail-et-diagrammes">Choisir le calcul du travail et lire un diagramme</a></li>
-</ul></nav><section class="course-section" data-source-slides="9–10"><h2 id="energie-interne">Énergie interne et premier principe</h2>
+</ul></nav><section class="course-section" data-source-slides="9–10"><h2 id="energie-interne">Énergie interne et premier principe</h2><p>À l’échelle microscopique, les constituants sont en mouvement et interagissent. U prend en compte leurs énergies, notamment celles de mouvement et d’interaction. L’énergie cinétique du déplacement du système entier et son énergie potentielle dans un champ extérieur sont comptées séparément.</p>
 <div class="definition">
 <h3>Énergie interne U</h3>
 <p>Somme des énergies des constituants du système à l’échelle microscopique.</p>
+<p>L’énergie interne U est un <strong>potentiel thermodynamique</strong> qui décrit l’énergie microscopique du système.</p>
 </div>
 <p>La variation d’énergie interne entre un état initial et un état final s’écrit :</p>
 <div class="formula">ΔU = U<sub>f</sub> − U<sub>i</sub>
@@ -38,10 +39,10 @@
 <p>Elle s’exprime en joules (J). 1 calorie vaut environ 4,18 J (valeur arrondie).</p><p class="data-reference">Données : <a href="ressources.html#donnees-eau">références et précisions (eau)</a></p>
 <div class="definition">
 <h3>Premier principe</h3>
-<p>L’énergie n’est ni créée ni détruite : elle peut être transférée ou convertie sous forme de travail W et de chaleur Q.</p>
+<p>L’énergie se conserve. Elle peut être transférée entre le système et son environnement par chaleur Q ou par travail W.</p>
 </div>
 <div class="formula">ΔU = Q + W</div>
-<p>Dans les bilans de ce chapitre, on étudie un système fermé et on néglige les variations d’énergie cinétique et potentielle du système dans son ensemble. Les transferts sont comptés <b>positivement s’ils sont reçus</b>, négativement s’ils sont cédés.</p></section><section class="course-section" data-source-slides="9–10"><h2 id="fonction-etat">Fonction d’état et chemin suivi</h2>
+<p>Dans les bilans de ce chapitre, on étudie un système fermé et on néglige les variations d’énergie cinétique et potentielle du système dans son ensemble. Les transferts sont comptés <b>positivement s’ils sont reçus</b>, négativement s’ils sont cédés.</p></section><section class="course-section" data-source-slides="9–10"><h2 id="fonction-etat">Fonction d’état et chemin suivi</h2><div class="definition"><h3>Une énergie et des transferts</h3><p>U caractérise l’état du système. Q et W décrivent des <strong>transferts pendant une transformation</strong> : le système ne « contient » ni une quantité de chaleur Q ni une quantité de travail W.</p></div><aside class="further-reading"><h3>Pour aller plus loin</h3><p><a href="https://goldbook.iupac.org/terms/view/I03103" target="_blank" rel="noopener noreferrer">IUPAC · énergie interne</a> ; <a href="https://openstax.org/books/university-physics-volume-2/pages/3-2-work-heat-and-internal-energy" target="_blank" rel="noopener noreferrer">OpenStax · chaleur, travail et énergie interne</a>.</p><p class="resource-meta">Lecture facultative · références en anglais · nouvel onglet. Les explications ci-dessus sont des reformulations pédagogiques.</p></aside>
 <p>U est une <b>fonction d’état</b> : sa variation dépend des états initial et final, pas du chemin suivi. Q et W dépendent du chemin.</p>
 <div class="formula">ΔU = W₁ + Q₁ = W₂ + Q₂ = W₃ + Q₃</div>
 <p>Pour une transformation infinitésimale :</p>
@@ -93,7 +94,7 @@
 <svg viewBox="0 0 580 210" role="img" aria-labelledby="energy-title energy-description"><title id="energy-title">Convention de signe des transferts d’énergie</title>
 <desc id="energy-description">Une flèche entre dans le système : chaleur reçue, Q positif.</desc><rect x="10" y="10" width="560" height="190" rx="12" fill="#eaf0f3"></rect><text x="32" y="43">Milieu extérieur</text><rect x="340" y="65" width="200" height="120" rx="10" fill="white" stroke="#172e42" stroke-width="2"></rect><text x="440" y="105" text-anchor="middle">Système</text><path id="transfer-arrow" d="M90 145H410m-14-9 14 9-14 9" fill="none" stroke="#226956" stroke-width="4"></path><text id="transfer-symbol" x="200" y="116" text-anchor="middle" fill="#226956" font-weight="bold">Q &gt; 0</text></svg><p id="energy-result" role="status">Chaleur reçue : Q &gt; 0. Le transfert entre dans le système (endothermique).</p>
 <p class="muted">Le signe indique le sens du transfert, pas la valeur de l’énergie interne. Pour connaître ΔU, on additionne Q et W.</p>
-</div></section><section class="course-section" data-source-slides="13"><h2 id="transformations">Transformations à paramètre constant</h2>
+</div></section><section class="course-section" data-source-slides="13"><h2 id="transformations">Transformations à paramètre constant</h2><details><summary>Compression adiabatique : comment U peut-elle augmenter sans chaleur reçue ?</summary><p>Reprenez le piston : si les parois sont adiabatiques, Q = 0. Lors d’une compression, le volume diminue et le travail reçu est positif. Le premier principe donne alors <strong>ΔU = W &gt; 0</strong>. Pour un gaz parfait, cela entraîne une augmentation de température.</p><p>Adiabatique signifie absence de transfert thermique, et non température constante. Cette hypothèse s’ajoute ici à la représentation du travail par le piston.</p></details>
 <div class="table-scroll"><table>
 <tbody><tr>
 <th>Transformation</th>

@@ -82,3 +82,6 @@ input[type=range],.thermal-widget input[type=range],.quiz-option input{accent-co
 progress::-webkit-progress-value{background:var(--accent)}progress::-moz-progress-bar{background:var(--accent)}
 :focus-visible{outline-color:var(--accent)}
 }
+
+/* Ouverture facultative : distincte du parcours noté */
+.optional-opening{margin:2.5rem 0;padding:clamp(1.4rem,4vw,2.5rem);border:1px solid #cbd5e1;border-left:5px solid #334155;border-radius:18px;background:#fff}.optional-opening h2{max-width:36ch}.optional-reading{max-width:960px;margin-inline:auto}.optional-reading .course-section{margin-block:2rem;padding-block:1rem;border-bottom:1px solid #e2e8f0}.optional-reading details{margin-block:1.2rem;padding:1rem;border:1px solid #cbd5e1;border-radius:12px}.optional-reading summary{cursor:pointer;font-weight:650}.optional-reading math{font-size:1.15em}.table-wrap{overflow-x:auto}

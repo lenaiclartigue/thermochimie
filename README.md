@@ -26,7 +26,7 @@ La version actuelle utilise six accents francs sur des cartes blanches (numéros
 
 | Fichier | Partie | Questions QCM | Activités |
 | --- | --- | ---: | ---: |
-| `systeme.html` | Décrire un système | 6 | 3 |
+| `systeme.html` | Introduction à la thermochimie | 6 | 3 |
 | `premier-principe.html` | Premier principe, travail et chaleur | 8 | 3 |
 | `enthalpie.html` | Enthalpie | 6 | 3 |
 | `enthalpie-reaction.html` | Enthalpie de réaction | 8 | 3 |
@@ -164,3 +164,20 @@ Après publication, ouvrir une page puis utiliser l’assistant de vérification
 Pour la formule gratuite, vérifier dans le compte les conditions applicables, notamment le badge requis et la limite d’historique. Le badge n’est pas inclus dans le script fourni : intégrer le code officiel du badge si cette formule est choisie. Ne pas publier de clé API privée dans les fichiers du site.
 
 Correction du formatage des fractions : les adresses web en texte brut, les liens et les blocs de code sont préservés, y compris dans les fenêtres de conditions.
+
+## Introduction aux potentiels thermodynamiques — 21 octobre 2026
+
+Ajout validé à partir du document de transmission : définition pédagogique d’un potentiel, rappel de la fonction d’état et mention des quatre potentiels classiques sans les énumérer. Texte au début de Comprendre dans systeme.html, accessible depuis l’accueil. Rappels de la nature de potentiel de U et H dans leurs modules. Le rapport IUPAC d’Alberty (2001) est indiqué comme référence avancée et non comme citation littérale. Aucun nouveau QCM ni exercice ajouté ; le complément hors programme sur S, F, G et K est maintenant accessible dans energie-equilibre.html.
+
+
+## Enrichissement et ouverture facultative — 21 octobre 2026
+
+Archive cumulative : tous les fichiers du site sont inclus. Remplacer les fichiers précédents par ceux de cette archive à la racine du dépôt GitHub Pages. Aucun déploiement automatique n’a été effectué.
+
+- Six modules conservés : ajouts dans Comprendre sur l’état et les fonctions d’état, le sens de U, les transferts, la compression adiabatique, l’intérêt de H, les conditions de Qp = ΔH, l’avancement, Hess et les frontières calorimétriques.
+- energie-equilibre.html : ouverture hors programme distincte, accessible par une carte sous les six modules. Entropie, deuxième et troisième principes, F et G, contraintes et équilibre, lien avec K. Approfondissements dépliables. Aucun septième objectif de progression.
+- Références contextualisées IUPAC, NIST, CRC et supports universitaires. Les textes ajoutés sont des reformulations pédagogiques à partir du document de transmission et des références indiquées, non des citations du diaporama. L’introduction des quatre potentiels sans les nommer reste dans le premier module.
+- Pas de nouvelle donnée numérique tabulée : les valeurs et calculs existants ne sont pas modifiés. Les liens NIST et CRC permettent une consultation ; ils ne certifient pas à eux seuls la provenance des valeurs héritées. CRC peut nécessiter un abonnement.
+- QCM, exercices, animations et mécanismes de sauvegarde inchangés. Le script Simple Analytics est présent sur la nouvelle page comme sur les autres pages du parcours ; aucune réponse ou note supplémentaire n’est collectée.
+
+Module 1 renommé « Introduction à la thermochimie », sous-titre « Décrire un système et ses échanges ». Le fichier systeme.html, les identifiants et la progression sont conservés. Seuls les intitulés associés ont changé ; les activités restent identiques.
