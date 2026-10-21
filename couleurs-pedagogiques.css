@@ -1,11 +1,10 @@
-/* Repérage des chapitres : six accents catégoriels, sans signification physique.
-   Les boutons d’action gardent le pétrole commun défini dans theme.css. */
-[data-module="1"],body[data-part="1"]{--part-accent:#2563eb;--part-soft:#edf4f9;--part-border:#c2d6e5}
-[data-module="2"],body[data-part="2"]{--part-accent:#007c83;--part-soft:#eaf5f4;--part-border:#b8dcda}
-[data-module="3"],body[data-part="3"]{--part-accent:#008257;--part-soft:#f0f5e9;--part-border:#d2dfbc}
-[data-module="4"],body[data-part="4"]{--part-accent:#b45309;--part-soft:#fcf5e7;--part-border:#ead7b0}
-[data-module="5"],body[data-part="5"]{--part-accent:#7c3aed;--part-soft:#f4eff8;--part-border:#d9cbe8}
-[data-module="6"],body[data-part="6"]{--part-accent:#d44332;--part-soft:#fcf0ec;--part-border:#e9c7bf}
+/* Ordered blue-to-teal accents; numbering and groups carry the sequence. */
+[data-module="1"],body[data-part="1"],.course-path [data-route="1"]{--part-accent:#2446a6;--part-soft:#f8fafc;--part-border:#cbd5e1}
+[data-module="2"],body[data-part="2"],.course-path [data-route="2"]{--part-accent:#2456a0;--part-soft:#f8fafc;--part-border:#cbd5e1}
+[data-module="3"],body[data-part="3"],.course-path [data-route="3"]{--part-accent:#226598;--part-soft:#f8fafc;--part-border:#cbd5e1}
+[data-module="4"],body[data-part="4"],.course-path [data-route="4"]{--part-accent:#20758c;--part-soft:#f8fafc;--part-border:#cbd5e1}
+[data-module="5"],body[data-part="5"],.course-path [data-route="5"]{--part-accent:#177e7e;--part-soft:#f8fafc;--part-border:#cbd5e1}
+[data-module="6"],body[data-part="6"],.course-path [data-route="6"]{--part-accent:#0f766e;--part-soft:#f8fafc;--part-border:#cbd5e1}
 @media screen{
 body{background:#f7f7f8}.cover h1,.module-heading{color:#202127}.cover-intro{color:#5a606b}.cover .eyebrow{background:transparent;border:0;padding:0;color:#666b75}.brand-symbol{background:#202127}.brand{color:#202127}
 
@@ -120,3 +119,10 @@ tr.linked-equation td{color:var(--term-color)}
 .license-badge{display:inline-block;margin-top:4px;border-radius:3px}
 .license-badge img{display:block;width:88px;height:31px;max-width:none}
 .license-badge:focus-visible{outline:3px solid #168a96;outline-offset:4px}
+
+/* Course sequence, distinct from saved personal results. */
+.course-path{margin:0 0 40px}.course-path ol{display:grid;grid-template-columns:repeat(6,1fr);list-style:none;padding:0;margin:0}.course-path li{position:relative;text-align:center}.course-path li:not(:last-child)::after{content:"";height:3px;background:#cbd5e1;position:absolute;top:23px;left:50%;width:100%;z-index:0}.course-path a{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:10px;color:#334155;text-decoration:none;font:600 12px/1.4 system-ui}.course-path .route-number{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--part-accent);border:4px solid #f7f7f8;color:#fff;font-size:16px}.course-path a[data-last-visited] .route-number{outline:2px solid var(--part-accent);outline-offset:3px}.course-path a:focus-visible{outline:3px solid #172e42;outline-offset:6px;border-radius:6px}
+.course-stage{margin:0 0 38px}.course-stage>h2{display:flex;align-items:center;gap:14px;font:650 21px/1.4 system-ui;color:#172e42;margin:0 0 16px}.course-stage>h2>span{font:650 12px/1.4 system-ui;color:#526074;border:1px solid #cbd5e1;border-radius:6px;padding:5px 8px;white-space:nowrap}.course-stage .part-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.course-stage .part-card{min-height:270px;border-top:3px solid var(--part-accent)}
+.part-card .card-progress{font:600 12px/1.6 system-ui;color:#475569;margin:0 0 16px;padding-top:12px;border-top:1px solid #e2e8f0}.card-progress span{display:block}.card-progress .quiz-met{color:#166534}
+.optional-opening{padding-top:14px;margin-top:8px;border-top:1px solid #cbd5e1}.optional-opening .optional-card{--part-accent:#116d69;display:flex;flex-direction:column;border-top:3px solid var(--part-accent);border-radius:16px;padding:26px}.optional-opening .optional-card .card-number{font:700 11px/1.5 system-ui;letter-spacing:.06em;color:var(--part-accent)}.optional-opening .optional-card .card-open{display:inline-flex;align-self:flex-start;width:auto}.optional-opening .optional-card h2{font-size:23px;margin:22px 0 12px}
+@media(max-width:680px){.course-stage .part-grid{grid-template-columns:1fr}.course-path a{font-size:10px}.course-path .route-number{width:38px;height:38px;font-size:13px}.course-path li:not(:last-child)::after{top:18px}.course-stage>h2{font-size:18px}.course-path{margin-bottom:30px}}
