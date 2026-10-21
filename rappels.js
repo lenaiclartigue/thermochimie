@@ -3,8 +3,16 @@
 const state='Fonction d’état : sa variation dépend uniquement des états initial et final, pas du chemin suivi.';
 const potential='Potentiel thermodynamique : fonction d’état énergétique utilisée pour établir des bilans et caractériser l’équilibre sous des contraintes appropriées.';
 const defs={U:['U — Énergie interne','Énergie microscopique du système.',state,potential],H:['H — Enthalpie','H = U + pV.',state,potential],S:['S — Entropie','Grandeur exprimée en J·K⁻¹.',state,'L’entropie n’est pas un potentiel thermodynamique.'],F:['F — Énergie de Helmholtz','F = U − TS (également notée A).',state,potential],G:['G — Énergie de Gibbs','G = H − TS.',state,potential]};
-const host=document.querySelector('#pane-course')||document.querySelector('.optional-reading');if(!host)return;
-const pop=document.createElement('aside');pop.id='grandeur-rappel';pop.className='grandeur-rappel';pop.hidden=true;pop.setAttribute('aria-label','Rappel sur la grandeur');document.body.append(pop);
+Object.assign(defs,{
+isochore:['Transformation isochore','Le volume du système reste constant. Si seul le travail des forces de pression intervient : W = 0 et ΔU = Qᵥ.'],
+isotherme:['Transformation isotherme','La température du système reste constante. Pour un gaz parfait de composition fixe, ΔU = 0 et W = −Q.'],
+isobare:['Transformation isobare','La pression du système reste constante.'],
+monobare:['Transformation monobare','La pression extérieure reste constante.'],
+adiabatique:['Paroi adiabatique / transformation adiabatique','Une paroi adiabatique empêche les transferts thermiques. Une transformation est adiabatique lorsque Q = 0 ; un échange de travail reste possible. Adiabatique ne signifie pas température constante.'],
+isole:['Système isolé','Le système n’échange ni matière ni énergie avec son environnement : Q = W = 0, donc ΔU = 0.']
+});
+const host=document.querySelector('#pane-course')||document.querySelector('.optional-reading')||document.querySelector('main');if(!host)return;
+const pop=document.createElement('aside');pop.id='grandeur-rappel';pop.className='grandeur-rappel';pop.hidden=true;pop.setAttribute('aria-label','Définition');document.body.append(pop);
 let active=null,timer,pinned=false;
 function close(){clearTimeout(timer);pop.hidden=true;if(active)active.setAttribute('aria-expanded','false');active=null;pinned=false;}
 function place(){if(!active)return;const b=active.getBoundingClientRect();pop.style.left=Math.max(12,Math.min(b.left,innerWidth-pop.offsetWidth-12))+'px';pop.style.top=Math.max(12,Math.min(b.bottom+8,innerHeight-pop.offsetHeight-12))+'px';}

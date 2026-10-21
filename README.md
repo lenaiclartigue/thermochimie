@@ -191,3 +191,5 @@ Introduction générale : échanges d’énergie sans anticipation de U, H, Q ou
 Clarification énergie interne / transferts et chaleur pendant un changement d’état. Introduction et démonstration de ΔH = Qp réécrites à partir de la pression atmosphérique et des hypothèses du système fermé. Composition MathML native des principales relations de U, du bilan de H, des intégrales de transfert et de la dérivée définissant ΔrH ; autres formules conservées. Pas de dépendance à un service externe de rendu.
 
 Intégrales avec bornes et primitive évaluée composées en MathML dans Comprendre et la fiche pratique. Présentation complète de ΔrH°T au-dessus des commandes de notation conservées. Aucun changement des évaluations ni du stockage.
+
+Version PDF / impression : print-course.js crée une vue de lecture autonome de Comprendre, avec style A4 print-course.css, commandes retirées, compléments dépliés et instantanés des illustrations. Le bouton ouvre un aperçu HTML ; le lecteur choisit ensuite Enregistrer au format PDF dans son navigateur. Pagination gérée par le navigateur (pas de service tiers).
