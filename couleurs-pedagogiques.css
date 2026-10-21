@@ -105,3 +105,5 @@ tr.linked-equation td{color:var(--term-color)}
 .optional-opening .optional-card .card-number{font:650 12px/1.5 system-ui;letter-spacing:.06em}.optional-opening .optional-card .card-open{display:inline-flex;width:auto}
 
 .potential-label{display:inline-block;margin:0 0 12px!important;padding:3px 9px;border:1px solid #aab4c2;border-radius:6px;background:#fff;color:#334155;font:600 12px/1.5 system-ui;letter-spacing:.015em}
+
+.formula.math-typeset{overflow-x:auto}.math-typeset math{font-family:"STIX Two Math","Cambria Math",math;font-size:1.12em;margin:0;text-align:left}.math-typeset math[display=block]{display:block}

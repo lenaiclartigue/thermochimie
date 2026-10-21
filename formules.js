@@ -3,7 +3,7 @@
 const atom='(?:[∂ΔA-Za-zÀ-ÿξρνθ₀-₉ᵢᵃ⁺¹²³°,]+(?:(?:<sub>[^<]+</sub>|<sup>[^<]+</sup>)[∂ΔA-Za-zÀ-ÿξρνθ₀-₉ᵢᵃ⁺¹²³°,]*)*|[0-9]+(?:[.,][0-9]+)?)';
 const operand='(?:\\([^()<>]+\\)|'+atom+')';
 const ratio=new RegExp('('+operand+')\\s*/\\s*('+operand+')','g');
-function format(el){if(el.closest('.math-frac,.eyebrow,a,code,pre,svg,select,script,style')||el.querySelector('button,input,select,textarea,a,code,pre,img,p,div,table,ul,ol'))return;const html=el.innerHTML;if(!html.includes('/')||html.includes('math-frac'))return;
+function format(el){if(el.closest('.math-frac,.math-typeset,math,.eyebrow,a,code,pre,svg,select,script,style')||el.querySelector('button,input,select,textarea,a,code,pre,img,math,p,div,table,ul,ol'))return;const html=el.innerHTML;if(!html.includes('/')||html.includes('math-frac'))return;
 // Une adresse web, même affichée en texte brut dans une fenêtre de dialogue,
 // n'est jamais une expression mathématique. Préserver tout son conteneur.
 if(/(?:https?:\/\/|www\.|mailto:|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})/i.test(el.textContent))return;

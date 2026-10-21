@@ -4,7 +4,7 @@
 <title>Enthalpie · Thermochimie</title>
 <link rel="stylesheet" href="style.css?v=a44835cb5a40">
 <link rel="stylesheet" href="theme.css?v=8a23d5ff162b">
-<link rel="stylesheet" href="couleurs-pedagogiques.css?v=82ba7e054d39">
+<link rel="stylesheet" href="couleurs-pedagogiques.css?v=fa7f15d8db57">
 </head>
 <body data-part="3">
 <header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Le parcours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="contact.html">Contact</a><a href="resultats.html">Mes résultats</a></nav></header><main data-current-module="3"><section class="workspace"><aside><a class="text-link" href="index.html#parcours">← Toutes les parties</a><nav id="module-nav" aria-label="Parties"><a href="systeme.html" data-module="1"><span>01</span> Introduction à la thermochimie <span class="completion"></span></a><a href="premier-principe.html" data-module="2"><span>02</span> Premier principe, travail et chaleur <span class="completion"></span></a><a href="enthalpie.html" data-module="3"><span>03</span> Enthalpie <span class="completion"></span></a><a href="enthalpie-reaction.html" data-module="4"><span>04</span> Enthalpie de réaction <span class="completion"></span></a><a href="hess.html" data-module="5"><span>05</span> Cycles de Hess <span class="completion"></span></a><a href="calorimetrie.html" data-module="6"><span>06</span> Calorimétrie <span class="completion"></span></a></nav><div class="progress-block">
@@ -27,19 +27,25 @@
 <li><a href="#changement-etat">Chauffage et changement d’état</a></li>
 <li><a href="#etapes-chauffage">Décomposer un chauffage en plusieurs étapes</a></li>
 
-</ul></nav><section class="course-section" data-source-slides="15"><p class="rappel-hint">Les symboles soulignés donnent accès à un rappel : survolez-les ou sélectionnez-les.</p><h2 id="fonction-enthalpie">Fonction enthalpie</h2><p>À pression extérieure imposée, une dilatation peut transférer de l’énergie à l’extérieur par travail. Le premier principe relie donc la chaleur reçue à la variation de U <em>et</em> à ce travail. Introduire H = U + pV permet de regrouper ces termes dans les conditions suivantes.</p><p><strong>U et H ne sont pas deux réserves indépendantes d’énergie.</strong> H est construite à partir de U et de pV ; pour un même état, leur différence vaut pV.</p><aside class="further-reading"><h3>Pour aller plus loin</h3><p><a href="https://goldbook.iupac.org/terms/view/E02141" target="_blank" rel="noopener noreferrer">IUPAC · enthalpie</a>.</p><p class="resource-meta">Lecture facultative · références en anglais · nouvel onglet. Les explications ci-dessus sont des reformulations pédagogiques.</p></aside>
-<div class="definition">
-<h3>Enthalpie <button type="button" class="grandeur-term" data-grandeur="H">H</button></h3><p class="potential-label">Potentiel thermodynamique</p>
-<p>On définit l’enthalpie par H = U + pV. L’enthalpie est une fonction d’état.</p>
-<p>L’enthalpie H est un autre <strong>potentiel thermodynamique</strong>, particulièrement utile pour étudier les transformations à pression constante.</p>
-</div>
-<div class="formula">H = U + pV<br>ΔH = ΔU + Δ(pV)</div>
-<p>Pour un système fermé en transformation monobare, avec les conditions précisées ci-dessous, la variation d’enthalpie est la chaleur transférée :</p>
-<div class="formula">ΔH = Q<sub>p</sub>
-</div>
-<p>On utilise ici le travail de pression seul, une pression extérieure constante et des états initial et final en équilibre mécanique avec l’extérieur : pᵢ = p<sub>f</sub> = p<sub>ext</sub>. Le bilan s’écrit :</p>
-<div class="formula">ΔU = Q − p<sub>ext</sub>(V<sub>f</sub> − V<sub>i</sub>)<br>ΔH = ΔU + p<sub>ext</sub>(V<sub>f</sub> − V<sub>i</sub>) = Q<sub>p</sub>
-</div>
+</ul></nav><section class="course-section" data-source-slides="15"><p class="rappel-hint">Les symboles soulignés donnent accès à un rappel : survolez-les ou sélectionnez-les.</p><h2 id="fonction-enthalpie">Fonction enthalpie</h2>
+<p>De nombreuses transformations physiques ou chimiques se déroulent à pression atmosphérique, considérée constante : c’est notamment le cas lorsque le milieu est au contact de l’air libre. Pour étudier leur bilan énergétique, il est utile de définir un potentiel thermodynamique adapté : <strong>l’enthalpie</strong>.</p>
+<p>Nous considérons un système fermé : une transformation à l’air libre peut être modélisée ainsi si les échanges de matière avec l’extérieur sont négligeables. La pression extérieure imposée n’empêche pas le volume du système de varier, par dilatation ou compression.</p>
+<div class="definition"><h3>Enthalpie <button type="button" class="grandeur-term" data-grandeur="H">H</button></h3><p class="potential-label">Potentiel thermodynamique</p>
+<p>L’enthalpie est la fonction d’état définie par :</p><div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="H = U + pV"><mrow><mi>H</mi><mo>=</mo><mi>U</mi><mo>+</mo><mi>p</mi><mi>V</mi></mrow></math></div>
+<p>Elle associe l’énergie interne U au terme pV, où p est la pression du système. Ce terme permet de prendre en compte le travail de pression dans le bilan à pression constante ; <strong>pV n’est pas, en lui-même, le travail échangé</strong>.</p></div>
+<h3>Pourquoi la variation d’enthalpie donne-t-elle la chaleur à pression constante ?</h3>
+<p>Le système est fermé, le seul travail échangé est celui des forces de pression, et les variations d’énergie cinétique et potentielle macroscopiques sont négligeables. La pression extérieure est constante et les états initial et final sont en équilibre mécanique avec l’extérieur :</p>
+<div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="pᵢ = pf = pext"><mrow><msub><mi>p</mi><mtext>i</mtext></msub><mo>=</mo><msub><mi>p</mi><mtext>f</mtext></msub><mo>=</mo><msub><mi>p</mi><mtext>ext</mtext></msub></mrow></math></div>
+<p>Le travail reçu, positif lors d’une compression et négatif lors d’une dilatation, vaut :</p>
+<div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="W = −pext(Vf − Vi)"><mrow><mi>W</mi><mo>=</mo><mo>−</mo><msub><mi>p</mi><mtext>ext</mtext></msub><mo>(</mo><msub><mi>V</mi><mtext>f</mtext></msub><mo>−</mo><msub><mi>V</mi><mtext>i</mtext></msub><mo>)</mo></mrow></math></div>
+<p>Le premier principe donne alors :</p>
+<div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="ΔU = Qp − pextΔV"><mrow><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><msub><mi>Q</mi><mtext>p</mtext></msub><mo>−</mo><msub><mi>p</mi><mtext>ext</mtext></msub><mi mathvariant="normal">Δ</mi><mi>V</mi></mrow></math></div>
+<p>Par définition de H, et puisque les pressions initiale et finale sont égales à la pression extérieure :</p>
+<div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="ΔH = ΔU + Δ(pV) = ΔU + pextΔV"><mrow><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mo>(</mo><mi>p</mi><mi>V</mi><mo>)</mo><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>+</mo><msub><mi>p</mi><mtext>ext</mtext></msub><mi mathvariant="normal">Δ</mi><mi>V</mi></mrow></math></div>
+<p>En remplaçant ΔU, les deux termes de travail de pression se compensent :</p>
+<div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="ΔH = Qp − pextΔV + pextΔV = Qp"><mrow><mi mathvariant="normal">Δ</mi><mi>H</mi><mo>=</mo><msub><mi>Q</mi><mtext>p</mtext></msub><mo>−</mo><msub><mi>p</mi><mtext>ext</mtext></msub><mi mathvariant="normal">Δ</mi><mi>V</mi><mo>+</mo><msub><mi>p</mi><mtext>ext</mtext></msub><mi mathvariant="normal">Δ</mi><mi>V</mi><mo>=</mo><msub><mi>Q</mi><mtext>p</mtext></msub></mrow></math></div>
+<div class="definition"><h3>Interpréter le signe de ΔH</h3><p>Dans ces conditions, <strong>la variation d’enthalpie est égale à la chaleur échangée à pression constante</strong>. Une transformation exothermique cède de la chaleur : ΔH &lt; 0. Une transformation endothermique reçoit de la chaleur : ΔH &gt; 0.</p><p>Cette relation s’applique à la pression atmosphérique, mais aussi à une autre pression extérieure constante si les mêmes conditions sont respectées. H est une fonction d’état ; c’est sa variation ΔH qui correspond à la chaleur échangée dans ce bilan.</p></div>
+<aside class="further-reading"><h3>Pour aller plus loin</h3><p><a href="https://goldbook.iupac.org/terms/view/E02141" target="_blank" rel="noopener noreferrer">IUPAC · définition de l’enthalpie</a></p></aside>
 <div class="definition">
 <h3>Que signifie ΔH ?</h3>
 <p>H est l’enthalpie, fonction d’état définie par H = U + pV. Δ indique sa <strong>variation entre deux états</strong> : ΔH = H<sub>f</sub> − Hᵢ. Sous les conditions précisées ci-dessus, cette variation est la chaleur transférée.</p>
@@ -299,7 +305,7 @@
 <script src="interactions.js?v=315866943bb3" defer=""></script>
 <script src="parcours-guides.js?v=403ee36aed8d" defer=""></script>
 
-<script src="formules.js?v=9469802becc0" defer=""></script>
+<script src="formules.js?v=13b9504f27dc" defer=""></script>
 <!-- Mesure des consultations : Simple Analytics -->
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <script src="rappels.js?v=6069b9a21354" defer></script></body></html>

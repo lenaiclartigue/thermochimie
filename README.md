@@ -187,3 +187,5 @@ Repères visuels : carte facultative harmonisée avec les cartes du parcours. Ra
 Ordre du module 1 : système et frontières, échanges, état et paramètres intensifs/extensifs, quantités et unités, fonctions d’état puis potentiels. Suppression du lien isolé vers les potentiels sur l’accueil.
 
 Introduction générale : échanges d’énergie sans anticipation de U, H, Q ou W. Chaleur et travail sont introduits comme modes de transfert dans le premier principe. Étiquette unique « Potentiel thermodynamique » près des définitions de U, H et de F/G dans l’ouverture facultative.
+
+Clarification énergie interne / transferts et chaleur pendant un changement d’état. Introduction et démonstration de ΔH = Qp réécrites à partir de la pression atmosphérique et des hypothèses du système fermé. Composition MathML native des principales relations de U, du bilan de H, des intégrales de transfert et de la dérivée définissant ΔrH ; autres formules conservées. Pas de dépendance à un service externe de rendu.
