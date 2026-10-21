@@ -966,7 +966,7 @@
   "Transferts, chemins et travail des forces de pression.": "Transfers, paths and pressure–volume work.",
   "Enthalpie et capacités thermiques": "Enthalpy and heat capacities",
   "Chauffage à pression constante et unités des capacités.": "Constant-pressure heating and heat-capacity units.",
-  "Changements d’état": "Phase transitions",
+  "Changements d’état": "Phase changes",
   "Partie consacrée aux chaleurs latentes.": "Section on latent heat.",
   "Enthalpie de réaction et Hess": "Reaction enthalpy and Hess's law",
   "OpenStax, Chemistry 2e, §5.3 (nouvel onglet)": "OpenStax, Chemistry 2e, §5.3 (new tab)",
@@ -1930,5 +1930,10 @@
   "Cours": "Course",
   "Conception : Lénaïc Lartigue.": "Design: Lénaïc Lartigue.",
   "Troisième principe": "Third law",
-  "Licence Creative Commons BY-NC-ND 4.0": "Creative Commons BY-NC-ND 4.0 licence"
+  "Licence Creative Commons BY-NC-ND 4.0": "Creative Commons BY-NC-ND 4.0 licence",
+  "Fiches de révision": "Revision sheets",
+  "Une fiche par notion : définitions, relations et conditions d’utilisation.": "One sheet per topic: definitions, equations and conditions of use.",
+  "Fonctions d’état et transformations": "State functions and processes",
+  "Le tableau de la fiche « Aide mathématique » permet d’intégrer le polynôme.": "The table in the mathematics revision sheet can be used to integrate the polynomial.",
+  "Capacités calorifiques": "Heat capacities"
 }

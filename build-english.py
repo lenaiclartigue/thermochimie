@@ -54,8 +54,8 @@ for p in ROOT.glob('*.html'):
  # Set the native language menu to the current page language.
  out=out.replace('value="fr" lang="fr" selected','value="fr" lang="fr"').replace('value="en" lang="en"','value="en" lang="en" selected')
  out=out.replace('</head>','<script src="../english-dictionary.js?v=1"></script><script src="../english.js?v=1" defer></script>\n</head>')
- for diagram in ['systeme-univers','transformations','cycle-hess']:
-  out=out.replace('../assets/images/'+diagram+'.png','../assets/en/'+diagram+'.svg')
+ for diagram in ['systeme-univers','transformations','cycle-hess','calorimetre-zinc-cuivre']:
+  out=out.replace('../assets/fr/'+diagram+'.svg','../assets/en/'+diagram+'.svg')
  (en/p.name).write_text(out)
 for p in ROOT.glob('*.css'):(en/p.name).write_bytes(p.read_bytes())
 for p in ROOT.glob('*.js'):

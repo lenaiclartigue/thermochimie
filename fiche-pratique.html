@@ -6,21 +6,12 @@
 <link rel="stylesheet" href="theme.css?v=8a23d5ff162b">
 <link rel="stylesheet" href="couleurs-pedagogiques.css?v=503d478e3e">
 <link rel="stylesheet" href="language.css?v=7cc1e1e400"><script src="language.js?v=e2ff37ee48" defer></script>
-</head>
+<link rel="stylesheet" href="revision.css?v=cb11b61939"><script src="revision.js?v=8edb3be17b" defer></script></head>
 <body>
-<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Cours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="contact.html">Contact</a><a href="resultats.html">Mes résultats</a></nav><div class="language-switch"><select data-language-select aria-label="Langue / Language"><option value="fr" lang="fr" selected>FR — Français</option><option value="en" lang="en">EN — English</option></select></div></header><main class="practical-guide"><p class="eyebrow">FORMULES ET MÉTHODES</p>
-<h1>Fiche pratique de thermochimie</h1>
-<p>Retrouver les définitions et les relations, avec leurs unités. L’aide sur les intégrales accompagne le calcul du travail.</p>
-<button class="button secondary" id="print-practical">Imprimer la fiche pratique</button><nav class="lesson-outline" aria-label="Dans la fiche"><ul>
-<li><a href="#unites">Notations et unités</a></li>
-<li><a href="#systeme">Décrire un système</a></li>
-<li><a href="#premier-principe">Premier principe et fonctions d’état</a></li>
-<li><a href="#travail">Calculer le travail</a></li>
-<li><a href="#enthalpie">Enthalpie et capacités calorifiques</a></li>
-<li><a href="#reaction">Enthalpies de réaction et cycles de Hess</a></li>
-<li><a href="#calorimetrie">Bilans calorimétriques</a></li>
-<li><a href="#integrales">Aide mathématique : primitives et intégrales</a></li>
-</ul></nav><section id="unites"><h2>Notations et unités</h2>
+<header class="topbar"><a href="index.html" class="brand"><span class="brand-symbol">Δ</span><span>Thermochimie<small>LICENCE</small></span></a><nav aria-label="Navigation principale"><a href="index.html#parcours">Cours</a><a href="fiche-pratique.html">Fiche pratique</a><a href="contact.html">Contact</a><a href="resultats.html">Mes résultats</a></nav><div class="language-switch"><select data-language-select aria-label="Langue / Language"><option value="fr" lang="fr" selected>FR — Français</option><option value="en" lang="en">EN — English</option></select></div></header><main class="practical-guide revision-guide"><p class="eyebrow">FORMULES ET MÉTHODES</p>
+<h1>Fiches de révision</h1>
+<p>Une fiche par notion : définitions, relations et conditions d’utilisation.</p>
+<button class="button secondary" id="print-practical">Imprimer la fiche pratique</button><nav class="revision-index" aria-label="Fiches de révision"><a href="#unites"><span>01</span> Notations et unités</a><a href="#systeme"><span>02</span> Décrire un système</a><a href="#premier-principe"><span>03</span> Premier principe</a><a href="#fonctions-etat"><span>04</span> Fonctions d’état et transformations</a><a href="#travail"><span>05</span> Calculer le travail</a><a href="#enthalpie"><span>06</span> Enthalpie</a><a href="#capacites"><span>07</span> Capacités calorifiques</a><a href="#changements-etat"><span>08</span> Changements d’état</a><a href="#reaction"><span>09</span> Enthalpies de réaction</a><a href="#hess"><span>10</span> Cycles de Hess</a><a href="#calorimetrie"><span>11</span> Bilans calorimétriques</a><a href="#integrales"><span>12</span> Aide mathématique : primitives et intégrales</a></nav><section id="unites" class="revision-sheet" data-sheet="1"><header class="revision-heading"><span class="revision-number">01 / 12</span><h2>Notations et unités</h2></header>
 <p>Une variation s’écrit ΔX = X<sub>f</sub> − X<sub>i</sub>. U, H, Q et W s’expriment en joules. Une enthalpie molaire s’exprime en J·mol⁻¹ ou kJ·mol⁻¹. Le symbole ° indique les états standard ; la température reste à préciser.</p>
 <div class="table-scroll"><table>
 <tbody><tr>
@@ -47,7 +38,7 @@
 <td>p° = 1 bar ; c° = 1 mol·L⁻¹</td>
 <td>Conventions standard.</td>
 </tr>
-</tbody></table></div></section><section id="systeme"><h2>Décrire un système</h2>
+</tbody></table></div></section><section id="systeme" class="revision-sheet" data-sheet="2"><header class="revision-heading"><span class="revision-number">02 / 12</span><h2>Décrire un système</h2></header>
 <div class="formula-entry">
 <h3>Échanges avec l’extérieur</h3>
 <div class="formula">Ouvert : matière et énergie<br>Fermé : énergie, pas de matière<br>Isolé : ni matière ni énergie</div>
@@ -58,14 +49,14 @@
 <div class="formula"><button type="button" class="grandeur-term" data-grandeur="extensif">Extensifs</button> : m, V, n<br><button type="button" class="grandeur-term" data-grandeur="intensif">Intensifs</button> : T, p, concentration, fraction molaire</div>
 <p>Un paramètre extensif est proportionnel à la quantité de matière. Un paramètre intensif en est indépendant.</p>
 </div>
-<a href="systeme.html#types-systemes">Revoir le schéma des échanges</a><p><strong>Quantités et gaz :</strong> n = m/M ; m = ρV ; n = cV ; pV = nRT ; xᵢ = nᵢ/n<sub>tot</sub> ; pᵢ = xᵢp. Avancement : nᵢ = nᵢ,₀ + νᵢξ ; pour une réaction totale, ξ<sub>max</sub> est le plus petit nᵢ,₀/|νᵢ| des réactifs.</p></section><section id="premier-principe"><h2>Premier principe et fonctions d’état</h2>
+<a href="systeme.html#types-systemes">Revoir le schéma des échanges</a><p><strong>Quantités et gaz :</strong> n = m/M ; m = ρV ; n = cV ; pV = nRT ; xᵢ = nᵢ/n<sub>tot</sub> ; pᵢ = xᵢp. Avancement : nᵢ = nᵢ,₀ + νᵢξ ; pour une réaction totale, ξ<sub>max</sub> est le plus petit nᵢ,₀/|νᵢ| des réactifs.</p></section><section id="premier-principe" class="revision-sheet" data-sheet="3"><header class="revision-heading"><span class="revision-number">03 / 12</span><h2>Premier principe</h2></header>
 <div class="formula-entry">
 <h3>Bilan d’énergie — <button type="button" class="grandeur-term" data-grandeur="U">énergie interne U</button></h3>
 <span class="potential-label">Potentiel thermodynamique</span>
 <div class="formula">ΔU = U<sub>f</sub> − U<sub>i</sub> = Q + W<br>dU = δQ + δW</div>
 <p>Bilans : système fermé, variations d’énergie cinétique et potentielle macroscopiques négligées. Une énergie reçue est positive ; une énergie cédée est négative.</p>
 </div>
-<div class="formula-entry">
+</section><section id="fonctions-etat" class="revision-sheet" data-sheet="4"><header class="revision-heading"><span class="revision-number">04 / 12</span><h2>Fonctions d’état et transformations</h2></header><div class="formula-entry">
 <h3>Intégrer une différentielle exacte</h3>
 <div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mtable columnalign="left"><mtr><mtd><msubsup><mo largeop="true">∫</mo><mrow><mi>i</mi></mrow><mrow><mi>f</mi></mrow></msubsup><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>U</mi><mo>=</mo><msub><mi>U</mi><mrow><mtext>f</mtext></mrow></msub><mo>−</mo><msub><mi>U</mi><mrow><mtext>i</mtext></mrow></msub></mtd></mtr><mtr><mtd><msubsup><mo largeop="true">∫</mo><mrow><mi>i</mi></mrow><mrow><mi>f</mi></mrow></msubsup><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>H</mi><mo>=</mo><msub><mi>H</mi><mrow><mtext>f</mtext></mrow></msub><mo>−</mo><msub><mi>H</mi><mrow><mtext>i</mtext></mrow></msub></mtd></mtr></mtable></mrow></math></div>
 <p>U et H sont des fonctions d’état : leur variation ne dépend pas du chemin. Sur un cycle, leurs variations sont nulles. Q et W dépendent du chemin : ∫δQ = Q et ∫δW = W.</p>
@@ -77,7 +68,7 @@
 <div class="formula"><button type="button" class="grandeur-term" data-grandeur="adiabatique">Parois adiabatiques</button> : Q = 0 et ΔU = W<br><button type="button" class="grandeur-term" data-grandeur="isole">Système isolé</button> : Q = W = ΔU = 0</div>
 <p>Le bilan concerne un système fermé, avec uniquement le travail des forces de pression et des variations d’énergie mécanique macroscopique négligées. Une transformation sans transfert thermique est également dite <strong>adiabatique</strong>. Un système à parois adiabatiques peut échanger du travail ; un système isolé ne le peut pas.</p>
 </div>
-<p><strong>Cycle :</strong> suite de transformations ramenant le système à son état initial. Le trajet est fermé ; ΔU<sub>cycle</sub> = ΔH<sub>cycle</sub> = 0 et Q<sub>cycle</sub> + W<sub>cycle</sub> = 0.</p></section><section id="travail"><h2>Calculer le travail</h2>
+<p><strong>Cycle :</strong> suite de transformations ramenant le système à son état initial. Le trajet est fermé ; ΔU<sub>cycle</sub> = ΔH<sub>cycle</sub> = 0 et Q<sub>cycle</sub> + W<sub>cycle</sub> = 0.</p></section><section id="travail" class="revision-sheet" data-sheet="5"><header class="revision-heading"><span class="revision-number">05 / 12</span><h2>Calculer le travail</h2></header>
 <div class="formula-entry">
 <h3>Expression générale</h3>
 <div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mtable columnalign="left"><mtr><mtd><mi>δ</mi><mi>W</mi><mo>=</mo><mo>−</mo><msub><mi>p</mi><mrow><mtext>ext</mtext></mrow></msub><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>V</mi></mtd></mtr><mtr><mtd><mi>W</mi><mo>=</mo><mo>−</mo><msubsup><mo largeop="true">∫</mo><mrow><msub><mi>V</mi><mrow><mtext>i</mtext></mrow></msub></mrow><mrow><msub><mi>V</mi><mrow><mtext>f</mtext></mrow></msub></mrow></msubsup><msub><mi>p</mi><mrow><mtext>ext</mtext></mrow></msub><mo>(</mo><mi>V</mi><mo>)</mo><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>V</mi></mtd></mtr></mtable></mrow></math></div>
@@ -92,7 +83,7 @@
 <h3>Gaz parfait, quantité fixe, isotherme réversible</h3>
 <div class="formula">W = −nRT ln(V<sub>f</sub>/V<sub>i</sub>) = nRT ln(p<sub>f</sub>/p<sub>i</sub>)</div>
 <p>On utilise p<sub>ext</sub> = p = nRT/V dans la limite réversible. Isotherme seul n’autorise pas ce remplacement. À volume constant, W = 0. À pression constante avec p = p<sub>ext</sub>, W = −nR(T<sub>f</sub> − T<sub>i</sub>).</p>
-</div></section><section id="enthalpie"><h2>Enthalpie et capacités calorifiques</h2>
+</div></section><section id="enthalpie" class="revision-sheet" data-sheet="6"><header class="revision-heading"><span class="revision-number">06 / 12</span><h2>Enthalpie</h2></header>
 <div class="formula-entry">
 <h3><button type="button" class="grandeur-term" data-grandeur="H">Enthalpie H</button></h3>
 <span class="potential-label">Potentiel thermodynamique</span>
@@ -104,7 +95,7 @@
 <div class="formula">Q<sub>p</sub> = ΔH</div>
 <p>Pour ces bilans : seul travail de pression, pression extérieure constante, états initial et final à cette pression, variations d’énergies macroscopiques négligées.</p>
 </div>
-<div class="formula-entry">
+</section><section id="capacites" class="revision-sheet" data-sheet="7"><header class="revision-heading"><span class="revision-number">07 / 12</span><h2>Capacités calorifiques</h2></header><div class="formula-entry">
 <h3><button type="button" class="grandeur-term" data-grandeur="capacite">Capacité calorifique</button></h3>
 <div class="formula">C<sub>p</sub> = (∂H/∂T)<sub>p</sub><br>C = n C<sub>molaire</sub> = m c<sub>massique</sub>
 </div>
@@ -118,9 +109,9 @@
 <div class="formula-entry">
 <h3>Si la capacité dépend de la température</h3>
 <div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mtable columnalign="left"><mtr><mtd><msub><mi>C</mi><mrow><mtext>p,m</mtext></mrow></msub><mo>(</mo><mi>T</mi><mo>)</mo><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>T</mi><mo>+</mo><mi>c</mi><msup><mi>T</mi><mn>2</mn></msup></mtd></mtr><mtr><mtd><mi>Δ</mi><mi>H</mi><mo>=</mo><mi>n</mi><msubsup><mo largeop="true">∫</mo><mrow><msub><mi>T</mi><mrow><mtext>i</mtext></mrow></msub></mrow><mrow><msub><mi>T</mi><mrow><mtext>f</mtext></mrow></msub></mrow></msubsup><msub><mi>C</mi><mrow><mtext>p,m</mtext></mrow></msub><mo>(</mo><mi>T</mi><mo>)</mo><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>T</mi></mtd></mtr></mtable></mrow></math></div>
-<p>On peut utiliser cette forme polynomiale ou retenir une capacité constante sur l’intervalle. Le tableau des primitives ci-dessous permet d’intégrer le polynôme.</p>
+<p>On peut utiliser cette forme polynomiale ou retenir une capacité constante sur l’intervalle. Le tableau de la fiche « Aide mathématique » permet d’intégrer le polynôme.</p>
 </div>
-<div class="formula-entry">
+</section><section id="changements-etat" class="revision-sheet" data-sheet="8"><header class="revision-heading"><span class="revision-number">08 / 12</span><h2>Changements d’état</h2></header><div class="formula-entry">
 <h3>Changement d’état</h3>
 <div class="formula">ΔH = n Δ<sub>changement d’état</sub>H°<br>Q<sub>total</sub> = ∑ Q<sub>chauffage</sub> + ∑ Q<sub>changement d’état</sub>
 </div>
@@ -129,13 +120,21 @@
 <div class="formula">Q<sub>p</sub> = m L = n Δ<sub>changement d’état</sub>H<br>L = Δ<sub>changement d’état</sub>H / M</div>
 <p>m, M et L doivent utiliser des unités de masse cohérentes. L<sub>fus</sub> et L<sub>vap</sub> sont positifs ; pour la solidification et la condensation à la même température, Q<sub>p</sub> = −m L. Pendant le palier, la chaleur reçue transforme la phase au lieu d’augmenter la température : on n’utilise pas m c ΔT pour cette étape.</p>
 </div>
-<p><strong>Notation :</strong> Δ renvoie à une variation ; H à l’enthalpie ; l’indice r, f, comb, fus ou vap au type de transformation ; ° aux états standard ; T à la température en kelvins. ΔH est en J ; ΔrH en J·mol⁻¹.</p></section><section id="reaction"><h2>Enthalpies de réaction et cycles de Hess</h2>
+<p><strong>Notation :</strong> Δ renvoie à une variation ; H à l’enthalpie ; l’indice r, f, comb, fus ou vap au type de transformation ; ° aux états standard ; T à la température en kelvins. ΔH est en J ; ΔrH en J·mol⁻¹.</p></section><section id="reaction" class="revision-sheet" data-sheet="9"><header class="revision-heading"><span class="revision-number">09 / 12</span><h2>Enthalpies de réaction</h2></header>
 <div class="formula-entry">
 <h3>Définition et avancement</h3>
 <div class="formula">Δ<sub>r</sub>H = (∂H/∂ξ)<sub>T,p</sub><br>ΔH ≈ ξ Δ<sub>r</sub>H°</div>
 <p>Pour la contribution de réaction à température et pression constantes. Écriture, avec l’avancement initial nul et l’enthalpie de réaction assimilée à la valeur standard constante. Dans l’approximation d’Ellingham, ΔrH° est considérée constante sur l’intervalle de température.</p>
 </div>
 <div class="formula-entry">
+<h3>Dissociation, ionisation, attachement électronique</h3>
+<div class="formula">A–B(g) → A(g) + B(g) : Δ<sub>diss</sub>H° &gt; 0<br>M(g) → M⁺(g) + e⁻ : Δ<sub>ion</sub>H° &gt; 0<br>M(g) + e⁻ → M⁻(g) : Δ<sub>AE</sub>H°</div>
+<p>Pour la formation d’une liaison à partir des atomes gazeux, on utilise l’opposé de son enthalpie de dissociation.</p>
+</div>
+<a href="enthalpie-reaction.html#enthalpies-particulieres">Revoir les définitions des enthalpies particulières</a><p><strong>Phases :</strong> seules les espèces de même formule et dans le même état peuvent s’annuler dans la somme des équations. Ajouter, si nécessaire, les enthalpies de changement d’état ou de dissolution. La dissolution A(s) → A(aq) diffère de la dissociation d’une liaison gazeuse.</p>
+<p><strong>Corps simple :</strong> un seul élément chimique, par exemple H₂, O₂ ou C(graphite). Un corps composé contient plusieurs éléments. La formation produit une mole du composé à partir des corps simples de référence.</p>
+<p><strong>Combustion :</strong> H₂O(l) sauf indication contraire dans ce parcours. L’enthalpie molaire de combustion se rapporte à une mole de combustible ; la phase de l’eau doit correspondre aux données utilisées. Les enthalpies de liaison concernent des espèces gazeuses pour isoler la liaison des interactions intermoléculaires.</p>
+<p><strong>Dissolution d’un solide ionique :</strong> dissociation du réseau et solvatation des ions ; dans l’eau, hydratation. La dissolution d’un composé moléculaire ne forme pas nécessairement d’ions.</p></section><section id="hess" class="revision-sheet" data-sheet="10"><header class="revision-heading"><span class="revision-number">10 / 12</span><h2>Cycles de Hess</h2></header><div class="formula-entry">
 <h3>À partir des enthalpies de formation</h3>
 <div class="formula">Δ<sub>r</sub>H° = ∑ νᵢ Δ<sub>f</sub>H°(produits) − ∑ νᵢ Δ<sub>f</sub>H°(réactifs)</div>
 <p>Les coefficients de ces deux sommes sont ceux de l’équation équilibrée, pris positifs. Les phases et la température des données doivent correspondre à la réaction. ΔfH° est nulle pour un élément dans son état standard de référence.</p>
@@ -146,15 +145,7 @@
 <div class="formula">Δ<sub>r</sub>H°<sub>cible</sub> = ∑ⱼ kⱼ Δ<sub>r</sub>H°ⱼ</div>
 <p>Inverser une réaction change le signe de son enthalpie. Multiplier l’équation par k multiplie son enthalpie par k. La somme des équations doit donner la réaction cherchée.</p>
 </div>
-<div class="formula-entry">
-<h3>Dissociation, ionisation, attachement électronique</h3>
-<div class="formula">A–B(g) → A(g) + B(g) : Δ<sub>diss</sub>H° &gt; 0<br>M(g) → M⁺(g) + e⁻ : Δ<sub>ion</sub>H° &gt; 0<br>M(g) + e⁻ → M⁻(g) : Δ<sub>AE</sub>H°</div>
-<p>Pour la formation d’une liaison à partir des atomes gazeux, on utilise l’opposé de son enthalpie de dissociation.</p>
-</div>
-<a href="enthalpie-reaction.html#enthalpies-particulieres">Revoir les définitions des enthalpies particulières</a><p><strong>Phases :</strong> seules les espèces de même formule et dans le même état peuvent s’annuler dans la somme des équations. Ajouter, si nécessaire, les enthalpies de changement d’état ou de dissolution. La dissolution A(s) → A(aq) diffère de la dissociation d’une liaison gazeuse.</p>
-<p><strong>Corps simple :</strong> un seul élément chimique, par exemple H₂, O₂ ou C(graphite). Un corps composé contient plusieurs éléments. La formation produit une mole du composé à partir des corps simples de référence.</p>
-<p><strong>Combustion :</strong> H₂O(l) sauf indication contraire dans ce parcours. L’enthalpie molaire de combustion se rapporte à une mole de combustible ; la phase de l’eau doit correspondre aux données utilisées. Les enthalpies de liaison concernent des espèces gazeuses pour isoler la liaison des interactions intermoléculaires.</p>
-<p><strong>Dissolution d’un solide ionique :</strong> dissociation du réseau et solvatation des ions ; dans l’eau, hydratation. La dissolution d’un composé moléculaire ne forme pas nécessairement d’ions.</p></section><section id="calorimetrie"><h2>Bilans calorimétriques</h2>
+</section><section id="calorimetrie" class="revision-sheet" data-sheet="11"><header class="revision-heading"><span class="revision-number">11 / 12</span><h2>Bilans calorimétriques</h2></header>
 <div class="formula-entry">
 <h3>Somme des contributions</h3>
 <div class="formula">∑ Q<sub>p,i</sub> = 0<br>Q<sub>calo</sub> + Q<sub>chauffage</sub> + Q<sub>changement d’état</sub> + Q<sub>réaction</sub> = 0</div>
@@ -175,7 +166,7 @@
 <h3>Fusion partielle ou totale</h3>
 <p>Glace à 0 °C, eau et calorimètre initialement à Tᵢ &gt; 0 °C : comparer (C<sub>cal</sub> + m<sub>eau</sub>c<sub>eau</sub>)Tᵢ à m<sub>glace</sub>L<sub>fus</sub>. Si la première valeur est plus petite, T<sub>f</sub> = 0 °C et m<sub>fondue</sub> = Q<sub>disponible</sub>/L<sub>fus</sub>. Sinon toute la glace fond ; ajouter le chauffage de l’eau issue de la glace si T<sub>f</sub> &gt; 0 °C.</p>
 </div>
-<p><strong>Valeurs molaires :</strong> à pression constante, Δ<sub>r</sub>H ≈ Q<sub>réaction</sub>/ξ ; à volume constant avec seul travail de pression, Δ<sub>r</sub>U ≈ Q<sub>V, réaction</sub>/ξ. Le signe est celui de la chaleur reçue par le système réactionnel.</p></section><section id="integrales"><h2>Aide mathématique : primitives et intégrales</h2>
+<p><strong>Valeurs molaires :</strong> à pression constante, Δ<sub>r</sub>H ≈ Q<sub>réaction</sub>/ξ ; à volume constant avec seul travail de pression, Δ<sub>r</sub>U ≈ Q<sub>V, réaction</sub>/ξ. Le signe est celui de la chaleur reçue par le système réactionnel.</p></section><section id="integrales" class="revision-sheet" data-sheet="12"><header class="revision-heading"><span class="revision-number">12 / 12</span><h2>Aide mathématique : primitives et intégrales</h2></header>
 <p>L’intégrale additionne les contributions sur un intervalle. Les rectangles en donnent une approximation. Si F′ = f, une primitive permet le calcul exact :</p>
 <div class="formula math-typeset"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mtable columnalign="left"><mtr><mtd><msubsup><mo largeop="true">∫</mo><mrow><mi>a</mi></mrow><mrow><mi>b</mi></mrow></msubsup><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mspace width="0.2em"/><mi mathvariant="normal">d</mi><mi>x</mi><mo>=</mo><mi>F</mi><mo>(</mo><mi>b</mi><mo>)</mo><mo>−</mo><mi>F</mi><mo>(</mo><mi>a</mi><mo>)</mo></mtd></mtr></mtable></mrow></math></div>
 <div class="table-scroll"><table>
@@ -221,5 +212,5 @@
 <!-- Mesure des consultations : Simple Analytics -->
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <script src="rappels.js?v=2d6228628b39" defer></script>
-<script src="print-course.js?v=0976404a7d7d" defer></script>
+<script src="print-course.js?v=da94bc9835" defer></script>
 </body></html>
