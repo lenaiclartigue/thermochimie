@@ -45,16 +45,14 @@ en=ROOT/'en';en.mkdir(exist_ok=True)
 for p in ROOT.glob('*.html'):
  s=p.read_text()
  if 'class="language-switch"' not in s:
-  nav='<nav class="language-switch" aria-label="Langue / Language"><a href="'+p.name+'" data-language="fr" lang="fr" aria-current="true">Français</a><a href="en/'+p.name+'" data-language="en" lang="en">English</a></nav>'
+  nav='<div class="language-switch"><select data-language-select aria-label="Langue / Language"><option value="fr" lang="fr" selected>FR — Français</option><option value="en" lang="en">EN — English</option></select></div>'
   if '</header>' in s:s=s.replace('</header>',nav+'</header>',1)
   elif '<body>' in s:s=s.replace('<body>','<body>'+nav,1)
   s=s.replace('</head>','<link rel="stylesheet" href="language.css?v=1"><script src="language.js?v=1" defer></script>\n</head>')
   p.write_text(s)
  parser=Translate();parser.feed(s);out=''.join(parser.out)
- # The switch always points to counterpart pages and survives without JavaScript.
- out=re.sub(r'href="[^"]*" data-language="fr"',f'href="../{p.name}" data-language="fr"',out)
- out=re.sub(r'href="[^"]*" data-language="en"',f'href="{p.name}" data-language="en"',out)
- out=out.replace('lang="fr" aria-current="true"','lang="fr" aria-current="false"').replace('data-language="en" lang="en"','data-language="en" lang="en" aria-current="true"')
+ # Set the native language menu to the current page language.
+ out=out.replace('value="fr" lang="fr" selected','value="fr" lang="fr"').replace('value="en" lang="en"','value="en" lang="en" selected')
  out=out.replace('</head>','<script src="../english-dictionary.js?v=1"></script><script src="../english.js?v=1" defer></script>\n</head>')
  for diagram in ['systeme-univers','transformations','cycle-hess']:
   out=out.replace('../assets/images/'+diagram+'.png','../assets/en/'+diagram+'.svg')
