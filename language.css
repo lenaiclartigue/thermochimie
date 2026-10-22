@@ -9,3 +9,26 @@
 
 .audience-trigger{cursor:pointer}
 .audience-dialog{width:min(640px,calc(100% - 32px));box-sizing:border-box}
+
+/* Shared teaching-site header and footer. */
+.topbar{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:16px 24px}
+.topbar>.brand{grid-column:1;grid-row:1;justify-self:start}
+.topbar>.university-brand{grid-column:2;grid-row:1;justify-self:center;display:block;line-height:0}
+.university-brand img{display:block;width:168px;max-width:100%;height:auto}
+.topbar>.language-switch{grid-column:3;grid-row:1;justify-self:end;margin-left:0}
+.topbar>nav{grid-column:1/-1;grid-row:2;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px 8px;width:100%}
+.site-footer{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+.footer-home{font-size:14px;font-weight:700;color:var(--ink);text-decoration:none}
+.footer-home:hover{text-decoration:underline}
+.footer-identity p{margin:4px 0 10px}
+.footer-actions{display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin-left:auto}
+.site-footer .text-link{display:block;margin-top:0;text-align:left}
+@media(max-width:650px){
+ .topbar{grid-template-columns:minmax(0,1fr) auto;gap:14px}
+ .topbar>.brand{grid-column:1;grid-row:1}
+ .topbar>.language-switch{grid-column:2;grid-row:1}
+ .topbar>.university-brand{grid-column:1/-1;grid-row:2}
+ .university-brand img{width:145px}
+ .topbar>nav{grid-column:1/-1;grid-row:3;justify-content:flex-end;gap:4px}
+ .site-footer{flex-wrap:wrap}.footer-actions{margin-left:0}
+}
