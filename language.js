@@ -58,3 +58,15 @@ document.body.append(dialog);trigger.setAttribute('aria-haspopup','dialog');trig
  });
  dialog.addEventListener('close',()=>trigger.focus());
 })();
+
+/* Reserve the actual bar heights, including wrapped navigation and zoom. */
+(()=>{
+ const header=document.querySelector('.topbar'),footer=document.querySelector('.site-footer');
+ if(!header||!footer)return;
+ const update=()=>{
+  document.documentElement.style.setProperty('--site-header-height',header.getBoundingClientRect().height+'px');
+  document.documentElement.style.setProperty('--site-footer-height',footer.getBoundingClientRect().height+'px');
+ };
+ update();new ResizeObserver(update).observe(header);new ResizeObserver(update).observe(footer);
+ window.addEventListener('resize',update);
+})();

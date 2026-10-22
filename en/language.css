@@ -32,3 +32,49 @@
  .topbar>nav{grid-column:1/-1;grid-row:3;justify-content:flex-end;gap:4px}
  .site-footer{flex-wrap:wrap}.footer-actions{margin-left:0}
 }
+
+/* Compact, pinned teaching-site bars, matching Python for chemistry. */
+:root{--site-header-height:88px;--site-footer-height:69px}
+html{scroll-padding-top:calc(var(--site-header-height) + 16px);scroll-padding-bottom:calc(var(--site-footer-height) + 16px)}
+body{padding-top:var(--site-header-height);padding-bottom:var(--site-footer-height)}
+.topbar{position:fixed;inset:0 0 auto;z-index:100;min-height:74px;padding:10px 30px;grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr);column-gap:24px;row-gap:6px;background:#fff}
+.topbar>.brand{font-size:17px;letter-spacing:-.025em}
+.topbar>.university-brand{grid-column:2;grid-row:1}
+.university-brand img{width:150px;height:auto}
+.topbar>nav{grid-column:3;grid-row:1;justify-self:end;width:auto;margin:0 106px 0 0;justify-content:flex-end;flex-wrap:nowrap;gap:2px}
+.topbar>nav a{white-space:nowrap;padding:8px 7px;font-size:13px;font-weight:400;border-radius:6px;color:#526576;text-decoration:none}
+.topbar>nav a:hover{background:#e9f3f1;color:#0b726b}
+.topbar>nav a[aria-current=page]{background:#eaf5f2;color:#0b726b;font-weight:700}
+.topbar>.language-switch{grid-column:3;grid-row:1;font-size:13px;gap:4px}
+.site-footer{position:fixed;inset:auto 0 0;z-index:100;max-width:none;width:100%;margin:0;padding:10px 30px;display:flex;align-items:center;justify-content:space-between;gap:18px;background:#f5f7fa;border-top:1px solid #dce4eb;font-size:12px;line-height:1.6}
+.site-footer .footer-identity{display:grid;grid-template-columns:auto auto;column-gap:16px;align-items:center}
+.site-footer .footer-home{grid-column:1;font-size:12px;font-weight:700}
+.site-footer .footer-identity p{grid-column:1;margin:0}
+.site-footer .license-badge{grid-column:2;grid-row:1/3;display:block;margin:0;height:31px}
+.site-footer .license-badge img{display:block}
+.site-footer .design-credit{padding:0;min-height:0;font-size:12px;line-height:1.6;font-weight:400;color:#526576}
+.site-footer .footer-actions{gap:2px;margin-left:auto}
+.site-footer .footer-actions .text-link{padding:0;min-height:0;font-size:13px;font-weight:400;line-height:1.8;color:#172d3e}
+.workspace>aside{top:calc(var(--site-header-height) + 16px)}
+@media(max-width:1250px){
+ .topbar>nav{grid-column:1/-1;grid-row:2;margin:0;justify-self:end;justify-content:flex-end;width:100%;flex-wrap:wrap}
+}
+@media(max-width:760px){
+ .topbar{padding:8px 16px;grid-template-columns:minmax(0,1fr) 115px minmax(0,1fr);column-gap:12px}
+ .topbar>.brand{font-size:14px}.university-brand img{width:115px}
+ .topbar>.language-switch{gap:0}.language-switch a{min-width:36px;min-height:36px}
+ .topbar>nav a{font-size:12px;padding:6px}
+ .site-footer{padding:8px 16px;gap:8px;flex-wrap:nowrap}
+ .site-footer .footer-identity{column-gap:8px}
+ .site-footer .footer-actions .text-link,.site-footer .design-credit,.site-footer .footer-home{font-size:11px}
+ .site-footer .license-badge{height:auto}.site-footer .license-badge img{width:70px;height:auto}
+}
+@media(max-width:480px){
+ .topbar{grid-template-columns:minmax(0,1fr) 96px auto;column-gap:8px}
+ .topbar>.brand{font-size:13px}.university-brand img{width:96px}
+ .topbar>nav{justify-content:center}.topbar>nav a{font-size:11px;padding:5px}
+ .language-switch a{min-width:30px;min-height:34px}.language-switch{font-size:12px}
+ .site-footer{padding:7px 10px}.site-footer .footer-identity{column-gap:6px}
+ .site-footer .license-badge img{width:58px}.site-footer .footer-actions .text-link{font-size:10px}
+}
+@media print{body{padding:0}.topbar,.site-footer{display:none!important}}
