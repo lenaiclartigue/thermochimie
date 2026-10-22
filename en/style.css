@@ -117,3 +117,9 @@
 .math-frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.25;margin:.12em .18em;white-space:nowrap;font-size:.96em}.math-frac>span:first-child{border-bottom:1px solid currentColor;padding:0 .18em .08em}.math-frac>span:last-child{padding:.08em .18em 0}.data-reference{font-size:.82rem;color:var(--muted);margin:.5rem 0 1rem}
 
 .math-frac>.fraction-slash{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+/* Stirring: surface ripples and schematic liquid circulation. */
+.stirring .calo-currents{opacity:.55;animation:calo-current 2s linear infinite}
+@keyframes calo-current{to{stroke-dashoffset:-80}}
+@media(prefers-reduced-motion:reduce){.stirring .calo-currents,.stirring #calo-paddle{animation:none!important}}
+@media print{.calo-currents{display:none!important}}

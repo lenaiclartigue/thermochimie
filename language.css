@@ -1,8 +1,11 @@
-.language-switch{position:relative;flex-shrink:0;margin-left:auto}
-.language-switch::after{content:"";position:absolute;right:14px;top:17px;width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);pointer-events:none;color:#334155}
-.language-switch select{appearance:none;display:block;width:148px;min-height:44px;margin:0;padding:10px 34px 10px 14px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;color:#172e42;font:600 13px/1.4 system-ui,sans-serif;cursor:pointer;transition:border-color .15s,box-shadow .15s}
-.language-switch select:hover{border-color:#64748b;box-shadow:0 2px 6px #172e4214}
-.language-switch select:focus-visible{outline:3px solid #168a96;outline-offset:3px}
+.language-switch{display:flex;align-items:center;gap:.4rem;flex-shrink:0;margin-left:auto;font-size:.85rem;white-space:nowrap}
+.language-switch a{display:grid;place-items:center;min-width:44px;min-height:44px;padding:.35rem .45rem;text-decoration:none;border-radius:6px;color:#183c53;font-weight:600}
+.language-switch a[aria-current]{background:#183c53;color:white;font-weight:700}
+.language-switch a:hover{box-shadow:inset 0 0 0 2px #197d8a}
+.language-switch a:focus-visible,.audience-trigger:focus-visible{outline:3px solid #168a96;outline-offset:3px}
 .topbar{flex-wrap:wrap;gap:12px}
 @media(max-width:650px){.topbar>nav{order:3;width:100%}}
-@media print{.language-switch{display:none!important}}
+@media print{.language-switch,.audience-trigger,.audience-dialog{display:none!important}}
+
+.audience-trigger{font:inherit;cursor:pointer}
+.audience-dialog{width:min(640px,calc(100% - 32px));box-sizing:border-box}

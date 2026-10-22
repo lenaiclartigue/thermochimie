@@ -381,7 +381,29 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
       g.addEventListener('click', () => select(g.dataset.caloShape));
       g.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(g.dataset.caloShape); } });
     });
+    let waterFrame = null;
+    const water = $('calo-water'), surface = $('calo-surface');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function drawWater(time) {
+      const points = [];
+      for (let x = 163; x <= 347; x += 4) {
+        const envelope = Math.sin(Math.PI * (x - 163) / 184);
+        const y = 182 + 3.5 * envelope * Math.sin((x - 163) / 22 - time / 280);
+        points.push(`${x},${y.toFixed(2)}`);
+      }
+      const top = 'M' + points.join(' L');
+      surface.setAttribute('d', top);
+      water.setAttribute('d', top + 'V278Q347 291 334 291H176Q163 291 163 278Z');
+      waterFrame = requestAnimationFrame(drawWater);
+    }
     function motion(on) {
+      if (waterFrame !== null) cancelAnimationFrame(waterFrame);
+      waterFrame = null;
+      if (on && !reducedMotion.matches && water && surface) waterFrame = requestAnimationFrame(drawWater);
+      else if (water && surface) {
+        surface.setAttribute('d', 'M163 182H347');
+        water.setAttribute('d', 'M163 182H347V278Q347 291 334 291H176Q163 291 163 278Z');
+      }
       calo.classList.toggle('stirring', on);
       $('calo-stir').textContent = on ? 'Arrêter l’agitateur' : 'Animer l’agitateur';
       $('calo-stir').setAttribute('aria-pressed', String(on));

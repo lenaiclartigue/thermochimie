@@ -7,10 +7,11 @@
  if(!isEnglish&&preferred==='en'){
   location.replace('en/'+file+location.search+location.hash);return;
  }
- document.querySelectorAll('[data-language-select]').forEach(select=>{
-  select.value=isEnglish?'en':'fr';
-  select.addEventListener('change',()=>{
-   const lang=select.value;
+ document.querySelectorAll('[data-language-link]').forEach(link=>{
+  link.addEventListener('click',event=>{
+   if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+   event.preventDefault();
+   const lang=link.dataset.languageLink;
    if(!['fr','en'].includes(lang))return;
    const target=lang==='en'?(isEnglish?'':'en/'):(isEnglish?'../':'');
    // Retain an unfinished quiz when switching language, without awarding a score.
@@ -42,3 +43,18 @@ document.body.append(dialog);trigger.setAttribute('aria-haspopup','dialog');trig
 })();
 
 (()=>{const id=Number(document.querySelector('main')?.dataset.currentModule);if(id>=1&&id<=6)try{const key='thermo-visits-v1';const visits=JSON.parse(localStorage.getItem(key)||'{}');visits[id]=Date.now();localStorage.setItem(key,JSON.stringify(visits))}catch{}})();
+
+/* Audience notice uses the same modal presentation as sharing terms. */
+(()=>{
+ const trigger=document.querySelector('.audience-trigger');
+ const dialog=document.getElementById('audience-dialog');
+ if(!trigger||!dialog)return;
+ trigger.addEventListener('click',()=>dialog.showModal());
+ dialog.querySelector('.close').addEventListener('click',()=>dialog.close());
+ dialog.addEventListener('click',event=>{
+  if(event.target!==dialog)return;
+  const box=dialog.getBoundingClientRect();
+  if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)dialog.close();
+ });
+ dialog.addEventListener('close',()=>trigger.focus());
+})();
