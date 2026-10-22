@@ -83,3 +83,15 @@ body{padding-top:var(--site-header-height);padding-bottom:var(--site-footer-heig
 .topbar>.brand{gap:10px;white-space:nowrap}
 .topbar .brand-symbol{display:grid;place-items:center;width:36px;height:36px;flex-shrink:0;border-radius:9px;background:#172d3e;color:#fff;font:25px/1 Georgia,serif}
 @media(max-width:480px){.topbar>.brand{gap:5px}.topbar .brand-symbol{width:25px;height:28px;border-radius:6px;font-size:21px}}
+
+/* Eight cards: six core modules and two optional extensions. */
+.eight-module-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-bottom:36px}
+.eight-module-grid .part-card{display:flex;flex-direction:column;min-width:0;min-height:300px;padding:22px 20px;border-top:3px solid var(--part-accent);border-radius:16px}
+.eight-module-grid .part-card h2{font-size:21px;line-height:1.25;margin:18px 0 12px}
+.eight-module-grid .part-card p{font-size:14px}
+.eight-module-grid .card-open{margin-top:auto;align-self:flex-start;font-size:12px}
+.eight-module-grid .optional-card{--part-accent:#116d69}
+.eight-module-grid .optional-label{font:700 10px/1.5 system-ui;letter-spacing:.05em;color:#116d69;min-height:32px}
+.optional-next{flex-wrap:wrap;margin-bottom:30px}
+@media(max-width:1050px){.eight-module-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.eight-module-grid{grid-template-columns:1fr}.eight-module-grid .part-card{min-height:240px}}
