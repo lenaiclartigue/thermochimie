@@ -78,3 +78,8 @@ body{padding-top:var(--site-header-height);padding-bottom:var(--site-footer-heig
  .site-footer .license-badge img{width:58px}.site-footer .footer-actions .text-link{font-size:10px}
 }
 @media print{body{padding:0}.topbar,.site-footer{display:none!important}}
+
+/* Thermochemistry identity beside the site name. */
+.topbar>.brand{gap:10px;white-space:nowrap}
+.topbar .brand-symbol{display:grid;place-items:center;width:36px;height:36px;flex-shrink:0;border-radius:9px;background:#172d3e;color:#fff;font:25px/1 Georgia,serif}
+@media(max-width:480px){.topbar>.brand{gap:5px}.topbar .brand-symbol{width:25px;height:28px;border-radius:6px;font-size:21px}}
