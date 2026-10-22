@@ -118,3 +118,24 @@ body{padding-top:var(--site-header-height);padding-bottom:var(--site-footer-heig
  .site-footer .footer-actions{text-align:right}
 }
 @media print{.site-footer{display:none!important}}
+
+/* v30: resource catalogue with a contextual reading guide. */
+.topbar nav a[aria-current="page"]{text-decoration:none}
+.resources-page{max-width:1180px;margin:auto;padding:36px 24px}
+.resources-page>h1{font-size:42px;margin:12px 0 18px}
+.resource-layout{display:grid;grid-template-columns:minmax(280px,1fr) minmax(0,1.12fr);gap:48px;align-items:start;margin:32px 0 56px}
+.resource-catalog label{display:block;font-weight:600;font-size:14px;margin-bottom:8px}
+#resource-search{width:100%;padding:12px 14px;border:1px solid #cbd6dd;border-radius:10px;background:white;font:inherit}
+.resource-choice{padding:20px;border:1px solid #dce4eb;border-radius:14px;margin:12px 0;background:white}
+.resource-choice.is-selected{border-color:#176d61;box-shadow:inset 3px 0 #176d61;background:#f1f8f6}
+.resource-choice h2{font-size:19px;margin:7px 0}.resource-choice h2 a{color:#183c53;text-underline-offset:4px}
+.resource-meta{font-size:13px;color:#526576;margin:0}
+.resource-choice button{margin-top:12px;border:1px solid #cbd6dd;border-radius:8px;background:white;color:#176d61;padding:8px 14px;font:600 13px system-ui;cursor:pointer}
+.resource-choice button[aria-pressed=true]{background:#176d61;color:white;border-color:#176d61}
+.resource-details{position:sticky;top:calc(var(--site-header-height) + 20px);max-height:calc(100dvh - var(--site-header-height) - var(--site-footer-height) - 40px);overflow:auto;padding:28px;background:white;border:1px solid #dce4eb;border-radius:20px;box-shadow:0 8px 28px #18364d08}
+.resource-panel h2{font-size:27px;margin:0 0 20px}.resource-panel p{line-height:1.7}.resource-panel a{overflow-wrap:anywhere}
+.resource-tip{background:#eef4f8;padding:16px 20px;border-radius:12px;margin-top:24px}.resource-tip h3{font-size:16px;margin:0 0 8px}.resource-tip p{margin:0}
+.resources-page [hidden]{display:none!important}
+.resources-page>#donnees{border-top:1px solid #dce4eb;padding-top:24px}
+@media(max-width:760px){.resource-layout{grid-template-columns:1fr;gap:24px}.resource-details{position:static;max-height:none;padding:22px}.resources-page>h1{font-size:32px}}
+@media print{.resource-layout{display:block}.resource-catalog{display:none}.resource-details{position:static;max-height:none;overflow:visible;border:0;padding:0}.resources-page .resource-panel[hidden]{display:block!important}}

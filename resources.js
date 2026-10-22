@@ -1,0 +1,8 @@
+(()=>{
+ const search=document.getElementById('resource-search');if(!search)return;
+ const cards=[...document.querySelectorAll('[data-resource]')], panels=[...document.querySelectorAll('.resource-panel')];let selected='0';
+ function select(id,focus=false){selected=id;cards.forEach(c=>{const on=c.dataset.resource===id;c.classList.toggle('is-selected',on);c.querySelector('button').setAttribute('aria-pressed',String(on))});panels.forEach(p=>p.hidden=p.id!=='resource-detail-'+id);if(focus&&matchMedia('(max-width:760px)').matches){const p=document.getElementById('resource-detail-'+id);p.focus({preventScroll:true});p.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'})}}
+ cards.forEach(c=>c.querySelector('button').addEventListener('click',()=>select(c.dataset.resource,true)));
+ const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+ search.addEventListener('input',()=>{const q=normalize(search.value);const found=cards.filter(c=>{const p=document.getElementById('resource-detail-'+c.dataset.resource);c.hidden=!normalize(c.textContent+' '+p.textContent).includes(q);return !c.hidden});document.getElementById('resource-empty').hidden=!!found.length;if(found.length)select(found.some(c=>c.dataset.resource===selected)?selected:found[0].dataset.resource);else panels.forEach(p=>p.hidden=true)});select(selected);
+})();

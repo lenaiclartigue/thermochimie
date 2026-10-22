@@ -1,5 +1,10 @@
 # Historique des versions
 
+## v30 — 22 octobre 2026
+- Ressources : liste filtrable à gauche et fiche de lecture sélectionnée à droite, FR/EN.
+- Références numériques et leurs ancres conservées.
+- Suppression du soulignement de la navigation active.
+
 ## v29 — 22 octobre 2026
 - Logo Nantes Université déplacé au centre du pied de page.
 - Navigation centrée dans le bandeau supérieur ; adaptations pour les petits écrans.
