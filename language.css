@@ -95,3 +95,26 @@ body{padding-top:var(--site-header-height);padding-bottom:var(--site-footer-heig
 .optional-next{flex-wrap:wrap;margin-bottom:30px}
 @media(max-width:1050px){.eight-module-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.eight-module-grid{grid-template-columns:1fr}.eight-module-grid .part-card{min-height:240px}}
+
+/* v29: centred navigation and university identity in the footer. */
+.topbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}
+.topbar>nav{grid-column:2;grid-row:1;justify-self:center;justify-content:center;width:auto;margin:0;flex-wrap:nowrap}
+.topbar>.language-switch{grid-column:3;grid-row:1;justify-self:end}
+.site-footer{display:grid;grid-template-columns:minmax(0,1fr) 130px minmax(0,1fr)}
+.site-footer>.university-brand{grid-column:2;grid-row:1;justify-self:center;display:block}
+.site-footer>.university-brand img{display:block;width:130px;height:auto}
+.site-footer>.footer-identity{grid-column:1;grid-row:1;justify-self:start}
+.site-footer>.footer-actions{grid-column:3;grid-row:1;justify-self:end;margin-left:0}
+@media(max-width:900px){
+ .topbar{grid-template-columns:1fr auto}
+ .topbar>.language-switch{grid-column:2}
+ .topbar>nav{grid-column:1/-1;grid-row:2;flex-wrap:wrap}
+}
+@media(max-width:650px){
+ .site-footer{grid-template-columns:minmax(0,1fr) 85px minmax(0,1fr);column-gap:8px}
+ .site-footer>.university-brand img{width:85px}
+ .site-footer .footer-identity{display:flex;flex-direction:column;align-items:flex-start;gap:1px}
+ .site-footer .license-badge img{width:58px}
+ .site-footer .footer-actions{text-align:right}
+}
+@media print{.site-footer{display:none!important}}
