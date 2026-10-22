@@ -7,5 +7,5 @@
 @media(max-width:650px){.topbar>nav{order:3;width:100%}}
 @media print{.language-switch,.audience-trigger,.audience-dialog{display:none!important}}
 
-.audience-trigger{font:inherit;cursor:pointer}
+.audience-trigger{cursor:pointer}
 .audience-dialog{width:min(640px,calc(100% - 32px));box-sizing:border-box}
